@@ -22,9 +22,148 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""InputActions"",
-    ""maps"": [],
+    ""maps"": [
+        {
+            ""name"": ""Quiz"",
+            ""id"": ""b367ded1-594a-4f60-a7c5-3c1aa9a7422e"",
+            ""actions"": [
+                {
+                    ""name"": ""Answer1"",
+                    ""type"": ""Button"",
+                    ""id"": ""ecf77f68-2b06-464d-b669-32970e80871a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Answer2"",
+                    ""type"": ""Button"",
+                    ""id"": ""d88dbff7-250b-4db9-9d6a-f0e8d97037a8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Answer3"",
+                    ""type"": ""Button"",
+                    ""id"": ""39f05e20-bd5e-4073-9641-4becbdeee6de"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Answer4"",
+                    ""type"": ""Button"",
+                    ""id"": ""5e101298-20f2-440b-a2cc-1b3fcd87ed7f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""2129a886-c6d6-42eb-a8df-b9eaff2320d0"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Answer1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7fdd924f-f5e1-44e9-9f4b-4583de4dab03"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Answer1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""69b27bd6-84cd-41e0-a835-759aef1dd8a2"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Answer2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""07c1eab5-ec8a-4415-9635-6a0a26c670f2"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Answer2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6a968d5e-b9b5-4a89-abd7-01042c63ffc9"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Answer3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3f6359a0-55de-4e93-a067-241e9cc79ec3"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Answer3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""26d7ad73-6dfa-460a-9d05-8b4706d047dd"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Answer4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4b642a96-0113-4e86-bc55-ae2f0cc6a129"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Answer4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        }
+    ],
     ""controlSchemes"": []
 }");
+        // Quiz
+        m_Quiz = asset.FindActionMap("Quiz", throwIfNotFound: true);
+        m_Quiz_Answer1 = m_Quiz.FindAction("Answer1", throwIfNotFound: true);
+        m_Quiz_Answer2 = m_Quiz.FindAction("Answer2", throwIfNotFound: true);
+        m_Quiz_Answer3 = m_Quiz.FindAction("Answer3", throwIfNotFound: true);
+        m_Quiz_Answer4 = m_Quiz.FindAction("Answer4", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -81,5 +220,82 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     public int FindBinding(InputBinding bindingMask, out InputAction action)
     {
         return asset.FindBinding(bindingMask, out action);
+    }
+
+    // Quiz
+    private readonly InputActionMap m_Quiz;
+    private List<IQuizActions> m_QuizActionsCallbackInterfaces = new List<IQuizActions>();
+    private readonly InputAction m_Quiz_Answer1;
+    private readonly InputAction m_Quiz_Answer2;
+    private readonly InputAction m_Quiz_Answer3;
+    private readonly InputAction m_Quiz_Answer4;
+    public struct QuizActions
+    {
+        private @InputActions m_Wrapper;
+        public QuizActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Answer1 => m_Wrapper.m_Quiz_Answer1;
+        public InputAction @Answer2 => m_Wrapper.m_Quiz_Answer2;
+        public InputAction @Answer3 => m_Wrapper.m_Quiz_Answer3;
+        public InputAction @Answer4 => m_Wrapper.m_Quiz_Answer4;
+        public InputActionMap Get() { return m_Wrapper.m_Quiz; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(QuizActions set) { return set.Get(); }
+        public void AddCallbacks(IQuizActions instance)
+        {
+            if (instance == null || m_Wrapper.m_QuizActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_QuizActionsCallbackInterfaces.Add(instance);
+            @Answer1.started += instance.OnAnswer1;
+            @Answer1.performed += instance.OnAnswer1;
+            @Answer1.canceled += instance.OnAnswer1;
+            @Answer2.started += instance.OnAnswer2;
+            @Answer2.performed += instance.OnAnswer2;
+            @Answer2.canceled += instance.OnAnswer2;
+            @Answer3.started += instance.OnAnswer3;
+            @Answer3.performed += instance.OnAnswer3;
+            @Answer3.canceled += instance.OnAnswer3;
+            @Answer4.started += instance.OnAnswer4;
+            @Answer4.performed += instance.OnAnswer4;
+            @Answer4.canceled += instance.OnAnswer4;
+        }
+
+        private void UnregisterCallbacks(IQuizActions instance)
+        {
+            @Answer1.started -= instance.OnAnswer1;
+            @Answer1.performed -= instance.OnAnswer1;
+            @Answer1.canceled -= instance.OnAnswer1;
+            @Answer2.started -= instance.OnAnswer2;
+            @Answer2.performed -= instance.OnAnswer2;
+            @Answer2.canceled -= instance.OnAnswer2;
+            @Answer3.started -= instance.OnAnswer3;
+            @Answer3.performed -= instance.OnAnswer3;
+            @Answer3.canceled -= instance.OnAnswer3;
+            @Answer4.started -= instance.OnAnswer4;
+            @Answer4.performed -= instance.OnAnswer4;
+            @Answer4.canceled -= instance.OnAnswer4;
+        }
+
+        public void RemoveCallbacks(IQuizActions instance)
+        {
+            if (m_Wrapper.m_QuizActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IQuizActions instance)
+        {
+            foreach (var item in m_Wrapper.m_QuizActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_QuizActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public QuizActions @Quiz => new QuizActions(this);
+    public interface IQuizActions
+    {
+        void OnAnswer1(InputAction.CallbackContext context);
+        void OnAnswer2(InputAction.CallbackContext context);
+        void OnAnswer3(InputAction.CallbackContext context);
+        void OnAnswer4(InputAction.CallbackContext context);
     }
 }
