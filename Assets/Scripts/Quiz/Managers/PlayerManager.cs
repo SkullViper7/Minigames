@@ -39,7 +39,7 @@ public class PlayerManager : MonoBehaviour
             inputManager.playerPrefab.GetComponent<Image>().sprite = green;
             player1 = GameObject.FindGameObjectWithTag("Player1");
             player1.transform.SetParent(canvas.transform);
-            player1.transform.position = Vector3.zero;
+            player1.transform.localPosition = Vector3.zero;
         }
 
         if (spawnedPlayers == 1)
