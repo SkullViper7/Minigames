@@ -40,18 +40,30 @@ public class PlayerController : MonoBehaviour
 
     void AnswerOneChoose(InputAction.CallbackContext value)
     {
-        answerChosed = 1;
+        if (value.performed)
+        {
+            answerChosed = 1;
+        }
     }
     void AnswerTwoChoose(InputAction.CallbackContext value)
     {
-        answerChosed = 2;
+        if (value.performed)
+        {
+            answerChosed = 2;
+        }
     }
     void AnswerThreeChoose(InputAction.CallbackContext value)
     {
-        answerChosed = 3;
+        if (value.performed)
+        {
+            answerChosed = 3;
+        }
     }
     void AnswerFourChoose(InputAction.CallbackContext value)
     {
-        answerChosed = 4;
+        if (value.performed)
+        {
+            answerChosed = 4;
+        }
     }
 }
