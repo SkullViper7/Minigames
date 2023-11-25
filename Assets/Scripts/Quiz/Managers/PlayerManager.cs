@@ -49,7 +49,7 @@ public class PlayerManager : MonoBehaviour
             inputManager.playerPrefab.GetComponent<Image>().sprite = red;
             player2 = GameObject.FindGameObjectWithTag("Player2");
             player2.transform.SetParent(canvas.transform);
-            player2.transform.position = Vector3.zero;
+            player2.transform.localPosition = Vector3.zero;
         }
 
         if (spawnedPlayers == 2)
@@ -59,7 +59,7 @@ public class PlayerManager : MonoBehaviour
             inputManager.playerPrefab.GetComponent<Image>().sprite = blue;
             player3 = GameObject.FindGameObjectWithTag("Player3");
             player3.transform.SetParent(canvas.transform);
-            player3.transform.position = Vector3.zero;
+            player3.transform.localPosition = Vector3.zero;
         }
 
         if (spawnedPlayers == 3)
@@ -69,7 +69,7 @@ public class PlayerManager : MonoBehaviour
             inputManager.playerPrefab.GetComponent<Image>().sprite = yellow;
             player4 = GameObject.FindGameObjectWithTag("Player4");
             player4.transform.SetParent(canvas.transform);
-            player4.transform.position = Vector3.zero;
+            player4.transform.localPosition = Vector3.zero;
         }
 
         spawnedPlayers++;
