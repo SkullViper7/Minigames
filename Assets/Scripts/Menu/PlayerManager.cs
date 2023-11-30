@@ -19,14 +19,15 @@ public class PlayerManager : MonoBehaviour
     public Transform player3Holder;
     public Transform player4Holder;
 
-    [Header("Logos")]
-    public Sprite green;
-    public Sprite red;
-    public Sprite blue;
-    public Sprite yellow;
+    [Space]
+    public GameObject player1Logo;
+    public GameObject player2Logo;
+    public GameObject player3Logo;
+    public GameObject player4Logo;
 
     GameObject player;
 
+    public int numberOfPlayers;
 
     public void RegisterPlayer()
     {
@@ -36,36 +37,38 @@ public class PlayerManager : MonoBehaviour
         {
             player.name = player1SO.name;
             player.tag = "Player1";
-            player.GetComponent<Image>().sprite = green;
-            player.transform.SetParent(player1Holder);
-            player.transform.localPosition = Vector3.zero;
+            player1Logo.SetActive(true);
+            player.GetComponent<Image>().sprite = null;
+            player.GetComponent<PlayerController>().enabled = false;
         }
 
         if (player.GetComponent<PlayerInput>().user.id == 2)
         {
             player.name = player2SO.name;
             player.tag = "Player2";
-            player.GetComponent<Image>().sprite = red;
-            player.transform.SetParent(player2Holder);
-            player.transform.localPosition = Vector3.zero;
+            player2Logo.SetActive(true);
+            player.GetComponent<Image>().sprite = null;
+            player.GetComponent<PlayerController>().enabled = false;
         }
 
         if (player.GetComponent<PlayerInput>().user.id == 3)
         {
             player.name = player3SO.name;
             player.tag = "Player3";
-            player.GetComponent<Image>().sprite = blue;
-            player.transform.SetParent(player3Holder);
-            player.transform.localPosition = Vector3.zero;
+            player3Logo.SetActive(true);
+            player.GetComponent<Image>().sprite = null;
+            player.GetComponent<PlayerController>().enabled = false;
         }
 
         if (player.GetComponent<PlayerInput>().user.id == 4)
         {
             player.name = player4SO.name;
             player.tag = "Player4";
-            player.GetComponent<Image>().sprite = yellow;
-            player.transform.SetParent(player4Holder);
-            player.transform.localPosition = Vector3.zero;
+            player4Logo.SetActive(true);
+            player.GetComponent<Image>().sprite = null;
+            player.GetComponent<PlayerController>().enabled = false;
         }
+
+        numberOfPlayers++;
     }
 }
