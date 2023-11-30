@@ -25,15 +25,8 @@ public class PlayerManager : MonoBehaviour
     public Sprite blue;
     public Sprite yellow;
 
-    [Space]
-    GameObject player1;
-    GameObject player2;
-    GameObject player3;
-    GameObject player4;
-
     GameObject player;
 
-    int spawnedPlayers;
 
     public void RegisterPlayer()
     {
@@ -74,48 +67,5 @@ public class PlayerManager : MonoBehaviour
             player.transform.SetParent(player4Holder);
             player.transform.localPosition = Vector3.zero;
         }
-
-        //if (spawnedPlayers == 3)
-        //{
-        //    inputManager.playerPrefab.name = player4SO.name;
-        //    inputManager.playerPrefab.tag = "Player4";
-        //    inputManager.playerPrefab.GetComponent<Image>().sprite = yellow;
-        //    player4 = GameObject.FindGameObjectWithTag("Player4");
-        //    player4.transform.SetParent(player4Holder);
-        //    player4.transform.localPosition = Vector3.zero;
-        //}
-
-        //if (spawnedPlayers == 2)
-        //{
-        //    inputManager.playerPrefab.name = player3SO.name;
-        //    inputManager.playerPrefab.tag = "Player3";
-        //    inputManager.playerPrefab.GetComponent<Image>().sprite = blue;
-        //    player3 = GameObject.FindGameObjectWithTag("Player3");
-        //    player3.transform.SetParent(player3Holder);
-        //    player3.transform.localPosition = Vector3.zero;
-        //    spawnedPlayers++;
-        //}
-
-        //if (spawnedPlayers == 1)
-        //{
-        //    inputManager.playerPrefab.name = player2SO.name;
-        //    inputManager.playerPrefab.tag = "Player2";
-        //    inputManager.playerPrefab.GetComponent<Image>().sprite = red;
-        //    player2 = GameObject.FindGameObjectWithTag("Player2");
-        //    player2.transform.SetParent(player2Holder);
-        //    player2.transform.localPosition = Vector3.zero;
-        //    spawnedPlayers++;
-        //}
-
-        //if (spawnedPlayers == 0)
-        //{
-        //    inputManager.playerPrefab.name = player1SO.name;
-        //    inputManager.playerPrefab.tag = "Player1";
-        //    inputManager.playerPrefab.GetComponent<Image>().sprite = green;
-        //    player1 = GameObject.FindGameObjectWithTag("Player1");
-        //    player1.transform.SetParent(player1Holder);
-        //    player1.transform.localPosition = Vector3.zero;
-        //    spawnedPlayers++;
-        //}
     }
 }
