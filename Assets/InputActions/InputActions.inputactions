@@ -494,6 +494,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "RocketRide",
+            "id": "5a8bca08-4101-4219-b2ec-339a2bc59032",
+            "actions": [
+                {
+                    "name": "OrientationGamepad",
+                    "type": "Value",
+                    "id": "7621689d-aa5d-467a-ae12-f7e24d94063e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "PropulsionGamepad",
+                    "type": "Button",
+                    "id": "b0c8e794-7e1b-43d2-8e38-02abea5a7415",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "dc3234e0-6a45-43ce-b299-09dce94a594c",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OrientationGamepad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df399114-1f73-4780-a119-ed984e8eac6e",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PropulsionGamepad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
