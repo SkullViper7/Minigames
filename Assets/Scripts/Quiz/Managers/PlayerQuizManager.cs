@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerQuizManager : MonoBehaviour
 {
     [Header("ScriptableObjects")]
     public Player player1SO;
@@ -14,7 +14,10 @@ public class PlayerManager : MonoBehaviour
 
     [Space]
     public PlayerInputManager inputManager;
-    public GameObject canvas;
+    public Transform player1Holder;
+    public Transform player2Holder;
+    public Transform player3Holder;
+    public Transform player4Holder;
 
     [Header("Logos")]
     public Sprite green;
@@ -38,7 +41,7 @@ public class PlayerManager : MonoBehaviour
             inputManager.playerPrefab.tag = "Player1";
             inputManager.playerPrefab.GetComponent<Image>().sprite = green;
             player1 = GameObject.FindGameObjectWithTag("Player1");
-            player1.transform.SetParent(canvas.transform);
+            player1.transform.SetParent(player1Holder);
             player1.transform.localPosition = Vector3.zero;
         }
 
@@ -48,7 +51,7 @@ public class PlayerManager : MonoBehaviour
             inputManager.playerPrefab.tag = "Player2";
             inputManager.playerPrefab.GetComponent<Image>().sprite = red;
             player2 = GameObject.FindGameObjectWithTag("Player2");
-            player2.transform.SetParent(canvas.transform);
+            player2.transform.SetParent(player2Holder);
             player2.transform.localPosition = Vector3.zero;
         }
 
@@ -58,7 +61,7 @@ public class PlayerManager : MonoBehaviour
             inputManager.playerPrefab.tag = "Player3";
             inputManager.playerPrefab.GetComponent<Image>().sprite = blue;
             player3 = GameObject.FindGameObjectWithTag("Player3");
-            player3.transform.SetParent(canvas.transform);
+            player3.transform.SetParent(player3Holder);
             player3.transform.localPosition = Vector3.zero;
         }
 
@@ -68,7 +71,7 @@ public class PlayerManager : MonoBehaviour
             inputManager.playerPrefab.tag = "Player4";
             inputManager.playerPrefab.GetComponent<Image>().sprite = yellow;
             player4 = GameObject.FindGameObjectWithTag("Player4");
-            player4.transform.SetParent(canvas.transform);
+            player4.transform.SetParent(player4Holder);
             player4.transform.localPosition = Vector3.zero;
         }
 
