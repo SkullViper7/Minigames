@@ -132,6 +132,368 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Hunter",
+            "id": "4a91244f-32b3-4ddd-a377-17b914cb8a04",
+            "actions": [
+                {
+                    "name": "GamePad",
+                    "type": "Button",
+                    "id": "3e22133a-c7b1-4a28-9e30-a79922fabf09",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Direction_North",
+                    "type": "Button",
+                    "id": "1130d9b3-ff7b-4afa-8d93-e37ae103bf8c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Direction_West",
+                    "type": "Button",
+                    "id": "6fb99c2a-4d87-4ac9-bc13-3727ac796e0f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Direction_East",
+                    "type": "Button",
+                    "id": "7814b296-1664-422e-893f-28223e6204d5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Keyboard",
+                    "type": "Button",
+                    "id": "4f98ee44-0461-4626-a1bc-d4832e4f0fd3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J1",
+                    "type": "Button",
+                    "id": "88d323b7-0ec2-4c64-a107-f3410a016617",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J1_North",
+                    "type": "Button",
+                    "id": "583dc5e0-db60-4868-9caa-1754c4fc51af",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J1_West",
+                    "type": "Button",
+                    "id": "7bee7dbf-294b-4881-ac0b-e9328c066f92",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J1_East",
+                    "type": "Button",
+                    "id": "2c0dc5d0-4dc9-4fd7-b23f-69436d36c8f5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J2",
+                    "type": "Button",
+                    "id": "f74ae54f-56bc-42c2-9729-af006556ca1a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J2_North",
+                    "type": "Button",
+                    "id": "9c11945a-c88c-4a19-bf3a-9d8f7e48fbfb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J2_West",
+                    "type": "Button",
+                    "id": "4707ea92-d3d4-4b72-abfe-0ba2ca6c8ef9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J2_East",
+                    "type": "Button",
+                    "id": "174068c9-ecf4-41e7-93f2-e2556c6b8104",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J3",
+                    "type": "Button",
+                    "id": "8391070b-3743-48a3-9158-e4921006b3ae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J3_North",
+                    "type": "Button",
+                    "id": "dfafb229-12dd-45e0-9e45-137c96734956",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J3_West",
+                    "type": "Button",
+                    "id": "0d5e94c5-6da7-46d1-8d86-c2b4baef7a0d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J3_East",
+                    "type": "Button",
+                    "id": "866a86a5-e071-4628-a405-622feeb1cc8f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J4",
+                    "type": "Button",
+                    "id": "30b7a0d1-dc21-45c5-b09c-0bf76e6575fb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J4_North",
+                    "type": "Button",
+                    "id": "7c9cd6e2-60a6-4d08-b693-ac71ac9d3371",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J4_West",
+                    "type": "Button",
+                    "id": "80c81c46-1263-4374-ae98-42998306a796",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "J4_East",
+                    "type": "Button",
+                    "id": "30c2c64e-739c-4319-81c0-27fafb13fc4d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ba1c4263-091b-4c72-a2af-0558ccbe37e4",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Direction_North",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ccede96-2f20-4f1a-971e-d1097f14f5af",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Direction_West",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "74878498-96ab-49c3-a7d9-3de7baa75a74",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Direction_East",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1d0ebc74-6574-42fb-8e80-4188e0e813c5",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J1_North",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "301fa315-81d2-4921-b2a8-998f4301faca",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J1_West",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4db2f29e-1d80-4077-8a0f-d74746327925",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J1_East",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "21750fd8-4e44-4cf2-8dc2-e66e0ab4dcad",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J2_North",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62c4202a-63db-4530-a9b6-c2901efdd495",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J2_West",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "148f9b5f-b941-48cb-933f-8e633f9c22e8",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J2_East",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "492fbe6c-265f-40d0-ac00-95ed9bd19d54",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J3_North",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51b39a37-1057-4bee-9d6d-0f5e0a60bb99",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J3_West",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d713149-503e-40f2-b456-2bb10d551f7b",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J3_East",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "19a5ed1b-2c81-4609-885c-106c28517de9",
+                    "path": "<Keyboard>/8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J4_North",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0e81d8db-5b8d-446f-8199-c7e47507c7d0",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J4_West",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03e79e5e-9bd4-4d5c-8f4c-bc748d43bfe4",
+                    "path": "<Keyboard>/6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "J4_East",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
