@@ -1,0 +1,118 @@
+{
+    "name": "InputActionAure",
+    "maps": [
+        {
+            "name": "Player1",
+            "id": "c47f8ba1-c97f-4a7b-94c9-7193ee7d71e4",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "eaf1db5f-0d77-4a51-9c53-e5cafd67a90b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0c954608-44ff-4310-92f8-0f7099627756",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player2",
+            "id": "f75787ca-a1a0-4889-aaa8-2636529525bb",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "cedaef7e-b910-45a7-b757-a08543979d1d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ff7ec53f-1e66-470d-9987-53424d545bbf",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player3",
+            "id": "ae884b17-c7ec-404b-b25f-cc260111d37a",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "4093b913-25f5-477d-9c9d-805a8ac3fbe1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f4f317d0-624a-49a4-bf46-cfb48cee1a50",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Player4",
+            "id": "4f0df988-565e-450d-a22b-1781c34e59b3",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "a0651c64-bf72-4ce3-a759-11ff48c9ed62",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "21274d59-edd7-4948-9d5d-f898a2cb6946",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
