@@ -49,15 +49,18 @@ public class SpawnManager : MonoBehaviour
         GameObject _obj = spawnObject[Random.Range(0, spawnObject.Count)];
         if(_obj.activeSelf) 
         {
-            Debug.Log("freeze");
             GameObject _newObj = Instantiate(_obj);
             float theDistanceToSpawn = _obj.GetComponent<SpawnObjects>().DistanceToSpawn;
-            _newObj.transform.position = new Vector2(_obj.transform.position.x, theDistanceToSpawn);
+            _newObj.transform.position = new Vector2(_newObj.transform.position.x, theDistanceToSpawn);
             _newObj.GetComponent<SpawnObjects>().DistanceToSpawn = theDistanceToSpawn;
         }
         else
         {
             _obj.SetActive(true);
+            if(_obj.tag == "Projectile")
+            {
+                _obj.GetComponent<ProjectileSpawned>().RandomSpawn();
+            }
             _obj.transform.position = new Vector2(_obj.transform.position.x, _obj.GetComponent<SpawnObjects>().DistanceToSpawn);
         }
         Invoke("SpawnAnObject", Random.Range(3f, maxSpawnTiming));
