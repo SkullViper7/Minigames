@@ -9,6 +9,9 @@ TagManager:
   - Player3
   - Player4
   - Wall
+  - Projectile
+  - UpLimit
+  - DeadLimit
   layers:
   - Default
   - TransparentFX

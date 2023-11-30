@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6815337202666802732}
   - component: {fileID: 4952000199922006096}
   - component: {fileID: 8650166497282526138}
+  - component: {fileID: 3584185584942844285}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player1
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bf9e928c6f8ad5b4a8a914c68ce87031, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e5f908f7142b104e8793deff41b6eb3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -145,3 +146,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3584185584942844285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5865567384886894764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cba2a33b17aa2a47aaad9ffc93bbd8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
