@@ -8,9 +8,9 @@ public class LaunchGame : MonoBehaviour
     public enum Game { Quiz, RocketRide, SlimeJump, BTBloc };
     public Game game;
 
-    public void GoToPlayerChoice()
+    public void GoToControllerChoice()
     {
         GameManager.Instance.game = game.ToString();
-        SceneManager.LoadScene("PlayerChoiceWithGamepad");
+        SceneManager.LoadScene("ControllerChoice");
     }
 }

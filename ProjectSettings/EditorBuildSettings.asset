@@ -9,10 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Main/MainMenu.unity
     guid: 218f8fc2dde053b45a7deb43ab71e0df
   - enabled: 1
+    path: Assets/Scenes/Main/ControllerChoice.unity
+    guid: a10cd1d388c353d488afb3545b68430c
+  - enabled: 1
     path: Assets/Scenes/Main/PlayerChoiceWithGamepad.unity
     guid: 0fd67d6a40f408246b09390fdfbb7b11
   - enabled: 1
-    path: Assets/Scenes/Leo.unity
+    path: Assets/Scenes/Leo/RocketRide.unity
     guid: b665fbe5eea0b4c47aef5e929e62cf43
   - enabled: 0
     path: Assets/Scenes/Quiz/QuizGame.unity

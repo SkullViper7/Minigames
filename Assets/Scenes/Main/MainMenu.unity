@@ -583,7 +583,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 491165117}
         m_TargetAssemblyTypeName: LaunchGame, Assembly-CSharp
-        m_MethodName: GoToPlayerChoice
+        m_MethodName: GoToControllerChoice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -638,6 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: 
+  isOnKeyboard: 0
   maxPlayerCount: 0
   playerCount: 0
 --- !u!1 &714021990
@@ -839,7 +840,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 723235736}
         m_TargetAssemblyTypeName: LaunchGame, Assembly-CSharp
-        m_MethodName: GoToPlayerChoice
+        m_MethodName: GoToControllerChoice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1787,9 +1788,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1688318731}
+      - m_Target: {fileID: 491165117}
         m_TargetAssemblyTypeName: LaunchGame, Assembly-CSharp
-        m_MethodName: GoToPlayerChoice
+        m_MethodName: GoToControllerChoice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2162,9 +2163,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2069702734}
+      - m_Target: {fileID: 491165117}
         m_TargetAssemblyTypeName: LaunchGame, Assembly-CSharp
-        m_MethodName: GoToPlayerChoice
+        m_MethodName: GoToControllerChoice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

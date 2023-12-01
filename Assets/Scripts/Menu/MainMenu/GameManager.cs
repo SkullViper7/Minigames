@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public string game = "";
 
+    public bool isOnKeyboard;
+
     public int maxPlayerCount;
     public int playerCount;
 
