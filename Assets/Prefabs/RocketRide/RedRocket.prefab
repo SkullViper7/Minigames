@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 310691021465338712}
   - component: {fileID: 6243576941213802121}
   - component: {fileID: 5202024594518475299}
+  - component: {fileID: 714155431241445198}
   m_Layer: 0
   m_Name: RedRocket
   m_TagString: Untagged
@@ -132,7 +133,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0.5
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -162,6 +163,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propulsion: 1000
+--- !u!136 &714155431241445198
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236790930908222091}
+  m_Material: {fileID: 13400000, guid: 2eea8d72a50440548b90c8e459a8cb02, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.75
+  m_Height: 13
+  m_Direction: 1
+  m_Center: {x: 0, y: 5.5, z: 0}
 --- !u!1 &6292654871758200800
 GameObject:
   m_ObjectHideFlags: 0
