@@ -419,6 +419,7 @@ RectTransform:
   - {fileID: 1975079267}
   - {fileID: 52607785}
   - {fileID: 1403351217}
+  - {fileID: 222935767}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -461,6 +462,81 @@ RectTransform:
   m_AnchoredPosition: {x: -25, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &222935766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 222935767}
+  - component: {fileID: 222935769}
+  - component: {fileID: 222935768}
+  m_Layer: 5
+  m_Name: Logo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &222935767
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222935766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5.5608, y: 5.5608, z: 5.5608}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 135739429}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 330}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &222935768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222935766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 308a3b3f63e0e154082b36ab31aaa1c9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &222935769
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222935766}
+  m_CullTransparentMesh: 1
 --- !u!1 &329383816
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +718,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctAnswer: 0
   scoreManager: {fileID: 106265156}
+  questionManager: {fileID: 1303899939}
+  answerTextManager: {fileID: 1831056239}
 --- !u!4 &369025602
 Transform:
   m_ObjectHideFlags: 0
@@ -808,8 +886,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 614b53713e28b554dbb71367888c673c, type: 2}
+  m_sharedMaterial: {fileID: 8327831447776781564, guid: 614b53713e28b554dbb71367888c673c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1278,7 +1357,56 @@ MonoBehaviour:
   - En Alabama, quel jour ne doit on pas jouer aux dominos ?
   - En Arizona, quel animal ne peut pas dormir dans une baignoire ?
   - "Dans le Connecticut, quel animal ne doit on pas \xE9duquer ?"
-  questionNumber: 0
+  - "En Floride, quel moyen de transport n\xE9cessite un permis ?"
+  - "En G\xE9orgie, quel ustensil est il obligatoir de poss\xE9der ?"
+  - "En Idaho, sur le dos de quel animal n'a t on pas le droit de p\xEAcher ?"
+  - En Iowa, que ne doivent pas manger les chevaux ?
+  - En Louisiane, combien de sandwitch peut on manger au maximum lors d'un enterrement
+    ?
+  - Dans le Massachusetts, quel animal est il interdit d'effrayer ?
+  - "Au Minnesota, qu'est-ce que doivent avoir imp\xE9rtivement les baignoires ?"
+  - "Dans le Nevada, o\xF9 ne doit on pas amener un chameau ?"
+  - Dans le Dakota du Nord, avec quel accessoire est-il interdit de s'endormir ?
+  - "Dans l'Oregon, o\xF9 n'a t on pas le droit de siffler ?"
+  - En Caroline du Sud, que doivent porter les chevaux ?
+  - "Dans le Dakota du Sud, o\xF9 ne doit on pas s'endormir ?"
+  - Dans l'Utah, quel animal a un droit de passage sur l'autoroute ?
+  - En Virginie de l'Ouest, durant quel fourchette horaire les poules ont uniquement
+    le droit de pondre ?
+  - Dans le Wisconsin, de quelle couleur les femmes n'ont pas le droit de s'habiller
+    ?
+  - Dans le Wyoming, quel jour est il interdit de prendre une douche ?
+  - En Alaska, quel animal est interdit dans les barber shop ?
+  - "En Arkansas, quel couleur d'ampoule n'a pas le droit d'\xEAtre vendue ?"
+  - En Californie, combien de moutons peut-on promener au maximun sur Holliwood Boulevard
+    ?
+  - "Dans le Colorado, de quoi doivent \xEAtre \xE9quip\xE9s les chats pour pouvoir
+    courrir en libert\xE9 ?"
+  - "En Delaware, quel action est-il interdit de r\xE9aliser sur un pari ?"
+  - A Hawaii, quel objet ne doit-on pas mettre dans son oreille ?
+  - Dans l'Illinois, qu'est-ce que ne peuvent pas faire les moustachus ?
+  - En Indiana, qu'est-il interdit de faire en hiver ?
+  - Dans le Kansas, que ne doit-on mettre sous son chapeau ?
+  - "Au Kentucky, combien de fois peut-on marrier la m\xEAme femme ?"
+  - "Dans le Maine, jusqu'\xE0 quelle date peut-on garder ses d\xE9corations de no\xEBl
+    ?"
+  - "Dans le Maryland, quel animal est interdit dans les cin\xE9mas ?"
+  - Au Mississipi, que doit porter votre chien pour aller le promener ?
+  - "Au Missouri, quelle activit\xE9 est interdite ?"
+  - Dans le Nebraska, dans quelle fourchette horaire les barbers n'ont pas le droit
+    de manger des oignons ?
+  - "Au New Jersey, que ne peut-on pas faire sans une ordonnance de son medecin apr\xE8s
+    18H ?"
+  - "A New York, \xE0 partir de quelle ne peut-on pas mettre de chaussons ?"
+  - En Caroline du Nord, pendant combien de secondes peut-on chanter faux au maximum
+    ?
+  - Dans l'Ohio, dans quelle situation est-il interdit de manger un donut ?
+  - "En Oklahoma, que ne faut-il pas faire sans la supervision d'un ing\xE9nieur
+    ?"
+  - "En Pennsylvanie, qu'est-ce qu'il ne faut pas faire lors d'un concert \xE0 l'auditorium
+    de Barnstormers ?"
+  - Au Tennessee, quel animal ne peut-on pas capturer au lasso ?
+  questionPicked: 0
   questionText: {fileID: 1975079268}
 --- !u!1 &1403351216
 GameObject:
@@ -1358,7 +1486,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550756223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d36734d50d091be4289a0348f03f2440, type: 3}
   m_Name: 
@@ -1575,8 +1703,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 614b53713e28b554dbb71367888c673c, type: 2}
+  m_sharedMaterial: {fileID: 8327831447776781564, guid: 614b53713e28b554dbb71367888c673c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1709,8 +1838,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 614b53713e28b554dbb71367888c673c, type: 2}
+  m_sharedMaterial: {fileID: 8327831447776781564, guid: 614b53713e28b554dbb71367888c673c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1903,19 +2033,174 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fb1e5a262f3af4f8d4f8f2bd5fb6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  answer1:
+  firstAnswer:
   - Lundi
   - Chien
   - Ours
-  answer2:
+  - Rollers
+  - Rateau
+  - Ours
+  - Miel
+  - 4
+  - Chat
+  - Rideau
+  - Autoroute
+  - Collier
+  - Enterrement
+  - Chapeau
+  - Mariage
+  - Marmottes
+  - 8H-16H
+  - Rose
+  - "F\xEAte nationale"
+  - Crocodile
+  - Rouge
+  - 2000
+  - Klaxon
+  - Mariage
+  - Pierre
+  - Boire
+  - Glisser sur la neige
+  - Rat
+  - 7
+  - 14 Janvier
+  - Renard
+  - Chapeau
+  - Chanter
+  - 12H-14H
+  - Acheter une glace
+  - 00H
+  - 5
+  - En dansant
+  - Ouvrir un soda
+  - Danser la country
+  - Cheval
+  secondAnswer:
   - Dimanche
   - Chat
-  answer3:
+  - Ecureuil
+  - Poussette
+  - Casque de chantier
+  - Cheval
+  - Bouche d'incendie
+  - 8
+  - Pigeon
+  - "Poign\xE9e"
+  - Canyon
+  - Chaussures
+  - Eglise
+  - Veste
+  - Magasin
+  - Oiseaux
+  - 9H-14H
+  - Noir
+  - Mercredi
+  - Kangourou
+  - Vert
+  - 10
+  - "Feu arri\xE8re"
+  - Changer de nom
+  - "Pi\xE8ce"
+  - Porter des chapeaux
+  - Prendre un bain
+  - Fourmie
+  - 3
+  - "23 d\xE9cembre"
+  - Giraffe
+  - Chaussures
+  - Rigoler
+  - 7H-19H
+  - "Acheter des m\xE9dicaments"
+  - 16H
+  - 60
+  - A reculons
+  - Couper du papier
+  - Jeter des pierres
+  - Poisson
+  thirdAnswer:
   - "Les jours f\xE9ri\xE9s"
-  - Loup
-  answer4:
+  - Hamster
+  - Chien
+  - Skateboard
+  - Foreuse
+  - "El\xE9phant"
+  - Ballon
+  - 1
+  - Cheval
+  - Pieds
+  - Rooftop
+  - Chapeau
+  - Avion
+  - Pantalon
+  - "H\xE9licopt\xE8re"
+  - Cerfs
+  - 00-12H
+  - Marron
+  - Dimanche
+  - Hippopotame
+  - Bleu
+  - 10000
+  - Gilet jaune
+  - Sauter en parachute
+  - Ciseaux
+  - Faire la grimace
+  - Laver sa voiture
+  - Abeille
+  - 5
+  - 1er janvier
+  - Lion
+  - Rollers
+  - Dancer
+  - 8H-17H
+  - Courir
+  - 8H
+  - 90
+  - "Dans un h\xE9licopt\xE8re"
+  - Gonfler un ballon
+  - "Manger des cacah\xE8tes \xE0 reculons"
+  - Oiseaux
+  fourthAnswer:
   - Le 11 septembre
   - Singe
+  - Souris
+  - BMX
+  - Fusil
+  - Giraffe
+  - Chemise
+  - 3
+  - Crocodile
+  - Tapis
+  - Boite de nuit
+  - Lunettes
+  - Sous l'eau
+  - Chaussures
+  - "Usine \xE0 fromage"
+  - Ours
+  - 15H-20H
+  - Rouge
+  - Thanksgiving
+  - Ours blanc
+  - Rose
+  - 4
+  - Essuie glace
+  - Pranker un policier
+  - Aliments
+  - Embrasser une femme
+  - Courir
+  - Ecureuil
+  - 1
+  - 20 juin
+  - Castor
+  - Couche
+  - Crier
+  - 00H-14H
+  - Chanter
+  - 22H
+  - 15
+  - En conduisant
+  - Laver sa voiture
+  - Faire du monocycle saoul
+  - "Li\xE8v"
   answerText1: {fileID: 1816373967}
   answerText2: {fileID: 1739366587}
   answerText3: {fileID: 641742980}
@@ -1980,8 +2265,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 614b53713e28b554dbb71367888c673c, type: 2}
+  m_sharedMaterial: {fileID: 8327831447776781564, guid: 614b53713e28b554dbb71367888c673c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2184,8 +2470,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 614b53713e28b554dbb71367888c673c, type: 2}
+  m_sharedMaterial: {fileID: 8327831447776781564, guid: 614b53713e28b554dbb71367888c673c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
