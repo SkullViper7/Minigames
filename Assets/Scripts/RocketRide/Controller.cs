@@ -33,7 +33,7 @@ public class Controller : MonoBehaviour
             actualOrientation = lastOrientation;
         }
 
-        Debug.Log(actualOrientation);
+        transform.up = new Vector2(actualOrientation.x, Mathf.Clamp(actualOrientation.y, 0f, 1f));
     }
 
     public void OnPropulsionGamepad()
@@ -43,6 +43,6 @@ public class Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.up = new Vector2(actualOrientation.x, Mathf.Clamp(actualOrientation.y, 0f, 1f));
+
     }
 }
