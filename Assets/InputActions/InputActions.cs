@@ -516,6 +516,54 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""RocketRide"",
+            ""id"": ""5a8bca08-4101-4219-b2ec-339a2bc59032"",
+            ""actions"": [
+                {
+                    ""name"": ""OrientationGamepad"",
+                    ""type"": ""Value"",
+                    ""id"": ""7621689d-aa5d-467a-ae12-f7e24d94063e"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PropulsionGamepad"",
+                    ""type"": ""Button"",
+                    ""id"": ""b0c8e794-7e1b-43d2-8e38-02abea5a7415"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""dc3234e0-6a45-43ce-b299-09dce94a594c"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OrientationGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df399114-1f73-4780-a119-ed984e8eac6e"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PropulsionGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -549,6 +597,10 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Hunter_J4_North = m_Hunter.FindAction("J4_North", throwIfNotFound: true);
         m_Hunter_J4_West = m_Hunter.FindAction("J4_West", throwIfNotFound: true);
         m_Hunter_J4_East = m_Hunter.FindAction("J4_East", throwIfNotFound: true);
+        // RocketRide
+        m_RocketRide = asset.FindActionMap("RocketRide", throwIfNotFound: true);
+        m_RocketRide_OrientationGamepad = m_RocketRide.FindAction("OrientationGamepad", throwIfNotFound: true);
+        m_RocketRide_PropulsionGamepad = m_RocketRide.FindAction("PropulsionGamepad", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -882,6 +934,60 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         }
     }
     public HunterActions @Hunter => new HunterActions(this);
+
+    // RocketRide
+    private readonly InputActionMap m_RocketRide;
+    private List<IRocketRideActions> m_RocketRideActionsCallbackInterfaces = new List<IRocketRideActions>();
+    private readonly InputAction m_RocketRide_OrientationGamepad;
+    private readonly InputAction m_RocketRide_PropulsionGamepad;
+    public struct RocketRideActions
+    {
+        private @InputActions m_Wrapper;
+        public RocketRideActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @OrientationGamepad => m_Wrapper.m_RocketRide_OrientationGamepad;
+        public InputAction @PropulsionGamepad => m_Wrapper.m_RocketRide_PropulsionGamepad;
+        public InputActionMap Get() { return m_Wrapper.m_RocketRide; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(RocketRideActions set) { return set.Get(); }
+        public void AddCallbacks(IRocketRideActions instance)
+        {
+            if (instance == null || m_Wrapper.m_RocketRideActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_RocketRideActionsCallbackInterfaces.Add(instance);
+            @OrientationGamepad.started += instance.OnOrientationGamepad;
+            @OrientationGamepad.performed += instance.OnOrientationGamepad;
+            @OrientationGamepad.canceled += instance.OnOrientationGamepad;
+            @PropulsionGamepad.started += instance.OnPropulsionGamepad;
+            @PropulsionGamepad.performed += instance.OnPropulsionGamepad;
+            @PropulsionGamepad.canceled += instance.OnPropulsionGamepad;
+        }
+
+        private void UnregisterCallbacks(IRocketRideActions instance)
+        {
+            @OrientationGamepad.started -= instance.OnOrientationGamepad;
+            @OrientationGamepad.performed -= instance.OnOrientationGamepad;
+            @OrientationGamepad.canceled -= instance.OnOrientationGamepad;
+            @PropulsionGamepad.started -= instance.OnPropulsionGamepad;
+            @PropulsionGamepad.performed -= instance.OnPropulsionGamepad;
+            @PropulsionGamepad.canceled -= instance.OnPropulsionGamepad;
+        }
+
+        public void RemoveCallbacks(IRocketRideActions instance)
+        {
+            if (m_Wrapper.m_RocketRideActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IRocketRideActions instance)
+        {
+            foreach (var item in m_Wrapper.m_RocketRideActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_RocketRideActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public RocketRideActions @RocketRide => new RocketRideActions(this);
     public interface IQuizActions
     {
         void OnAnswer1(InputAction.CallbackContext context);
@@ -912,5 +1018,10 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnJ4_North(InputAction.CallbackContext context);
         void OnJ4_West(InputAction.CallbackContext context);
         void OnJ4_East(InputAction.CallbackContext context);
+    }
+    public interface IRocketRideActions
+    {
+        void OnOrientationGamepad(InputAction.CallbackContext context);
+        void OnPropulsionGamepad(InputAction.CallbackContext context);
     }
 }

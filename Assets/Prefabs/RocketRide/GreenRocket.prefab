@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2209383806956306783}
   - component: {fileID: -6060247139509598512}
   - component: {fileID: 7211607401780872529}
+  - component: {fileID: 8029704392439328753}
   m_Layer: 0
   m_Name: GreenRocket
   m_TagString: Untagged
@@ -44,7 +45,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0.5
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -74,6 +75,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propulsion: 1000
+--- !u!136 &8029704392439328753
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779452359445421435}
+  m_Material: {fileID: 13400000, guid: 2eea8d72a50440548b90c8e459a8cb02, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6867822006379464337
 PrefabInstance:
   m_ObjectHideFlags: 0
