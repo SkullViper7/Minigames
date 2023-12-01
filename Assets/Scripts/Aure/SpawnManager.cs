@@ -46,6 +46,13 @@ public class SpawnManager : MonoBehaviour
                     arrowIndicator = _obj;
                     _obj.transform.parent.gameObject.SetActive(false);
                     break;
+                case "AudioSource":
+                    TimeManager.Instance.music = _obj.GetComponent<AudioSource>();
+                    break;
+                case "TextUI":
+                    TimeManager.Instance.music = _obj.GetComponent<AudioSource>();
+                    break;
+
             }
             /*if (_obj.name == "Wall")
             {
@@ -77,22 +84,14 @@ public class SpawnManager : MonoBehaviour
         else
         {
             _obj.SetActive(true);
-            /*if(_obj.tag == "Projectile")
-            {
-                _obj.GetComponent<ProjectileSpawned>().RandomSpawn();
-            }*/
             _obj.transform.position = new Vector2(_obj.transform.position.x, _obj.GetComponent<SpawnObjects>().DistanceToSpawn);
         }
         if (_obj.tag == "Projectile")
         {
-            /*if (arrowIndicator.activeSelf)
-            {
-                GameObject _newIndicator = Instantiate(arrowIndicator);
-            }*/
             theObjectSpawn.GetComponent<ProjectileSpawned>().RandomSpawn();
             theObjectSpawn.SetActive(false);
             arrowIndicator.transform.parent.gameObject.SetActive(true);
-            arrowIndicator.transform.position = new Vector2(theObjectSpawn.transform.position.x, arrowIndicator.transform.position.y);
+            arrowIndicator.transform.position = new Vector2(theObjectSpawn.transform.position.x, arrowIndicator.transform.parent.position.y);
             StartCoroutine(ShowIndicatorBeforeSpawn(theObjectSpawn));
         }
         Invoke("SpawnAnObject", Random.Range(3f, maxSpawnTiming));
@@ -103,5 +102,11 @@ public class SpawnManager : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         arrowIndicator.transform.parent.gameObject.SetActive(false);
         ProjectileSpawned.SetActive(true);
+        StartCoroutine(SoundArrow(ProjectileSpawned.GetComponent<AudioSource>()));
+    }
+    IEnumerator SoundArrow(AudioSource sound)
+    {
+        yield return new WaitForSeconds(0.5f);
+        sound.Play();
     }
 }

@@ -11,8 +11,10 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer sr;
     Animator animator;
     float UpLimit;
+    AudioSource audioSource;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         speed = 0;
@@ -24,16 +26,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 velocite = new Vector2(speed * directionX * Time.deltaTime, directionY * Time.deltaTime);
         transform.Translate(velocite, Space.World);
-        /*if (speed > 0)
-        {
-            
-            
-        }
-        else
-        {
-
-        }*/
-        
     }
 
 
@@ -66,13 +58,11 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
                 break;
-            case "Projectile":
-                gameObject.SetActive(false);
-                Debug.Log("aie");
+            case "Projectile" :
+                Dead();
                 break;
             case "DeadLimit":
-                gameObject.SetActive(false);
-                Debug.Log("dead");
+                Dead();
                 break;
             case "UpLimit":
                 if(UpLimit == 0) 
@@ -85,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Wall" && speed==0)
+        if(collision.gameObject.tag == "Wall" && speed == 0)
         {
             directionY = -5;
         }
@@ -99,7 +89,14 @@ public class PlayerMovement : MonoBehaviour
             directionY = 0;
         }
         animator.SetBool("IsJumping", true);
+        audioSource.Play();
         speed = 25;
         
+    }
+
+    void Dead()
+    {
+        GameManager.Instance.PlayerDie(this);
+        gameObject.SetActive(false);
     }
 }
