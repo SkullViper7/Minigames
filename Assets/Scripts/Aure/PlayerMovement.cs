@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -35,30 +36,42 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+       
         switch (collision.gameObject.tag)
         {
             case "Wall":
-                animator.SetBool("IsJumping", false);
-                speed = 0;
-                Debug.Log("cha");
-                directionY = -2;
-                if (directionX > 0)
+                Transform theTransformCollision = collision.transform;
+                if (collision.ClosestPoint(transform.position).x < (theTransformCollision.position.x + (theTransformCollision.lossyScale.x / 2) * 80 / 100)
+                && collision.ClosestPoint(transform.position).x > (theTransformCollision.position.x - (theTransformCollision.lossyScale.x / 2) * 80 / 100))
                 {
-                    sr.flipY = false;
-                    directionX = -1;
+
                 }
                 else
                 {
-                    sr.flipY = true;
-                    directionX = 1;
+                    animator.SetBool("IsJumping", false);
+                    speed = 0;
+                    directionY = -1;
+                    if (directionX > 0)
+                    {
+                        sr.flipY = false;
+                        directionX = -1;
+                    }
+                    else
+                    {
+                        sr.flipY = true;
+                        directionX = 1;
+                    }
                 }
                 break;
             case "Projectile":
+                gameObject.SetActive(false);
                 Debug.Log("aie");
                 break;
             case "DeadLimit":
+                gameObject.SetActive(false);
                 Debug.Log("dead");
                 break;
             case "UpLimit":

@@ -44,7 +44,7 @@ public class SpawnManager : MonoBehaviour
                     break;
                 case "ArrowIndicator":
                     arrowIndicator = _obj;
-                    _obj.SetActive(false);
+                    _obj.transform.parent.gameObject.SetActive(false);
                     break;
             }
             /*if (_obj.name == "Wall")
@@ -91,7 +91,7 @@ public class SpawnManager : MonoBehaviour
             }*/
             theObjectSpawn.GetComponent<ProjectileSpawned>().RandomSpawn();
             theObjectSpawn.SetActive(false);
-            arrowIndicator.SetActive(true);
+            arrowIndicator.transform.parent.gameObject.SetActive(true);
             arrowIndicator.transform.position = new Vector2(theObjectSpawn.transform.position.x, arrowIndicator.transform.position.y);
             StartCoroutine(ShowIndicatorBeforeSpawn(theObjectSpawn));
         }
@@ -100,8 +100,8 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator ShowIndicatorBeforeSpawn(GameObject ProjectileSpawned)
     {
-        yield return new WaitForSeconds(0.4f);
-        arrowIndicator.SetActive(false);
+        yield return new WaitForSeconds(0.6f);
+        arrowIndicator.transform.parent.gameObject.SetActive(false);
         ProjectileSpawned.SetActive(true);
     }
 }
