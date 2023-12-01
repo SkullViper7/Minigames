@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class SlimeJumpManager : MonoBehaviour
 {
-    private static GameManager _instance = null;
-    public static GameManager Instance => _instance;
+    private static SlimeJumpManager _instance = null;
+    public static SlimeJumpManager Instance => _instance;
 
     List<PlayerMovement> _players = new List<PlayerMovement>();
 
