@@ -1278,6 +1278,36 @@ MonoBehaviour:
   - En Alabama, quel jour ne doit on pas jouer aux dominos ?
   - En Arizona, quel animal ne peut pas dormir dans une baignoire ?
   - "Dans le Connecticut, quel animal ne doit on pas \xE9duquer ?"
+  - "En Floride, quel moyen de transport n\xE9cessite un permis ?"
+  - "En G\xE9orgie, quel ustensil est il obligatoir de poss\xE9der ?"
+  - "En Idaho, sur le dos de quel animal n'a t on pas le droit de p\xEAcher ?"
+  - En Iowa, que ne doivent pas manger les chevaux ?
+  - En Louisiane, combien de sandwitch peut on manger au maximum lors d'un enterrement
+    ?
+  - Dans le Massachusetts, quel animal est il interdit d'effrayer ?
+  - "Au Minnesota, qu'est-ce que doivent avoir imp\xE9rtivement les baignoires ?"
+  - "Dans le Nevada, o\xF9 ne doit on pas amener un chameau ?"
+  - Dans le Dakota du Nord, avec quel accessoire est-il interdit de s'endormir ?
+  - "Dans l'Oregon, o\xF9 n'a t on pas le droit de siffler ?"
+  - En Caroline du Sud, que doivent porter les chevaux ?
+  - "Dans le Dakota du Sud, o\xF9 ne doit on pas s'endormir ?"
+  - Dans l'Utah, quel animal a un droit de passage sur l'autoroute ?
+  - En Virginie de l'Ouest, durant quel fourchette horaire les poules ont uniquement
+    le droit de pondre ?
+  - Dans le Wisconsin, de quelle couleur les femmes n'ont pas le droit de s'habiller
+    ?
+  - Dans le Wyoming, quel jour est il interdit de prendre une douche ?
+  - En Alaska, quel animal est interdit dans les barber shop ?
+  - "En Arkansas, quel couleur d'ampoule n'a pas le droit d'\xEAtre vendue ?"
+  - En Californie, combien de moutons peut-on promener au maximun sur Holliwood Boulevard
+    ?
+  - "Dans le Colorado, de quoi doivent \xEAtre \xE9quip\xE9s les chats pour pouvoir
+    courrir en libert\xE9 ?"
+  - "En Delaware, quel action est-il interdit de r\xE9aliser sur un pari ?"
+  - A Hawaii, quel objet ne doit-on pas mettre dans son oreille ?
+  - Dans l'Illinois, qu'est-ce que ne peuvent pas faire les moustachus ?
+  - En Indiana, qu'est-il interdit de faire en hiver ?
+  - Dans le Kansas, que ne doit-on mettre sous son chapeau ?
   questionNumber: 0
   questionText: {fileID: 1975079268}
 --- !u!1 &1403351216
@@ -1907,15 +1937,118 @@ MonoBehaviour:
   - Lundi
   - Chien
   - Ours
+  - Rollers
+  - Rateau
+  - Ours
+  - Miel
+  - 4
+  - Chat
+  - Rideau
+  - Autoroute
+  - Collier
+  - Enterrement
+  - Chapeau
+  - Mariage
+  - Marmottes
+  - 8H-16H
+  - Rose
+  - "F\xEAte nationale"
+  - Crocodile
+  - Rouge
+  - 2000
+  - Klaxon
+  - Mariage
+  - Pierre
+  - Boire
+  - Glisser sur la neige
+  - Rat
   answer2:
   - Dimanche
   - Chat
+  - Ecureuil
+  - Poussette
+  - Casque de chantier
+  - Cheval
+  - Bouche d'incendie
+  - 8
+  - Pigeon
+  - "Poign\xE9e"
+  - Canyon
+  - Chaussures
+  - Eglise
+  - Veste
+  - Magasin
+  - Oiseaux
+  - 9H-14H
+  - Noir
+  - Mercredi
+  - Kangourou
+  - Vert
+  - 10
+  - "Feu arri\xE8re"
+  - Change de nom
+  - "Pi\xE8ce"
+  - Porter des chapeaux
+  - Prendre un bain
+  - Fourmie
   answer3:
   - "Les jours f\xE9ri\xE9s"
-  - Loup
+  - Hamster
+  - Chien
+  - Skateboard
+  - Foreuse
+  - "El\xE9phant"
+  - Ballon
+  - 1
+  - Cheval
+  - Pieds
+  - Rooftop
+  - Chapeau
+  - Avion
+  - Pantalon
+  - "H\xE9licopt\xE8re"
+  - Cerfs
+  - 00H-12H
+  - Marron
+  - Dimanche
+  - Hippopotame
+  - Bleu
+  - 10000
+  - Gilet jaune
+  - Sauter en parachute
+  - Ciseaux
+  - Faire la grimace
+  - Laver sa voiture
+  - Abeille
   answer4:
   - Le 11 septembre
   - Singe
+  - Souris
+  - BMX
+  - Fusil
+  - Giraffe
+  - Chemise
+  - 3
+  - Crocodile
+  - Tapis
+  - Boite de nuit
+  - Lunettes
+  - Sous l'eau
+  - Chaussures
+  - "Usine \xE0 fromage"
+  - Ours
+  - 15H-20H
+  - Rouge
+  - Thanksgiving
+  - Ours blanc
+  - Rose
+  - 4
+  - Essuie glace
+  - Pranker un policier
+  - Aliments
+  - Embrasser une femme
+  - Courrir
+  - Ecureuil
   answerText1: {fileID: 1816373967}
   answerText2: {fileID: 1739366587}
   answerText3: {fileID: 641742980}
