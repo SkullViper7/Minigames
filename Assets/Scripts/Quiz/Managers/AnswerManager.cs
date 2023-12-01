@@ -8,6 +8,8 @@ public class AnswerManager : MonoBehaviour
 
     [Space]
     public ScoreManager scoreManager;
+    public QuestionManager questionManager;
+    public AnswerTextManager answerTextManager;
 
     GameObject player1;
     GameObject player2;
@@ -17,20 +19,20 @@ public class AnswerManager : MonoBehaviour
     private void Start()
     {
         correctAnswer = 1;
-        Invoke("AnswerCheck", 10);
+        Invoke("AnswerCheck", 3);
     }
 
     public void AnswerCheck()
     {
-        player1 = GameObject.FindGameObjectWithTag("Player1");
-        player2 = GameObject.FindGameObjectWithTag("Player2");
-        player3 = GameObject.FindGameObjectWithTag("Player3");
-        player4 = GameObject.FindGameObjectWithTag("Player4");
+        //player1 = GameObject.FindGameObjectWithTag("Player1");
+        //player2 = GameObject.FindGameObjectWithTag("Player2");
+        //player3 = GameObject.FindGameObjectWithTag("Player3");
+        //player4 = GameObject.FindGameObjectWithTag("Player4");
 
-        if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
-        {
-            scoreManager.AddScore(scoreManager.player1Score);
-        }
+        //if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
+        //{
+        //    scoreManager.AddScore(scoreManager.player1Score);
+        //}
 
         //if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
         //{
@@ -46,5 +48,19 @@ public class AnswerManager : MonoBehaviour
         //{
         //    scoreManager.AddScore(scoreManager.player4Score);
         //}
+
+        LoadNextQuestion();
+    }
+
+    void LoadNextQuestion()
+    {
+        int questionPicked = Random.Range(0, questionManager.questions.Count);
+        questionManager.QuestionWrite(questionManager.questions[questionPicked]);
+        answerTextManager.AnswerWrite(answerTextManager.firstAnswer[questionPicked],
+            answerTextManager.secondAnswer[questionPicked],
+            answerTextManager.thirdAnswer[questionPicked],
+           answerTextManager.fourthAnswer[questionPicked]);
+
+        Invoke("AnswerCheck", 3);
     }
 }

@@ -39,5 +39,8 @@ public class SpawnObjects : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        
     }
+
+
 }

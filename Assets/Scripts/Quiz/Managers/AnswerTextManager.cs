@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class AnswerTextManager : MonoBehaviour
 {
-    public string[] answer1;
-    public string[] answer2;
-    public string[] answer3;
-    public string[] answer4;
+    public List<string> firstAnswer;
+    public List<string> secondAnswer;
+    public List<string> thirdAnswer;
+    public List<string> fourthAnswer;
 
     [Space]
     public TMP_Text answerText1; 
@@ -21,8 +21,8 @@ public class AnswerTextManager : MonoBehaviour
 
     private void Start()
     {
-        AnswerWrite(answer1[questionManager.questionNumber], answer2[questionManager.questionNumber], 
-            answer3[questionManager.questionNumber], answer4[questionManager.questionNumber]);
+        AnswerWrite(firstAnswer[questionManager.questionPicked], secondAnswer[questionManager.questionPicked], 
+            thirdAnswer[questionManager.questionPicked], fourthAnswer[questionManager.questionPicked]);
     }
 
     public void AnswerWrite(string answer1, string answer2, string answer3, string answer4)
@@ -31,5 +31,10 @@ public class AnswerTextManager : MonoBehaviour
         answerText2.text = answer2;
         answerText3.text = answer3;
         answerText4.text = answer4;
+
+        firstAnswer.Remove(answer1);
+        secondAnswer.Remove(answer2);
+        thirdAnswer.Remove(answer3);
+        fourthAnswer.Remove(answer4);
     }
 }
