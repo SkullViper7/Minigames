@@ -1275,7 +1275,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - Quelle est la couleur du cheval blanc d'Henri IV ?
+  - En Alabama, quel jour ne doit on pas jouer aux dominos ?
+  - En Arizona, quel animal ne peut pas dormir dans une baignoire ?
+  - "Dans le Connecticut, quel animal ne doit on pas \xE9duquer ?"
   questionNumber: 0
   questionText: {fileID: 1975079268}
 --- !u!1 &1403351216
@@ -1902,13 +1904,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   answer1:
-  - Blanc
+  - Lundi
+  - Chien
+  - Ours
   answer2:
-  - Rouge
+  - Dimanche
+  - Chat
   answer3:
-  - Taupe
+  - "Les jours f\xE9ri\xE9s"
+  - Loup
   answer4:
-  - Fushia
+  - Le 11 septembre
+  - Singe
   answerText1: {fileID: 1816373967}
   answerText2: {fileID: 1739366587}
   answerText3: {fileID: 641742980}
