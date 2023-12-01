@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour
     public Player player4SO;
 
     [Space]
-    public PlayerInputManager inputManager;
+    public UnityEngine.InputSystem.PlayerInputManager inputManager;
     public Transform player1Holder;
     public Transform player2Holder;
     public Transform player3Holder;
