@@ -1308,6 +1308,25 @@ MonoBehaviour:
   - Dans l'Illinois, qu'est-ce que ne peuvent pas faire les moustachus ?
   - En Indiana, qu'est-il interdit de faire en hiver ?
   - Dans le Kansas, que ne doit-on mettre sous son chapeau ?
+  - "Au Kentucky, combien de fois peut-on marrier la m\xEAme femme ?"
+  - "Dans le Maine, jusqu'\xE0 quelle date peut-on garder ses d\xE9corations de no\xEBl
+    ?"
+  - "Dans le Maryland, quel animal est interdit dans les cin\xE9mas ?"
+  - Au Mississipi, que doit porter votre chien pour aller le promener ?
+  - "Au Missouri, quelle activit\xE9 est interdite ?"
+  - Dans le Nebraska, dans quelle fourchette horaire les barbers n'ont pas le droit
+    de manger des oignons ?
+  - "Au New Jersey, que ne peut-on pas faire sans une ordonnance de son medecin apr\xE8s
+    18H ?"
+  - "A New York, \xE0 partir de quelle ne peut-on pas mettre de chaussons ?"
+  - En Caroline du Nord, pendant combien de secondes peut-on chanter faux au maximum
+    ?
+  - Dans l'Ohio, dans quelle situation est-il interdit de manger un donut ?
+  - "En Oklahoma, que ne faut-il pas faire sans la supervision d'un ing\xE9nieur
+    ?"
+  - "En Pennsylvanie, qu'est-ce qu'il ne faut pas faire lors d'un concert \xE0 l'auditorium
+    de Barnstormers ?"
+  - Au Tennessee, quel animal ne peut-on pas capturer au lasso ?
   questionNumber: 0
   questionText: {fileID: 1975079268}
 --- !u!1 &1403351216
@@ -1962,6 +1981,19 @@ MonoBehaviour:
   - Boire
   - Glisser sur la neige
   - Rat
+  - 7
+  - 14 Janvier
+  - Renard
+  - Chapeau
+  - Chanter
+  - 12H-14H
+  - Acheter une glace
+  - 00H
+  - 5
+  - En dansant
+  - Ouvrir un soda
+  - Danser la country
+  - Cheval
   answer2:
   - Dimanche
   - Chat
@@ -1991,6 +2023,19 @@ MonoBehaviour:
   - Porter des chapeaux
   - Prendre un bain
   - Fourmie
+  - 3
+  - "23 d\xE9cembre"
+  - Giraffe
+  - Chaussures
+  - Rigoler
+  - 7H-19H
+  - "Acheter des m\xE9dicaments"
+  - 16H
+  - 60
+  - A reculons
+  - Couper du papier
+  - Jeter des pierres
+  - Poisson
   answer3:
   - "Les jours f\xE9ri\xE9s"
   - Hamster
@@ -2020,6 +2065,19 @@ MonoBehaviour:
   - Faire la grimace
   - Laver sa voiture
   - Abeille
+  - 5
+  - 1er janvier
+  - Lion
+  - Rollers
+  - Dancer
+  - 8H-17H
+  - Courir
+  - 8H
+  - 90
+  - "Dans un helicopt\xE8re"
+  - Gonfler un ballon
+  - "Manger des cacahu\xE8tes \xE0 reculons"
+  - Oiseaux
   answer4:
   - Le 11 septembre
   - Singe
@@ -2049,6 +2107,19 @@ MonoBehaviour:
   - Embrasser une femme
   - Courrir
   - Ecureuil
+  - 1
+  - 20 juin
+  - Castor
+  - Couche
+  - Crier
+  - 00H-4H
+  - Chanter
+  - 22H
+  - 15
+  - En conduisant
+  - Laver sa voiture
+  - Faire du monocycle saoul
+  - "Li\xE8vre"
   answerText1: {fileID: 1816373967}
   answerText2: {fileID: 1739366587}
   answerText3: {fileID: 641742980}
