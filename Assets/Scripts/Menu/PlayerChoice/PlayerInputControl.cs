@@ -5,54 +5,15 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerInputControl : MonoBehaviour
+
 {
+    private PlayerInput playerInput;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        gameObject.name = "PlayerInputControl" + GameManager.Instance.playerCount.ToString();
+        playerInput = GetComponent<PlayerInput>();
+        playerInput.SwitchCurrentActionMap(GameManager.Instance.game);
     }
-
-    public void OnAction(InputAction.CallbackContext context)
-    {
-
-    }
-
-    //Quiz
-    public void OnAnswer1()
-    {
-
-    }
-
-    public void OnAnswer2()
-    {
-
-    }
-
-    public void OnAnswer3()
-    {
-
-    }
-
-    public void OnAnswer4()
-    {
-        
-    }
-
-    //RocketRide
-    public void OnOrientationGamepad()
-    {
-
-    }
-
-    public void OnPropulsionGamepad()
-    {
-
-    }
-
-    //BTBloc
-    public void OnNorth()
-    {
-
-    }
-
-    //SlimeJump
 }
