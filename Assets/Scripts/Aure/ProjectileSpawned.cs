@@ -5,11 +5,7 @@ using UnityEngine;
 public class ProjectileSpawned : SpawnObjects
 {
     public List<float> positionRandomToSpawnOnX = new List<float>();
-    // Start is called before the first frame update
-    void Start()
-    {
-        RandomSpawn();
-    }
+    
 
     public void RandomSpawn()
     {
