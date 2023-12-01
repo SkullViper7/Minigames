@@ -5,19 +5,22 @@ using UnityEngine;
 
 public class QuestionManager : MonoBehaviour
 {
-    public string[] questions;
-    public int questionNumber;
+    public List<string> questions;
+
+    public int questionPicked;
 
     [Space]
     public TMP_Text questionText;
 
     private void Start()
     {
-        QuestionWrite(questions[questionNumber]);
+        questionPicked = Random.Range(0, questions.Count);
+        QuestionWrite(questions[questionPicked]);
     }
 
     public void QuestionWrite(string question)
     {
         questionText.text = question;
+        questions.Remove(question);
     }
 }

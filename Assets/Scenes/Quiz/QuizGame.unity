@@ -419,6 +419,7 @@ RectTransform:
   - {fileID: 1975079267}
   - {fileID: 52607785}
   - {fileID: 1403351217}
+  - {fileID: 222935767}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -461,6 +462,81 @@ RectTransform:
   m_AnchoredPosition: {x: -25, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &222935766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 222935767}
+  - component: {fileID: 222935769}
+  - component: {fileID: 222935768}
+  m_Layer: 5
+  m_Name: Logo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &222935767
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222935766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5.5608, y: 5.5608, z: 5.5608}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 135739429}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 330}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &222935768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222935766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 308a3b3f63e0e154082b36ab31aaa1c9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &222935769
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222935766}
+  m_CullTransparentMesh: 1
 --- !u!1 &329383816
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +718,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctAnswer: 0
   scoreManager: {fileID: 106265156}
+  questionManager: {fileID: 1303899939}
+  answerTextManager: {fileID: 1831056239}
 --- !u!4 &369025602
 Transform:
   m_ObjectHideFlags: 0
@@ -808,8 +886,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 614b53713e28b554dbb71367888c673c, type: 2}
+  m_sharedMaterial: {fileID: 8327831447776781564, guid: 614b53713e28b554dbb71367888c673c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1327,7 +1406,7 @@ MonoBehaviour:
   - "En Pennsylvanie, qu'est-ce qu'il ne faut pas faire lors d'un concert \xE0 l'auditorium
     de Barnstormers ?"
   - Au Tennessee, quel animal ne peut-on pas capturer au lasso ?
-  questionNumber: 0
+  questionPicked: 0
   questionText: {fileID: 1975079268}
 --- !u!1 &1403351216
 GameObject:
@@ -1407,7 +1486,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550756223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d36734d50d091be4289a0348f03f2440, type: 3}
   m_Name: 
@@ -1624,8 +1703,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 614b53713e28b554dbb71367888c673c, type: 2}
+  m_sharedMaterial: {fileID: 8327831447776781564, guid: 614b53713e28b554dbb71367888c673c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1758,8 +1838,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 614b53713e28b554dbb71367888c673c, type: 2}
+  m_sharedMaterial: {fileID: 8327831447776781564, guid: 614b53713e28b554dbb71367888c673c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1952,7 +2033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fb1e5a262f3af4f8d4f8f2bd5fb6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  answer1:
+  firstAnswer:
   - Lundi
   - Chien
   - Ours
@@ -1994,7 +2075,7 @@ MonoBehaviour:
   - Ouvrir un soda
   - Danser la country
   - Cheval
-  answer2:
+  secondAnswer:
   - Dimanche
   - Chat
   - Ecureuil
@@ -2018,7 +2099,7 @@ MonoBehaviour:
   - Vert
   - 10
   - "Feu arri\xE8re"
-  - Change de nom
+  - Changer de nom
   - "Pi\xE8ce"
   - Porter des chapeaux
   - Prendre un bain
@@ -2036,7 +2117,7 @@ MonoBehaviour:
   - Couper du papier
   - Jeter des pierres
   - Poisson
-  answer3:
+  thirdAnswer:
   - "Les jours f\xE9ri\xE9s"
   - Hamster
   - Chien
@@ -2053,7 +2134,7 @@ MonoBehaviour:
   - Pantalon
   - "H\xE9licopt\xE8re"
   - Cerfs
-  - 00H-12H
+  - 00-12H
   - Marron
   - Dimanche
   - Hippopotame
@@ -2074,11 +2155,11 @@ MonoBehaviour:
   - Courir
   - 8H
   - 90
-  - "Dans un helicopt\xE8re"
+  - "Dans un h\xE9licopt\xE8re"
   - Gonfler un ballon
-  - "Manger des cacahu\xE8tes \xE0 reculons"
+  - "Manger des cacah\xE8tes \xE0 reculons"
   - Oiseaux
-  answer4:
+  fourthAnswer:
   - Le 11 septembre
   - Singe
   - Souris
@@ -2105,21 +2186,21 @@ MonoBehaviour:
   - Pranker un policier
   - Aliments
   - Embrasser une femme
-  - Courrir
+  - Courir
   - Ecureuil
   - 1
   - 20 juin
   - Castor
   - Couche
   - Crier
-  - 00H-4H
+  - 00H-14H
   - Chanter
   - 22H
   - 15
   - En conduisant
   - Laver sa voiture
   - Faire du monocycle saoul
-  - "Li\xE8vre"
+  - "Li\xE8v"
   answerText1: {fileID: 1816373967}
   answerText2: {fileID: 1739366587}
   answerText3: {fileID: 641742980}
@@ -2184,8 +2265,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 614b53713e28b554dbb71367888c673c, type: 2}
+  m_sharedMaterial: {fileID: 8327831447776781564, guid: 614b53713e28b554dbb71367888c673c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2388,8 +2470,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 614b53713e28b554dbb71367888c673c, type: 2}
+  m_sharedMaterial: {fileID: 8327831447776781564, guid: 614b53713e28b554dbb71367888c673c,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
