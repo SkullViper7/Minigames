@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Dead()
     {
-        GameManager.Instance.PlayerDie(this);
+        SlimeJumpManager.Instance.PlayerDie(this);
         gameObject.SetActive(false);
     }
 }

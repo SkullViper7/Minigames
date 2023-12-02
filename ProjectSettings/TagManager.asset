@@ -41,10 +41,10 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Cam P1
+  - Cam P2
+  - Cam P3
+  - Cam P4
   m_SortingLayers:
   - name: Default
     uniqueID: 0
