@@ -11,6 +11,7 @@ public class PlayerInputControl : MonoBehaviour
 
     private void Awake()
     {
+        //Set the player Input Control prefab in don't destroy on load with a unique name and the good action map
         DontDestroyOnLoad(gameObject);
         gameObject.name = "PlayerInputControl" + GameManager.Instance.playerCount.ToString();
         playerInput = GetComponent<PlayerInput>();

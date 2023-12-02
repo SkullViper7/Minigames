@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class PlayerCounter : MonoBehaviour
 {
     private PlayerInputManager playerInputManager;
+    public GameObject launchGameButton;
+    public GameObject instruction;
+    public List<GameObject> playerHolders = new();
 
     private void Start()
     {
@@ -25,11 +28,15 @@ public class PlayerCounter : MonoBehaviour
         {
             GameManager.Instance.playerCount++;
         }
-    }
 
-    public void OnPlayerDisconnected()
-    {
-        //Remove a player in the count if a player quites
-        GameManager.Instance.playerCount--;
+        //Active the player holder associated to the player who has joined
+        playerHolders[GameManager.Instance.playerCount - 1].SetActive(true);
+
+        if (GameManager.Instance.playerCount == GameManager.Instance.maxPlayerCount)
+        {
+            //Active the button to launch the game when everyone is connected
+            instruction.SetActive(false);
+            launchGameButton.SetActive(true);
+        }
     }
 }

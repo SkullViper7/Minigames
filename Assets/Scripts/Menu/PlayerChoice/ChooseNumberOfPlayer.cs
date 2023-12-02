@@ -10,6 +10,7 @@ public class ChooseNumberOfPlayer : MonoBehaviour
 
     public void Click(int _numberOfPlayer)
     {
+        //Set the max number of player and show the lobby screen
         GameManager.Instance.maxPlayerCount = _numberOfPlayer;
         lobbyWindow.SetActive(true);
         choiceWindow.SetActive(false);
