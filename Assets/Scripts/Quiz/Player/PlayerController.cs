@@ -18,21 +18,64 @@ public class PlayerController : MonoBehaviour
 
     private void LinkPlayerToDevice()
     {
-        //Determine which PlayerInputControl to find depending of the name of the rocket
-        switch (gameObject.name)
+        if (!GameManager.Instance.isOnKeyboard)
         {
-            case "Player1":
-                TryToFindController("PlayerInputControl1");
-                break;
-            case "Player2":
-                TryToFindController("PlayerInputControl2");
-                break;
-            case "Player3":
-                TryToFindController("PlayerInputControl3");
-                break;
-            case "Player4":
-                TryToFindController("PlayerInputControl4");
-                break;
+            //Determine which PlayerInputControl to find depending of the name of the rocket
+            switch (gameObject.name)
+            {
+                case "Player1":
+                    TryToFindController("PlayerInputControl1");
+                    break;
+                case "Player2":
+                    TryToFindController("PlayerInputControl2");
+                    break;
+                case "Player3":
+                    TryToFindController("PlayerInputControl3");
+                    break;
+                case "Player4":
+                    TryToFindController("PlayerInputControl4");
+                    break;
+            }
+        }
+
+        else
+        {
+            switch (gameObject.name)
+            {
+                case "Player1":
+                    gameObject.SetActive(true);
+
+                    break;
+
+                case "Player2":
+                    gameObject.SetActive(true);
+                    break;
+
+                case "Player3":
+                    if (GameManager.Instance.maxPlayerCount >= 3)
+                    {
+                        gameObject.SetActive(true);
+                    }
+
+                    else
+                    {
+                        gameObject.SetActive(false);
+                    }
+                    break;
+
+                case "Player4":
+                    if (GameManager.Instance.maxPlayerCount == 4)
+                    {
+                        gameObject.SetActive(true);
+                    }
+
+                    else
+                    {
+                        gameObject.SetActive(false);
+                    }
+                    break;
+            }
+
         }
     }
 

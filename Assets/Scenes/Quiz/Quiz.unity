@@ -853,6 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c6683b7a3fd7ab498dffefbafea9e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctAnswers: 0200000004000000030000000300000001000000040000000200000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   correctAnswer: 0
   scoreManager: {fileID: 106265156}
   questionManager: {fileID: 1303899939}
@@ -1767,7 +1768,7 @@ MonoBehaviour:
   questions:
   - En Alabama, quel jour ne doit on pas jouer aux dominos ?
   - En Arizona, quel animal ne peut pas dormir dans une baignoire ?
-  - "Dans le Connecticut, quel animal ne doit on pas \xE9duquer ?"
+  - Dans le Connecticut, quel animal ne doit on pas dresser ?
   - "En Floride, quel moyen de transport n\xE9cessite un permis ?"
   - "En G\xE9orgie, quel ustensil est il obligatoir de poss\xE9der ?"
   - "En Idaho, sur le dos de quel animal n'a t on pas le droit de p\xEAcher ?"
@@ -2520,7 +2521,7 @@ MonoBehaviour:
   - Oiseaux
   fourthAnswer:
   - Le 11 septembre
-  - Singe
+  - Ane
   - Souris
   - BMX
   - Fusil

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnswerManager : MonoBehaviour
 {
+    public List<int> correctAnswers;
     public int correctAnswer;
 
     [Space]
@@ -18,36 +19,78 @@ public class AnswerManager : MonoBehaviour
 
     private void Start()
     {
-        correctAnswer = 1;
         Invoke("AnswerCheck", 3);
     }
 
     public void AnswerCheck()
     {
-        //player1 = GameObject.FindGameObjectWithTag("Player1");
-        //player2 = GameObject.FindGameObjectWithTag("Player2");
-        //player3 = GameObject.FindGameObjectWithTag("Player3");
-        //player4 = GameObject.FindGameObjectWithTag("Player4");
+        correctAnswer = correctAnswers[questionManager.questionPicked];
 
-        //if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
-        //{
-        //    scoreManager.AddScore(scoreManager.player1Score);
-        //}
+        if (GameManager.Instance.maxPlayerCount == 2)
+        {
+            player1 = GameObject.FindGameObjectWithTag("Player1");
+            player2 = GameObject.FindGameObjectWithTag("Player2");
 
-        //if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
-        //{
-        //    scoreManager.AddScore(scoreManager.player2Score);
-        //}
+            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(scoreManager.player1Score);
+            }
 
-        //if (player3.GetComponent<PlayerController>().answerChosed == correctAnswer)
-        //{
-        //    scoreManager.AddScore(scoreManager.player3Score);
-        //}
+            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(scoreManager.player2Score);
+            }
+        }
 
-        //if (player4.GetComponent<PlayerController>().answerChosed == correctAnswer)
-        //{
-        //    scoreManager.AddScore(scoreManager.player4Score);
-        //}
+        if (GameManager.Instance.maxPlayerCount == 3)
+        {
+            player1 = GameObject.FindGameObjectWithTag("Player1");
+            player2 = GameObject.FindGameObjectWithTag("Player2");
+            player3 = GameObject.FindGameObjectWithTag("Player3");
+
+            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(scoreManager.player1Score);
+            }
+
+            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(scoreManager.player2Score);
+            }
+
+            if (player3.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(scoreManager.player3Score);
+            }
+        }
+
+        if (GameManager.Instance.maxPlayerCount == 4)
+        {
+            player1 = GameObject.FindGameObjectWithTag("Player1");
+            player2 = GameObject.FindGameObjectWithTag("Player2");
+            player3 = GameObject.FindGameObjectWithTag("Player3");
+            player4 = GameObject.FindGameObjectWithTag("Player4");
+
+            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(scoreManager.player1Score);
+            }
+
+            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(scoreManager.player2Score);
+            }
+
+            if (player3.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(scoreManager.player3Score);
+            }
+
+            if (player4.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(scoreManager.player4Score);
+            }
+        }
 
         LoadNextQuestion();
     }
