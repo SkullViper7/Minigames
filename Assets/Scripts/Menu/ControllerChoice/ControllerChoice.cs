@@ -11,7 +11,7 @@ public class ControllerChoice : MonoBehaviour
 
         if (_isKeyboard)
         {
-            SceneManager.LoadScene(GameManager.Instance.game);
+            SceneManager.LoadScene("PlayerChoiceWithKeyboard");
         }
         else
         {

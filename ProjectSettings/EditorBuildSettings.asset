@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main/ControllerChoice.unity
     guid: a10cd1d388c353d488afb3545b68430c
   - enabled: 1
+    path: Assets/Scenes/Main/PlayerChoiceWithKeyboard.unity
+    guid: e39a991a7b5e8654b87710bde372164b
+  - enabled: 1
     path: Assets/Scenes/Main/PlayerChoiceWithGamepad.unity
     guid: 0fd67d6a40f408246b09390fdfbb7b11
   - enabled: 1

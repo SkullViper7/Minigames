@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ChooseNumberOfPlayer : MonoBehaviour
+public class ChooseNumberOfPlayerWithGamepad : MonoBehaviour
 {
     public GameObject choiceWindow;
     public GameObject lobbyWindow;
