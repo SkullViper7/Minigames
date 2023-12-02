@@ -19,84 +19,115 @@ public class AnswerManager : MonoBehaviour
 
     private void Start()
     {
-        Invoke("AnswerCheck", 3);
-    }
-
-    public void AnswerCheck()
-    {
-        correctAnswer = correctAnswers[questionManager.questionPicked];
-
         if (GameManager.Instance.maxPlayerCount == 2)
         {
             player1 = GameObject.FindGameObjectWithTag("Player1");
             player2 = GameObject.FindGameObjectWithTag("Player2");
-
-            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(scoreManager.player1Score);
-            }
-
-            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(scoreManager.player2Score);
-            }
         }
-
         if (GameManager.Instance.maxPlayerCount == 3)
         {
             player1 = GameObject.FindGameObjectWithTag("Player1");
             player2 = GameObject.FindGameObjectWithTag("Player2");
             player3 = GameObject.FindGameObjectWithTag("Player3");
-
-            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(scoreManager.player1Score);
-            }
-
-            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(scoreManager.player2Score);
-            }
-
-            if (player3.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(scoreManager.player3Score);
-            }
         }
-
         if (GameManager.Instance.maxPlayerCount == 4)
         {
             player1 = GameObject.FindGameObjectWithTag("Player1");
             player2 = GameObject.FindGameObjectWithTag("Player2");
             player3 = GameObject.FindGameObjectWithTag("Player3");
             player4 = GameObject.FindGameObjectWithTag("Player4");
+        }
 
+        Invoke("AnswerCheck", 10);
+    }
+
+    private void Update()
+    {
+        correctAnswer = correctAnswers[questionManager.questionPicked];
+    }
+
+    public void AnswerCheck()
+    {
+        if (GameManager.Instance.maxPlayerCount == 2)
+        {
             if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
             {
-                scoreManager.AddScore(scoreManager.player1Score);
+                scoreManager.AddScore(1, 1);
             }
 
             if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
             {
-                scoreManager.AddScore(scoreManager.player2Score);
+                scoreManager.AddScore(2, 1);
+            }
+        }
+
+        if (GameManager.Instance.maxPlayerCount == 3)
+        {
+            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(1,  1);
+            }
+
+            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(2, 1);
             }
 
             if (player3.GetComponent<PlayerController>().answerChosed == correctAnswer)
             {
-                scoreManager.AddScore(scoreManager.player3Score);
+                scoreManager.AddScore(3, 1);
+            }
+        }
+
+        if (GameManager.Instance.maxPlayerCount == 4)
+        {
+            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(1, 1);
+            }
+
+            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(2, 1);
+            }
+
+            if (player3.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            {
+                scoreManager.AddScore(3, 1);
             }
 
             if (player4.GetComponent<PlayerController>().answerChosed == correctAnswer)
             {
-                scoreManager.AddScore(scoreManager.player4Score);
+                scoreManager.AddScore(4, 1);
             }
         }
+
+        correctAnswers.Remove(correctAnswer);
 
         LoadNextQuestion();
     }
 
     void LoadNextQuestion()
     {
+        if (GameManager.Instance.maxPlayerCount == 2)
+        {
+            player1.GetComponent<PlayerController>().answerChosed = 0;
+            player2.GetComponent<PlayerController>().answerChosed = 0;
+        }
+        if (GameManager.Instance.maxPlayerCount == 3)
+        {
+            player1.GetComponent<PlayerController>().answerChosed = 0;
+            player2.GetComponent<PlayerController>().answerChosed = 0;
+            player3.GetComponent<PlayerController>().answerChosed = 0;
+        }
+        if (GameManager.Instance.maxPlayerCount == 4)
+        {
+            player1.GetComponent<PlayerController>().answerChosed = 0;
+            player2.GetComponent<PlayerController>().answerChosed = 0;
+            player3.GetComponent<PlayerController>().answerChosed = 0;
+            player4.GetComponent<PlayerController>().answerChosed = 0;
+        }
+
         int questionPicked = Random.Range(0, questionManager.questions.Count);
         questionManager.QuestionWrite(questionManager.questions[questionPicked]);
         answerTextManager.AnswerWrite(answerTextManager.firstAnswer[questionPicked],
@@ -104,6 +135,6 @@ public class AnswerManager : MonoBehaviour
             answerTextManager.thirdAnswer[questionPicked],
            answerTextManager.fourthAnswer[questionPicked]);
 
-        Invoke("AnswerCheck", 3);
+        Invoke("AnswerCheck", 10);
     }
 }
