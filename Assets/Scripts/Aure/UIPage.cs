@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIPage : MonoBehaviour
 {
-    //public text
+    public TextMeshProUGUI _TextEarly;
+    public TextMeshProUGUI _PlayerDeadUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +17,23 @@ public class UIPage : MonoBehaviour
     void Update()
     {
         
+    }
+    public IEnumerator AnnounceTheGame()
+    {
+        _TextEarly.text = "3";
+        yield return new WaitForSeconds(1f);
+        _TextEarly.text = "2";
+        yield return new WaitForSeconds(1f);
+        _TextEarly.text = "1";
+        yield return new WaitForSeconds(1f);
+        _TextEarly.text = "GO";
+        GameManager.Instance.StartTheGame();
+        yield return new WaitForSeconds(1f);
+        _TextEarly.gameObject.SetActive(false);
+    }
+
+    public void ChangeNamePlayerDeadUI(GameObject player)
+    {
+        _PlayerDeadUI.text = player.name + "is OUT";
     }
 }

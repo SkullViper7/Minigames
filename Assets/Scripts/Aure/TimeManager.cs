@@ -23,7 +23,7 @@ public class TimeManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void GameStart()
     {
         timeMultiplicator = 0.9f;
         timingToSpeedUp = 3;

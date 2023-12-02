@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -28,6 +30,7 @@ public class SpawnManager : MonoBehaviour
     private void Start()
     {
         maxSpawnTiming = 5;
+        UIPage _UI = GameManager.Instance.UI;
         foreach (GameObject _obj in FindObjectsOfType(typeof(GameObject)))
         {
             switch (_obj.name)
@@ -49,27 +52,19 @@ public class SpawnManager : MonoBehaviour
                 case "AudioSource":
                     TimeManager.Instance.music = _obj.GetComponent<AudioSource>();
                     break;
-                case "TextUI":
-                    TimeManager.Instance.music = _obj.GetComponent<AudioSource>();
+                case "TextEarly":
+                    _UI._TextEarly = _obj.GetComponent<TextMeshProUGUI>();
+                    StartCoroutine(_UI.AnnounceTheGame());
                     break;
-
+                case "TextDeadPlayer":
+                    _UI._PlayerDeadUI = _obj.GetComponent<TextMeshProUGUI>();
+                    _obj.SetActive(false);
+                    break;
+                    
             }
-            /*if (_obj.name == "Wall")
-            {
-                wall = _obj;
-                _obj.SetActive(false);
-                spawnObject.Add(_obj);
-            }
-            if (_obj.name == "Projectile")
-            {
-                projectile = _obj;
-                _obj.SetActive(false);
-                spawnObject.Add(_obj);
-            }*/
         }
-        Invoke("SpawnAnObject", Random.Range(3f, maxSpawnTiming));
     }
-    void SpawnAnObject()
+    public void SpawnAnObject()
     {
         GameObject _obj = spawnObject[Random.Range(0, spawnObject.Count)];
         GameObject theObjectSpawn = _obj;
@@ -94,7 +89,7 @@ public class SpawnManager : MonoBehaviour
             arrowIndicator.transform.position = new Vector2(theObjectSpawn.transform.position.x, arrowIndicator.transform.parent.position.y);
             StartCoroutine(ShowIndicatorBeforeSpawn(theObjectSpawn));
         }
-        Invoke("SpawnAnObject", Random.Range(3f, maxSpawnTiming));
+        InvokeTheSpawn();
     }
 
     IEnumerator ShowIndicatorBeforeSpawn(GameObject ProjectileSpawned)
@@ -108,5 +103,10 @@ public class SpawnManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         sound.Play();
+    }
+
+    public void InvokeTheSpawn()
+    {
+        Invoke("SpawnAnObject", Random.Range(3f, maxSpawnTiming));
     }
 }

@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance = null;
     public static GameManager Instance => _instance;
 
-    List<PlayerMovement> _players = new List<PlayerMovement>();
+    public List<PlayerMovement> _players = new List<PlayerMovement>();
 
-    UIPage UI;
+    public UIPage UI;
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
-        UI = new UIPage();
+        UI = gameObject.AddComponent<UIPage>();
     }
     void Start()
     {
@@ -36,7 +36,24 @@ public class GameManager : MonoBehaviour
 
     public void PlayerDie(PlayerMovement theDeadPlayer)
     {
-        
-        _players.Remove(theDeadPlayer);
+        if(_players.Count != 1)
+        {
+            UI.ChangeNamePlayerDeadUI(theDeadPlayer.gameObject);
+            _players.Remove(theDeadPlayer);
+        }
+        else
+        {
+
+        }
+    }
+
+    public void StartTheGame()
+    {
+        TimeManager.Instance.GameStart();
+        SpawnManager.Instance.InvokeTheSpawn();
+        foreach (var player in _players) 
+        {
+            player.GameStart();
+        }
     }
 }

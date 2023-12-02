@@ -12,14 +12,21 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     float UpLimit;
     AudioSource audioSource;
-    void Start()
+
+
+    private void Start()
     {
+        GameManager.Instance._players.Add(this);
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+    }
+    public void GameStart()
+    {
+        
         speed = 0;
-        directionX = -1;
-        directionY = -2;
+        directionX = 1;
+        directionY = -1;
     }
 
     private void FixedUpdate()
@@ -31,46 +38,48 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        switch (collision.gameObject.tag)
+        if (directionX != 0)
         {
-            case "Wall":
-                Transform theTransformCollision = collision.transform;
-                if (collision.ClosestPoint(transform.position).x < (theTransformCollision.position.x + (theTransformCollision.lossyScale.x / 2) * 80 / 100)
-                && collision.ClosestPoint(transform.position).x > (theTransformCollision.position.x - (theTransformCollision.lossyScale.x / 2) * 80 / 100))
-                {
-
-                }
-                else
-                {
-                    animator.SetBool("IsJumping", false);
-                    speed = 0;
-                    directionY = -1;
-                    if (directionX > 0)
+            switch (collision.gameObject.tag)
+            {
+                case "Wall":
+                    Transform theTransformCollision = collision.transform;
+                    if (collision.ClosestPoint(transform.position).x < (theTransformCollision.position.x + (theTransformCollision.lossyScale.x / 2) * 80 / 100)
+                    && collision.ClosestPoint(transform.position).x > (theTransformCollision.position.x - (theTransformCollision.lossyScale.x / 2) * 80 / 100))
                     {
-                        sr.flipY = false;
-                        directionX = -1;
+
                     }
                     else
                     {
-                        sr.flipY = true;
-                        directionX = 1;
+                        animator.SetBool("IsJumping", false);
+                        speed = 0;
+                        directionY = -1;
+                        if (directionX > 0)
+                        {
+                            sr.flipY = false;
+                            directionX = -1;
+                        }
+                        else
+                        {
+                            sr.flipY = true;
+                            directionX = 1;
+                        }
                     }
-                }
-                break;
-            case "Projectile" :
-                Dead();
-                break;
-            case "DeadLimit":
-                Dead();
-                break;
-            case "UpLimit":
-                if(UpLimit == 0) 
-                {
-                    UpLimit = collision.transform.position.y;
-                }
-                break;
-        }        
+                    break;
+                case "Projectile":
+                    Dead();
+                    break;
+                case "DeadLimit":
+                    Dead();
+                    break;
+                case "UpLimit":
+                    if (UpLimit == 0)
+                    {
+                        UpLimit = collision.transform.position.y;
+                    }
+                    break;
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
