@@ -30,21 +30,61 @@ public class Rocket : MonoBehaviour
 
     private void LinkPlayerToDevice()
     {
-        //Determine which PlayerInputControl to find depending of the name of the rocket
-        switch(gameObject.name)
+        //If controller chosen is gamepad
+        if (!GameManager.Instance.isOnKeyboard)
         {
-            case "RedRocket":
-                TryToFindController("PlayerInputControl2");
-                break;
-            case "GreenRocket":
-                TryToFindController("PlayerInputControl1");
-                break;
-            case "BlueRocket":
-                TryToFindController("PlayerInputControl3");
-                break;
-            case "YellowRocket":
-                TryToFindController("PlayerInputControl4");
-                break;
+            //Determine which PlayerInputControl to find depending of the name of the rocket
+            switch (gameObject.name)
+            {
+                case "GreenRocket":
+                    TryToFindController("PlayerInputControl1");
+                    break;
+                case "RedRocket":
+                    TryToFindController("PlayerInputControl2");
+                    break;
+                case "BlueRocket":
+                    TryToFindController("PlayerInputControl3");
+                    break;
+                case "YellowRocket":
+                    TryToFindController("PlayerInputControl4");
+                    break;
+            }
+        }
+        //If controller chosen is keyboard
+        else
+        {
+            //Active green and red rocket by default and blue and yellow if necessary
+            switch (gameObject.name)
+            {
+                case "GreenRocket":
+                    gameObject.SetActive(true);
+                    break;
+                case "RedRocket":
+                    gameObject.SetActive(true);
+                    break;
+                case "BlueRocket":
+                    if (GameManager.Instance.maxPlayerCount >= 3)
+                    {
+                        gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        gameObject.SetActive(false);
+                    }
+                    break;
+                case "YellowRocket":
+                    if (GameManager.Instance.maxPlayerCount == 4)
+                    {
+                        gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        gameObject.SetActive(false);
+                    }
+                    break;
+            }
+            //Find the player input control
+            playerInput = GameObject.Find("PlayerInputControlKeyboard").GetComponent<PlayerInput>();
         }
     }
 

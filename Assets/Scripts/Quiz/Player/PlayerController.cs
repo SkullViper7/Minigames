@@ -18,9 +18,10 @@ public class PlayerController : MonoBehaviour
 
     private void LinkPlayerToDevice()
     {
+        //If controller chosen is gamepad
         if (!GameManager.Instance.isOnKeyboard)
         {
-            //Determine which PlayerInputControl to find depending of the name of the rocket
+            //Determine which PlayerInputControl to find depending of the name of the player
             switch (gameObject.name)
             {
                 case "Player1":
@@ -37,9 +38,10 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
-
+        //If controller chosen is keyboard
         else
         {
+            //Active player one and two by default and player three and four if necessary
             switch (gameObject.name)
             {
                 case "Player1":
@@ -75,13 +77,14 @@ public class PlayerController : MonoBehaviour
                     }
                     break;
             }
-
+            //Find the player input control
+            playerInput = GameObject.Find("PlayerInputControlKeyboard").GetComponent<PlayerInput>();
         }
     }
 
     private void TryToFindController(string _name)
     {
-        //Try to find the PlayerInputControl for this rocket, if there is no PlayerInputControl for it, desactive it
+        //Try to find the PlayerInputControl for this player, if there is no PlayerInputControl for it, desactive it
         if (GameObject.Find(_name) != null)
         {
             playerInput = GameObject.Find(_name).GetComponent<PlayerInput>();
