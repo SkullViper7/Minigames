@@ -5,65 +5,87 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Inputs")]
-    public InputActionReference answerOne;
-    public InputActionReference answerTwo;
-    public InputActionReference answerThree;
-    public InputActionReference answerFour;
-    InputAction input = null;
+    [Space]
+    public PlayerInput playerInput;
 
     [Header("Answers")]
     public int answerChosed;
 
-    private void Awake()
+    private void Start()
     {
-        input = new InputAction();
+        LinkPlayerToDevice();
     }
 
-    private void OnEnable()
+    private void LinkPlayerToDevice()
     {
-        input.Enable();
-        answerOne.action.performed += AnswerOneChoose;
-        answerTwo.action.performed += AnswerTwoChoose;
-        answerThree.action.performed += AnswerThreeChoose;
-        answerFour.action.performed += AnswerFourChoose;
+        //Determine which PlayerInputControl to find depending of the name of the rocket
+        switch (gameObject.name)
+        {
+            case "Player1":
+                TryToFindController("PlayerInputControl1");
+                break;
+            case "Player2":
+                TryToFindController("PlayerInputControl2");
+                break;
+            case "Player3":
+                TryToFindController("PlayerInputControl3");
+                break;
+            case "Player4":
+                TryToFindController("PlayerInputControl4");
+                break;
+        }
     }
 
-    private void OnDisable()
+    private void TryToFindController(string _name)
     {
-        input.Disable();
-        answerOne.action.performed -= AnswerOneChoose;
-        answerTwo.action.performed -= AnswerTwoChoose;
-        answerThree.action.performed -= AnswerThreeChoose;
-        answerFour.action.performed -= AnswerFourChoose;
+        //Try to find the PlayerInputControl for this rocket, if there is no PlayerInputControl for it, desactive it
+        if (GameObject.Find(_name) != null)
+        {
+            playerInput = GameObject.Find(_name).GetComponent<PlayerInput>();
+            playerInput.onActionTriggered += OnAction;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
-    void AnswerOneChoose(InputAction.CallbackContext value)
+    public void OnAction(InputAction.CallbackContext context)
     {
-        if (value.performed)
+        switch (context.action.name)
         {
-            answerChosed = 1;
+            case "Answer1":
+                AnswerOneChoose();
+                break;
+            case "Answer2":
+                AnswerTwoChoose();
+                break;
+            case "Answer3":
+                AnswerThreeChoose();
+                break;
+            case "Answer4":
+                AnswerFourChoose();
+                break;
         }
     }
-    void AnswerTwoChoose(InputAction.CallbackContext value)
+
+    void AnswerOneChoose()
     {
-        if (value.performed)
-        {
-            answerChosed = 2;
-        }
+        answerChosed = 1;
     }
-    void AnswerThreeChoose(InputAction.CallbackContext value)
+
+    void AnswerTwoChoose()
     {
-        if (value.performed)
-        {
-            answerChosed = 3;
-        }
+        answerChosed = 2;
     }
-    void AnswerFourChoose(InputAction.CallbackContext value)
+
+    void AnswerThreeChoose()
     {
-        if (value.performed)
-        {
-            answerChosed = 4;
-        }
+        answerChosed = 3;
+    }
+
+    void AnswerFourChoose()
+    {
+        answerChosed = 4;
     }
 }
