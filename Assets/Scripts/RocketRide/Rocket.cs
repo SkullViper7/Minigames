@@ -4,17 +4,24 @@ using UnityEditor.MPE;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.Rendering.DebugUI;
+using DG.Tweening;
 
 public class Rocket : MonoBehaviour
 {
-    public PlayerInput playerInput;
+    private PlayerInput playerInput;
 
     public float propulsion;
+    public float bounceForce;
+    public float timeStunt;
+    private bool isStunt;
 
     private Vector2 lastOrientation;
     private Vector2 actualOrientation;
 
-    new Rigidbody rigidbody;
+    private new Rigidbody rigidbody;
+
+    [SerializeField]
+    private List<ParticleSystem> fires;
 
     void Start()
     {
@@ -117,32 +124,67 @@ public class Rocket : MonoBehaviour
 
     private void OrientationGamepad(Vector2 _value)
     {
-        lastOrientation = actualOrientation;
-
-        //If joystick is not in neutral pos, actual orientation is the same as the joystick
-        if (_value != new Vector2(0, 0))
+        if (!isStunt)
         {
-            actualOrientation = _value;
-        }
-        //Else keep the last orientation to not go to the neutral pos
-        else
-        {
-            actualOrientation = lastOrientation;
-        }
+            lastOrientation = actualOrientation;
 
-        //Rocket orientation is the same as the stick
-        transform.up = new Vector2(actualOrientation.x, Mathf.Clamp(actualOrientation.y, 0f, 1f));
-    }
+            //If joystick is not in neutral pos, actual orientation is the same as the joystick
+            if (_value != new Vector2(0, 0))
+            {
+                actualOrientation = _value;
+            }
+            //Else keep the last orientation to not go to the neutral pos
+            else
+            {
+                actualOrientation = lastOrientation;
+            }
 
-    private void ResetPhysic()
-    {
-        rigidbody.angularDrag = 1000;
-        rigidbody.angularDrag = 0.5f;
+            //Rocket orientation is the same as the stick
+            transform.up = new Vector2(actualOrientation.x, Mathf.Clamp(actualOrientation.y, 0f, 1f));
+        }
     }
 
     private void PropulsionGamepad()
     {
-        //Rocket moves
-        rigidbody.AddForce(transform.up * propulsion);
+        if (!isStunt)
+        {
+            //Rocket moves
+            rigidbody.AddForce(transform.up * propulsion);
+
+            //Active fires
+            foreach (ParticleSystem fire in fires)
+            {
+                fire.Play();
+            }
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Environment"))
+        {
+            //Launch the coroutine for stunt
+            isStunt = true;
+            StartCoroutine(Stunt(timeStunt));
+
+            //Shake
+            transform.DOShakeRotation(3f, new Vector3(0, 0, 7), 30, 90);
+
+            //Bounce when collide to the environment
+            rigidbody.velocity = Vector2.Reflect(rigidbody.velocity.normalized * bounceForce, collision.contacts[0].normal);
+
+            //Desactive fires
+            foreach (ParticleSystem fire in fires)
+            {
+                fire.Stop();
+            }
+        }
+    }
+
+    private IEnumerator Stunt(float _time)
+    {
+        //Rocket is stunt
+        yield return new WaitForSeconds(_time);
+        isStunt = false;
     }
 }

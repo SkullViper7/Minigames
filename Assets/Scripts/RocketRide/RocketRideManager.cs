@@ -25,10 +25,12 @@ public class RocketRideManager : MonoBehaviour
         //
     }
 
+    public List<GameObject> rocketsWhichHaveFinished = new();
 
+    public bool gameIsOver;
 
     private void Start()
     {
-        
+        gameIsOver = false;
     }
 }

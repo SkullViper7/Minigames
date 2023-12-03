@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public int maxPlayerCount;
     public int playerCount;
 
+    public List<GameObject> playerInputControls = new();
+
     private void Awake()
     {
         //Singleton
@@ -36,5 +38,29 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         playerCount = 0;
+    }
+
+    public void ClearPlayerInputControls()
+    {
+        //Delete all playerInputControls
+        foreach (GameObject playerInputControl in playerInputControls)
+        {
+            Destroy(playerInputControl);
+        }
+        playerInputControls.Clear();
+    }
+
+    public void ResetManager()
+    {
+        //Reset all values
+        game = "";
+        isOnKeyboard = false;
+        maxPlayerCount = 0;
+        playerCount = 0;
+        foreach (GameObject playerInputControl in playerInputControls)
+        {
+            Destroy(playerInputControl);
+        }
+        playerInputControls.Clear();
     }
 }

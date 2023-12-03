@@ -13,6 +13,8 @@ TagManager:
   - UpLimit
   - DeadLimit
   - Coin
+  - Environment
+  - Rocket
   layers:
   - Default
   - TransparentFX
