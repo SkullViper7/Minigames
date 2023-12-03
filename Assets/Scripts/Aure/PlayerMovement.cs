@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     float UpLimit;
     AudioSource audioSource;
-
+    public float _score;
 
     private void Start()
     {
@@ -77,6 +77,10 @@ public class PlayerMovement : MonoBehaviour
                     {
                         UpLimit = collision.transform.position.y;
                     }
+                    break;
+                case "Coin":
+                    _score += 10;
+                    collision.gameObject.SetActive(false);
                     break;
             }
         }

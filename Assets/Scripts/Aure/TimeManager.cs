@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class TimeManager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class TimeManager : MonoBehaviour
     float timeMultiplicator;
     float timingToSpeedUp;
     public AudioSource music;
-
+    public float totalScore;
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -32,6 +33,7 @@ public class TimeManager : MonoBehaviour
 
     private void SpeedUp()
     {
+        totalScore += timeMultiplicator;
         timeMultiplicator += 0.1f;
         timingToSpeedUp = 3 * timeMultiplicator;
         Time.timeScale = timeMultiplicator;

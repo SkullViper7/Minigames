@@ -2163,8 +2163,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 491165117}
-        m_TargetAssemblyTypeName: LaunchGame, Assembly-CSharp
+      - m_Target: {fileID: 2069702734}
+        m_TargetAssemblyTypeName: GoToController, Assembly-CSharp
         m_MethodName: GoToControllerChoice
         m_Mode: 1
         m_Arguments:

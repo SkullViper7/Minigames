@@ -36,6 +36,8 @@ public class SlimeJumpManager : MonoBehaviour
 
     public void PlayerDie(PlayerMovement theDeadPlayer)
     {
+        theDeadPlayer._score += TimeManager.Instance.totalScore;
+        Debug.Log(theDeadPlayer._score);
         if(_players.Count != 1)
         {
             UI.ChangeNamePlayerDeadUI(theDeadPlayer.gameObject);
@@ -50,7 +52,8 @@ public class SlimeJumpManager : MonoBehaviour
     public void StartTheGame()
     {
         TimeManager.Instance.GameStart();
-        SpawnManager.Instance.InvokeTheSpawn();
+        SpawnManager.Instance.InvokeTheSpawn("SpawnAnObject", SpawnManager.Instance.maxSpawnTiming);
+        SpawnManager.Instance.InvokeTheSpawn("SpawnCoins", SpawnManager.Instance.maxCoinSpawnTiming);
         foreach (var player in _players) 
         {
             player.GameStart();

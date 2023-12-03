@@ -34,13 +34,16 @@ public class SpawnObjects : MonoBehaviour
                     isTheOriginal = true;
                 }
             }
+            if(SpawnManager.Instance.coin == gameObject)
+            {
+                gameObject.SetActive(false);
+                Debug.Log(gameObject.name);
+                isTheOriginal = true;
+            }
             if(!isTheOriginal) 
             {
                 Destroy(gameObject);
             }
         }
-        
     }
-
-
 }

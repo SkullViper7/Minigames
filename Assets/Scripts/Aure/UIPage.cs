@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor.Animations;
 
 public class UIPage : MonoBehaviour
 {
     public TextMeshProUGUI _TextEarly;
     public TextMeshProUGUI _PlayerDeadUI;
+    public TextMeshProUGUI _LastDead;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,19 @@ public class UIPage : MonoBehaviour
 
     public void ChangeNamePlayerDeadUI(GameObject player)
     {
-        _PlayerDeadUI.text = player.name + "is OUT";
+        if(_LastDead != null) 
+        {
+            _LastDead.gameObject.SetActive(false);
+        }
+        _LastDead = Instantiate(_PlayerDeadUI, _PlayerDeadUI.transform.parent);
+        _LastDead.text = player.name + " is OUT";
+        _LastDead.gameObject.SetActive(true);
+        StartCoroutine(StopDeadUI(_LastDead.gameObject));
+    }
+
+    IEnumerator StopDeadUI(GameObject _lastDeadUI)
+    {
+        yield return new WaitForSeconds(2f);
+        _lastDeadUI.SetActive(false);
     }
 }

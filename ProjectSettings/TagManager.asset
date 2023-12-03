@@ -12,6 +12,7 @@ TagManager:
   - Projectile
   - UpLimit
   - DeadLimit
+  - Coin
   layers:
   - Default
   - TransparentFX
