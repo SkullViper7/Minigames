@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
             Destroy(playerInputControl);
         }
         playerInputControls.Clear();
+        playerCount = 0;
     }
 
     public void ResetManager()

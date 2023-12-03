@@ -641,6 +641,7 @@ MonoBehaviour:
   isOnKeyboard: 0
   maxPlayerCount: 0
   playerCount: 0
+  playerInputControls: []
 --- !u!1 &714021990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,8 +1789,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 491165117}
-        m_TargetAssemblyTypeName: LaunchGame, Assembly-CSharp
+      - m_Target: {fileID: 1688318731}
+        m_TargetAssemblyTypeName: GoToController, Assembly-CSharp
         m_MethodName: GoToControllerChoice
         m_Mode: 1
         m_Arguments:
