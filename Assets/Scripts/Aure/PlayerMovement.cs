@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance._players.Add(this);
+        SlimeJumpManager.Instance._players.Add(this);
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();

@@ -27,7 +27,7 @@ public class UIPage : MonoBehaviour
         _TextEarly.text = "1";
         yield return new WaitForSeconds(1f);
         _TextEarly.text = "GO";
-        GameManager.Instance.StartTheGame();
+        SlimeJumpManager.Instance.StartTheGame();
         yield return new WaitForSeconds(1f);
         _TextEarly.gameObject.SetActive(false);
     }
