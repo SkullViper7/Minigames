@@ -35,6 +35,8 @@ public class ClockManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         time.text = "1";
         yield return new WaitForSeconds(1);
+        time.text = "0";
+        yield return new WaitForSeconds(3);
 
         StartCoroutine(TimeDecrease());
     }

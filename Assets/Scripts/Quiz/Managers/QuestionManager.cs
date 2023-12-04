@@ -12,15 +12,22 @@ public class QuestionManager : MonoBehaviour
     [Space]
     public TMP_Text questionText;
 
+    [Space]
+    public AnswerManager answerManager;
+
     private void Start()
     {
         questionPicked = Random.Range(0, questions.Count);
-        QuestionWrite(questions[questionPicked]);
+        StartCoroutine(QuestionWrite(questions[questionPicked]));
+        answerManager.UpdateCorrectAnswer();
     }
 
-    public void QuestionWrite(string question)
+    public IEnumerator QuestionWrite(string question)
     {
         questionText.text = question;
+
+        yield return new WaitForSeconds(0.5f);
+
         questions.Remove(question);
     }
 }
