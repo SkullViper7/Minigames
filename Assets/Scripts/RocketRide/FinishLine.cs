@@ -25,12 +25,14 @@ public class FinishLine : MonoBehaviour
         {
             RocketRideManager.Instance.rocketsWhichHaveFinished.Add(other.gameObject);
             rocketGroup.RemoveMember(other.transform);
+            StartCoroutine(other.GetComponent<Rocket>().Finish());
         }
 
         //If all rockets have finished, camera follow the finish line and show the podium
         if (RocketRideManager.Instance.rocketsWhichHaveFinished.Count == numberOfPlayer)
         {
             rocketGroup.AddMember(transform, 1, 0);
+            StartCoroutine(other.GetComponent<Rocket>().Finish());
             StartCoroutine(WaitBeforeShowingPodium());
         }
     }
