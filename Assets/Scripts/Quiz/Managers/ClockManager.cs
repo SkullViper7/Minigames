@@ -13,7 +13,7 @@ public class ClockManager : MonoBehaviour
         StartCoroutine(TimeDecrease());
     }
 
-    IEnumerator TimeDecrease()
+    IEnumerator TimeDecrease()//Countdown from 10 to 0
     {
         time.text = "10";
         yield return new WaitForSeconds(1);
@@ -36,7 +36,7 @@ public class ClockManager : MonoBehaviour
         time.text = "1";
         yield return new WaitForSeconds(1);
         time.text = "0";
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(3);//We wait 3s between each question
 
         StartCoroutine(TimeDecrease());
     }

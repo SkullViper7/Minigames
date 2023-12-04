@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public int player1Score;
+    public int player1Score;//Storing player score for the leaderboard
     public int player2Score;
     public int player3Score;
     public int player4Score;
@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
         switch (playerNumber)
         {
             case 1:
-                player1Score += score;
+                player1Score += score;//Adding the right amount for the right player
                 Debug.Log("Player 1 Score: " + player1Score);
                 break;
             case 2:
