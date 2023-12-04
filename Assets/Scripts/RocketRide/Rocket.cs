@@ -112,6 +112,7 @@ public class Rocket : MonoBehaviour
 
     public void OnAction(InputAction.CallbackContext context)
     {
+        //List of all inputs for this game
         switch (context.action.name)
         {
             case "OrientationGamepad":
@@ -162,6 +163,7 @@ public class Rocket : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        //Rocket is stunt when it collides to environment
         if (collision.gameObject.CompareTag("Environment"))
         {
             //Launch the coroutine for stunt
@@ -191,12 +193,15 @@ public class Rocket : MonoBehaviour
 
     public IEnumerator Finish()
     {
+        //When rocket has finished the race, it continue to fly upward
         if (transform.position.y >= 1700)
         {
+            //If rocket is to hight, desactive it
             StopAllCoroutines();
             gameObject.SetActive(false);
         }
 
+        //Add propulsion every half second
         transform.up = startOrientation;
         Propulsion();
         yield return new WaitForSeconds(0.5f);

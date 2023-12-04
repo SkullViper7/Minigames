@@ -39,6 +39,7 @@ public class FinishLine : MonoBehaviour
 
     private IEnumerator WaitBeforeShowingPodium()
     {
+        //Wait for 3 seconds before showing the results
         yield return new WaitForSeconds(3f);
         podiumScreen.SetActive(true);
     }
