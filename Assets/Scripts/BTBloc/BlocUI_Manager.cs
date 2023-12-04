@@ -8,18 +8,25 @@ public class BlocUI_Manager : MonoBehaviour
     BTBloc_Manager blocManager;
     public TMP_Text _uiTimer;
 
-    private BlocUI_Manager _uiInstance;
+        //Singleton
+    private static BlocUI_Manager _instance = null;
+    private BlocUI_Manager() { }
+    public static BlocUI_Manager Instance => _instance;
+    //
 
-    public BlocUI_Manager Instance
+    private void Awake()
     {
-        get
+        //Singleton
+        if (_instance != null && _instance != this)
         {
-            if (_uiInstance == null)
-            {
-                Debug.LogError("Game Manager missing");
-            }
-            return _uiInstance;
+            Destroy(this.gameObject);
+            return;
         }
+        else
+        {
+            _instance = this;
+        }
+        //
     }
 
     void Start()

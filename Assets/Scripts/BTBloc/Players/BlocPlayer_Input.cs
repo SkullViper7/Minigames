@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,92 +8,131 @@ using UnityEngine.InputSystem;
 public class BlocPlayer_Input : MonoBehaviour
 {
     private InputActions _inputActions;
-    BTBloc_Manager blocManager;
+    private PlayerInput _playerInput;
+    public Camera _camera;
 
     public GameObject cubeToSpawn;
 
-    private void Awake()
+    private void Start()
     {
-        _inputActions = new InputActions();
-        blocManager = GameObject.Find("Game Manager").GetComponent<BTBloc_Manager>();
+        LinkPlayerToDevice();
     }
 
-    private void OnEnable()
+    private void Spawner(string tag)
     {
-        _inputActions.Hunter.Direction_North.performed += OnNorth;
-        _inputActions.Hunter.Direction_North.Enable();
-
-        if (gameObject.tag == "Player1")
-        {
-            _inputActions.Hunter.J1_North.performed += OnNorth;
-            _inputActions.Hunter.J1_North.Enable();
-        }
-
-        if (gameObject.tag == "Player2")
-        {
-            _inputActions.Hunter.J2_North.performed += OnNorth;
-            _inputActions.Hunter.J2_North.Enable();
-        }
-
-        if (gameObject.tag == "Player3")
-        {
-            _inputActions.Hunter.J3_North.performed += OnNorth;
-            _inputActions.Hunter.J3_North.Enable();
-        }
-
-        if (gameObject.tag == "Player4")
-        {
-            _inputActions.Hunter.J4_North.performed += OnNorth;
-            _inputActions.Hunter.J4_North.Enable();
-        }
+        BTBloc_Manager.Instance.player1Score++;
+        Instantiate(cubeToSpawn, transform.position, transform.rotation);
+        transform.position += new Vector3(0f, 0.5f, 0f);
     }
 
-    private void OnNorth(InputAction.CallbackContext context)
+    public void OnAction(InputAction.CallbackContext context)
     {
-        if (gameObject.tag == "Player1")
+        switch (context.action.name)
         {
-            blocManager.player1Score++;
-            Instantiate(cubeToSpawn, transform.position, transform.rotation);
-            transform.position += new Vector3(0f, 0.5f, 0f);
-        }
+            case "Direction_North":
+                Spawner(gameObject.tag);
+                break;
 
-        if (gameObject.tag == "Player2")
-        {
-            blocManager.player2Score++;
-            Instantiate(cubeToSpawn, transform.position, transform.rotation);
-            transform.position += new Vector3(0f, 0.5f, 0f);
-        }
-
-        if (gameObject.tag == "Player3")
-        {
-            blocManager.player3Score++;
-            Instantiate(cubeToSpawn, transform.position, transform.rotation);
-            transform.position += new Vector3(0f, 0.5f, 0f);
-        }
-
-        if (gameObject.tag == "Player4")
-        {
-            blocManager.player4Score++;
-            Instantiate(cubeToSpawn, transform.position, transform.rotation);
-            transform.position += new Vector3(0f, 0.5f, 0f);
+            case "J1_North":
+                if (gameObject.CompareTag("Player1"))
+                {
+                    Spawner(gameObject.tag);
+                }
+                break;
+            case "J2_North":
+                if (gameObject.CompareTag("Player2"))
+                {
+                    Spawner(gameObject.tag);
+                }
+                break;
+            case "J3_North":
+                if (gameObject.CompareTag("Player3"))
+                {
+                    Spawner(gameObject.tag);
+                }
+                break;
+            case "J4_North":
+                if (gameObject.CompareTag("Player4"))
+                {
+                    Spawner(gameObject.tag);
+                }
+                break;
         }
     }
 
-    private void OnDisable()
+
+    private void LinkPlayerToDevice()
     {
-        _inputActions.Hunter.Direction_North.performed -= OnNorth;
-        _inputActions.Hunter.Direction_North.Disable();
+        //If controller chosen is gamepad
+        if (!GameManager.Instance.isOnKeyboard)
+        {
+            //Determine which PlayerInputControl to find depending of the name of the rocket
+            switch (gameObject.name)
+            {
+                case "Bloc_Player_1":
+                    TryToFindController("PlayerInputControl1");
+                    break;
+                case "Bloc_Player_2":
+                    TryToFindController("PlayerInputControl2");
+                    break;
+                case "Bloc_Player_3":
+                    TryToFindController("PlayerInputControl3");
+                    break;
+                case "Bloc_Player_4":
+                    TryToFindController("PlayerInputControl4");
+                    break;
+            }
+        }
+        //If controller chosen is keyboard
+        else
+        {
+            //Active green and red rocket by default and blue and yellow if necessary
+            switch (gameObject.name)
+            {
+                case "Bloc_Player_1":
+                    gameObject.SetActive(true);
+                    break;
+                case "Bloc_Player_2":
+                    gameObject.SetActive(true);
+                    break;
+                case "Bloc_Player_3":
+                    if (GameManager.Instance.maxPlayerCount >= 3)
+                    {
+                        gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        gameObject.SetActive(false);
+                    }
+                    break;
+                case "Bloc_Player_4":
+                    if (GameManager.Instance.maxPlayerCount == 4)
+                    {
+                        gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        gameObject.SetActive(false);
+                    }
+                    break;
+            }
+            //Find the player input control
+            _playerInput = GameObject.Find("PlayerInputControlKeyboard").GetComponent<PlayerInput>();
+        }
+    }
 
-        _inputActions.Hunter.J1_North.performed -= OnNorth;
-        _inputActions.Hunter.J1_North.Disable();
-
-        _inputActions.Hunter.J2_North.performed -= OnNorth;
-        _inputActions.Hunter.J2_North.Disable();
-
-        _inputActions.Hunter.J3_North.performed -= OnNorth;
-        _inputActions.Hunter.J3_North.Disable();
-
-        _inputActions.Hunter.J4_North.performed -= OnNorth;
-        _inputActions.Hunter.J4_North.Disable();
+    private void TryToFindController(string _name)
+    {
+        //Try to find the PlayerInputControl for this rocket, if there is no PlayerInputControl for it, desactive it
+        if (GameObject.Find(_name) != null)
+        {
+            _playerInput = GameObject.Find(_name).GetComponent<PlayerInput>();
+            _playerInput.camera = _camera;
+            _playerInput.onActionTriggered += OnAction;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

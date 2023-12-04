@@ -156,7 +156,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""Hunter"",
+            ""name"": ""BTBloc"",
             ""id"": ""4a91244f-32b3-4ddd-a377-17b914cb8a04"",
             ""actions"": [
                 {
@@ -574,29 +574,29 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Quiz_Answer2 = m_Quiz.FindAction("Answer2", throwIfNotFound: true);
         m_Quiz_Answer3 = m_Quiz.FindAction("Answer3", throwIfNotFound: true);
         m_Quiz_Answer4 = m_Quiz.FindAction("Answer4", throwIfNotFound: true);
-        // Hunter
-        m_Hunter = asset.FindActionMap("Hunter", throwIfNotFound: true);
-        m_Hunter_GamePad = m_Hunter.FindAction("GamePad", throwIfNotFound: true);
-        m_Hunter_Direction_North = m_Hunter.FindAction("Direction_North", throwIfNotFound: true);
-        m_Hunter_Direction_West = m_Hunter.FindAction("Direction_West", throwIfNotFound: true);
-        m_Hunter_Direction_East = m_Hunter.FindAction("Direction_East", throwIfNotFound: true);
-        m_Hunter_Keyboard = m_Hunter.FindAction("Keyboard", throwIfNotFound: true);
-        m_Hunter_J1 = m_Hunter.FindAction("J1", throwIfNotFound: true);
-        m_Hunter_J1_North = m_Hunter.FindAction("J1_North", throwIfNotFound: true);
-        m_Hunter_J1_West = m_Hunter.FindAction("J1_West", throwIfNotFound: true);
-        m_Hunter_J1_East = m_Hunter.FindAction("J1_East", throwIfNotFound: true);
-        m_Hunter_J2 = m_Hunter.FindAction("J2", throwIfNotFound: true);
-        m_Hunter_J2_North = m_Hunter.FindAction("J2_North", throwIfNotFound: true);
-        m_Hunter_J2_West = m_Hunter.FindAction("J2_West", throwIfNotFound: true);
-        m_Hunter_J2_East = m_Hunter.FindAction("J2_East", throwIfNotFound: true);
-        m_Hunter_J3 = m_Hunter.FindAction("J3", throwIfNotFound: true);
-        m_Hunter_J3_North = m_Hunter.FindAction("J3_North", throwIfNotFound: true);
-        m_Hunter_J3_West = m_Hunter.FindAction("J3_West", throwIfNotFound: true);
-        m_Hunter_J3_East = m_Hunter.FindAction("J3_East", throwIfNotFound: true);
-        m_Hunter_J4 = m_Hunter.FindAction("J4", throwIfNotFound: true);
-        m_Hunter_J4_North = m_Hunter.FindAction("J4_North", throwIfNotFound: true);
-        m_Hunter_J4_West = m_Hunter.FindAction("J4_West", throwIfNotFound: true);
-        m_Hunter_J4_East = m_Hunter.FindAction("J4_East", throwIfNotFound: true);
+        // BTBloc
+        m_BTBloc = asset.FindActionMap("BTBloc", throwIfNotFound: true);
+        m_BTBloc_GamePad = m_BTBloc.FindAction("GamePad", throwIfNotFound: true);
+        m_BTBloc_Direction_North = m_BTBloc.FindAction("Direction_North", throwIfNotFound: true);
+        m_BTBloc_Direction_West = m_BTBloc.FindAction("Direction_West", throwIfNotFound: true);
+        m_BTBloc_Direction_East = m_BTBloc.FindAction("Direction_East", throwIfNotFound: true);
+        m_BTBloc_Keyboard = m_BTBloc.FindAction("Keyboard", throwIfNotFound: true);
+        m_BTBloc_J1 = m_BTBloc.FindAction("J1", throwIfNotFound: true);
+        m_BTBloc_J1_North = m_BTBloc.FindAction("J1_North", throwIfNotFound: true);
+        m_BTBloc_J1_West = m_BTBloc.FindAction("J1_West", throwIfNotFound: true);
+        m_BTBloc_J1_East = m_BTBloc.FindAction("J1_East", throwIfNotFound: true);
+        m_BTBloc_J2 = m_BTBloc.FindAction("J2", throwIfNotFound: true);
+        m_BTBloc_J2_North = m_BTBloc.FindAction("J2_North", throwIfNotFound: true);
+        m_BTBloc_J2_West = m_BTBloc.FindAction("J2_West", throwIfNotFound: true);
+        m_BTBloc_J2_East = m_BTBloc.FindAction("J2_East", throwIfNotFound: true);
+        m_BTBloc_J3 = m_BTBloc.FindAction("J3", throwIfNotFound: true);
+        m_BTBloc_J3_North = m_BTBloc.FindAction("J3_North", throwIfNotFound: true);
+        m_BTBloc_J3_West = m_BTBloc.FindAction("J3_West", throwIfNotFound: true);
+        m_BTBloc_J3_East = m_BTBloc.FindAction("J3_East", throwIfNotFound: true);
+        m_BTBloc_J4 = m_BTBloc.FindAction("J4", throwIfNotFound: true);
+        m_BTBloc_J4_North = m_BTBloc.FindAction("J4_North", throwIfNotFound: true);
+        m_BTBloc_J4_West = m_BTBloc.FindAction("J4_West", throwIfNotFound: true);
+        m_BTBloc_J4_East = m_BTBloc.FindAction("J4_East", throwIfNotFound: true);
         // RocketRide
         m_RocketRide = asset.FindActionMap("RocketRide", throwIfNotFound: true);
         m_RocketRide_OrientationGamepad = m_RocketRide.FindAction("OrientationGamepad", throwIfNotFound: true);
@@ -729,64 +729,64 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     }
     public QuizActions @Quiz => new QuizActions(this);
 
-    // Hunter
-    private readonly InputActionMap m_Hunter;
-    private List<IHunterActions> m_HunterActionsCallbackInterfaces = new List<IHunterActions>();
-    private readonly InputAction m_Hunter_GamePad;
-    private readonly InputAction m_Hunter_Direction_North;
-    private readonly InputAction m_Hunter_Direction_West;
-    private readonly InputAction m_Hunter_Direction_East;
-    private readonly InputAction m_Hunter_Keyboard;
-    private readonly InputAction m_Hunter_J1;
-    private readonly InputAction m_Hunter_J1_North;
-    private readonly InputAction m_Hunter_J1_West;
-    private readonly InputAction m_Hunter_J1_East;
-    private readonly InputAction m_Hunter_J2;
-    private readonly InputAction m_Hunter_J2_North;
-    private readonly InputAction m_Hunter_J2_West;
-    private readonly InputAction m_Hunter_J2_East;
-    private readonly InputAction m_Hunter_J3;
-    private readonly InputAction m_Hunter_J3_North;
-    private readonly InputAction m_Hunter_J3_West;
-    private readonly InputAction m_Hunter_J3_East;
-    private readonly InputAction m_Hunter_J4;
-    private readonly InputAction m_Hunter_J4_North;
-    private readonly InputAction m_Hunter_J4_West;
-    private readonly InputAction m_Hunter_J4_East;
-    public struct HunterActions
+    // BTBloc
+    private readonly InputActionMap m_BTBloc;
+    private List<IBTBlocActions> m_BTBlocActionsCallbackInterfaces = new List<IBTBlocActions>();
+    private readonly InputAction m_BTBloc_GamePad;
+    private readonly InputAction m_BTBloc_Direction_North;
+    private readonly InputAction m_BTBloc_Direction_West;
+    private readonly InputAction m_BTBloc_Direction_East;
+    private readonly InputAction m_BTBloc_Keyboard;
+    private readonly InputAction m_BTBloc_J1;
+    private readonly InputAction m_BTBloc_J1_North;
+    private readonly InputAction m_BTBloc_J1_West;
+    private readonly InputAction m_BTBloc_J1_East;
+    private readonly InputAction m_BTBloc_J2;
+    private readonly InputAction m_BTBloc_J2_North;
+    private readonly InputAction m_BTBloc_J2_West;
+    private readonly InputAction m_BTBloc_J2_East;
+    private readonly InputAction m_BTBloc_J3;
+    private readonly InputAction m_BTBloc_J3_North;
+    private readonly InputAction m_BTBloc_J3_West;
+    private readonly InputAction m_BTBloc_J3_East;
+    private readonly InputAction m_BTBloc_J4;
+    private readonly InputAction m_BTBloc_J4_North;
+    private readonly InputAction m_BTBloc_J4_West;
+    private readonly InputAction m_BTBloc_J4_East;
+    public struct BTBlocActions
     {
         private @InputActions m_Wrapper;
-        public HunterActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @GamePad => m_Wrapper.m_Hunter_GamePad;
-        public InputAction @Direction_North => m_Wrapper.m_Hunter_Direction_North;
-        public InputAction @Direction_West => m_Wrapper.m_Hunter_Direction_West;
-        public InputAction @Direction_East => m_Wrapper.m_Hunter_Direction_East;
-        public InputAction @Keyboard => m_Wrapper.m_Hunter_Keyboard;
-        public InputAction @J1 => m_Wrapper.m_Hunter_J1;
-        public InputAction @J1_North => m_Wrapper.m_Hunter_J1_North;
-        public InputAction @J1_West => m_Wrapper.m_Hunter_J1_West;
-        public InputAction @J1_East => m_Wrapper.m_Hunter_J1_East;
-        public InputAction @J2 => m_Wrapper.m_Hunter_J2;
-        public InputAction @J2_North => m_Wrapper.m_Hunter_J2_North;
-        public InputAction @J2_West => m_Wrapper.m_Hunter_J2_West;
-        public InputAction @J2_East => m_Wrapper.m_Hunter_J2_East;
-        public InputAction @J3 => m_Wrapper.m_Hunter_J3;
-        public InputAction @J3_North => m_Wrapper.m_Hunter_J3_North;
-        public InputAction @J3_West => m_Wrapper.m_Hunter_J3_West;
-        public InputAction @J3_East => m_Wrapper.m_Hunter_J3_East;
-        public InputAction @J4 => m_Wrapper.m_Hunter_J4;
-        public InputAction @J4_North => m_Wrapper.m_Hunter_J4_North;
-        public InputAction @J4_West => m_Wrapper.m_Hunter_J4_West;
-        public InputAction @J4_East => m_Wrapper.m_Hunter_J4_East;
-        public InputActionMap Get() { return m_Wrapper.m_Hunter; }
+        public BTBlocActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @GamePad => m_Wrapper.m_BTBloc_GamePad;
+        public InputAction @Direction_North => m_Wrapper.m_BTBloc_Direction_North;
+        public InputAction @Direction_West => m_Wrapper.m_BTBloc_Direction_West;
+        public InputAction @Direction_East => m_Wrapper.m_BTBloc_Direction_East;
+        public InputAction @Keyboard => m_Wrapper.m_BTBloc_Keyboard;
+        public InputAction @J1 => m_Wrapper.m_BTBloc_J1;
+        public InputAction @J1_North => m_Wrapper.m_BTBloc_J1_North;
+        public InputAction @J1_West => m_Wrapper.m_BTBloc_J1_West;
+        public InputAction @J1_East => m_Wrapper.m_BTBloc_J1_East;
+        public InputAction @J2 => m_Wrapper.m_BTBloc_J2;
+        public InputAction @J2_North => m_Wrapper.m_BTBloc_J2_North;
+        public InputAction @J2_West => m_Wrapper.m_BTBloc_J2_West;
+        public InputAction @J2_East => m_Wrapper.m_BTBloc_J2_East;
+        public InputAction @J3 => m_Wrapper.m_BTBloc_J3;
+        public InputAction @J3_North => m_Wrapper.m_BTBloc_J3_North;
+        public InputAction @J3_West => m_Wrapper.m_BTBloc_J3_West;
+        public InputAction @J3_East => m_Wrapper.m_BTBloc_J3_East;
+        public InputAction @J4 => m_Wrapper.m_BTBloc_J4;
+        public InputAction @J4_North => m_Wrapper.m_BTBloc_J4_North;
+        public InputAction @J4_West => m_Wrapper.m_BTBloc_J4_West;
+        public InputAction @J4_East => m_Wrapper.m_BTBloc_J4_East;
+        public InputActionMap Get() { return m_Wrapper.m_BTBloc; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(HunterActions set) { return set.Get(); }
-        public void AddCallbacks(IHunterActions instance)
+        public static implicit operator InputActionMap(BTBlocActions set) { return set.Get(); }
+        public void AddCallbacks(IBTBlocActions instance)
         {
-            if (instance == null || m_Wrapper.m_HunterActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_HunterActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_BTBlocActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_BTBlocActionsCallbackInterfaces.Add(instance);
             @GamePad.started += instance.OnGamePad;
             @GamePad.performed += instance.OnGamePad;
             @GamePad.canceled += instance.OnGamePad;
@@ -852,7 +852,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @J4_East.canceled += instance.OnJ4_East;
         }
 
-        private void UnregisterCallbacks(IHunterActions instance)
+        private void UnregisterCallbacks(IBTBlocActions instance)
         {
             @GamePad.started -= instance.OnGamePad;
             @GamePad.performed -= instance.OnGamePad;
@@ -919,21 +919,21 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @J4_East.canceled -= instance.OnJ4_East;
         }
 
-        public void RemoveCallbacks(IHunterActions instance)
+        public void RemoveCallbacks(IBTBlocActions instance)
         {
-            if (m_Wrapper.m_HunterActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_BTBlocActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IHunterActions instance)
+        public void SetCallbacks(IBTBlocActions instance)
         {
-            foreach (var item in m_Wrapper.m_HunterActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_BTBlocActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_HunterActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_BTBlocActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public HunterActions @Hunter => new HunterActions(this);
+    public BTBlocActions @BTBloc => new BTBlocActions(this);
 
     // RocketRide
     private readonly InputActionMap m_RocketRide;
@@ -995,7 +995,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnAnswer3(InputAction.CallbackContext context);
         void OnAnswer4(InputAction.CallbackContext context);
     }
-    public interface IHunterActions
+    public interface IBTBlocActions
     {
         void OnGamePad(InputAction.CallbackContext context);
         void OnDirection_North(InputAction.CallbackContext context);

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Aurelien/SlimeJump.unity
     guid: f0498c56f18489a4fb95a356801db6a5
+  - enabled: 1
+    path: Assets/Scenes/Maxime/BTBloc.unity
+    guid: b4560cb848cc174478a2b9f8b108c1a1
   m_configObjects: {}
