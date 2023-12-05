@@ -13,6 +13,11 @@ public class AnswerManager : MonoBehaviour
     public AnswerTextManager answerTextManager;
     public CorrectAnswerBlink blink;
 
+    [Header("EndScreen")]
+    public GameObject gameScreen;
+    public GameObject endScreen;
+    public LeaderboardManager leaderboardManager;
+
     GameObject player1;//Players
     GameObject player2;
     GameObject player3;
@@ -124,7 +129,17 @@ public class AnswerManager : MonoBehaviour
 
         correctAnswers.Remove(correctAnswer);//Removing the answer from the list so it can't be picked randomly again
 
-        Invoke("LoadNextQuestion", 3);//Waiting time before the next question
+        if (questionManager.questions !=  null)
+        {
+            Invoke("LoadNextQuestion", 3);//Waiting time before the next question
+        }
+
+        else
+        {
+            gameScreen.SetActive(false);
+            endScreen.SetActive(true);
+            leaderboardManager.ShowScore();
+        }
     }
 
     void LoadNextQuestion()
