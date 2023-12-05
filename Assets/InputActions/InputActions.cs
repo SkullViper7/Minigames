@@ -322,6 +322,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             ""id"": ""5a8bca08-4101-4219-b2ec-339a2bc59032"",
             ""actions"": [
                 {
+                    ""name"": ""----Gamepad----"",
+                    ""type"": ""Button"",
+                    ""id"": ""6c88afc5-0f66-4259-865d-c10c3bd749ba"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""OrientationGamepad"",
                     ""type"": ""Value"",
                     ""id"": ""7621689d-aa5d-467a-ae12-f7e24d94063e"",
@@ -340,36 +349,151 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""TestKeyboard"",
+                    ""name"": ""----GreenRocket----"",
                     ""type"": ""Button"",
-                    ""id"": ""83e65af4-25a2-43df-8d7c-e9365ef3dd1d"",
+                    ""id"": ""55ca963f-1cfa-4e0f-b9b4-6d3472ae64c7"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""TestGamepad"",
+                    ""name"": ""GreenRocketLeft"",
                     ""type"": ""Button"",
-                    ""id"": ""38e49a93-65c5-4868-bb7c-a3c4c0f70c76"",
+                    ""id"": ""46643e01-dcc8-4022-85f6-ef53f7d42ecb"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GreenRocketRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""1c1f9d69-d8fa-49f1-b4b5-63106e5f0163"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GreenRocketPropulsion"",
+                    ""type"": ""Button"",
+                    ""id"": ""3722504c-7598-4c15-851e-cad306deae90"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""----RedRocket----"",
+                    ""type"": ""Button"",
+                    ""id"": ""59a2dffe-f092-4fdc-b16b-3c2776d601e8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RedRocketLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""636ad84b-2078-44be-ac5e-d99ce2231bf4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RedRocketRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""25a5d97c-eda8-4713-bb06-14c9a22be882"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RedRocketPropulsion"",
+                    ""type"": ""Button"",
+                    ""id"": ""2a03b754-b3eb-43af-a114-e36a9ad8fd50"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""----BlueRocket----"",
+                    ""type"": ""Button"",
+                    ""id"": ""ebe59b29-84bd-410b-94de-76729ec9780c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BlueRocketLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""39114e9b-01d4-44d4-bef9-30484fb12ca4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BlueRocketRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""a76053f4-c09c-42ad-83bd-12ed1c410e73"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BlueRocketPropulsion"",
+                    ""type"": ""Button"",
+                    ""id"": ""7bca2887-d673-4511-af21-c905047bb79d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""----YellowRocket----"",
+                    ""type"": ""Button"",
+                    ""id"": ""fe9bb6d5-336a-4d2a-b680-5b405b96b7dc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""YellowRocketLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""5ac6b5ee-17f1-440a-80b5-b09c62656b8b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""YellowRocketRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""ac40b028-a142-41e0-8cb8-b633793bc0c3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""YellowRocketPropulsion"",
+                    ""type"": ""Button"",
+                    ""id"": ""3e278db2-8385-435a-beeb-a4bac503819d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""dc3234e0-6a45-43ce-b299-09dce94a594c"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""OrientationGamepad"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""df399114-1f73-4780-a119-ed984e8eac6e"",
@@ -383,23 +507,199 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6522b5d3-bcf2-40c9-9484-58f7d51b538e"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""2401ddc2-5593-4d0d-bdbf-003f3a69fef0"",
+                    ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TestKeyboard"",
+                    ""action"": ""----GreenRocket----"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9efa9eaa-940d-4962-8226-56be477dc2a2"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""id"": ""a9d26753-dc0c-496e-baf1-e558c1eab663"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TestGamepad"",
+                    ""action"": ""GreenRocketLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7a2514d1-650e-4725-bd02-233059346a14"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GreenRocketRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""334fb38c-6557-4e77-92f2-d1afc56ab3b0"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GreenRocketPropulsion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""12aa5ee1-5108-4b8d-9259-35e096b8e4e4"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""----RedRocket----"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""98d7ff8f-aa59-40ed-b5e1-91dbc2089e77"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RedRocketLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ce81a6d7-8492-4ff7-8fd2-d8a8155ff069"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RedRocketRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f20650c6-dedc-4d04-a7dd-e16a0e7776b6"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RedRocketPropulsion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1d055be6-8d41-4baa-a501-9ba8adc50c03"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""----BlueRocket----"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0a309149-a970-4850-be16-6b87da8fcc30"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""----Gamepad----"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dc3234e0-6a45-43ce-b299-09dce94a594c"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OrientationGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""648d52c0-0bb9-4e66-81e3-bafbd71439ea"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BlueRocketLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6d4401a8-3b3f-4d71-8ebc-cb635f5851b0"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BlueRocketRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7a336f8b-cf55-4396-a1fd-e01eabd4cef2"",
+                    ""path"": ""<Keyboard>/rightCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BlueRocketPropulsion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd16d703-115a-4c78-8097-b082cc3e29b8"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""----YellowRocket----"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e0d847b2-355d-4506-aa36-4e27370f259a"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""YellowRocketLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ec08a6ff-a7c3-4246-a1fa-49fc8a0d2af0"",
+                    ""path"": ""<Keyboard>/numpad9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""YellowRocketRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""202afa85-c3a1-44a1-9056-fe55e09c681e"",
+                    ""path"": ""<Keyboard>/numpad0"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""YellowRocketPropulsion"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -429,10 +729,25 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_BTBloc_J4_North = m_BTBloc.FindAction("J4_North", throwIfNotFound: true);
         // RocketRide
         m_RocketRide = asset.FindActionMap("RocketRide", throwIfNotFound: true);
+        m_RocketRide_Gamepad = m_RocketRide.FindAction("----Gamepad----", throwIfNotFound: true);
         m_RocketRide_OrientationGamepad = m_RocketRide.FindAction("OrientationGamepad", throwIfNotFound: true);
         m_RocketRide_PropulsionGamepad = m_RocketRide.FindAction("PropulsionGamepad", throwIfNotFound: true);
-        m_RocketRide_TestKeyboard = m_RocketRide.FindAction("TestKeyboard", throwIfNotFound: true);
-        m_RocketRide_TestGamepad = m_RocketRide.FindAction("TestGamepad", throwIfNotFound: true);
+        m_RocketRide_GreenRocket = m_RocketRide.FindAction("----GreenRocket----", throwIfNotFound: true);
+        m_RocketRide_GreenRocketLeft = m_RocketRide.FindAction("GreenRocketLeft", throwIfNotFound: true);
+        m_RocketRide_GreenRocketRight = m_RocketRide.FindAction("GreenRocketRight", throwIfNotFound: true);
+        m_RocketRide_GreenRocketPropulsion = m_RocketRide.FindAction("GreenRocketPropulsion", throwIfNotFound: true);
+        m_RocketRide_RedRocket = m_RocketRide.FindAction("----RedRocket----", throwIfNotFound: true);
+        m_RocketRide_RedRocketLeft = m_RocketRide.FindAction("RedRocketLeft", throwIfNotFound: true);
+        m_RocketRide_RedRocketRight = m_RocketRide.FindAction("RedRocketRight", throwIfNotFound: true);
+        m_RocketRide_RedRocketPropulsion = m_RocketRide.FindAction("RedRocketPropulsion", throwIfNotFound: true);
+        m_RocketRide_BlueRocket = m_RocketRide.FindAction("----BlueRocket----", throwIfNotFound: true);
+        m_RocketRide_BlueRocketLeft = m_RocketRide.FindAction("BlueRocketLeft", throwIfNotFound: true);
+        m_RocketRide_BlueRocketRight = m_RocketRide.FindAction("BlueRocketRight", throwIfNotFound: true);
+        m_RocketRide_BlueRocketPropulsion = m_RocketRide.FindAction("BlueRocketPropulsion", throwIfNotFound: true);
+        m_RocketRide_YellowRocket = m_RocketRide.FindAction("----YellowRocket----", throwIfNotFound: true);
+        m_RocketRide_YellowRocketLeft = m_RocketRide.FindAction("YellowRocketLeft", throwIfNotFound: true);
+        m_RocketRide_YellowRocketRight = m_RocketRide.FindAction("YellowRocketRight", throwIfNotFound: true);
+        m_RocketRide_YellowRocketPropulsion = m_RocketRide.FindAction("YellowRocketPropulsion", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -690,18 +1005,48 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     // RocketRide
     private readonly InputActionMap m_RocketRide;
     private List<IRocketRideActions> m_RocketRideActionsCallbackInterfaces = new List<IRocketRideActions>();
+    private readonly InputAction m_RocketRide_Gamepad;
     private readonly InputAction m_RocketRide_OrientationGamepad;
     private readonly InputAction m_RocketRide_PropulsionGamepad;
-    private readonly InputAction m_RocketRide_TestKeyboard;
-    private readonly InputAction m_RocketRide_TestGamepad;
+    private readonly InputAction m_RocketRide_GreenRocket;
+    private readonly InputAction m_RocketRide_GreenRocketLeft;
+    private readonly InputAction m_RocketRide_GreenRocketRight;
+    private readonly InputAction m_RocketRide_GreenRocketPropulsion;
+    private readonly InputAction m_RocketRide_RedRocket;
+    private readonly InputAction m_RocketRide_RedRocketLeft;
+    private readonly InputAction m_RocketRide_RedRocketRight;
+    private readonly InputAction m_RocketRide_RedRocketPropulsion;
+    private readonly InputAction m_RocketRide_BlueRocket;
+    private readonly InputAction m_RocketRide_BlueRocketLeft;
+    private readonly InputAction m_RocketRide_BlueRocketRight;
+    private readonly InputAction m_RocketRide_BlueRocketPropulsion;
+    private readonly InputAction m_RocketRide_YellowRocket;
+    private readonly InputAction m_RocketRide_YellowRocketLeft;
+    private readonly InputAction m_RocketRide_YellowRocketRight;
+    private readonly InputAction m_RocketRide_YellowRocketPropulsion;
     public struct RocketRideActions
     {
         private @InputActions m_Wrapper;
         public RocketRideActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Gamepad => m_Wrapper.m_RocketRide_Gamepad;
         public InputAction @OrientationGamepad => m_Wrapper.m_RocketRide_OrientationGamepad;
         public InputAction @PropulsionGamepad => m_Wrapper.m_RocketRide_PropulsionGamepad;
-        public InputAction @TestKeyboard => m_Wrapper.m_RocketRide_TestKeyboard;
-        public InputAction @TestGamepad => m_Wrapper.m_RocketRide_TestGamepad;
+        public InputAction @GreenRocket => m_Wrapper.m_RocketRide_GreenRocket;
+        public InputAction @GreenRocketLeft => m_Wrapper.m_RocketRide_GreenRocketLeft;
+        public InputAction @GreenRocketRight => m_Wrapper.m_RocketRide_GreenRocketRight;
+        public InputAction @GreenRocketPropulsion => m_Wrapper.m_RocketRide_GreenRocketPropulsion;
+        public InputAction @RedRocket => m_Wrapper.m_RocketRide_RedRocket;
+        public InputAction @RedRocketLeft => m_Wrapper.m_RocketRide_RedRocketLeft;
+        public InputAction @RedRocketRight => m_Wrapper.m_RocketRide_RedRocketRight;
+        public InputAction @RedRocketPropulsion => m_Wrapper.m_RocketRide_RedRocketPropulsion;
+        public InputAction @BlueRocket => m_Wrapper.m_RocketRide_BlueRocket;
+        public InputAction @BlueRocketLeft => m_Wrapper.m_RocketRide_BlueRocketLeft;
+        public InputAction @BlueRocketRight => m_Wrapper.m_RocketRide_BlueRocketRight;
+        public InputAction @BlueRocketPropulsion => m_Wrapper.m_RocketRide_BlueRocketPropulsion;
+        public InputAction @YellowRocket => m_Wrapper.m_RocketRide_YellowRocket;
+        public InputAction @YellowRocketLeft => m_Wrapper.m_RocketRide_YellowRocketLeft;
+        public InputAction @YellowRocketRight => m_Wrapper.m_RocketRide_YellowRocketRight;
+        public InputAction @YellowRocketPropulsion => m_Wrapper.m_RocketRide_YellowRocketPropulsion;
         public InputActionMap Get() { return m_Wrapper.m_RocketRide; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -711,34 +1056,124 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_RocketRideActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_RocketRideActionsCallbackInterfaces.Add(instance);
+            @Gamepad.started += instance.OnGamepad;
+            @Gamepad.performed += instance.OnGamepad;
+            @Gamepad.canceled += instance.OnGamepad;
             @OrientationGamepad.started += instance.OnOrientationGamepad;
             @OrientationGamepad.performed += instance.OnOrientationGamepad;
             @OrientationGamepad.canceled += instance.OnOrientationGamepad;
             @PropulsionGamepad.started += instance.OnPropulsionGamepad;
             @PropulsionGamepad.performed += instance.OnPropulsionGamepad;
             @PropulsionGamepad.canceled += instance.OnPropulsionGamepad;
-            @TestKeyboard.started += instance.OnTestKeyboard;
-            @TestKeyboard.performed += instance.OnTestKeyboard;
-            @TestKeyboard.canceled += instance.OnTestKeyboard;
-            @TestGamepad.started += instance.OnTestGamepad;
-            @TestGamepad.performed += instance.OnTestGamepad;
-            @TestGamepad.canceled += instance.OnTestGamepad;
+            @GreenRocket.started += instance.OnGreenRocket;
+            @GreenRocket.performed += instance.OnGreenRocket;
+            @GreenRocket.canceled += instance.OnGreenRocket;
+            @GreenRocketLeft.started += instance.OnGreenRocketLeft;
+            @GreenRocketLeft.performed += instance.OnGreenRocketLeft;
+            @GreenRocketLeft.canceled += instance.OnGreenRocketLeft;
+            @GreenRocketRight.started += instance.OnGreenRocketRight;
+            @GreenRocketRight.performed += instance.OnGreenRocketRight;
+            @GreenRocketRight.canceled += instance.OnGreenRocketRight;
+            @GreenRocketPropulsion.started += instance.OnGreenRocketPropulsion;
+            @GreenRocketPropulsion.performed += instance.OnGreenRocketPropulsion;
+            @GreenRocketPropulsion.canceled += instance.OnGreenRocketPropulsion;
+            @RedRocket.started += instance.OnRedRocket;
+            @RedRocket.performed += instance.OnRedRocket;
+            @RedRocket.canceled += instance.OnRedRocket;
+            @RedRocketLeft.started += instance.OnRedRocketLeft;
+            @RedRocketLeft.performed += instance.OnRedRocketLeft;
+            @RedRocketLeft.canceled += instance.OnRedRocketLeft;
+            @RedRocketRight.started += instance.OnRedRocketRight;
+            @RedRocketRight.performed += instance.OnRedRocketRight;
+            @RedRocketRight.canceled += instance.OnRedRocketRight;
+            @RedRocketPropulsion.started += instance.OnRedRocketPropulsion;
+            @RedRocketPropulsion.performed += instance.OnRedRocketPropulsion;
+            @RedRocketPropulsion.canceled += instance.OnRedRocketPropulsion;
+            @BlueRocket.started += instance.OnBlueRocket;
+            @BlueRocket.performed += instance.OnBlueRocket;
+            @BlueRocket.canceled += instance.OnBlueRocket;
+            @BlueRocketLeft.started += instance.OnBlueRocketLeft;
+            @BlueRocketLeft.performed += instance.OnBlueRocketLeft;
+            @BlueRocketLeft.canceled += instance.OnBlueRocketLeft;
+            @BlueRocketRight.started += instance.OnBlueRocketRight;
+            @BlueRocketRight.performed += instance.OnBlueRocketRight;
+            @BlueRocketRight.canceled += instance.OnBlueRocketRight;
+            @BlueRocketPropulsion.started += instance.OnBlueRocketPropulsion;
+            @BlueRocketPropulsion.performed += instance.OnBlueRocketPropulsion;
+            @BlueRocketPropulsion.canceled += instance.OnBlueRocketPropulsion;
+            @YellowRocket.started += instance.OnYellowRocket;
+            @YellowRocket.performed += instance.OnYellowRocket;
+            @YellowRocket.canceled += instance.OnYellowRocket;
+            @YellowRocketLeft.started += instance.OnYellowRocketLeft;
+            @YellowRocketLeft.performed += instance.OnYellowRocketLeft;
+            @YellowRocketLeft.canceled += instance.OnYellowRocketLeft;
+            @YellowRocketRight.started += instance.OnYellowRocketRight;
+            @YellowRocketRight.performed += instance.OnYellowRocketRight;
+            @YellowRocketRight.canceled += instance.OnYellowRocketRight;
+            @YellowRocketPropulsion.started += instance.OnYellowRocketPropulsion;
+            @YellowRocketPropulsion.performed += instance.OnYellowRocketPropulsion;
+            @YellowRocketPropulsion.canceled += instance.OnYellowRocketPropulsion;
         }
 
         private void UnregisterCallbacks(IRocketRideActions instance)
         {
+            @Gamepad.started -= instance.OnGamepad;
+            @Gamepad.performed -= instance.OnGamepad;
+            @Gamepad.canceled -= instance.OnGamepad;
             @OrientationGamepad.started -= instance.OnOrientationGamepad;
             @OrientationGamepad.performed -= instance.OnOrientationGamepad;
             @OrientationGamepad.canceled -= instance.OnOrientationGamepad;
             @PropulsionGamepad.started -= instance.OnPropulsionGamepad;
             @PropulsionGamepad.performed -= instance.OnPropulsionGamepad;
             @PropulsionGamepad.canceled -= instance.OnPropulsionGamepad;
-            @TestKeyboard.started -= instance.OnTestKeyboard;
-            @TestKeyboard.performed -= instance.OnTestKeyboard;
-            @TestKeyboard.canceled -= instance.OnTestKeyboard;
-            @TestGamepad.started -= instance.OnTestGamepad;
-            @TestGamepad.performed -= instance.OnTestGamepad;
-            @TestGamepad.canceled -= instance.OnTestGamepad;
+            @GreenRocket.started -= instance.OnGreenRocket;
+            @GreenRocket.performed -= instance.OnGreenRocket;
+            @GreenRocket.canceled -= instance.OnGreenRocket;
+            @GreenRocketLeft.started -= instance.OnGreenRocketLeft;
+            @GreenRocketLeft.performed -= instance.OnGreenRocketLeft;
+            @GreenRocketLeft.canceled -= instance.OnGreenRocketLeft;
+            @GreenRocketRight.started -= instance.OnGreenRocketRight;
+            @GreenRocketRight.performed -= instance.OnGreenRocketRight;
+            @GreenRocketRight.canceled -= instance.OnGreenRocketRight;
+            @GreenRocketPropulsion.started -= instance.OnGreenRocketPropulsion;
+            @GreenRocketPropulsion.performed -= instance.OnGreenRocketPropulsion;
+            @GreenRocketPropulsion.canceled -= instance.OnGreenRocketPropulsion;
+            @RedRocket.started -= instance.OnRedRocket;
+            @RedRocket.performed -= instance.OnRedRocket;
+            @RedRocket.canceled -= instance.OnRedRocket;
+            @RedRocketLeft.started -= instance.OnRedRocketLeft;
+            @RedRocketLeft.performed -= instance.OnRedRocketLeft;
+            @RedRocketLeft.canceled -= instance.OnRedRocketLeft;
+            @RedRocketRight.started -= instance.OnRedRocketRight;
+            @RedRocketRight.performed -= instance.OnRedRocketRight;
+            @RedRocketRight.canceled -= instance.OnRedRocketRight;
+            @RedRocketPropulsion.started -= instance.OnRedRocketPropulsion;
+            @RedRocketPropulsion.performed -= instance.OnRedRocketPropulsion;
+            @RedRocketPropulsion.canceled -= instance.OnRedRocketPropulsion;
+            @BlueRocket.started -= instance.OnBlueRocket;
+            @BlueRocket.performed -= instance.OnBlueRocket;
+            @BlueRocket.canceled -= instance.OnBlueRocket;
+            @BlueRocketLeft.started -= instance.OnBlueRocketLeft;
+            @BlueRocketLeft.performed -= instance.OnBlueRocketLeft;
+            @BlueRocketLeft.canceled -= instance.OnBlueRocketLeft;
+            @BlueRocketRight.started -= instance.OnBlueRocketRight;
+            @BlueRocketRight.performed -= instance.OnBlueRocketRight;
+            @BlueRocketRight.canceled -= instance.OnBlueRocketRight;
+            @BlueRocketPropulsion.started -= instance.OnBlueRocketPropulsion;
+            @BlueRocketPropulsion.performed -= instance.OnBlueRocketPropulsion;
+            @BlueRocketPropulsion.canceled -= instance.OnBlueRocketPropulsion;
+            @YellowRocket.started -= instance.OnYellowRocket;
+            @YellowRocket.performed -= instance.OnYellowRocket;
+            @YellowRocket.canceled -= instance.OnYellowRocket;
+            @YellowRocketLeft.started -= instance.OnYellowRocketLeft;
+            @YellowRocketLeft.performed -= instance.OnYellowRocketLeft;
+            @YellowRocketLeft.canceled -= instance.OnYellowRocketLeft;
+            @YellowRocketRight.started -= instance.OnYellowRocketRight;
+            @YellowRocketRight.performed -= instance.OnYellowRocketRight;
+            @YellowRocketRight.canceled -= instance.OnYellowRocketRight;
+            @YellowRocketPropulsion.started -= instance.OnYellowRocketPropulsion;
+            @YellowRocketPropulsion.performed -= instance.OnYellowRocketPropulsion;
+            @YellowRocketPropulsion.canceled -= instance.OnYellowRocketPropulsion;
         }
 
         public void RemoveCallbacks(IRocketRideActions instance)
@@ -779,9 +1214,24 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     }
     public interface IRocketRideActions
     {
+        void OnGamepad(InputAction.CallbackContext context);
         void OnOrientationGamepad(InputAction.CallbackContext context);
         void OnPropulsionGamepad(InputAction.CallbackContext context);
-        void OnTestKeyboard(InputAction.CallbackContext context);
-        void OnTestGamepad(InputAction.CallbackContext context);
+        void OnGreenRocket(InputAction.CallbackContext context);
+        void OnGreenRocketLeft(InputAction.CallbackContext context);
+        void OnGreenRocketRight(InputAction.CallbackContext context);
+        void OnGreenRocketPropulsion(InputAction.CallbackContext context);
+        void OnRedRocket(InputAction.CallbackContext context);
+        void OnRedRocketLeft(InputAction.CallbackContext context);
+        void OnRedRocketRight(InputAction.CallbackContext context);
+        void OnRedRocketPropulsion(InputAction.CallbackContext context);
+        void OnBlueRocket(InputAction.CallbackContext context);
+        void OnBlueRocketLeft(InputAction.CallbackContext context);
+        void OnBlueRocketRight(InputAction.CallbackContext context);
+        void OnBlueRocketPropulsion(InputAction.CallbackContext context);
+        void OnYellowRocket(InputAction.CallbackContext context);
+        void OnYellowRocketLeft(InputAction.CallbackContext context);
+        void OnYellowRocketRight(InputAction.CallbackContext context);
+        void OnYellowRocketPropulsion(InputAction.CallbackContext context);
     }
 }
