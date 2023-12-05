@@ -62,6 +62,150 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP1A1"",
+                    ""type"": ""Button"",
+                    ""id"": ""6255a05d-cc54-4d94-ab07-3554f3f61ff2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP1A2"",
+                    ""type"": ""Button"",
+                    ""id"": ""78eaf17f-2f30-4334-a683-6692cbd5c228"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP1A3"",
+                    ""type"": ""Button"",
+                    ""id"": ""37e1ff33-49c3-4ca0-80e8-b58b0dcbdaa4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP1A4"",
+                    ""type"": ""Button"",
+                    ""id"": ""75455e3d-1f5d-442f-95ac-d4372712a4a5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP2A1"",
+                    ""type"": ""Button"",
+                    ""id"": ""2252e683-f02c-42c8-920c-6c3661482085"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP2A2"",
+                    ""type"": ""Button"",
+                    ""id"": ""f0415add-fa15-459e-844c-57ab761fe596"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP2A3"",
+                    ""type"": ""Button"",
+                    ""id"": ""a2b99131-557c-4e7d-a7b8-6dcbeaae03d4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP2A4"",
+                    ""type"": ""Button"",
+                    ""id"": ""1b6e748e-34ca-4133-a491-b36134d886eb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP3A1"",
+                    ""type"": ""Button"",
+                    ""id"": ""9bc3db49-807c-4b07-a92f-b782fbe71e7d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP3A2"",
+                    ""type"": ""Button"",
+                    ""id"": ""c8fd6876-a83d-4ecd-b16b-622259d730ce"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP3A3"",
+                    ""type"": ""Button"",
+                    ""id"": ""cbb0da5a-3a48-49ef-a2c4-d4a5ecf6472f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP3A4"",
+                    ""type"": ""Button"",
+                    ""id"": ""ae0dcd1a-2f63-428e-b8ec-a41e8abe8092"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP4A1"",
+                    ""type"": ""Button"",
+                    ""id"": ""5b69e466-24d3-4716-8d71-ddd28516fab5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP4A2"",
+                    ""type"": ""Button"",
+                    ""id"": ""56a7e937-c76d-43d5-b7f4-5f0df0ac22da"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP4A3"",
+                    ""type"": ""Button"",
+                    ""id"": ""00a39fef-0ff6-4cf7-a685-075d62f2b335"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP4A4"",
+                    ""type"": ""Button"",
+                    ""id"": ""6bd1bf36-bb4e-4019-869e-619b4d016501"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -150,6 +294,182 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Answer4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f58db161-17a0-45cf-ab31-a092b37b4cb1"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP1A1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f98e9ef2-3900-42b0-8194-87ba479681d0"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP1A2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1b5108f0-d7bd-404a-9b8c-de1c1f540437"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP1A3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b1daf84f-40b2-4600-9874-18d4ebc9d16d"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP1A4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""501020c1-b434-4ea5-8c5e-f074f2c515ef"",
+                    ""path"": ""<Keyboard>/u"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP2A1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ec93b21-10a3-4198-8450-acb934161813"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP2A2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""52b45eb4-3c92-4d01-baa8-51886d090521"",
+                    ""path"": ""<Keyboard>/o"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP2A3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9c1d1bf2-38f3-42fc-829b-889609449b43"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP2A4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""982685b0-6ec0-4406-9d8d-ddd8ff431499"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP3A1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4c7af468-5bb4-478b-8282-1fc84a25a811"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP3A2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c76befcc-7cdd-4161-949b-456de3983e08"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP3A3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5759c6ec-9dcf-4350-bcf7-dc57793f40d3"",
+                    ""path"": ""<Keyboard>/n"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP3A4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e708da0e-51f7-4836-b77a-444bf3cac185"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP4A1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a79c58b8-2ec5-4580-b7e9-b5eba0cf743d"",
+                    ""path"": ""<Keyboard>/numpad2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP4A2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""54ab48ec-053e-4cfc-a976-d1be9995837a"",
+                    ""path"": ""<Keyboard>/numpad3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP4A3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2fa62cd0-ba18-44dd-b38e-f796026d5e42"",
+                    ""path"": ""<Keyboard>/numpad4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP4A4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -670,6 +990,22 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Quiz_Answer2 = m_Quiz.FindAction("Answer2", throwIfNotFound: true);
         m_Quiz_Answer3 = m_Quiz.FindAction("Answer3", throwIfNotFound: true);
         m_Quiz_Answer4 = m_Quiz.FindAction("Answer4", throwIfNotFound: true);
+        m_Quiz_KBP1A1 = m_Quiz.FindAction("KBP1A1", throwIfNotFound: true);
+        m_Quiz_KBP1A2 = m_Quiz.FindAction("KBP1A2", throwIfNotFound: true);
+        m_Quiz_KBP1A3 = m_Quiz.FindAction("KBP1A3", throwIfNotFound: true);
+        m_Quiz_KBP1A4 = m_Quiz.FindAction("KBP1A4", throwIfNotFound: true);
+        m_Quiz_KBP2A1 = m_Quiz.FindAction("KBP2A1", throwIfNotFound: true);
+        m_Quiz_KBP2A2 = m_Quiz.FindAction("KBP2A2", throwIfNotFound: true);
+        m_Quiz_KBP2A3 = m_Quiz.FindAction("KBP2A3", throwIfNotFound: true);
+        m_Quiz_KBP2A4 = m_Quiz.FindAction("KBP2A4", throwIfNotFound: true);
+        m_Quiz_KBP3A1 = m_Quiz.FindAction("KBP3A1", throwIfNotFound: true);
+        m_Quiz_KBP3A2 = m_Quiz.FindAction("KBP3A2", throwIfNotFound: true);
+        m_Quiz_KBP3A3 = m_Quiz.FindAction("KBP3A3", throwIfNotFound: true);
+        m_Quiz_KBP3A4 = m_Quiz.FindAction("KBP3A4", throwIfNotFound: true);
+        m_Quiz_KBP4A1 = m_Quiz.FindAction("KBP4A1", throwIfNotFound: true);
+        m_Quiz_KBP4A2 = m_Quiz.FindAction("KBP4A2", throwIfNotFound: true);
+        m_Quiz_KBP4A3 = m_Quiz.FindAction("KBP4A3", throwIfNotFound: true);
+        m_Quiz_KBP4A4 = m_Quiz.FindAction("KBP4A4", throwIfNotFound: true);
         // BTBloc
         m_BTBloc = asset.FindActionMap("BTBloc", throwIfNotFound: true);
         m_BTBloc_GamePad = m_BTBloc.FindAction("GamePad", throwIfNotFound: true);
@@ -769,6 +1105,22 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Quiz_Answer2;
     private readonly InputAction m_Quiz_Answer3;
     private readonly InputAction m_Quiz_Answer4;
+    private readonly InputAction m_Quiz_KBP1A1;
+    private readonly InputAction m_Quiz_KBP1A2;
+    private readonly InputAction m_Quiz_KBP1A3;
+    private readonly InputAction m_Quiz_KBP1A4;
+    private readonly InputAction m_Quiz_KBP2A1;
+    private readonly InputAction m_Quiz_KBP2A2;
+    private readonly InputAction m_Quiz_KBP2A3;
+    private readonly InputAction m_Quiz_KBP2A4;
+    private readonly InputAction m_Quiz_KBP3A1;
+    private readonly InputAction m_Quiz_KBP3A2;
+    private readonly InputAction m_Quiz_KBP3A3;
+    private readonly InputAction m_Quiz_KBP3A4;
+    private readonly InputAction m_Quiz_KBP4A1;
+    private readonly InputAction m_Quiz_KBP4A2;
+    private readonly InputAction m_Quiz_KBP4A3;
+    private readonly InputAction m_Quiz_KBP4A4;
     public struct QuizActions
     {
         private @InputActions m_Wrapper;
@@ -777,6 +1129,22 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @Answer2 => m_Wrapper.m_Quiz_Answer2;
         public InputAction @Answer3 => m_Wrapper.m_Quiz_Answer3;
         public InputAction @Answer4 => m_Wrapper.m_Quiz_Answer4;
+        public InputAction @KBP1A1 => m_Wrapper.m_Quiz_KBP1A1;
+        public InputAction @KBP1A2 => m_Wrapper.m_Quiz_KBP1A2;
+        public InputAction @KBP1A3 => m_Wrapper.m_Quiz_KBP1A3;
+        public InputAction @KBP1A4 => m_Wrapper.m_Quiz_KBP1A4;
+        public InputAction @KBP2A1 => m_Wrapper.m_Quiz_KBP2A1;
+        public InputAction @KBP2A2 => m_Wrapper.m_Quiz_KBP2A2;
+        public InputAction @KBP2A3 => m_Wrapper.m_Quiz_KBP2A3;
+        public InputAction @KBP2A4 => m_Wrapper.m_Quiz_KBP2A4;
+        public InputAction @KBP3A1 => m_Wrapper.m_Quiz_KBP3A1;
+        public InputAction @KBP3A2 => m_Wrapper.m_Quiz_KBP3A2;
+        public InputAction @KBP3A3 => m_Wrapper.m_Quiz_KBP3A3;
+        public InputAction @KBP3A4 => m_Wrapper.m_Quiz_KBP3A4;
+        public InputAction @KBP4A1 => m_Wrapper.m_Quiz_KBP4A1;
+        public InputAction @KBP4A2 => m_Wrapper.m_Quiz_KBP4A2;
+        public InputAction @KBP4A3 => m_Wrapper.m_Quiz_KBP4A3;
+        public InputAction @KBP4A4 => m_Wrapper.m_Quiz_KBP4A4;
         public InputActionMap Get() { return m_Wrapper.m_Quiz; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -798,6 +1166,54 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Answer4.started += instance.OnAnswer4;
             @Answer4.performed += instance.OnAnswer4;
             @Answer4.canceled += instance.OnAnswer4;
+            @KBP1A1.started += instance.OnKBP1A1;
+            @KBP1A1.performed += instance.OnKBP1A1;
+            @KBP1A1.canceled += instance.OnKBP1A1;
+            @KBP1A2.started += instance.OnKBP1A2;
+            @KBP1A2.performed += instance.OnKBP1A2;
+            @KBP1A2.canceled += instance.OnKBP1A2;
+            @KBP1A3.started += instance.OnKBP1A3;
+            @KBP1A3.performed += instance.OnKBP1A3;
+            @KBP1A3.canceled += instance.OnKBP1A3;
+            @KBP1A4.started += instance.OnKBP1A4;
+            @KBP1A4.performed += instance.OnKBP1A4;
+            @KBP1A4.canceled += instance.OnKBP1A4;
+            @KBP2A1.started += instance.OnKBP2A1;
+            @KBP2A1.performed += instance.OnKBP2A1;
+            @KBP2A1.canceled += instance.OnKBP2A1;
+            @KBP2A2.started += instance.OnKBP2A2;
+            @KBP2A2.performed += instance.OnKBP2A2;
+            @KBP2A2.canceled += instance.OnKBP2A2;
+            @KBP2A3.started += instance.OnKBP2A3;
+            @KBP2A3.performed += instance.OnKBP2A3;
+            @KBP2A3.canceled += instance.OnKBP2A3;
+            @KBP2A4.started += instance.OnKBP2A4;
+            @KBP2A4.performed += instance.OnKBP2A4;
+            @KBP2A4.canceled += instance.OnKBP2A4;
+            @KBP3A1.started += instance.OnKBP3A1;
+            @KBP3A1.performed += instance.OnKBP3A1;
+            @KBP3A1.canceled += instance.OnKBP3A1;
+            @KBP3A2.started += instance.OnKBP3A2;
+            @KBP3A2.performed += instance.OnKBP3A2;
+            @KBP3A2.canceled += instance.OnKBP3A2;
+            @KBP3A3.started += instance.OnKBP3A3;
+            @KBP3A3.performed += instance.OnKBP3A3;
+            @KBP3A3.canceled += instance.OnKBP3A3;
+            @KBP3A4.started += instance.OnKBP3A4;
+            @KBP3A4.performed += instance.OnKBP3A4;
+            @KBP3A4.canceled += instance.OnKBP3A4;
+            @KBP4A1.started += instance.OnKBP4A1;
+            @KBP4A1.performed += instance.OnKBP4A1;
+            @KBP4A1.canceled += instance.OnKBP4A1;
+            @KBP4A2.started += instance.OnKBP4A2;
+            @KBP4A2.performed += instance.OnKBP4A2;
+            @KBP4A2.canceled += instance.OnKBP4A2;
+            @KBP4A3.started += instance.OnKBP4A3;
+            @KBP4A3.performed += instance.OnKBP4A3;
+            @KBP4A3.canceled += instance.OnKBP4A3;
+            @KBP4A4.started += instance.OnKBP4A4;
+            @KBP4A4.performed += instance.OnKBP4A4;
+            @KBP4A4.canceled += instance.OnKBP4A4;
         }
 
         private void UnregisterCallbacks(IQuizActions instance)
@@ -814,6 +1230,54 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Answer4.started -= instance.OnAnswer4;
             @Answer4.performed -= instance.OnAnswer4;
             @Answer4.canceled -= instance.OnAnswer4;
+            @KBP1A1.started -= instance.OnKBP1A1;
+            @KBP1A1.performed -= instance.OnKBP1A1;
+            @KBP1A1.canceled -= instance.OnKBP1A1;
+            @KBP1A2.started -= instance.OnKBP1A2;
+            @KBP1A2.performed -= instance.OnKBP1A2;
+            @KBP1A2.canceled -= instance.OnKBP1A2;
+            @KBP1A3.started -= instance.OnKBP1A3;
+            @KBP1A3.performed -= instance.OnKBP1A3;
+            @KBP1A3.canceled -= instance.OnKBP1A3;
+            @KBP1A4.started -= instance.OnKBP1A4;
+            @KBP1A4.performed -= instance.OnKBP1A4;
+            @KBP1A4.canceled -= instance.OnKBP1A4;
+            @KBP2A1.started -= instance.OnKBP2A1;
+            @KBP2A1.performed -= instance.OnKBP2A1;
+            @KBP2A1.canceled -= instance.OnKBP2A1;
+            @KBP2A2.started -= instance.OnKBP2A2;
+            @KBP2A2.performed -= instance.OnKBP2A2;
+            @KBP2A2.canceled -= instance.OnKBP2A2;
+            @KBP2A3.started -= instance.OnKBP2A3;
+            @KBP2A3.performed -= instance.OnKBP2A3;
+            @KBP2A3.canceled -= instance.OnKBP2A3;
+            @KBP2A4.started -= instance.OnKBP2A4;
+            @KBP2A4.performed -= instance.OnKBP2A4;
+            @KBP2A4.canceled -= instance.OnKBP2A4;
+            @KBP3A1.started -= instance.OnKBP3A1;
+            @KBP3A1.performed -= instance.OnKBP3A1;
+            @KBP3A1.canceled -= instance.OnKBP3A1;
+            @KBP3A2.started -= instance.OnKBP3A2;
+            @KBP3A2.performed -= instance.OnKBP3A2;
+            @KBP3A2.canceled -= instance.OnKBP3A2;
+            @KBP3A3.started -= instance.OnKBP3A3;
+            @KBP3A3.performed -= instance.OnKBP3A3;
+            @KBP3A3.canceled -= instance.OnKBP3A3;
+            @KBP3A4.started -= instance.OnKBP3A4;
+            @KBP3A4.performed -= instance.OnKBP3A4;
+            @KBP3A4.canceled -= instance.OnKBP3A4;
+            @KBP4A1.started -= instance.OnKBP4A1;
+            @KBP4A1.performed -= instance.OnKBP4A1;
+            @KBP4A1.canceled -= instance.OnKBP4A1;
+            @KBP4A2.started -= instance.OnKBP4A2;
+            @KBP4A2.performed -= instance.OnKBP4A2;
+            @KBP4A2.canceled -= instance.OnKBP4A2;
+            @KBP4A3.started -= instance.OnKBP4A3;
+            @KBP4A3.performed -= instance.OnKBP4A3;
+            @KBP4A3.canceled -= instance.OnKBP4A3;
+            @KBP4A4.started -= instance.OnKBP4A4;
+            @KBP4A4.performed -= instance.OnKBP4A4;
+            @KBP4A4.canceled -= instance.OnKBP4A4;
         }
 
         public void RemoveCallbacks(IQuizActions instance)
@@ -1153,6 +1617,22 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnAnswer2(InputAction.CallbackContext context);
         void OnAnswer3(InputAction.CallbackContext context);
         void OnAnswer4(InputAction.CallbackContext context);
+        void OnKBP1A1(InputAction.CallbackContext context);
+        void OnKBP1A2(InputAction.CallbackContext context);
+        void OnKBP1A3(InputAction.CallbackContext context);
+        void OnKBP1A4(InputAction.CallbackContext context);
+        void OnKBP2A1(InputAction.CallbackContext context);
+        void OnKBP2A2(InputAction.CallbackContext context);
+        void OnKBP2A3(InputAction.CallbackContext context);
+        void OnKBP2A4(InputAction.CallbackContext context);
+        void OnKBP3A1(InputAction.CallbackContext context);
+        void OnKBP3A2(InputAction.CallbackContext context);
+        void OnKBP3A3(InputAction.CallbackContext context);
+        void OnKBP3A4(InputAction.CallbackContext context);
+        void OnKBP4A1(InputAction.CallbackContext context);
+        void OnKBP4A2(InputAction.CallbackContext context);
+        void OnKBP4A3(InputAction.CallbackContext context);
+        void OnKBP4A4(InputAction.CallbackContext context);
     }
     public interface IBTBlocActions
     {
