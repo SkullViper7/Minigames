@@ -10,7 +10,10 @@ public class Rocket : MonoBehaviour
     private PlayerInput playerInput;
 
     public float propulsion;
+    public float rotationPerSecond;
+
     public float bounceForce;
+
     public float timeStunt;
     private bool isStunt;
 
@@ -116,6 +119,7 @@ public class Rocket : MonoBehaviour
         //List of all inputs for this game
         switch (context.action.name)
         {
+            //Gamepad
             case "OrientationGamepad":
                 if (!GameManager.Instance.isOnKeyboard)
                 {
@@ -126,6 +130,121 @@ public class Rocket : MonoBehaviour
                 if (!GameManager.Instance.isOnKeyboard)
                 {
                     if (context.started == true)
+                    {
+                        Propulsion();
+                    }
+                }
+                break;
+            //Keyboard
+            //GreenRocket
+            case "GreenRocketLeft":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "GreenRocket")
+                    {
+                        Debug.Log("test");
+                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                    }
+                }
+                break;
+            case "GreenRocketRight":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "GreenRocket")
+                    {
+                        Debug.Log("test");
+                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                    }
+                }
+                break;
+            case "GreenRocketPropulsion":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "GreenRocket")
+                    {
+                        Propulsion();
+                    }
+                }
+                break;
+            //RedRocket
+            case "RedRocketLeft":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "RedRocket")
+                    {
+                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                    }
+                }
+                break;
+            case "RedRocketRight":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "RedRocket")
+                    {
+                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                    }
+                }
+                break;
+            case "RedRocketPropulsion":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "RedRocket")
+                    {
+                        Propulsion();
+                    }
+                }
+                break;
+            //BlueRocket
+            case "BlueRocketLeft":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "BlueRocket")
+                    {
+                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                    }
+                }
+                break;
+            case "BlueRocketRight":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "BlueRocket")
+                    {
+                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                    }
+                }
+                break;
+            case "BlueRocketPropulsion":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "BlueRocket")
+                    {
+                        Propulsion();
+                    }
+                }
+                break;
+            //YellowRocket
+            case "YellowRocketLeft":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "YellowRocket")
+                    {
+                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                    }
+                }
+                break;
+            case "YellowRocketRight":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "YellowRocket")
+                    {
+                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                    }
+                }
+                break;
+            case "YellowRocketPropulsion":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "YellowRocket")
                     {
                         Propulsion();
                     }
@@ -154,6 +273,12 @@ public class Rocket : MonoBehaviour
             //Rocket orientation is the same as the stick
             transform.up = new Vector2(actualOrientation.x, Mathf.Clamp(actualOrientation.y, 0f, 1f));
         }
+    }
+
+    private void OrientationLeftKeyboard()
+    {
+        //Rotate the rocket
+        transform.Rotate(new Vector3(0, 0, rotationPerSecond) * Time.deltaTime);
     }
 
     private void Propulsion()
