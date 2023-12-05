@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.Rendering.DebugUI;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class Rocket : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Rocket : MonoBehaviour
 
     public float propulsion;
     public float rotationPerSecond;
+
+    public bool leftKeyIsHeld;
+    public bool rightKeyIsHeld;
 
     public float bounceForce;
 
@@ -142,8 +146,14 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "GreenRocket")
                     {
-                        Debug.Log("test");
-                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                        if (context.started == true)
+                        {
+                            leftKeyIsHeld = true;
+                        }
+                        else if(context.canceled == true)
+                        {
+                            leftKeyIsHeld = false;
+                        }
                     }
                 }
                 break;
@@ -152,8 +162,14 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "GreenRocket")
                     {
-                        Debug.Log("test");
-                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                        if (context.started == true)
+                        {
+                            rightKeyIsHeld = true;
+                        }
+                        else if (context.canceled == true)
+                        {
+                            rightKeyIsHeld = false;
+                        }
                     }
                 }
                 break;
@@ -162,7 +178,10 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "GreenRocket")
                     {
-                        Propulsion();
+                        if (context.started == true)
+                        {
+                            Propulsion();
+                        }
                     }
                 }
                 break;
@@ -172,7 +191,14 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "RedRocket")
                     {
-                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                        if (context.started == true)
+                        {
+                            leftKeyIsHeld = true;
+                        }
+                        else if (context.canceled == true)
+                        {
+                            leftKeyIsHeld = false;
+                        }
                     }
                 }
                 break;
@@ -181,7 +207,14 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "RedRocket")
                     {
-                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                        if (context.started == true)
+                        {
+                            rightKeyIsHeld = true;
+                        }
+                        else if (context.canceled == true)
+                        {
+                            rightKeyIsHeld = false;
+                        }
                     }
                 }
                 break;
@@ -190,7 +223,10 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "RedRocket")
                     {
-                        Propulsion();
+                        if (context.started == true)
+                        {
+                            Propulsion();
+                        }
                     }
                 }
                 break;
@@ -200,7 +236,14 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "BlueRocket")
                     {
-                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                        if (context.started == true)
+                        {
+                            leftKeyIsHeld = true;
+                        }
+                        else if (context.canceled == true)
+                        {
+                            leftKeyIsHeld = false;
+                        }
                     }
                 }
                 break;
@@ -209,7 +252,14 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "BlueRocket")
                     {
-                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                        if (context.started == true)
+                        {
+                            rightKeyIsHeld = true;
+                        }
+                        else if (context.canceled == true)
+                        {
+                            rightKeyIsHeld = false;
+                        }
                     }
                 }
                 break;
@@ -218,7 +268,10 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "BlueRocket")
                     {
-                        Propulsion();
+                        if (context.started == true)
+                        {
+                            Propulsion();
+                        }
                     }
                 }
                 break;
@@ -228,7 +281,14 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "YellowRocket")
                     {
-                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                        if (context.started == true)
+                        {
+                            leftKeyIsHeld = true;
+                        }
+                        else if (context.canceled == true)
+                        {
+                            leftKeyIsHeld = false;
+                        }
                     }
                 }
                 break;
@@ -237,7 +297,14 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "YellowRocket")
                     {
-                        //OrientationGamepad(context.action.ReadValue<Vector2>());
+                        if (context.started == true)
+                        {
+                            rightKeyIsHeld = true;
+                        }
+                        else if (context.canceled == true)
+                        {
+                            rightKeyIsHeld = false;
+                        }
                     }
                 }
                 break;
@@ -246,7 +313,10 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "YellowRocket")
                     {
-                        Propulsion();
+                        if (context.started == true)
+                        {
+                            Propulsion();
+                        }
                     }
                 }
                 break;
@@ -275,10 +345,37 @@ public class Rocket : MonoBehaviour
         }
     }
 
+
+
     private void OrientationLeftKeyboard()
     {
-        //Rotate the rocket
-        transform.Rotate(new Vector3(0, 0, rotationPerSecond) * Time.deltaTime);
+        if (!isStunt)
+        {
+            //Rotate the rocket on the left
+            transform.Rotate(new Vector3(0, 0, rotationPerSecond) * Time.deltaTime);
+        }
+    }
+
+    private void OrientationRightKeyboard()
+    {
+        if (!isStunt)
+        {
+            //Rotate the rocket on the right
+            transform.Rotate(new Vector3(0, 0, -rotationPerSecond) * Time.deltaTime);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        //Check if buttons are pressed and rotate
+        if (leftKeyIsHeld)
+        {
+            OrientationLeftKeyboard();
+        }
+        if (rightKeyIsHeld)
+        {
+            OrientationRightKeyboard();
+        }
     }
 
     private void Propulsion()
