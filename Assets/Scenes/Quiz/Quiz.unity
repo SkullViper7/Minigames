@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -197,6 +197,7 @@ Transform:
   - {fileID: 1831056238}
   - {fileID: 964851560}
   - {fileID: 256768703}
+  - {fileID: 1732366043}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &93385193
@@ -1075,6 +1076,7 @@ MonoBehaviour:
   scoreManager: {fileID: 106265156}
   questionManager: {fileID: 1303899939}
   answerTextManager: {fileID: 1831056239}
+  blink: {fileID: 1732366044}
 --- !u!4 &369025602
 Transform:
   m_ObjectHideFlags: 0
@@ -2100,6 +2102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: {fileID: 1570602692}
+  blink: {fileID: 1732366044}
 --- !u!1 &1059817302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,6 +2461,7 @@ MonoBehaviour:
   - Au Tennessee, quel animal ne peut-on pas capturer au lasso ?
   questionPicked: 0
   questionText: {fileID: 1975079268}
+  answerManager: {fileID: 369025601}
 --- !u!1 &1403351216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,6 +2886,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674158382}
   m_CullTransparentMesh: 1
+--- !u!1 &1732366042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1732366043}
+  - component: {fileID: 1732366044}
+  m_Layer: 0
+  m_Name: BlinkManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1732366043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732366042}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 66131162}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1732366044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732366042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e09c0ee9b03ddf4ca7ea511e1958ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answer1: {fileID: 1137328214}
+  answer2: {fileID: 2073862177}
+  answer3: {fileID: 1236058450}
+  answer4: {fileID: 1674158384}
+  text1: {fileID: 1816373967}
+  text2: {fileID: 1739366587}
+  text3: {fileID: 641742980}
+  text4: {fileID: 1861585075}
+  icon1: {fileID: 93385195}
+  icon2: {fileID: 343036456}
+  icon3: {fileID: 1827267898}
+  icon4: {fileID: 822082450}
+  pause: 0
 --- !u!1 &1739366585
 GameObject:
   m_ObjectHideFlags: 0

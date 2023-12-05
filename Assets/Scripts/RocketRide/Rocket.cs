@@ -14,6 +14,7 @@ public class Rocket : MonoBehaviour
     public float timeStunt;
     private bool isStunt;
 
+    private Vector2 startOrientation;
     private Vector2 lastOrientation;
     private Vector2 actualOrientation;
 
@@ -27,6 +28,7 @@ public class Rocket : MonoBehaviour
         LinkPlayerToDevice();
 
         //Set up orientation
+        startOrientation = transform.up;
         lastOrientation = transform.up;
         actualOrientation = transform.up;
 
@@ -110,13 +112,14 @@ public class Rocket : MonoBehaviour
 
     public void OnAction(InputAction.CallbackContext context)
     {
+        //List of all inputs for this game
         switch (context.action.name)
         {
             case "OrientationGamepad":
                 OrientationGamepad(context.action.ReadValue<Vector2>());
                 break;
             case "PropulsionGamepad":
-                PropulsionGamepad();
+                Propulsion();
                 break;
         }
     }
@@ -143,7 +146,7 @@ public class Rocket : MonoBehaviour
         }
     }
 
-    private void PropulsionGamepad()
+    private void Propulsion()
     {
         if (!isStunt)
         {
@@ -160,6 +163,7 @@ public class Rocket : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        //Rocket is stunt when it collides to environment
         if (collision.gameObject.CompareTag("Environment"))
         {
             //Launch the coroutine for stunt
@@ -185,5 +189,22 @@ public class Rocket : MonoBehaviour
         //Rocket is stunt
         yield return new WaitForSeconds(_time);
         isStunt = false;
+    }
+
+    public IEnumerator Finish()
+    {
+        //When rocket has finished the race, it continue to fly upward
+        if (transform.position.y >= 1700)
+        {
+            //If rocket is to hight, desactive it
+            StopAllCoroutines();
+            gameObject.SetActive(false);
+        }
+
+        //Add propulsion every half second
+        transform.up = startOrientation;
+        Propulsion();
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(Finish());
     }
 }
