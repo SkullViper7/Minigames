@@ -1387,7 +1387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c6683b7a3fd7ab498dffefbafea9e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctAnswers: 0200000004000000030000000300000001000000040000000200000004000000020000000300000001000000020000000400000003000000040000000200000001000000040000000200000002000000030000000100000002000000010000000200000004000000020000000300000002000000010000000300000004000000030000000200000001000000040000000300000002000000010000000300000002000000
+  correctAnswers: 02000000040000000300000003000000010000000400000002000000040000000200000003000000010000000200000004000000030000000400000002000000010000000400000002000000020000000300000001000000020000000100000002000000040000000200000003000000020000000100000003000000040000000300000002000000010000000400000003000000020000000100000003000000
   correctAnswer: 0
   scoreManager: {fileID: 106265156}
   questionManager: {fileID: 1303899939}
@@ -3528,7 +3528,6 @@ MonoBehaviour:
     ?"
   - "En Pennsylvanie, qu'est-ce qu'il ne faut pas faire lors d'un concert \xE0 l'auditorium
     de Barnstormers ?"
-  - Au Tennessee, quel animal ne peut-on pas capturer au lasso ?
   questionPicked: 0
   questionText: {fileID: 1975079268}
   answerManager: {fileID: 369025601}
@@ -4728,7 +4727,6 @@ MonoBehaviour:
   - En dansant
   - Ouvrir un soda
   - Danser la country
-  - Cheval
   secondAnswer:
   - Dimanche
   - Chat
@@ -4770,7 +4768,6 @@ MonoBehaviour:
   - A reculons
   - Couper du papier
   - Jeter des pierres
-  - Poisson
   thirdAnswer:
   - "Les jours f\xE9ri\xE9s"
   - Hamster
@@ -4812,7 +4809,6 @@ MonoBehaviour:
   - "Dans un h\xE9licopt\xE8re"
   - Gonfler un ballon
   - "Manger des cacah\xE8tes \xE0 reculons"
-  - Oiseaux
   fourthAnswer:
   - Le 11 septembre
   - Ane
@@ -4854,7 +4850,6 @@ MonoBehaviour:
   - En conduisant
   - Laver sa voiture
   - Faire du monocycle saoul
-  - "Li\xE8v"
   answerText1: {fileID: 1816373967}
   answerText2: {fileID: 1739366587}
   answerText3: {fileID: 641742980}
