@@ -80,6 +80,7 @@ public class PlayerController : MonoBehaviour
             }
             //Find the player input control
             playerInput = GameObject.Find("PlayerInputControlKeyboard").GetComponent<PlayerInput>();
+            playerInput.onActionTriggered += OnAction;
         }
     }
 
@@ -102,16 +103,40 @@ public class PlayerController : MonoBehaviour
         switch (context.action.name)
         {
             case "Answer1":
-                AnswerOneChoose();
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    if (context.started == true)
+                    {
+                        AnswerOneChoose();
+                    }
+                }
                 break;
             case "Answer2":
-                AnswerTwoChoose();
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    if (context.started == true)
+                    {
+                        AnswerTwoChoose();
+                    }
+                }
                 break;
             case "Answer3":
-                AnswerThreeChoose();
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    if (context.started == true)
+                    {
+                        AnswerThreeChoose();
+                    }
+                }
                 break;
             case "Answer4":
-                AnswerFourChoose();
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    if (context.started == true)
+                    {
+                        AnswerFourChoose();
+                    }
+                }
                 break;
         }
     }

@@ -174,7 +174,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""1130d9b3-ff7b-4afa-8d93-e37ae103bf8c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -201,7 +201,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""583dc5e0-db60-4868-9caa-1754c4fc51af"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -219,7 +219,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""9c11945a-c88c-4a19-bf3a-9d8f7e48fbfb"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -237,7 +237,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""dfafb229-12dd-45e0-9e45-137c96734956"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -255,7 +255,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""7c9cd6e2-60a6-4d08-b693-ac71ac9d3371"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 }
             ],
@@ -338,6 +338,24 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TestKeyboard"",
+                    ""type"": ""Button"",
+                    ""id"": ""83e65af4-25a2-43df-8d7c-e9365ef3dd1d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TestGamepad"",
+                    ""type"": ""Button"",
+                    ""id"": ""38e49a93-65c5-4868-bb7c-a3c4c0f70c76"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -360,6 +378,28 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""PropulsionGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6522b5d3-bcf2-40c9-9484-58f7d51b538e"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestKeyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9efa9eaa-940d-4962-8226-56be477dc2a2"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestGamepad"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -391,6 +431,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_RocketRide = asset.FindActionMap("RocketRide", throwIfNotFound: true);
         m_RocketRide_OrientationGamepad = m_RocketRide.FindAction("OrientationGamepad", throwIfNotFound: true);
         m_RocketRide_PropulsionGamepad = m_RocketRide.FindAction("PropulsionGamepad", throwIfNotFound: true);
+        m_RocketRide_TestKeyboard = m_RocketRide.FindAction("TestKeyboard", throwIfNotFound: true);
+        m_RocketRide_TestGamepad = m_RocketRide.FindAction("TestGamepad", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -650,12 +692,16 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private List<IRocketRideActions> m_RocketRideActionsCallbackInterfaces = new List<IRocketRideActions>();
     private readonly InputAction m_RocketRide_OrientationGamepad;
     private readonly InputAction m_RocketRide_PropulsionGamepad;
+    private readonly InputAction m_RocketRide_TestKeyboard;
+    private readonly InputAction m_RocketRide_TestGamepad;
     public struct RocketRideActions
     {
         private @InputActions m_Wrapper;
         public RocketRideActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @OrientationGamepad => m_Wrapper.m_RocketRide_OrientationGamepad;
         public InputAction @PropulsionGamepad => m_Wrapper.m_RocketRide_PropulsionGamepad;
+        public InputAction @TestKeyboard => m_Wrapper.m_RocketRide_TestKeyboard;
+        public InputAction @TestGamepad => m_Wrapper.m_RocketRide_TestGamepad;
         public InputActionMap Get() { return m_Wrapper.m_RocketRide; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -671,6 +717,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @PropulsionGamepad.started += instance.OnPropulsionGamepad;
             @PropulsionGamepad.performed += instance.OnPropulsionGamepad;
             @PropulsionGamepad.canceled += instance.OnPropulsionGamepad;
+            @TestKeyboard.started += instance.OnTestKeyboard;
+            @TestKeyboard.performed += instance.OnTestKeyboard;
+            @TestKeyboard.canceled += instance.OnTestKeyboard;
+            @TestGamepad.started += instance.OnTestGamepad;
+            @TestGamepad.performed += instance.OnTestGamepad;
+            @TestGamepad.canceled += instance.OnTestGamepad;
         }
 
         private void UnregisterCallbacks(IRocketRideActions instance)
@@ -681,6 +733,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @PropulsionGamepad.started -= instance.OnPropulsionGamepad;
             @PropulsionGamepad.performed -= instance.OnPropulsionGamepad;
             @PropulsionGamepad.canceled -= instance.OnPropulsionGamepad;
+            @TestKeyboard.started -= instance.OnTestKeyboard;
+            @TestKeyboard.performed -= instance.OnTestKeyboard;
+            @TestKeyboard.canceled -= instance.OnTestKeyboard;
+            @TestGamepad.started -= instance.OnTestGamepad;
+            @TestGamepad.performed -= instance.OnTestGamepad;
+            @TestGamepad.canceled -= instance.OnTestGamepad;
         }
 
         public void RemoveCallbacks(IRocketRideActions instance)
@@ -723,5 +781,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     {
         void OnOrientationGamepad(InputAction.CallbackContext context);
         void OnPropulsionGamepad(InputAction.CallbackContext context);
+        void OnTestKeyboard(InputAction.CallbackContext context);
+        void OnTestGamepad(InputAction.CallbackContext context);
     }
 }

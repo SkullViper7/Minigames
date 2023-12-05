@@ -152,7 +152,7 @@
                     "id": "1130d9b3-ff7b-4afa-8d93-e37ae103bf8c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -179,7 +179,7 @@
                     "id": "583dc5e0-db60-4868-9caa-1754c4fc51af",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -197,7 +197,7 @@
                     "id": "9c11945a-c88c-4a19-bf3a-9d8f7e48fbfb",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -215,7 +215,7 @@
                     "id": "dfafb229-12dd-45e0-9e45-137c96734956",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -233,7 +233,7 @@
                     "id": "7c9cd6e2-60a6-4d08-b693-ac71ac9d3371",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 }
             ],
@@ -316,6 +316,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "TestKeyboard",
+                    "type": "Button",
+                    "id": "83e65af4-25a2-43df-8d7c-e9365ef3dd1d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestGamepad",
+                    "type": "Button",
+                    "id": "38e49a93-65c5-4868-bb7c-a3c4c0f70c76",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -338,6 +356,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "PropulsionGamepad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6522b5d3-bcf2-40c9-9484-58f7d51b538e",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestKeyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9efa9eaa-940d-4962-8226-56be477dc2a2",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestGamepad",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

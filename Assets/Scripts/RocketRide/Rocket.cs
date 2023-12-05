@@ -93,6 +93,7 @@ public class Rocket : MonoBehaviour
             }
             //Find the player input control
             playerInput = GameObject.Find("PlayerInputControlKeyboard").GetComponent<PlayerInput>();
+            playerInput.onActionTriggered += OnAction;
         }
     }
 
@@ -116,10 +117,19 @@ public class Rocket : MonoBehaviour
         switch (context.action.name)
         {
             case "OrientationGamepad":
-                OrientationGamepad(context.action.ReadValue<Vector2>());
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    OrientationGamepad(context.action.ReadValue<Vector2>());
+                }
                 break;
             case "PropulsionGamepad":
-                Propulsion();
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    if (context.started == true)
+                    {
+                        Propulsion();
+                    }
+                }
                 break;
         }
     }

@@ -58,7 +58,79 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ecf77f68-2b06-464d-b669-32970e80871a
+    m_ActionName: Quiz/Answer1[/Keyboard/q,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d88dbff7-250b-4db9-9d6a-f0e8d97037a8
+    m_ActionName: Quiz/Answer2[/XInputControllerWindows/buttonEast,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 39f05e20-bd5e-4073-9641-4becbdeee6de
+    m_ActionName: Quiz/Answer3[/Keyboard/e,/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5e101298-20f2-440b-a2cc-1b3fcd87ed7f
+    m_ActionName: Quiz/Answer4[/Keyboard/r,/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3e22133a-c7b1-4a28-9e30-a79922fabf09
+    m_ActionName: BTBloc/GamePad
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1130d9b3-ff7b-4afa-8d93-e37ae103bf8c
+    m_ActionName: BTBloc/Direction_North[/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4f98ee44-0461-4626-a1bc-d4832e4f0fd3
+    m_ActionName: BTBloc/Keyboard
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 88d323b7-0ec2-4c64-a107-f3410a016617
+    m_ActionName: BTBloc/J1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 583dc5e0-db60-4868-9caa-1754c4fc51af
+    m_ActionName: BTBloc/J1_North[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f74ae54f-56bc-42c2-9729-af006556ca1a
+    m_ActionName: BTBloc/J2
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9c11945a-c88c-4a19-bf3a-9d8f7e48fbfb
+    m_ActionName: BTBloc/J2_North[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8391070b-3743-48a3-9158-e4921006b3ae
+    m_ActionName: BTBloc/J3
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dfafb229-12dd-45e0-9e45-137c96734956
+    m_ActionName: BTBloc/J3_North[/Keyboard/i]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 30b7a0d1-dc21-45c5-b09c-0bf76e6575fb
+    m_ActionName: BTBloc/J4
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7c9cd6e2-60a6-4d08-b693-ac71ac9d3371
+    m_ActionName: BTBloc/J4_North[/Keyboard/8]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7621689d-aa5d-467a-ae12-f7e24d94063e
+    m_ActionName: RocketRide/OrientationGamepad[/XInputControllerWindows/leftStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b0c8e794-7e1b-43d2-8e38-02abea5a7415
+    m_ActionName: RocketRide/PropulsionGamepad[/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 83e65af4-25a2-43df-8d7c-e9365ef3dd1d
+    m_ActionName: RocketRide/Test[/Keyboard/space,/XInputControllerWindows/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Quiz

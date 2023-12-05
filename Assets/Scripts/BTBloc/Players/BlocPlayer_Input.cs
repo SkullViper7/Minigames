@@ -18,9 +18,23 @@ public class BlocPlayer_Input : MonoBehaviour
         LinkPlayerToDevice();
     }
 
-    private void Spawner(string tag)
+    private void Spawner()
     {
-        BTBloc_Manager.Instance.player1Score++;
+        switch (gameObject.tag)
+        {
+            case "Player1":
+                BTBloc_Manager.Instance.player1Score++;
+                break;
+            case "Player2":
+                BTBloc_Manager.Instance.player2Score++;
+                break;
+            case "Player3":
+                BTBloc_Manager.Instance.player3Score++;
+                break;
+            case "Player4":
+                BTBloc_Manager.Instance.player4Score++;
+                break;
+        }
         Instantiate(cubeToSpawn, transform.position, transform.rotation);
         transform.position += new Vector3(0f, 0.5f, 0f);
     }
@@ -30,31 +44,49 @@ public class BlocPlayer_Input : MonoBehaviour
         switch (context.action.name)
         {
             case "Direction_North":
-                Spawner(gameObject.tag);
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    if (context.started == true)
+                    {
+                        Spawner();
+                    }
+                }
                 break;
 
             case "J1_North":
                 if (gameObject.CompareTag("Player1"))
                 {
-                    Spawner(gameObject.tag);
+                    if (context.started == true)
+                    {
+                        Spawner();
+                    }
                 }
                 break;
             case "J2_North":
                 if (gameObject.CompareTag("Player2"))
                 {
-                    Spawner(gameObject.tag);
+                    if (context.started == true)
+                    {
+                        Spawner();
+                    }
                 }
                 break;
             case "J3_North":
                 if (gameObject.CompareTag("Player3"))
                 {
-                    Spawner(gameObject.tag);
+                    if (context.started == true)
+                    {
+                        Spawner();
+                    }
                 }
                 break;
             case "J4_North":
                 if (gameObject.CompareTag("Player4"))
                 {
-                    Spawner(gameObject.tag);
+                    if (context.started == true)
+                    {
+                        Spawner();
+                    }
                 }
                 break;
         }
@@ -66,7 +98,7 @@ public class BlocPlayer_Input : MonoBehaviour
         //If controller chosen is gamepad
         if (!GameManager.Instance.isOnKeyboard)
         {
-            //Determine which PlayerInputControl to find depending of the name of the rocket
+            //Determine which PlayerInputControl to find depending of the name of the player
             switch (gameObject.name)
             {
                 case "Bloc_Player_1":
@@ -86,7 +118,7 @@ public class BlocPlayer_Input : MonoBehaviour
         //If controller chosen is keyboard
         else
         {
-            //Active green and red rocket by default and blue and yellow if necessary
+            //Active player 1 and 2 by default and 3 and 4 if necessary
             switch (gameObject.name)
             {
                 case "Bloc_Player_1":
@@ -118,12 +150,13 @@ public class BlocPlayer_Input : MonoBehaviour
             }
             //Find the player input control
             _playerInput = GameObject.Find("PlayerInputControlKeyboard").GetComponent<PlayerInput>();
+            _playerInput.onActionTriggered += OnAction;
         }
     }
 
     private void TryToFindController(string _name)
     {
-        //Try to find the PlayerInputControl for this rocket, if there is no PlayerInputControl for it, desactive it
+        //Try to find the PlayerInputControl for this player, if there is no PlayerInputControl for it, desactive it
         if (GameObject.Find(_name) != null)
         {
             _playerInput = GameObject.Find(_name).GetComponent<PlayerInput>();
