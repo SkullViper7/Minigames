@@ -45,7 +45,7 @@ public class SlimeJumpManager : MonoBehaviour
         }
         else
         {
-
+            UI.ShowNameWinnerUI(theDeadPlayer.gameObject);
         }
     }
 

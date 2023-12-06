@@ -44,6 +44,17 @@ public class UIPage : MonoBehaviour
         _LastDead.gameObject.SetActive(true);
         StartCoroutine(StopDeadUI(_LastDead.gameObject));
     }
+    public void ShowNameWinnerUI(GameObject player)
+    {
+        if (_LastDead != null)
+        {
+            _LastDead.gameObject.SetActive(false);
+        }
+        _LastDead = Instantiate(_PlayerDeadUI, _PlayerDeadUI.transform.parent);
+        _LastDead.text = player.name + " WIN!!!!!!!!!!";
+        _LastDead.gameObject.SetActive(true);
+        StartCoroutine(StopDeadUI(_LastDead.gameObject));
+    }
 
     IEnumerator StopDeadUI(GameObject _lastDeadUI)
     {
