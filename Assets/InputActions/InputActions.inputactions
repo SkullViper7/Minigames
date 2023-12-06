@@ -839,7 +839,7 @@
                 {
                     "name": "",
                     "id": "98d7ff8f-aa59-40ed-b5e1-91dbc2089e77",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/numpad1",
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "",
@@ -850,7 +850,7 @@
                 {
                     "name": "",
                     "id": "ce81a6d7-8492-4ff7-8fd2-d8a8155ff069",
-                    "path": "<Keyboard>/h",
+                    "path": "<Keyboard>/numpad9",
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "",
@@ -861,7 +861,7 @@
                 {
                     "name": "",
                     "id": "f20650c6-dedc-4d04-a7dd-e16a0e7776b6",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/numpad0",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -894,7 +894,7 @@
                 {
                     "name": "",
                     "id": "648d52c0-0bb9-4e66-81e3-bafbd71439ea",
-                    "path": "<Keyboard>/leftArrow",
+                    "path": "<Keyboard>/f",
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "",
@@ -905,7 +905,7 @@
                 {
                     "name": "",
                     "id": "6d4401a8-3b3f-4d71-8ebc-cb635f5851b0",
-                    "path": "<Keyboard>/rightArrow",
+                    "path": "<Keyboard>/h",
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "",
@@ -916,7 +916,7 @@
                 {
                     "name": "",
                     "id": "7a336f8b-cf55-4396-a1fd-e01eabd4cef2",
-                    "path": "<Keyboard>/rightCtrl",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -927,7 +927,7 @@
                 {
                     "name": "",
                     "id": "e0d847b2-355d-4506-aa36-4e27370f259a",
-                    "path": "<Keyboard>/numpad1",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "",
@@ -938,7 +938,7 @@
                 {
                     "name": "",
                     "id": "ec08a6ff-a7c3-4246-a1fa-49fc8a0d2af0",
-                    "path": "<Keyboard>/numpad9",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "",
@@ -949,7 +949,7 @@
                 {
                     "name": "",
                     "id": "202afa85-c3a1-44a1-9056-fe55e09c681e",
-                    "path": "<Keyboard>/numpad0",
+                    "path": "<Keyboard>/ctrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
