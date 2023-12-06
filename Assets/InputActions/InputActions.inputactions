@@ -40,6 +40,150 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "KBP1A1",
+                    "type": "Button",
+                    "id": "6255a05d-cc54-4d94-ab07-3554f3f61ff2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP1A2",
+                    "type": "Button",
+                    "id": "78eaf17f-2f30-4334-a683-6692cbd5c228",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP1A3",
+                    "type": "Button",
+                    "id": "37e1ff33-49c3-4ca0-80e8-b58b0dcbdaa4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP1A4",
+                    "type": "Button",
+                    "id": "75455e3d-1f5d-442f-95ac-d4372712a4a5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP2A1",
+                    "type": "Button",
+                    "id": "2252e683-f02c-42c8-920c-6c3661482085",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP2A2",
+                    "type": "Button",
+                    "id": "f0415add-fa15-459e-844c-57ab761fe596",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP2A3",
+                    "type": "Button",
+                    "id": "a2b99131-557c-4e7d-a7b8-6dcbeaae03d4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP2A4",
+                    "type": "Button",
+                    "id": "1b6e748e-34ca-4133-a491-b36134d886eb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP3A1",
+                    "type": "Button",
+                    "id": "9bc3db49-807c-4b07-a92f-b782fbe71e7d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP3A2",
+                    "type": "Button",
+                    "id": "c8fd6876-a83d-4ecd-b16b-622259d730ce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP3A3",
+                    "type": "Button",
+                    "id": "cbb0da5a-3a48-49ef-a2c4-d4a5ecf6472f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP3A4",
+                    "type": "Button",
+                    "id": "ae0dcd1a-2f63-428e-b8ec-a41e8abe8092",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP4A1",
+                    "type": "Button",
+                    "id": "5b69e466-24d3-4716-8d71-ddd28516fab5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP4A2",
+                    "type": "Button",
+                    "id": "56a7e937-c76d-43d5-b7f4-5f0df0ac22da",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP4A3",
+                    "type": "Button",
+                    "id": "00a39fef-0ff6-4cf7-a685-075d62f2b335",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KBP4A4",
+                    "type": "Button",
+                    "id": "6bd1bf36-bb4e-4019-869e-619b4d016501",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -130,11 +274,187 @@
                     "action": "Answer4",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f58db161-17a0-45cf-ab31-a092b37b4cb1",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP1A1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f98e9ef2-3900-42b0-8194-87ba479681d0",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP1A2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1b5108f0-d7bd-404a-9b8c-de1c1f540437",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP1A3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1daf84f-40b2-4600-9874-18d4ebc9d16d",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP1A4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "501020c1-b434-4ea5-8c5e-f074f2c515ef",
+                    "path": "<Keyboard>/u",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP2A1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ec93b21-10a3-4198-8450-acb934161813",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP2A2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "52b45eb4-3c92-4d01-baa8-51886d090521",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP2A3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9c1d1bf2-38f3-42fc-829b-889609449b43",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP2A4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "982685b0-6ec0-4406-9d8d-ddd8ff431499",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP3A1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4c7af468-5bb4-478b-8282-1fc84a25a811",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP3A2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c76befcc-7cdd-4161-949b-456de3983e08",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP3A3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5759c6ec-9dcf-4350-bcf7-dc57793f40d3",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP3A4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e708da0e-51f7-4836-b77a-444bf3cac185",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP4A1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a79c58b8-2ec5-4580-b7e9-b5eba0cf743d",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP4A2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "54ab48ec-053e-4cfc-a976-d1be9995837a",
+                    "path": "<Keyboard>/numpad3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP4A3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2fa62cd0-ba18-44dd-b38e-f796026d5e42",
+                    "path": "<Keyboard>/numpad4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KBP4A4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
         {
-            "name": "Hunter",
+            "name": "BTBloc",
             "id": "4a91244f-32b3-4ddd-a377-17b914cb8a04",
             "actions": [
                 {
@@ -152,25 +472,7 @@
                     "id": "1130d9b3-ff7b-4afa-8d93-e37ae103bf8c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Direction_West",
-                    "type": "Button",
-                    "id": "6fb99c2a-4d87-4ac9-bc13-3727ac796e0f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Direction_East",
-                    "type": "Button",
-                    "id": "7814b296-1664-422e-893f-28223e6204d5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -197,25 +499,7 @@
                     "id": "583dc5e0-db60-4868-9caa-1754c4fc51af",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "J1_West",
-                    "type": "Button",
-                    "id": "7bee7dbf-294b-4881-ac0b-e9328c066f92",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "J1_East",
-                    "type": "Button",
-                    "id": "2c0dc5d0-4dc9-4fd7-b23f-69436d36c8f5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -233,25 +517,7 @@
                     "id": "9c11945a-c88c-4a19-bf3a-9d8f7e48fbfb",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "J2_West",
-                    "type": "Button",
-                    "id": "4707ea92-d3d4-4b72-abfe-0ba2ca6c8ef9",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "J2_East",
-                    "type": "Button",
-                    "id": "174068c9-ecf4-41e7-93f2-e2556c6b8104",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -269,25 +535,7 @@
                     "id": "dfafb229-12dd-45e0-9e45-137c96734956",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "J3_West",
-                    "type": "Button",
-                    "id": "0d5e94c5-6da7-46d1-8d86-c2b4baef7a0d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "J3_East",
-                    "type": "Button",
-                    "id": "866a86a5-e071-4628-a405-622feeb1cc8f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -305,25 +553,7 @@
                     "id": "7c9cd6e2-60a6-4d08-b693-ac71ac9d3371",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "J4_West",
-                    "type": "Button",
-                    "id": "80c81c46-1263-4374-ae98-42998306a796",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "J4_East",
-                    "type": "Button",
-                    "id": "30c2c64e-739c-4319-81c0-27fafb13fc4d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
+                    "interactions": "",
                     "initialStateCheck": false
                 }
             ],
@@ -341,56 +571,12 @@
                 },
                 {
                     "name": "",
-                    "id": "6ccede96-2f20-4f1a-971e-d1097f14f5af",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Direction_West",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "74878498-96ab-49c3-a7d9-3de7baa75a74",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Direction_East",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "1d0ebc74-6574-42fb-8e80-4188e0e813c5",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "J1_North",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "301fa315-81d2-4921-b2a8-998f4301faca",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "J1_West",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4db2f29e-1d80-4077-8a0f-d74746327925",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "J1_East",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -407,56 +593,12 @@
                 },
                 {
                     "name": "",
-                    "id": "62c4202a-63db-4530-a9b6-c2901efdd495",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "J2_West",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "148f9b5f-b941-48cb-933f-8e633f9c22e8",
-                    "path": "<Keyboard>/h",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "J2_East",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "492fbe6c-265f-40d0-ac00-95ed9bd19d54",
                     "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "J3_North",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "51b39a37-1057-4bee-9d6d-0f5e0a60bb99",
-                    "path": "<Keyboard>/j",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "J3_West",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2d713149-503e-40f2-b456-2bb10d551f7b",
-                    "path": "<Keyboard>/l",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "J3_East",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -470,28 +612,6 @@
                     "action": "J4_North",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0e81d8db-5b8d-446f-8199-c7e47507c7d0",
-                    "path": "<Keyboard>/4",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "J4_West",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "03e79e5e-9bd4-4d5c-8f4c-bc748d43bfe4",
-                    "path": "<Keyboard>/6",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "J4_East",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
@@ -499,6 +619,15 @@
             "name": "RocketRide",
             "id": "5a8bca08-4101-4219-b2ec-339a2bc59032",
             "actions": [
+                {
+                    "name": "----Gamepad----",
+                    "type": "Button",
+                    "id": "6c88afc5-0f66-4259-865d-c10c3bd749ba",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
                 {
                     "name": "OrientationGamepad",
                     "type": "Value",
@@ -516,9 +645,241 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "----GreenRocket----",
+                    "type": "Button",
+                    "id": "55ca963f-1cfa-4e0f-b9b4-6d3472ae64c7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GreenRocketLeft",
+                    "type": "Button",
+                    "id": "46643e01-dcc8-4022-85f6-ef53f7d42ecb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GreenRocketRight",
+                    "type": "Button",
+                    "id": "1c1f9d69-d8fa-49f1-b4b5-63106e5f0163",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GreenRocketPropulsion",
+                    "type": "Button",
+                    "id": "3722504c-7598-4c15-851e-cad306deae90",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "----RedRocket----",
+                    "type": "Button",
+                    "id": "59a2dffe-f092-4fdc-b16b-3c2776d601e8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RedRocketLeft",
+                    "type": "Button",
+                    "id": "636ad84b-2078-44be-ac5e-d99ce2231bf4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RedRocketRight",
+                    "type": "Button",
+                    "id": "25a5d97c-eda8-4713-bb06-14c9a22be882",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RedRocketPropulsion",
+                    "type": "Button",
+                    "id": "2a03b754-b3eb-43af-a114-e36a9ad8fd50",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "----BlueRocket----",
+                    "type": "Button",
+                    "id": "ebe59b29-84bd-410b-94de-76729ec9780c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BlueRocketLeft",
+                    "type": "Button",
+                    "id": "39114e9b-01d4-44d4-bef9-30484fb12ca4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BlueRocketRight",
+                    "type": "Button",
+                    "id": "a76053f4-c09c-42ad-83bd-12ed1c410e73",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BlueRocketPropulsion",
+                    "type": "Button",
+                    "id": "7bca2887-d673-4511-af21-c905047bb79d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "----YellowRocket----",
+                    "type": "Button",
+                    "id": "fe9bb6d5-336a-4d2a-b680-5b405b96b7dc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "YellowRocketLeft",
+                    "type": "Button",
+                    "id": "5ac6b5ee-17f1-440a-80b5-b09c62656b8b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "YellowRocketRight",
+                    "type": "Button",
+                    "id": "ac40b028-a142-41e0-8cb8-b633793bc0c3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "YellowRocketPropulsion",
+                    "type": "Button",
+                    "id": "3e278db2-8385-435a-beeb-a4bac503819d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
+                {
+                    "name": "",
+                    "id": "df399114-1f73-4780-a119-ed984e8eac6e",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PropulsionGamepad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9d26753-dc0c-496e-baf1-e558c1eab663",
+                    "path": "<Keyboard>/q",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GreenRocketLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a2514d1-650e-4725-bd02-233059346a14",
+                    "path": "<Keyboard>/s",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GreenRocketRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "334fb38c-6557-4e77-92f2-d1afc56ab3b0",
+                    "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GreenRocketPropulsion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "98d7ff8f-aa59-40ed-b5e1-91dbc2089e77",
+                    "path": "<Keyboard>/f",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RedRocketLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ce81a6d7-8492-4ff7-8fd2-d8a8155ff069",
+                    "path": "<Keyboard>/h",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RedRocketRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f20650c6-dedc-4d04-a7dd-e16a0e7776b6",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RedRocketPropulsion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a309149-a970-4850-be16-6b87da8fcc30",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "----Gamepad----",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "",
                     "id": "dc3234e0-6a45-43ce-b299-09dce94a594c",
@@ -532,12 +893,67 @@
                 },
                 {
                     "name": "",
-                    "id": "df399114-1f73-4780-a119-ed984e8eac6e",
-                    "path": "<Gamepad>/buttonSouth",
+                    "id": "648d52c0-0bb9-4e66-81e3-bafbd71439ea",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BlueRocketLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6d4401a8-3b3f-4d71-8ebc-cb635f5851b0",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BlueRocketRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a336f8b-cf55-4396-a1fd-e01eabd4cef2",
+                    "path": "<Keyboard>/rightCtrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PropulsionGamepad",
+                    "action": "BlueRocketPropulsion",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e0d847b2-355d-4506-aa36-4e27370f259a",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "YellowRocketLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec08a6ff-a7c3-4246-a1fa-49fc8a0d2af0",
+                    "path": "<Keyboard>/numpad9",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "YellowRocketRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "202afa85-c3a1-44a1-9056-fe55e09c681e",
+                    "path": "<Keyboard>/numpad0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "YellowRocketPropulsion",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

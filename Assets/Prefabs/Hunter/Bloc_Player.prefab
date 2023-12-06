@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6039823124973637657}
   - component: {fileID: 2439683445444380337}
   - component: {fileID: 3965445965337999480}
-  - component: {fileID: 117720320588684297}
   - component: {fileID: 7282868002845241838}
   m_Layer: 0
   m_Name: Bloc_Player
@@ -126,37 +125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeToSpawn: {fileID: 5676224666128721223, guid: 42c1340efd19da344b875e8335e7b66d,
     type: 3}
---- !u!114 &117720320588684297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105805783928645365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 444dc1284f9e12b4296148d0a5db4817,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Hunter
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 2883295575628992870}
 --- !u!114 &7282868002845241838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 2733780622597393187}
   serializedVersion: 2
   m_LocalRotation: {x: 0.11571218, y: -0.70397747, z: 0.11365387, w: 0.69145447}
-  m_LocalPosition: {x: 5.472344, y: 3.2003894, z: 0.09947176}
+  m_LocalPosition: {x: 5.472328, y: 3.2003942, z: 0.09954834}
   m_LocalScale: {x: 2.124835, y: 1.9723437, z: 2.106257}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -390,7 +358,7 @@ Transform:
   m_GameObject: {fileID: 5359718411107384422}
   serializedVersion: 2
   m_LocalRotation: {x: 0.11571218, y: -0.70397747, z: 0.11365387, w: 0.69145447}
-  m_LocalPosition: {x: -94.62863, y: 3.7003963, z: 484.97592}
+  m_LocalPosition: {x: 5.472328, y: 3.2003942, z: 0.09954834}
   m_LocalScale: {x: 2.124835, y: 1.9723437, z: 2.106257}
   m_ConstrainProportionsScale: 0
   m_Children: []

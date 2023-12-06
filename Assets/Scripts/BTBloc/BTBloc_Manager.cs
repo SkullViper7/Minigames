@@ -7,8 +7,6 @@ using UnityEngine.InputSystem.Utilities;
 
 public class BTBloc_Manager : MonoBehaviour
 {
-    private static BTBloc_Manager _instance;
-    private BlocUI_Manager _uiManager;
 
     public int players;
     public float setTimer;
@@ -19,22 +17,25 @@ public class BTBloc_Manager : MonoBehaviour
     public int player3Score;
     public int player4Score;
 
-    public BTBloc_Manager Instance
-    { 
-        get 
-        { 
-            if (_instance == null)
-            {
-                Debug.LogError("Game Manager missing");
-            }
-            return _instance; 
-        } 
-    }
+    //Singleton
+    private static BTBloc_Manager _instance = null;
+    private BTBloc_Manager() { }
+    public static BTBloc_Manager Instance => _instance;
+    //
 
     private void Awake()
     {
-        _instance = this;
-        _uiManager = GameObject.Find("Canvas").GetComponent<BlocUI_Manager>();
+        //Singleton
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            _instance = this;
+        }
+        //
     }
 
     private void Start()
@@ -50,7 +51,7 @@ public class BTBloc_Manager : MonoBehaviour
             if (timer > 0)
             {
                 timer = timer - Time.deltaTime;
-                _uiManager.DisplayTime(timer);
+                BlocUI_Manager.Instance.DisplayTime(timer);
             }
             else
             {

@@ -62,6 +62,150 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP1A1"",
+                    ""type"": ""Button"",
+                    ""id"": ""6255a05d-cc54-4d94-ab07-3554f3f61ff2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP1A2"",
+                    ""type"": ""Button"",
+                    ""id"": ""78eaf17f-2f30-4334-a683-6692cbd5c228"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP1A3"",
+                    ""type"": ""Button"",
+                    ""id"": ""37e1ff33-49c3-4ca0-80e8-b58b0dcbdaa4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP1A4"",
+                    ""type"": ""Button"",
+                    ""id"": ""75455e3d-1f5d-442f-95ac-d4372712a4a5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP2A1"",
+                    ""type"": ""Button"",
+                    ""id"": ""2252e683-f02c-42c8-920c-6c3661482085"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP2A2"",
+                    ""type"": ""Button"",
+                    ""id"": ""f0415add-fa15-459e-844c-57ab761fe596"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP2A3"",
+                    ""type"": ""Button"",
+                    ""id"": ""a2b99131-557c-4e7d-a7b8-6dcbeaae03d4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP2A4"",
+                    ""type"": ""Button"",
+                    ""id"": ""1b6e748e-34ca-4133-a491-b36134d886eb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP3A1"",
+                    ""type"": ""Button"",
+                    ""id"": ""9bc3db49-807c-4b07-a92f-b782fbe71e7d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP3A2"",
+                    ""type"": ""Button"",
+                    ""id"": ""c8fd6876-a83d-4ecd-b16b-622259d730ce"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP3A3"",
+                    ""type"": ""Button"",
+                    ""id"": ""cbb0da5a-3a48-49ef-a2c4-d4a5ecf6472f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP3A4"",
+                    ""type"": ""Button"",
+                    ""id"": ""ae0dcd1a-2f63-428e-b8ec-a41e8abe8092"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP4A1"",
+                    ""type"": ""Button"",
+                    ""id"": ""5b69e466-24d3-4716-8d71-ddd28516fab5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP4A2"",
+                    ""type"": ""Button"",
+                    ""id"": ""56a7e937-c76d-43d5-b7f4-5f0df0ac22da"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP4A3"",
+                    ""type"": ""Button"",
+                    ""id"": ""00a39fef-0ff6-4cf7-a685-075d62f2b335"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KBP4A4"",
+                    ""type"": ""Button"",
+                    ""id"": ""6bd1bf36-bb4e-4019-869e-619b4d016501"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -152,11 +296,187 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Answer4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f58db161-17a0-45cf-ab31-a092b37b4cb1"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP1A1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f98e9ef2-3900-42b0-8194-87ba479681d0"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP1A2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1b5108f0-d7bd-404a-9b8c-de1c1f540437"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP1A3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b1daf84f-40b2-4600-9874-18d4ebc9d16d"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP1A4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""501020c1-b434-4ea5-8c5e-f074f2c515ef"",
+                    ""path"": ""<Keyboard>/u"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP2A1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ec93b21-10a3-4198-8450-acb934161813"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP2A2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""52b45eb4-3c92-4d01-baa8-51886d090521"",
+                    ""path"": ""<Keyboard>/o"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP2A3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9c1d1bf2-38f3-42fc-829b-889609449b43"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP2A4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""982685b0-6ec0-4406-9d8d-ddd8ff431499"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP3A1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4c7af468-5bb4-478b-8282-1fc84a25a811"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP3A2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c76befcc-7cdd-4161-949b-456de3983e08"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP3A3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5759c6ec-9dcf-4350-bcf7-dc57793f40d3"",
+                    ""path"": ""<Keyboard>/n"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP3A4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e708da0e-51f7-4836-b77a-444bf3cac185"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP4A1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a79c58b8-2ec5-4580-b7e9-b5eba0cf743d"",
+                    ""path"": ""<Keyboard>/numpad2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP4A2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""54ab48ec-053e-4cfc-a976-d1be9995837a"",
+                    ""path"": ""<Keyboard>/numpad3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP4A3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2fa62cd0-ba18-44dd-b38e-f796026d5e42"",
+                    ""path"": ""<Keyboard>/numpad4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KBP4A4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
         {
-            ""name"": ""Hunter"",
+            ""name"": ""BTBloc"",
             ""id"": ""4a91244f-32b3-4ddd-a377-17b914cb8a04"",
             ""actions"": [
                 {
@@ -174,25 +494,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""1130d9b3-ff7b-4afa-8d93-e37ae103bf8c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Direction_West"",
-                    ""type"": ""Button"",
-                    ""id"": ""6fb99c2a-4d87-4ac9-bc13-3727ac796e0f"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Direction_East"",
-                    ""type"": ""Button"",
-                    ""id"": ""7814b296-1664-422e-893f-28223e6204d5"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -219,25 +521,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""583dc5e0-db60-4868-9caa-1754c4fc51af"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""J1_West"",
-                    ""type"": ""Button"",
-                    ""id"": ""7bee7dbf-294b-4881-ac0b-e9328c066f92"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""J1_East"",
-                    ""type"": ""Button"",
-                    ""id"": ""2c0dc5d0-4dc9-4fd7-b23f-69436d36c8f5"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -255,25 +539,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""9c11945a-c88c-4a19-bf3a-9d8f7e48fbfb"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""J2_West"",
-                    ""type"": ""Button"",
-                    ""id"": ""4707ea92-d3d4-4b72-abfe-0ba2ca6c8ef9"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""J2_East"",
-                    ""type"": ""Button"",
-                    ""id"": ""174068c9-ecf4-41e7-93f2-e2556c6b8104"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -291,25 +557,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""dfafb229-12dd-45e0-9e45-137c96734956"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""J3_West"",
-                    ""type"": ""Button"",
-                    ""id"": ""0d5e94c5-6da7-46d1-8d86-c2b4baef7a0d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""J3_East"",
-                    ""type"": ""Button"",
-                    ""id"": ""866a86a5-e071-4628-a405-622feeb1cc8f"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -327,25 +575,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""7c9cd6e2-60a6-4d08-b693-ac71ac9d3371"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""J4_West"",
-                    ""type"": ""Button"",
-                    ""id"": ""80c81c46-1263-4374-ae98-42998306a796"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""J4_East"",
-                    ""type"": ""Button"",
-                    ""id"": ""30c2c64e-739c-4319-81c0-27fafb13fc4d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 }
             ],
@@ -363,56 +593,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6ccede96-2f20-4f1a-971e-d1097f14f5af"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Direction_West"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""74878498-96ab-49c3-a7d9-3de7baa75a74"",
-                    ""path"": ""<Gamepad>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Direction_East"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""1d0ebc74-6574-42fb-8e80-4188e0e813c5"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""J1_North"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""301fa315-81d2-4921-b2a8-998f4301faca"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""J1_West"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4db2f29e-1d80-4077-8a0f-d74746327925"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""J1_East"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -429,56 +615,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""62c4202a-63db-4530-a9b6-c2901efdd495"",
-                    ""path"": ""<Keyboard>/f"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""J2_West"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""148f9b5f-b941-48cb-933f-8e633f9c22e8"",
-                    ""path"": ""<Keyboard>/h"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""J2_East"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""492fbe6c-265f-40d0-ac00-95ed9bd19d54"",
                     ""path"": ""<Keyboard>/i"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""J3_North"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""51b39a37-1057-4bee-9d6d-0f5e0a60bb99"",
-                    ""path"": ""<Keyboard>/j"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""J3_West"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2d713149-503e-40f2-b456-2bb10d551f7b"",
-                    ""path"": ""<Keyboard>/l"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""J3_East"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -492,28 +634,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""J4_North"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0e81d8db-5b8d-446f-8199-c7e47507c7d0"",
-                    ""path"": ""<Keyboard>/4"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""J4_West"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""03e79e5e-9bd4-4d5c-8f4c-bc748d43bfe4"",
-                    ""path"": ""<Keyboard>/6"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""J4_East"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -521,6 +641,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             ""name"": ""RocketRide"",
             ""id"": ""5a8bca08-4101-4219-b2ec-339a2bc59032"",
             ""actions"": [
+                {
+                    ""name"": ""----Gamepad----"",
+                    ""type"": ""Button"",
+                    ""id"": ""6c88afc5-0f66-4259-865d-c10c3bd749ba"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
                 {
                     ""name"": ""OrientationGamepad"",
                     ""type"": ""Value"",
@@ -538,9 +667,241 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""----GreenRocket----"",
+                    ""type"": ""Button"",
+                    ""id"": ""55ca963f-1cfa-4e0f-b9b4-6d3472ae64c7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GreenRocketLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""46643e01-dcc8-4022-85f6-ef53f7d42ecb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GreenRocketRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""1c1f9d69-d8fa-49f1-b4b5-63106e5f0163"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GreenRocketPropulsion"",
+                    ""type"": ""Button"",
+                    ""id"": ""3722504c-7598-4c15-851e-cad306deae90"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""----RedRocket----"",
+                    ""type"": ""Button"",
+                    ""id"": ""59a2dffe-f092-4fdc-b16b-3c2776d601e8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RedRocketLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""636ad84b-2078-44be-ac5e-d99ce2231bf4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RedRocketRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""25a5d97c-eda8-4713-bb06-14c9a22be882"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RedRocketPropulsion"",
+                    ""type"": ""Button"",
+                    ""id"": ""2a03b754-b3eb-43af-a114-e36a9ad8fd50"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""----BlueRocket----"",
+                    ""type"": ""Button"",
+                    ""id"": ""ebe59b29-84bd-410b-94de-76729ec9780c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BlueRocketLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""39114e9b-01d4-44d4-bef9-30484fb12ca4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BlueRocketRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""a76053f4-c09c-42ad-83bd-12ed1c410e73"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BlueRocketPropulsion"",
+                    ""type"": ""Button"",
+                    ""id"": ""7bca2887-d673-4511-af21-c905047bb79d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""----YellowRocket----"",
+                    ""type"": ""Button"",
+                    ""id"": ""fe9bb6d5-336a-4d2a-b680-5b405b96b7dc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""YellowRocketLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""5ac6b5ee-17f1-440a-80b5-b09c62656b8b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""YellowRocketRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""ac40b028-a142-41e0-8cb8-b633793bc0c3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""YellowRocketPropulsion"",
+                    ""type"": ""Button"",
+                    ""id"": ""3e278db2-8385-435a-beeb-a4bac503819d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""df399114-1f73-4780-a119-ed984e8eac6e"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PropulsionGamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a9d26753-dc0c-496e-baf1-e558c1eab663"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GreenRocketLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7a2514d1-650e-4725-bd02-233059346a14"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GreenRocketRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""334fb38c-6557-4e77-92f2-d1afc56ab3b0"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GreenRocketPropulsion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""98d7ff8f-aa59-40ed-b5e1-91dbc2089e77"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RedRocketLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ce81a6d7-8492-4ff7-8fd2-d8a8155ff069"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RedRocketRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f20650c6-dedc-4d04-a7dd-e16a0e7776b6"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RedRocketPropulsion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0a309149-a970-4850-be16-6b87da8fcc30"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""----Gamepad----"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
                 {
                     ""name"": """",
                     ""id"": ""dc3234e0-6a45-43ce-b299-09dce94a594c"",
@@ -554,12 +915,67 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""df399114-1f73-4780-a119-ed984e8eac6e"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""id"": ""648d52c0-0bb9-4e66-81e3-bafbd71439ea"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BlueRocketLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6d4401a8-3b3f-4d71-8ebc-cb635f5851b0"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BlueRocketRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7a336f8b-cf55-4396-a1fd-e01eabd4cef2"",
+                    ""path"": ""<Keyboard>/rightCtrl"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PropulsionGamepad"",
+                    ""action"": ""BlueRocketPropulsion"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e0d847b2-355d-4506-aa36-4e27370f259a"",
+                    ""path"": ""<Keyboard>/numpad1"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""YellowRocketLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ec08a6ff-a7c3-4246-a1fa-49fc8a0d2af0"",
+                    ""path"": ""<Keyboard>/numpad9"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""YellowRocketRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""202afa85-c3a1-44a1-9056-fe55e09c681e"",
+                    ""path"": ""<Keyboard>/numpad0"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""YellowRocketPropulsion"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -574,33 +990,56 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Quiz_Answer2 = m_Quiz.FindAction("Answer2", throwIfNotFound: true);
         m_Quiz_Answer3 = m_Quiz.FindAction("Answer3", throwIfNotFound: true);
         m_Quiz_Answer4 = m_Quiz.FindAction("Answer4", throwIfNotFound: true);
-        // Hunter
-        m_Hunter = asset.FindActionMap("Hunter", throwIfNotFound: true);
-        m_Hunter_GamePad = m_Hunter.FindAction("GamePad", throwIfNotFound: true);
-        m_Hunter_Direction_North = m_Hunter.FindAction("Direction_North", throwIfNotFound: true);
-        m_Hunter_Direction_West = m_Hunter.FindAction("Direction_West", throwIfNotFound: true);
-        m_Hunter_Direction_East = m_Hunter.FindAction("Direction_East", throwIfNotFound: true);
-        m_Hunter_Keyboard = m_Hunter.FindAction("Keyboard", throwIfNotFound: true);
-        m_Hunter_J1 = m_Hunter.FindAction("J1", throwIfNotFound: true);
-        m_Hunter_J1_North = m_Hunter.FindAction("J1_North", throwIfNotFound: true);
-        m_Hunter_J1_West = m_Hunter.FindAction("J1_West", throwIfNotFound: true);
-        m_Hunter_J1_East = m_Hunter.FindAction("J1_East", throwIfNotFound: true);
-        m_Hunter_J2 = m_Hunter.FindAction("J2", throwIfNotFound: true);
-        m_Hunter_J2_North = m_Hunter.FindAction("J2_North", throwIfNotFound: true);
-        m_Hunter_J2_West = m_Hunter.FindAction("J2_West", throwIfNotFound: true);
-        m_Hunter_J2_East = m_Hunter.FindAction("J2_East", throwIfNotFound: true);
-        m_Hunter_J3 = m_Hunter.FindAction("J3", throwIfNotFound: true);
-        m_Hunter_J3_North = m_Hunter.FindAction("J3_North", throwIfNotFound: true);
-        m_Hunter_J3_West = m_Hunter.FindAction("J3_West", throwIfNotFound: true);
-        m_Hunter_J3_East = m_Hunter.FindAction("J3_East", throwIfNotFound: true);
-        m_Hunter_J4 = m_Hunter.FindAction("J4", throwIfNotFound: true);
-        m_Hunter_J4_North = m_Hunter.FindAction("J4_North", throwIfNotFound: true);
-        m_Hunter_J4_West = m_Hunter.FindAction("J4_West", throwIfNotFound: true);
-        m_Hunter_J4_East = m_Hunter.FindAction("J4_East", throwIfNotFound: true);
+        m_Quiz_KBP1A1 = m_Quiz.FindAction("KBP1A1", throwIfNotFound: true);
+        m_Quiz_KBP1A2 = m_Quiz.FindAction("KBP1A2", throwIfNotFound: true);
+        m_Quiz_KBP1A3 = m_Quiz.FindAction("KBP1A3", throwIfNotFound: true);
+        m_Quiz_KBP1A4 = m_Quiz.FindAction("KBP1A4", throwIfNotFound: true);
+        m_Quiz_KBP2A1 = m_Quiz.FindAction("KBP2A1", throwIfNotFound: true);
+        m_Quiz_KBP2A2 = m_Quiz.FindAction("KBP2A2", throwIfNotFound: true);
+        m_Quiz_KBP2A3 = m_Quiz.FindAction("KBP2A3", throwIfNotFound: true);
+        m_Quiz_KBP2A4 = m_Quiz.FindAction("KBP2A4", throwIfNotFound: true);
+        m_Quiz_KBP3A1 = m_Quiz.FindAction("KBP3A1", throwIfNotFound: true);
+        m_Quiz_KBP3A2 = m_Quiz.FindAction("KBP3A2", throwIfNotFound: true);
+        m_Quiz_KBP3A3 = m_Quiz.FindAction("KBP3A3", throwIfNotFound: true);
+        m_Quiz_KBP3A4 = m_Quiz.FindAction("KBP3A4", throwIfNotFound: true);
+        m_Quiz_KBP4A1 = m_Quiz.FindAction("KBP4A1", throwIfNotFound: true);
+        m_Quiz_KBP4A2 = m_Quiz.FindAction("KBP4A2", throwIfNotFound: true);
+        m_Quiz_KBP4A3 = m_Quiz.FindAction("KBP4A3", throwIfNotFound: true);
+        m_Quiz_KBP4A4 = m_Quiz.FindAction("KBP4A4", throwIfNotFound: true);
+        // BTBloc
+        m_BTBloc = asset.FindActionMap("BTBloc", throwIfNotFound: true);
+        m_BTBloc_GamePad = m_BTBloc.FindAction("GamePad", throwIfNotFound: true);
+        m_BTBloc_Direction_North = m_BTBloc.FindAction("Direction_North", throwIfNotFound: true);
+        m_BTBloc_Keyboard = m_BTBloc.FindAction("Keyboard", throwIfNotFound: true);
+        m_BTBloc_J1 = m_BTBloc.FindAction("J1", throwIfNotFound: true);
+        m_BTBloc_J1_North = m_BTBloc.FindAction("J1_North", throwIfNotFound: true);
+        m_BTBloc_J2 = m_BTBloc.FindAction("J2", throwIfNotFound: true);
+        m_BTBloc_J2_North = m_BTBloc.FindAction("J2_North", throwIfNotFound: true);
+        m_BTBloc_J3 = m_BTBloc.FindAction("J3", throwIfNotFound: true);
+        m_BTBloc_J3_North = m_BTBloc.FindAction("J3_North", throwIfNotFound: true);
+        m_BTBloc_J4 = m_BTBloc.FindAction("J4", throwIfNotFound: true);
+        m_BTBloc_J4_North = m_BTBloc.FindAction("J4_North", throwIfNotFound: true);
         // RocketRide
         m_RocketRide = asset.FindActionMap("RocketRide", throwIfNotFound: true);
+        m_RocketRide_Gamepad = m_RocketRide.FindAction("----Gamepad----", throwIfNotFound: true);
         m_RocketRide_OrientationGamepad = m_RocketRide.FindAction("OrientationGamepad", throwIfNotFound: true);
         m_RocketRide_PropulsionGamepad = m_RocketRide.FindAction("PropulsionGamepad", throwIfNotFound: true);
+        m_RocketRide_GreenRocket = m_RocketRide.FindAction("----GreenRocket----", throwIfNotFound: true);
+        m_RocketRide_GreenRocketLeft = m_RocketRide.FindAction("GreenRocketLeft", throwIfNotFound: true);
+        m_RocketRide_GreenRocketRight = m_RocketRide.FindAction("GreenRocketRight", throwIfNotFound: true);
+        m_RocketRide_GreenRocketPropulsion = m_RocketRide.FindAction("GreenRocketPropulsion", throwIfNotFound: true);
+        m_RocketRide_RedRocket = m_RocketRide.FindAction("----RedRocket----", throwIfNotFound: true);
+        m_RocketRide_RedRocketLeft = m_RocketRide.FindAction("RedRocketLeft", throwIfNotFound: true);
+        m_RocketRide_RedRocketRight = m_RocketRide.FindAction("RedRocketRight", throwIfNotFound: true);
+        m_RocketRide_RedRocketPropulsion = m_RocketRide.FindAction("RedRocketPropulsion", throwIfNotFound: true);
+        m_RocketRide_BlueRocket = m_RocketRide.FindAction("----BlueRocket----", throwIfNotFound: true);
+        m_RocketRide_BlueRocketLeft = m_RocketRide.FindAction("BlueRocketLeft", throwIfNotFound: true);
+        m_RocketRide_BlueRocketRight = m_RocketRide.FindAction("BlueRocketRight", throwIfNotFound: true);
+        m_RocketRide_BlueRocketPropulsion = m_RocketRide.FindAction("BlueRocketPropulsion", throwIfNotFound: true);
+        m_RocketRide_YellowRocket = m_RocketRide.FindAction("----YellowRocket----", throwIfNotFound: true);
+        m_RocketRide_YellowRocketLeft = m_RocketRide.FindAction("YellowRocketLeft", throwIfNotFound: true);
+        m_RocketRide_YellowRocketRight = m_RocketRide.FindAction("YellowRocketRight", throwIfNotFound: true);
+        m_RocketRide_YellowRocketPropulsion = m_RocketRide.FindAction("YellowRocketPropulsion", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -666,6 +1105,22 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Quiz_Answer2;
     private readonly InputAction m_Quiz_Answer3;
     private readonly InputAction m_Quiz_Answer4;
+    private readonly InputAction m_Quiz_KBP1A1;
+    private readonly InputAction m_Quiz_KBP1A2;
+    private readonly InputAction m_Quiz_KBP1A3;
+    private readonly InputAction m_Quiz_KBP1A4;
+    private readonly InputAction m_Quiz_KBP2A1;
+    private readonly InputAction m_Quiz_KBP2A2;
+    private readonly InputAction m_Quiz_KBP2A3;
+    private readonly InputAction m_Quiz_KBP2A4;
+    private readonly InputAction m_Quiz_KBP3A1;
+    private readonly InputAction m_Quiz_KBP3A2;
+    private readonly InputAction m_Quiz_KBP3A3;
+    private readonly InputAction m_Quiz_KBP3A4;
+    private readonly InputAction m_Quiz_KBP4A1;
+    private readonly InputAction m_Quiz_KBP4A2;
+    private readonly InputAction m_Quiz_KBP4A3;
+    private readonly InputAction m_Quiz_KBP4A4;
     public struct QuizActions
     {
         private @InputActions m_Wrapper;
@@ -674,6 +1129,22 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @Answer2 => m_Wrapper.m_Quiz_Answer2;
         public InputAction @Answer3 => m_Wrapper.m_Quiz_Answer3;
         public InputAction @Answer4 => m_Wrapper.m_Quiz_Answer4;
+        public InputAction @KBP1A1 => m_Wrapper.m_Quiz_KBP1A1;
+        public InputAction @KBP1A2 => m_Wrapper.m_Quiz_KBP1A2;
+        public InputAction @KBP1A3 => m_Wrapper.m_Quiz_KBP1A3;
+        public InputAction @KBP1A4 => m_Wrapper.m_Quiz_KBP1A4;
+        public InputAction @KBP2A1 => m_Wrapper.m_Quiz_KBP2A1;
+        public InputAction @KBP2A2 => m_Wrapper.m_Quiz_KBP2A2;
+        public InputAction @KBP2A3 => m_Wrapper.m_Quiz_KBP2A3;
+        public InputAction @KBP2A4 => m_Wrapper.m_Quiz_KBP2A4;
+        public InputAction @KBP3A1 => m_Wrapper.m_Quiz_KBP3A1;
+        public InputAction @KBP3A2 => m_Wrapper.m_Quiz_KBP3A2;
+        public InputAction @KBP3A3 => m_Wrapper.m_Quiz_KBP3A3;
+        public InputAction @KBP3A4 => m_Wrapper.m_Quiz_KBP3A4;
+        public InputAction @KBP4A1 => m_Wrapper.m_Quiz_KBP4A1;
+        public InputAction @KBP4A2 => m_Wrapper.m_Quiz_KBP4A2;
+        public InputAction @KBP4A3 => m_Wrapper.m_Quiz_KBP4A3;
+        public InputAction @KBP4A4 => m_Wrapper.m_Quiz_KBP4A4;
         public InputActionMap Get() { return m_Wrapper.m_Quiz; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -695,6 +1166,54 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Answer4.started += instance.OnAnswer4;
             @Answer4.performed += instance.OnAnswer4;
             @Answer4.canceled += instance.OnAnswer4;
+            @KBP1A1.started += instance.OnKBP1A1;
+            @KBP1A1.performed += instance.OnKBP1A1;
+            @KBP1A1.canceled += instance.OnKBP1A1;
+            @KBP1A2.started += instance.OnKBP1A2;
+            @KBP1A2.performed += instance.OnKBP1A2;
+            @KBP1A2.canceled += instance.OnKBP1A2;
+            @KBP1A3.started += instance.OnKBP1A3;
+            @KBP1A3.performed += instance.OnKBP1A3;
+            @KBP1A3.canceled += instance.OnKBP1A3;
+            @KBP1A4.started += instance.OnKBP1A4;
+            @KBP1A4.performed += instance.OnKBP1A4;
+            @KBP1A4.canceled += instance.OnKBP1A4;
+            @KBP2A1.started += instance.OnKBP2A1;
+            @KBP2A1.performed += instance.OnKBP2A1;
+            @KBP2A1.canceled += instance.OnKBP2A1;
+            @KBP2A2.started += instance.OnKBP2A2;
+            @KBP2A2.performed += instance.OnKBP2A2;
+            @KBP2A2.canceled += instance.OnKBP2A2;
+            @KBP2A3.started += instance.OnKBP2A3;
+            @KBP2A3.performed += instance.OnKBP2A3;
+            @KBP2A3.canceled += instance.OnKBP2A3;
+            @KBP2A4.started += instance.OnKBP2A4;
+            @KBP2A4.performed += instance.OnKBP2A4;
+            @KBP2A4.canceled += instance.OnKBP2A4;
+            @KBP3A1.started += instance.OnKBP3A1;
+            @KBP3A1.performed += instance.OnKBP3A1;
+            @KBP3A1.canceled += instance.OnKBP3A1;
+            @KBP3A2.started += instance.OnKBP3A2;
+            @KBP3A2.performed += instance.OnKBP3A2;
+            @KBP3A2.canceled += instance.OnKBP3A2;
+            @KBP3A3.started += instance.OnKBP3A3;
+            @KBP3A3.performed += instance.OnKBP3A3;
+            @KBP3A3.canceled += instance.OnKBP3A3;
+            @KBP3A4.started += instance.OnKBP3A4;
+            @KBP3A4.performed += instance.OnKBP3A4;
+            @KBP3A4.canceled += instance.OnKBP3A4;
+            @KBP4A1.started += instance.OnKBP4A1;
+            @KBP4A1.performed += instance.OnKBP4A1;
+            @KBP4A1.canceled += instance.OnKBP4A1;
+            @KBP4A2.started += instance.OnKBP4A2;
+            @KBP4A2.performed += instance.OnKBP4A2;
+            @KBP4A2.canceled += instance.OnKBP4A2;
+            @KBP4A3.started += instance.OnKBP4A3;
+            @KBP4A3.performed += instance.OnKBP4A3;
+            @KBP4A3.canceled += instance.OnKBP4A3;
+            @KBP4A4.started += instance.OnKBP4A4;
+            @KBP4A4.performed += instance.OnKBP4A4;
+            @KBP4A4.canceled += instance.OnKBP4A4;
         }
 
         private void UnregisterCallbacks(IQuizActions instance)
@@ -711,6 +1230,54 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Answer4.started -= instance.OnAnswer4;
             @Answer4.performed -= instance.OnAnswer4;
             @Answer4.canceled -= instance.OnAnswer4;
+            @KBP1A1.started -= instance.OnKBP1A1;
+            @KBP1A1.performed -= instance.OnKBP1A1;
+            @KBP1A1.canceled -= instance.OnKBP1A1;
+            @KBP1A2.started -= instance.OnKBP1A2;
+            @KBP1A2.performed -= instance.OnKBP1A2;
+            @KBP1A2.canceled -= instance.OnKBP1A2;
+            @KBP1A3.started -= instance.OnKBP1A3;
+            @KBP1A3.performed -= instance.OnKBP1A3;
+            @KBP1A3.canceled -= instance.OnKBP1A3;
+            @KBP1A4.started -= instance.OnKBP1A4;
+            @KBP1A4.performed -= instance.OnKBP1A4;
+            @KBP1A4.canceled -= instance.OnKBP1A4;
+            @KBP2A1.started -= instance.OnKBP2A1;
+            @KBP2A1.performed -= instance.OnKBP2A1;
+            @KBP2A1.canceled -= instance.OnKBP2A1;
+            @KBP2A2.started -= instance.OnKBP2A2;
+            @KBP2A2.performed -= instance.OnKBP2A2;
+            @KBP2A2.canceled -= instance.OnKBP2A2;
+            @KBP2A3.started -= instance.OnKBP2A3;
+            @KBP2A3.performed -= instance.OnKBP2A3;
+            @KBP2A3.canceled -= instance.OnKBP2A3;
+            @KBP2A4.started -= instance.OnKBP2A4;
+            @KBP2A4.performed -= instance.OnKBP2A4;
+            @KBP2A4.canceled -= instance.OnKBP2A4;
+            @KBP3A1.started -= instance.OnKBP3A1;
+            @KBP3A1.performed -= instance.OnKBP3A1;
+            @KBP3A1.canceled -= instance.OnKBP3A1;
+            @KBP3A2.started -= instance.OnKBP3A2;
+            @KBP3A2.performed -= instance.OnKBP3A2;
+            @KBP3A2.canceled -= instance.OnKBP3A2;
+            @KBP3A3.started -= instance.OnKBP3A3;
+            @KBP3A3.performed -= instance.OnKBP3A3;
+            @KBP3A3.canceled -= instance.OnKBP3A3;
+            @KBP3A4.started -= instance.OnKBP3A4;
+            @KBP3A4.performed -= instance.OnKBP3A4;
+            @KBP3A4.canceled -= instance.OnKBP3A4;
+            @KBP4A1.started -= instance.OnKBP4A1;
+            @KBP4A1.performed -= instance.OnKBP4A1;
+            @KBP4A1.canceled -= instance.OnKBP4A1;
+            @KBP4A2.started -= instance.OnKBP4A2;
+            @KBP4A2.performed -= instance.OnKBP4A2;
+            @KBP4A2.canceled -= instance.OnKBP4A2;
+            @KBP4A3.started -= instance.OnKBP4A3;
+            @KBP4A3.performed -= instance.OnKBP4A3;
+            @KBP4A3.canceled -= instance.OnKBP4A3;
+            @KBP4A4.started -= instance.OnKBP4A4;
+            @KBP4A4.performed -= instance.OnKBP4A4;
+            @KBP4A4.canceled -= instance.OnKBP4A4;
         }
 
         public void RemoveCallbacks(IQuizActions instance)
@@ -729,76 +1296,50 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     }
     public QuizActions @Quiz => new QuizActions(this);
 
-    // Hunter
-    private readonly InputActionMap m_Hunter;
-    private List<IHunterActions> m_HunterActionsCallbackInterfaces = new List<IHunterActions>();
-    private readonly InputAction m_Hunter_GamePad;
-    private readonly InputAction m_Hunter_Direction_North;
-    private readonly InputAction m_Hunter_Direction_West;
-    private readonly InputAction m_Hunter_Direction_East;
-    private readonly InputAction m_Hunter_Keyboard;
-    private readonly InputAction m_Hunter_J1;
-    private readonly InputAction m_Hunter_J1_North;
-    private readonly InputAction m_Hunter_J1_West;
-    private readonly InputAction m_Hunter_J1_East;
-    private readonly InputAction m_Hunter_J2;
-    private readonly InputAction m_Hunter_J2_North;
-    private readonly InputAction m_Hunter_J2_West;
-    private readonly InputAction m_Hunter_J2_East;
-    private readonly InputAction m_Hunter_J3;
-    private readonly InputAction m_Hunter_J3_North;
-    private readonly InputAction m_Hunter_J3_West;
-    private readonly InputAction m_Hunter_J3_East;
-    private readonly InputAction m_Hunter_J4;
-    private readonly InputAction m_Hunter_J4_North;
-    private readonly InputAction m_Hunter_J4_West;
-    private readonly InputAction m_Hunter_J4_East;
-    public struct HunterActions
+    // BTBloc
+    private readonly InputActionMap m_BTBloc;
+    private List<IBTBlocActions> m_BTBlocActionsCallbackInterfaces = new List<IBTBlocActions>();
+    private readonly InputAction m_BTBloc_GamePad;
+    private readonly InputAction m_BTBloc_Direction_North;
+    private readonly InputAction m_BTBloc_Keyboard;
+    private readonly InputAction m_BTBloc_J1;
+    private readonly InputAction m_BTBloc_J1_North;
+    private readonly InputAction m_BTBloc_J2;
+    private readonly InputAction m_BTBloc_J2_North;
+    private readonly InputAction m_BTBloc_J3;
+    private readonly InputAction m_BTBloc_J3_North;
+    private readonly InputAction m_BTBloc_J4;
+    private readonly InputAction m_BTBloc_J4_North;
+    public struct BTBlocActions
     {
         private @InputActions m_Wrapper;
-        public HunterActions(@InputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @GamePad => m_Wrapper.m_Hunter_GamePad;
-        public InputAction @Direction_North => m_Wrapper.m_Hunter_Direction_North;
-        public InputAction @Direction_West => m_Wrapper.m_Hunter_Direction_West;
-        public InputAction @Direction_East => m_Wrapper.m_Hunter_Direction_East;
-        public InputAction @Keyboard => m_Wrapper.m_Hunter_Keyboard;
-        public InputAction @J1 => m_Wrapper.m_Hunter_J1;
-        public InputAction @J1_North => m_Wrapper.m_Hunter_J1_North;
-        public InputAction @J1_West => m_Wrapper.m_Hunter_J1_West;
-        public InputAction @J1_East => m_Wrapper.m_Hunter_J1_East;
-        public InputAction @J2 => m_Wrapper.m_Hunter_J2;
-        public InputAction @J2_North => m_Wrapper.m_Hunter_J2_North;
-        public InputAction @J2_West => m_Wrapper.m_Hunter_J2_West;
-        public InputAction @J2_East => m_Wrapper.m_Hunter_J2_East;
-        public InputAction @J3 => m_Wrapper.m_Hunter_J3;
-        public InputAction @J3_North => m_Wrapper.m_Hunter_J3_North;
-        public InputAction @J3_West => m_Wrapper.m_Hunter_J3_West;
-        public InputAction @J3_East => m_Wrapper.m_Hunter_J3_East;
-        public InputAction @J4 => m_Wrapper.m_Hunter_J4;
-        public InputAction @J4_North => m_Wrapper.m_Hunter_J4_North;
-        public InputAction @J4_West => m_Wrapper.m_Hunter_J4_West;
-        public InputAction @J4_East => m_Wrapper.m_Hunter_J4_East;
-        public InputActionMap Get() { return m_Wrapper.m_Hunter; }
+        public BTBlocActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @GamePad => m_Wrapper.m_BTBloc_GamePad;
+        public InputAction @Direction_North => m_Wrapper.m_BTBloc_Direction_North;
+        public InputAction @Keyboard => m_Wrapper.m_BTBloc_Keyboard;
+        public InputAction @J1 => m_Wrapper.m_BTBloc_J1;
+        public InputAction @J1_North => m_Wrapper.m_BTBloc_J1_North;
+        public InputAction @J2 => m_Wrapper.m_BTBloc_J2;
+        public InputAction @J2_North => m_Wrapper.m_BTBloc_J2_North;
+        public InputAction @J3 => m_Wrapper.m_BTBloc_J3;
+        public InputAction @J3_North => m_Wrapper.m_BTBloc_J3_North;
+        public InputAction @J4 => m_Wrapper.m_BTBloc_J4;
+        public InputAction @J4_North => m_Wrapper.m_BTBloc_J4_North;
+        public InputActionMap Get() { return m_Wrapper.m_BTBloc; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(HunterActions set) { return set.Get(); }
-        public void AddCallbacks(IHunterActions instance)
+        public static implicit operator InputActionMap(BTBlocActions set) { return set.Get(); }
+        public void AddCallbacks(IBTBlocActions instance)
         {
-            if (instance == null || m_Wrapper.m_HunterActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_HunterActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_BTBlocActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_BTBlocActionsCallbackInterfaces.Add(instance);
             @GamePad.started += instance.OnGamePad;
             @GamePad.performed += instance.OnGamePad;
             @GamePad.canceled += instance.OnGamePad;
             @Direction_North.started += instance.OnDirection_North;
             @Direction_North.performed += instance.OnDirection_North;
             @Direction_North.canceled += instance.OnDirection_North;
-            @Direction_West.started += instance.OnDirection_West;
-            @Direction_West.performed += instance.OnDirection_West;
-            @Direction_West.canceled += instance.OnDirection_West;
-            @Direction_East.started += instance.OnDirection_East;
-            @Direction_East.performed += instance.OnDirection_East;
-            @Direction_East.canceled += instance.OnDirection_East;
             @Keyboard.started += instance.OnKeyboard;
             @Keyboard.performed += instance.OnKeyboard;
             @Keyboard.canceled += instance.OnKeyboard;
@@ -808,51 +1349,27 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @J1_North.started += instance.OnJ1_North;
             @J1_North.performed += instance.OnJ1_North;
             @J1_North.canceled += instance.OnJ1_North;
-            @J1_West.started += instance.OnJ1_West;
-            @J1_West.performed += instance.OnJ1_West;
-            @J1_West.canceled += instance.OnJ1_West;
-            @J1_East.started += instance.OnJ1_East;
-            @J1_East.performed += instance.OnJ1_East;
-            @J1_East.canceled += instance.OnJ1_East;
             @J2.started += instance.OnJ2;
             @J2.performed += instance.OnJ2;
             @J2.canceled += instance.OnJ2;
             @J2_North.started += instance.OnJ2_North;
             @J2_North.performed += instance.OnJ2_North;
             @J2_North.canceled += instance.OnJ2_North;
-            @J2_West.started += instance.OnJ2_West;
-            @J2_West.performed += instance.OnJ2_West;
-            @J2_West.canceled += instance.OnJ2_West;
-            @J2_East.started += instance.OnJ2_East;
-            @J2_East.performed += instance.OnJ2_East;
-            @J2_East.canceled += instance.OnJ2_East;
             @J3.started += instance.OnJ3;
             @J3.performed += instance.OnJ3;
             @J3.canceled += instance.OnJ3;
             @J3_North.started += instance.OnJ3_North;
             @J3_North.performed += instance.OnJ3_North;
             @J3_North.canceled += instance.OnJ3_North;
-            @J3_West.started += instance.OnJ3_West;
-            @J3_West.performed += instance.OnJ3_West;
-            @J3_West.canceled += instance.OnJ3_West;
-            @J3_East.started += instance.OnJ3_East;
-            @J3_East.performed += instance.OnJ3_East;
-            @J3_East.canceled += instance.OnJ3_East;
             @J4.started += instance.OnJ4;
             @J4.performed += instance.OnJ4;
             @J4.canceled += instance.OnJ4;
             @J4_North.started += instance.OnJ4_North;
             @J4_North.performed += instance.OnJ4_North;
             @J4_North.canceled += instance.OnJ4_North;
-            @J4_West.started += instance.OnJ4_West;
-            @J4_West.performed += instance.OnJ4_West;
-            @J4_West.canceled += instance.OnJ4_West;
-            @J4_East.started += instance.OnJ4_East;
-            @J4_East.performed += instance.OnJ4_East;
-            @J4_East.canceled += instance.OnJ4_East;
         }
 
-        private void UnregisterCallbacks(IHunterActions instance)
+        private void UnregisterCallbacks(IBTBlocActions instance)
         {
             @GamePad.started -= instance.OnGamePad;
             @GamePad.performed -= instance.OnGamePad;
@@ -860,12 +1377,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Direction_North.started -= instance.OnDirection_North;
             @Direction_North.performed -= instance.OnDirection_North;
             @Direction_North.canceled -= instance.OnDirection_North;
-            @Direction_West.started -= instance.OnDirection_West;
-            @Direction_West.performed -= instance.OnDirection_West;
-            @Direction_West.canceled -= instance.OnDirection_West;
-            @Direction_East.started -= instance.OnDirection_East;
-            @Direction_East.performed -= instance.OnDirection_East;
-            @Direction_East.canceled -= instance.OnDirection_East;
             @Keyboard.started -= instance.OnKeyboard;
             @Keyboard.performed -= instance.OnKeyboard;
             @Keyboard.canceled -= instance.OnKeyboard;
@@ -875,77 +1386,87 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @J1_North.started -= instance.OnJ1_North;
             @J1_North.performed -= instance.OnJ1_North;
             @J1_North.canceled -= instance.OnJ1_North;
-            @J1_West.started -= instance.OnJ1_West;
-            @J1_West.performed -= instance.OnJ1_West;
-            @J1_West.canceled -= instance.OnJ1_West;
-            @J1_East.started -= instance.OnJ1_East;
-            @J1_East.performed -= instance.OnJ1_East;
-            @J1_East.canceled -= instance.OnJ1_East;
             @J2.started -= instance.OnJ2;
             @J2.performed -= instance.OnJ2;
             @J2.canceled -= instance.OnJ2;
             @J2_North.started -= instance.OnJ2_North;
             @J2_North.performed -= instance.OnJ2_North;
             @J2_North.canceled -= instance.OnJ2_North;
-            @J2_West.started -= instance.OnJ2_West;
-            @J2_West.performed -= instance.OnJ2_West;
-            @J2_West.canceled -= instance.OnJ2_West;
-            @J2_East.started -= instance.OnJ2_East;
-            @J2_East.performed -= instance.OnJ2_East;
-            @J2_East.canceled -= instance.OnJ2_East;
             @J3.started -= instance.OnJ3;
             @J3.performed -= instance.OnJ3;
             @J3.canceled -= instance.OnJ3;
             @J3_North.started -= instance.OnJ3_North;
             @J3_North.performed -= instance.OnJ3_North;
             @J3_North.canceled -= instance.OnJ3_North;
-            @J3_West.started -= instance.OnJ3_West;
-            @J3_West.performed -= instance.OnJ3_West;
-            @J3_West.canceled -= instance.OnJ3_West;
-            @J3_East.started -= instance.OnJ3_East;
-            @J3_East.performed -= instance.OnJ3_East;
-            @J3_East.canceled -= instance.OnJ3_East;
             @J4.started -= instance.OnJ4;
             @J4.performed -= instance.OnJ4;
             @J4.canceled -= instance.OnJ4;
             @J4_North.started -= instance.OnJ4_North;
             @J4_North.performed -= instance.OnJ4_North;
             @J4_North.canceled -= instance.OnJ4_North;
-            @J4_West.started -= instance.OnJ4_West;
-            @J4_West.performed -= instance.OnJ4_West;
-            @J4_West.canceled -= instance.OnJ4_West;
-            @J4_East.started -= instance.OnJ4_East;
-            @J4_East.performed -= instance.OnJ4_East;
-            @J4_East.canceled -= instance.OnJ4_East;
         }
 
-        public void RemoveCallbacks(IHunterActions instance)
+        public void RemoveCallbacks(IBTBlocActions instance)
         {
-            if (m_Wrapper.m_HunterActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_BTBlocActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IHunterActions instance)
+        public void SetCallbacks(IBTBlocActions instance)
         {
-            foreach (var item in m_Wrapper.m_HunterActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_BTBlocActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_HunterActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_BTBlocActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public HunterActions @Hunter => new HunterActions(this);
+    public BTBlocActions @BTBloc => new BTBlocActions(this);
 
     // RocketRide
     private readonly InputActionMap m_RocketRide;
     private List<IRocketRideActions> m_RocketRideActionsCallbackInterfaces = new List<IRocketRideActions>();
+    private readonly InputAction m_RocketRide_Gamepad;
     private readonly InputAction m_RocketRide_OrientationGamepad;
     private readonly InputAction m_RocketRide_PropulsionGamepad;
+    private readonly InputAction m_RocketRide_GreenRocket;
+    private readonly InputAction m_RocketRide_GreenRocketLeft;
+    private readonly InputAction m_RocketRide_GreenRocketRight;
+    private readonly InputAction m_RocketRide_GreenRocketPropulsion;
+    private readonly InputAction m_RocketRide_RedRocket;
+    private readonly InputAction m_RocketRide_RedRocketLeft;
+    private readonly InputAction m_RocketRide_RedRocketRight;
+    private readonly InputAction m_RocketRide_RedRocketPropulsion;
+    private readonly InputAction m_RocketRide_BlueRocket;
+    private readonly InputAction m_RocketRide_BlueRocketLeft;
+    private readonly InputAction m_RocketRide_BlueRocketRight;
+    private readonly InputAction m_RocketRide_BlueRocketPropulsion;
+    private readonly InputAction m_RocketRide_YellowRocket;
+    private readonly InputAction m_RocketRide_YellowRocketLeft;
+    private readonly InputAction m_RocketRide_YellowRocketRight;
+    private readonly InputAction m_RocketRide_YellowRocketPropulsion;
     public struct RocketRideActions
     {
         private @InputActions m_Wrapper;
         public RocketRideActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Gamepad => m_Wrapper.m_RocketRide_Gamepad;
         public InputAction @OrientationGamepad => m_Wrapper.m_RocketRide_OrientationGamepad;
         public InputAction @PropulsionGamepad => m_Wrapper.m_RocketRide_PropulsionGamepad;
+        public InputAction @GreenRocket => m_Wrapper.m_RocketRide_GreenRocket;
+        public InputAction @GreenRocketLeft => m_Wrapper.m_RocketRide_GreenRocketLeft;
+        public InputAction @GreenRocketRight => m_Wrapper.m_RocketRide_GreenRocketRight;
+        public InputAction @GreenRocketPropulsion => m_Wrapper.m_RocketRide_GreenRocketPropulsion;
+        public InputAction @RedRocket => m_Wrapper.m_RocketRide_RedRocket;
+        public InputAction @RedRocketLeft => m_Wrapper.m_RocketRide_RedRocketLeft;
+        public InputAction @RedRocketRight => m_Wrapper.m_RocketRide_RedRocketRight;
+        public InputAction @RedRocketPropulsion => m_Wrapper.m_RocketRide_RedRocketPropulsion;
+        public InputAction @BlueRocket => m_Wrapper.m_RocketRide_BlueRocket;
+        public InputAction @BlueRocketLeft => m_Wrapper.m_RocketRide_BlueRocketLeft;
+        public InputAction @BlueRocketRight => m_Wrapper.m_RocketRide_BlueRocketRight;
+        public InputAction @BlueRocketPropulsion => m_Wrapper.m_RocketRide_BlueRocketPropulsion;
+        public InputAction @YellowRocket => m_Wrapper.m_RocketRide_YellowRocket;
+        public InputAction @YellowRocketLeft => m_Wrapper.m_RocketRide_YellowRocketLeft;
+        public InputAction @YellowRocketRight => m_Wrapper.m_RocketRide_YellowRocketRight;
+        public InputAction @YellowRocketPropulsion => m_Wrapper.m_RocketRide_YellowRocketPropulsion;
         public InputActionMap Get() { return m_Wrapper.m_RocketRide; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -955,22 +1476,124 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_RocketRideActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_RocketRideActionsCallbackInterfaces.Add(instance);
+            @Gamepad.started += instance.OnGamepad;
+            @Gamepad.performed += instance.OnGamepad;
+            @Gamepad.canceled += instance.OnGamepad;
             @OrientationGamepad.started += instance.OnOrientationGamepad;
             @OrientationGamepad.performed += instance.OnOrientationGamepad;
             @OrientationGamepad.canceled += instance.OnOrientationGamepad;
             @PropulsionGamepad.started += instance.OnPropulsionGamepad;
             @PropulsionGamepad.performed += instance.OnPropulsionGamepad;
             @PropulsionGamepad.canceled += instance.OnPropulsionGamepad;
+            @GreenRocket.started += instance.OnGreenRocket;
+            @GreenRocket.performed += instance.OnGreenRocket;
+            @GreenRocket.canceled += instance.OnGreenRocket;
+            @GreenRocketLeft.started += instance.OnGreenRocketLeft;
+            @GreenRocketLeft.performed += instance.OnGreenRocketLeft;
+            @GreenRocketLeft.canceled += instance.OnGreenRocketLeft;
+            @GreenRocketRight.started += instance.OnGreenRocketRight;
+            @GreenRocketRight.performed += instance.OnGreenRocketRight;
+            @GreenRocketRight.canceled += instance.OnGreenRocketRight;
+            @GreenRocketPropulsion.started += instance.OnGreenRocketPropulsion;
+            @GreenRocketPropulsion.performed += instance.OnGreenRocketPropulsion;
+            @GreenRocketPropulsion.canceled += instance.OnGreenRocketPropulsion;
+            @RedRocket.started += instance.OnRedRocket;
+            @RedRocket.performed += instance.OnRedRocket;
+            @RedRocket.canceled += instance.OnRedRocket;
+            @RedRocketLeft.started += instance.OnRedRocketLeft;
+            @RedRocketLeft.performed += instance.OnRedRocketLeft;
+            @RedRocketLeft.canceled += instance.OnRedRocketLeft;
+            @RedRocketRight.started += instance.OnRedRocketRight;
+            @RedRocketRight.performed += instance.OnRedRocketRight;
+            @RedRocketRight.canceled += instance.OnRedRocketRight;
+            @RedRocketPropulsion.started += instance.OnRedRocketPropulsion;
+            @RedRocketPropulsion.performed += instance.OnRedRocketPropulsion;
+            @RedRocketPropulsion.canceled += instance.OnRedRocketPropulsion;
+            @BlueRocket.started += instance.OnBlueRocket;
+            @BlueRocket.performed += instance.OnBlueRocket;
+            @BlueRocket.canceled += instance.OnBlueRocket;
+            @BlueRocketLeft.started += instance.OnBlueRocketLeft;
+            @BlueRocketLeft.performed += instance.OnBlueRocketLeft;
+            @BlueRocketLeft.canceled += instance.OnBlueRocketLeft;
+            @BlueRocketRight.started += instance.OnBlueRocketRight;
+            @BlueRocketRight.performed += instance.OnBlueRocketRight;
+            @BlueRocketRight.canceled += instance.OnBlueRocketRight;
+            @BlueRocketPropulsion.started += instance.OnBlueRocketPropulsion;
+            @BlueRocketPropulsion.performed += instance.OnBlueRocketPropulsion;
+            @BlueRocketPropulsion.canceled += instance.OnBlueRocketPropulsion;
+            @YellowRocket.started += instance.OnYellowRocket;
+            @YellowRocket.performed += instance.OnYellowRocket;
+            @YellowRocket.canceled += instance.OnYellowRocket;
+            @YellowRocketLeft.started += instance.OnYellowRocketLeft;
+            @YellowRocketLeft.performed += instance.OnYellowRocketLeft;
+            @YellowRocketLeft.canceled += instance.OnYellowRocketLeft;
+            @YellowRocketRight.started += instance.OnYellowRocketRight;
+            @YellowRocketRight.performed += instance.OnYellowRocketRight;
+            @YellowRocketRight.canceled += instance.OnYellowRocketRight;
+            @YellowRocketPropulsion.started += instance.OnYellowRocketPropulsion;
+            @YellowRocketPropulsion.performed += instance.OnYellowRocketPropulsion;
+            @YellowRocketPropulsion.canceled += instance.OnYellowRocketPropulsion;
         }
 
         private void UnregisterCallbacks(IRocketRideActions instance)
         {
+            @Gamepad.started -= instance.OnGamepad;
+            @Gamepad.performed -= instance.OnGamepad;
+            @Gamepad.canceled -= instance.OnGamepad;
             @OrientationGamepad.started -= instance.OnOrientationGamepad;
             @OrientationGamepad.performed -= instance.OnOrientationGamepad;
             @OrientationGamepad.canceled -= instance.OnOrientationGamepad;
             @PropulsionGamepad.started -= instance.OnPropulsionGamepad;
             @PropulsionGamepad.performed -= instance.OnPropulsionGamepad;
             @PropulsionGamepad.canceled -= instance.OnPropulsionGamepad;
+            @GreenRocket.started -= instance.OnGreenRocket;
+            @GreenRocket.performed -= instance.OnGreenRocket;
+            @GreenRocket.canceled -= instance.OnGreenRocket;
+            @GreenRocketLeft.started -= instance.OnGreenRocketLeft;
+            @GreenRocketLeft.performed -= instance.OnGreenRocketLeft;
+            @GreenRocketLeft.canceled -= instance.OnGreenRocketLeft;
+            @GreenRocketRight.started -= instance.OnGreenRocketRight;
+            @GreenRocketRight.performed -= instance.OnGreenRocketRight;
+            @GreenRocketRight.canceled -= instance.OnGreenRocketRight;
+            @GreenRocketPropulsion.started -= instance.OnGreenRocketPropulsion;
+            @GreenRocketPropulsion.performed -= instance.OnGreenRocketPropulsion;
+            @GreenRocketPropulsion.canceled -= instance.OnGreenRocketPropulsion;
+            @RedRocket.started -= instance.OnRedRocket;
+            @RedRocket.performed -= instance.OnRedRocket;
+            @RedRocket.canceled -= instance.OnRedRocket;
+            @RedRocketLeft.started -= instance.OnRedRocketLeft;
+            @RedRocketLeft.performed -= instance.OnRedRocketLeft;
+            @RedRocketLeft.canceled -= instance.OnRedRocketLeft;
+            @RedRocketRight.started -= instance.OnRedRocketRight;
+            @RedRocketRight.performed -= instance.OnRedRocketRight;
+            @RedRocketRight.canceled -= instance.OnRedRocketRight;
+            @RedRocketPropulsion.started -= instance.OnRedRocketPropulsion;
+            @RedRocketPropulsion.performed -= instance.OnRedRocketPropulsion;
+            @RedRocketPropulsion.canceled -= instance.OnRedRocketPropulsion;
+            @BlueRocket.started -= instance.OnBlueRocket;
+            @BlueRocket.performed -= instance.OnBlueRocket;
+            @BlueRocket.canceled -= instance.OnBlueRocket;
+            @BlueRocketLeft.started -= instance.OnBlueRocketLeft;
+            @BlueRocketLeft.performed -= instance.OnBlueRocketLeft;
+            @BlueRocketLeft.canceled -= instance.OnBlueRocketLeft;
+            @BlueRocketRight.started -= instance.OnBlueRocketRight;
+            @BlueRocketRight.performed -= instance.OnBlueRocketRight;
+            @BlueRocketRight.canceled -= instance.OnBlueRocketRight;
+            @BlueRocketPropulsion.started -= instance.OnBlueRocketPropulsion;
+            @BlueRocketPropulsion.performed -= instance.OnBlueRocketPropulsion;
+            @BlueRocketPropulsion.canceled -= instance.OnBlueRocketPropulsion;
+            @YellowRocket.started -= instance.OnYellowRocket;
+            @YellowRocket.performed -= instance.OnYellowRocket;
+            @YellowRocket.canceled -= instance.OnYellowRocket;
+            @YellowRocketLeft.started -= instance.OnYellowRocketLeft;
+            @YellowRocketLeft.performed -= instance.OnYellowRocketLeft;
+            @YellowRocketLeft.canceled -= instance.OnYellowRocketLeft;
+            @YellowRocketRight.started -= instance.OnYellowRocketRight;
+            @YellowRocketRight.performed -= instance.OnYellowRocketRight;
+            @YellowRocketRight.canceled -= instance.OnYellowRocketRight;
+            @YellowRocketPropulsion.started -= instance.OnYellowRocketPropulsion;
+            @YellowRocketPropulsion.performed -= instance.OnYellowRocketPropulsion;
+            @YellowRocketPropulsion.canceled -= instance.OnYellowRocketPropulsion;
         }
 
         public void RemoveCallbacks(IRocketRideActions instance)
@@ -994,34 +1617,57 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnAnswer2(InputAction.CallbackContext context);
         void OnAnswer3(InputAction.CallbackContext context);
         void OnAnswer4(InputAction.CallbackContext context);
+        void OnKBP1A1(InputAction.CallbackContext context);
+        void OnKBP1A2(InputAction.CallbackContext context);
+        void OnKBP1A3(InputAction.CallbackContext context);
+        void OnKBP1A4(InputAction.CallbackContext context);
+        void OnKBP2A1(InputAction.CallbackContext context);
+        void OnKBP2A2(InputAction.CallbackContext context);
+        void OnKBP2A3(InputAction.CallbackContext context);
+        void OnKBP2A4(InputAction.CallbackContext context);
+        void OnKBP3A1(InputAction.CallbackContext context);
+        void OnKBP3A2(InputAction.CallbackContext context);
+        void OnKBP3A3(InputAction.CallbackContext context);
+        void OnKBP3A4(InputAction.CallbackContext context);
+        void OnKBP4A1(InputAction.CallbackContext context);
+        void OnKBP4A2(InputAction.CallbackContext context);
+        void OnKBP4A3(InputAction.CallbackContext context);
+        void OnKBP4A4(InputAction.CallbackContext context);
     }
-    public interface IHunterActions
+    public interface IBTBlocActions
     {
         void OnGamePad(InputAction.CallbackContext context);
         void OnDirection_North(InputAction.CallbackContext context);
-        void OnDirection_West(InputAction.CallbackContext context);
-        void OnDirection_East(InputAction.CallbackContext context);
         void OnKeyboard(InputAction.CallbackContext context);
         void OnJ1(InputAction.CallbackContext context);
         void OnJ1_North(InputAction.CallbackContext context);
-        void OnJ1_West(InputAction.CallbackContext context);
-        void OnJ1_East(InputAction.CallbackContext context);
         void OnJ2(InputAction.CallbackContext context);
         void OnJ2_North(InputAction.CallbackContext context);
-        void OnJ2_West(InputAction.CallbackContext context);
-        void OnJ2_East(InputAction.CallbackContext context);
         void OnJ3(InputAction.CallbackContext context);
         void OnJ3_North(InputAction.CallbackContext context);
-        void OnJ3_West(InputAction.CallbackContext context);
-        void OnJ3_East(InputAction.CallbackContext context);
         void OnJ4(InputAction.CallbackContext context);
         void OnJ4_North(InputAction.CallbackContext context);
-        void OnJ4_West(InputAction.CallbackContext context);
-        void OnJ4_East(InputAction.CallbackContext context);
     }
     public interface IRocketRideActions
     {
+        void OnGamepad(InputAction.CallbackContext context);
         void OnOrientationGamepad(InputAction.CallbackContext context);
         void OnPropulsionGamepad(InputAction.CallbackContext context);
+        void OnGreenRocket(InputAction.CallbackContext context);
+        void OnGreenRocketLeft(InputAction.CallbackContext context);
+        void OnGreenRocketRight(InputAction.CallbackContext context);
+        void OnGreenRocketPropulsion(InputAction.CallbackContext context);
+        void OnRedRocket(InputAction.CallbackContext context);
+        void OnRedRocketLeft(InputAction.CallbackContext context);
+        void OnRedRocketRight(InputAction.CallbackContext context);
+        void OnRedRocketPropulsion(InputAction.CallbackContext context);
+        void OnBlueRocket(InputAction.CallbackContext context);
+        void OnBlueRocketLeft(InputAction.CallbackContext context);
+        void OnBlueRocketRight(InputAction.CallbackContext context);
+        void OnBlueRocketPropulsion(InputAction.CallbackContext context);
+        void OnYellowRocket(InputAction.CallbackContext context);
+        void OnYellowRocketLeft(InputAction.CallbackContext context);
+        void OnYellowRocketRight(InputAction.CallbackContext context);
+        void OnYellowRocketPropulsion(InputAction.CallbackContext context);
     }
 }

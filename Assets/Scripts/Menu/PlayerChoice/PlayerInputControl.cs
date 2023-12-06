@@ -13,6 +13,7 @@ public class PlayerInputControl : MonoBehaviour
     {
         //Set the player Input Control prefab in don't destroy on load with a unique name and the good action map
         DontDestroyOnLoad(gameObject);
+        GameManager.Instance.playerInputControls.Add(gameObject);
         if (GameManager.Instance.isOnKeyboard)
         {
             gameObject.name = "PlayerInputControlKeyboard";

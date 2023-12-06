@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public LogoMove logoMove;
 
     [Header("Answers")]
-    public int answerChosed;
+    public int answerChosed;//Answer chosen by the player
 
     private void Start()
     {
@@ -80,6 +80,7 @@ public class PlayerController : MonoBehaviour
             }
             //Find the player input control
             playerInput = GameObject.Find("PlayerInputControlKeyboard").GetComponent<PlayerInput>();
+            playerInput.onActionTriggered += OnAction;
         }
     }
 
@@ -102,27 +103,51 @@ public class PlayerController : MonoBehaviour
         switch (context.action.name)
         {
             case "Answer1":
-                AnswerOneChoose();
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    if (context.started == true)
+                    {
+                        AnswerOneChoose();
+                    }
+                }
                 break;
             case "Answer2":
-                AnswerTwoChoose();
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    if (context.started == true)
+                    {
+                        AnswerTwoChoose();
+                    }
+                }
                 break;
             case "Answer3":
-                AnswerThreeChoose();
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    if (context.started == true)
+                    {
+                        AnswerThreeChoose();
+                    }
+                }
                 break;
             case "Answer4":
-                AnswerFourChoose();
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    if (context.started == true)
+                    {
+                        AnswerFourChoose();
+                    }
+                }
                 break;
         }
     }
 
-    void AnswerOneChoose()
+    void AnswerOneChoose()//Each input is linked to an answer
     {
-        answerChosed = 1;
+        answerChosed = 1;//Setting the number for the chosen answer
 
         if (gameObject.tag == "Player1")
         {
-            StartCoroutine(logoMove.Move(logoMove.player1, logoMove.AHolder1));
+            StartCoroutine(logoMove.Move(logoMove.player1, logoMove.AHolder1));//Calling the method to move the player icon next to the chosen answer
         }
         if (gameObject.tag == "Player2")
         {

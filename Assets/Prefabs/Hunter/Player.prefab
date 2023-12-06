@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5626248188204512379}
   - component: {fileID: 2569827289577272943}
   - component: {fileID: 303151324120486100}
-  - component: {fileID: 451189276674016296}
   - component: {fileID: 2422120551348556440}
   m_Layer: 0
   m_Name: Player
@@ -109,18 +108,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &451189276674016296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7071926660951686174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2c7970bf7ca44f45b195750261374fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2422120551348556440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +136,6 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 4a91244f-32b3-4ddd-a377-17b914cb8a04
+  m_DefaultActionMap: Hunter
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
