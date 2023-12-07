@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerUI : MonoBehaviour
 {
-    public GameObject camera;
+    public new GameObject camera;
     public GameObject player;
 
     public float cameraStartPosZ;
