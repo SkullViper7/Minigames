@@ -25,13 +25,26 @@ public class Podium : MonoBehaviour
     private void DisplayPodium()
     {
         //Display values in the podium
-        for (int i = 0; i < GameManager.Instance.maxPlayerCount; i++)
+        //Rockets which have finished
+        for (int i = 0; i < RocketRideManager.Instance.rocketsWhichHaveFinished.Count; i++)
         {
-            ranks[i].text = (i+1).ToString();
+            ranks[i].text = (i + 1).ToString();
             steps[i].text = PlayerName(RocketRideManager.Instance.rocketsWhichHaveFinished[i]);
             steps[i].color = PlayerColor(RocketRideManager.Instance.rocketsWhichHaveFinished[i]);
-            points[i].text = PlayerPoints(i+1);
+            points[i].text = PlayerPoints(i + 1);
             points[i].color = PlayerColor(RocketRideManager.Instance.rocketsWhichHaveFinished[i]);
+        }
+        //Rockets which have not finished
+        if (RocketRideManager.Instance.rocketsWhichHaveNotFinished.Count != 0)
+        {
+            for (int i = 0; i < RocketRideManager.Instance.rocketsWhichHaveNotFinished.Count; i++)
+            {
+                int index = i + RocketRideManager.Instance.rocketsWhichHaveFinished.Count;
+                steps[index].text = PlayerName(RocketRideManager.Instance.rocketsWhichHaveNotFinished[i]);
+                steps[index].color = PlayerColor(RocketRideManager.Instance.rocketsWhichHaveNotFinished[i]);
+                points[index].text = "+0";
+                points[index].color = PlayerColor(RocketRideManager.Instance.rocketsWhichHaveNotFinished[i]);
+            }
         }
     }
 
@@ -55,7 +68,7 @@ public class Podium : MonoBehaviour
     private Color PlayerColor(GameObject _player)
     {
         //Return the color associated to the player given
-        switch(_player.name)
+        switch (_player.name)
         {
             case "GreenRocket":
                 return green;
