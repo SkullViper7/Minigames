@@ -980,6 +980,94 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""SlimeJump"",
+            ""id"": ""de96fa74-1913-4415-a6be-857e841da8c8"",
+            ""actions"": [
+                {
+                    ""name"": ""Player1Move"",
+                    ""type"": ""Button"",
+                    ""id"": ""060389b8-7baf-4eec-b190-5dc633efda4a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Player2Move"",
+                    ""type"": ""Button"",
+                    ""id"": ""47396f23-75a2-4d4f-abd1-3c98704974e3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Player3Move"",
+                    ""type"": ""Button"",
+                    ""id"": ""8a4f2d83-abaf-411a-88bc-18da1dd82d0c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Player4Move"",
+                    ""type"": ""Button"",
+                    ""id"": ""18f836c3-28f5-49d6-aaed-163a35402925"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""0af0bd12-1d7a-40c1-bbb7-4c08858c0c5a"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Player1Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9fc7f3a0-765d-49e2-8cf3-62fbad152586"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Player2Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4dfca769-45b8-4a63-a5cd-d4d618299eb4"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Player3Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0da44ac8-7a66-4a16-84b2-8b412b535db7"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Player4Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -1040,6 +1128,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_RocketRide_YellowRocketLeft = m_RocketRide.FindAction("YellowRocketLeft", throwIfNotFound: true);
         m_RocketRide_YellowRocketRight = m_RocketRide.FindAction("YellowRocketRight", throwIfNotFound: true);
         m_RocketRide_YellowRocketPropulsion = m_RocketRide.FindAction("YellowRocketPropulsion", throwIfNotFound: true);
+        // SlimeJump
+        m_SlimeJump = asset.FindActionMap("SlimeJump", throwIfNotFound: true);
+        m_SlimeJump_Player1Move = m_SlimeJump.FindAction("Player1Move", throwIfNotFound: true);
+        m_SlimeJump_Player2Move = m_SlimeJump.FindAction("Player2Move", throwIfNotFound: true);
+        m_SlimeJump_Player3Move = m_SlimeJump.FindAction("Player3Move", throwIfNotFound: true);
+        m_SlimeJump_Player4Move = m_SlimeJump.FindAction("Player4Move", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1611,6 +1705,76 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         }
     }
     public RocketRideActions @RocketRide => new RocketRideActions(this);
+
+    // SlimeJump
+    private readonly InputActionMap m_SlimeJump;
+    private List<ISlimeJumpActions> m_SlimeJumpActionsCallbackInterfaces = new List<ISlimeJumpActions>();
+    private readonly InputAction m_SlimeJump_Player1Move;
+    private readonly InputAction m_SlimeJump_Player2Move;
+    private readonly InputAction m_SlimeJump_Player3Move;
+    private readonly InputAction m_SlimeJump_Player4Move;
+    public struct SlimeJumpActions
+    {
+        private @InputActions m_Wrapper;
+        public SlimeJumpActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Player1Move => m_Wrapper.m_SlimeJump_Player1Move;
+        public InputAction @Player2Move => m_Wrapper.m_SlimeJump_Player2Move;
+        public InputAction @Player3Move => m_Wrapper.m_SlimeJump_Player3Move;
+        public InputAction @Player4Move => m_Wrapper.m_SlimeJump_Player4Move;
+        public InputActionMap Get() { return m_Wrapper.m_SlimeJump; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(SlimeJumpActions set) { return set.Get(); }
+        public void AddCallbacks(ISlimeJumpActions instance)
+        {
+            if (instance == null || m_Wrapper.m_SlimeJumpActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_SlimeJumpActionsCallbackInterfaces.Add(instance);
+            @Player1Move.started += instance.OnPlayer1Move;
+            @Player1Move.performed += instance.OnPlayer1Move;
+            @Player1Move.canceled += instance.OnPlayer1Move;
+            @Player2Move.started += instance.OnPlayer2Move;
+            @Player2Move.performed += instance.OnPlayer2Move;
+            @Player2Move.canceled += instance.OnPlayer2Move;
+            @Player3Move.started += instance.OnPlayer3Move;
+            @Player3Move.performed += instance.OnPlayer3Move;
+            @Player3Move.canceled += instance.OnPlayer3Move;
+            @Player4Move.started += instance.OnPlayer4Move;
+            @Player4Move.performed += instance.OnPlayer4Move;
+            @Player4Move.canceled += instance.OnPlayer4Move;
+        }
+
+        private void UnregisterCallbacks(ISlimeJumpActions instance)
+        {
+            @Player1Move.started -= instance.OnPlayer1Move;
+            @Player1Move.performed -= instance.OnPlayer1Move;
+            @Player1Move.canceled -= instance.OnPlayer1Move;
+            @Player2Move.started -= instance.OnPlayer2Move;
+            @Player2Move.performed -= instance.OnPlayer2Move;
+            @Player2Move.canceled -= instance.OnPlayer2Move;
+            @Player3Move.started -= instance.OnPlayer3Move;
+            @Player3Move.performed -= instance.OnPlayer3Move;
+            @Player3Move.canceled -= instance.OnPlayer3Move;
+            @Player4Move.started -= instance.OnPlayer4Move;
+            @Player4Move.performed -= instance.OnPlayer4Move;
+            @Player4Move.canceled -= instance.OnPlayer4Move;
+        }
+
+        public void RemoveCallbacks(ISlimeJumpActions instance)
+        {
+            if (m_Wrapper.m_SlimeJumpActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ISlimeJumpActions instance)
+        {
+            foreach (var item in m_Wrapper.m_SlimeJumpActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_SlimeJumpActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public SlimeJumpActions @SlimeJump => new SlimeJumpActions(this);
     public interface IQuizActions
     {
         void OnAnswer1(InputAction.CallbackContext context);
@@ -1669,5 +1833,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnYellowRocketLeft(InputAction.CallbackContext context);
         void OnYellowRocketRight(InputAction.CallbackContext context);
         void OnYellowRocketPropulsion(InputAction.CallbackContext context);
+    }
+    public interface ISlimeJumpActions
+    {
+        void OnPlayer1Move(InputAction.CallbackContext context);
+        void OnPlayer2Move(InputAction.CallbackContext context);
+        void OnPlayer3Move(InputAction.CallbackContext context);
+        void OnPlayer4Move(InputAction.CallbackContext context);
     }
 }
