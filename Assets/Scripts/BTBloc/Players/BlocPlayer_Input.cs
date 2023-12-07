@@ -20,75 +20,64 @@ public class BlocPlayer_Input : MonoBehaviour
 
     private void Spawner()
     {
-        switch (gameObject.tag)
-        {
-            case "Player1":
-                BTBloc_Manager.Instance.player1Score++;
-                break;
-            case "Player2":
-                BTBloc_Manager.Instance.player2Score++;
-                break;
-            case "Player3":
-                BTBloc_Manager.Instance.player3Score++;
-                break;
-            case "Player4":
-                BTBloc_Manager.Instance.player4Score++;
-                break;
-        }
+        BlocUI_Manager.Instance.scoresPlayers[gameObject.name]++;
         Instantiate(cubeToSpawn, transform.position, transform.rotation);
         transform.position += new Vector3(0f, 0.5f, 0f);
     }
 
     public void OnAction(InputAction.CallbackContext context)
     {
-        switch (context.action.name)
+        if (BTBloc_Manager.Instance.isGameOver == false)
         {
-            case "Direction_North":
-                if (!GameManager.Instance.isOnKeyboard)
-                {
-                    if (context.started == true)
+            switch (context.action.name)
+            {
+                case "Direction_North":
+                    if (!GameManager.Instance.isOnKeyboard)
                     {
-                        Spawner();
+                        if (context.started == true)
+                        {
+                            Spawner();
+                        }
                     }
-                }
-                break;
+                    break;
 
-            case "J1_North":
-                if (gameObject.CompareTag("Player1"))
-                {
-                    if (context.started == true)
+                case "J1_North":
+                    if (gameObject.CompareTag("Player1"))
                     {
-                        Spawner();
+                        if (context.started == true)
+                        {
+                            Spawner();
+                        }
                     }
-                }
-                break;
-            case "J2_North":
-                if (gameObject.CompareTag("Player2"))
-                {
-                    if (context.started == true)
+                    break;
+                case "J2_North":
+                    if (gameObject.CompareTag("Player2"))
                     {
-                        Spawner();
+                        if (context.started == true)
+                        {
+                            Spawner();
+                        }
                     }
-                }
-                break;
-            case "J3_North":
-                if (gameObject.CompareTag("Player3"))
-                {
-                    if (context.started == true)
+                    break;
+                case "J3_North":
+                    if (gameObject.CompareTag("Player3"))
                     {
-                        Spawner();
+                        if (context.started == true)
+                        {
+                            Spawner();
+                        }
                     }
-                }
-                break;
-            case "J4_North":
-                if (gameObject.CompareTag("Player4"))
-                {
-                    if (context.started == true)
+                    break;
+                case "J4_North":
+                    if (gameObject.CompareTag("Player4"))
                     {
-                        Spawner();
+                        if (context.started == true)
+                        {
+                            Spawner();
+                        }
                     }
-                }
-                break;
+                    break;
+            }
         }
     }
 
@@ -123,14 +112,17 @@ public class BlocPlayer_Input : MonoBehaviour
             {
                 case "Bloc_Player_1":
                     gameObject.SetActive(true);
+                    BlocUI_Manager.Instance.scoresPlayers.Add(gameObject.name, 0);
                     break;
                 case "Bloc_Player_2":
                     gameObject.SetActive(true);
+                    BlocUI_Manager.Instance.scoresPlayers.Add(gameObject.name, 0);
                     break;
                 case "Bloc_Player_3":
                     if (GameManager.Instance.maxPlayerCount >= 3)
                     {
                         gameObject.SetActive(true);
+                        BlocUI_Manager.Instance.scoresPlayers.Add(gameObject.name, 0);
                     }
                     else
                     {
@@ -141,6 +133,7 @@ public class BlocPlayer_Input : MonoBehaviour
                     if (GameManager.Instance.maxPlayerCount == 4)
                     {
                         gameObject.SetActive(true);
+                        BlocUI_Manager.Instance.scoresPlayers.Add(gameObject.name, 0);
                     }
                     else
                     {
@@ -162,6 +155,7 @@ public class BlocPlayer_Input : MonoBehaviour
             _playerInput = GameObject.Find(_name).GetComponent<PlayerInput>();
             _playerInput.camera = _camera;
             _playerInput.onActionTriggered += OnAction;
+            BlocUI_Manager.Instance.scoresPlayers.Add(gameObject.name, 0);
         }
         else
         {
