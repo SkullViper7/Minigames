@@ -16,7 +16,32 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        SlimeJumpManager.Instance._players.Add(this);
+        switch (GameManager.Instance.maxPlayerCount)
+        {
+            case 2:
+                if(gameObject.name != "Player3" || gameObject.name != "Player4")
+                {
+                    SlimeJumpManager.Instance._players.Add(this);
+                }
+                else
+                {
+                    gameObject.SetActive(false);
+                }
+                break;
+            case 3:
+                if (gameObject.name != "Player4")
+                {
+                    SlimeJumpManager.Instance._players.Add(this);
+                }
+                else
+                {
+                    gameObject.SetActive(false);
+                }
+                break;
+            case 4:
+                SlimeJumpManager.Instance._players.Add(this);
+                break;
+        }
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();

@@ -1,4 +1,5 @@
 using Cinemachine;
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,9 +24,21 @@ public class FinishLine : MonoBehaviour
         //Add the rocket which has reached the finish line in the list
         if (other.CompareTag("Rocket")) 
         {
+            Rocket rocket = other.GetComponent<Rocket>();
+            rocket.hasFinished = true;
+
             RocketRideManager.Instance.rocketsWhichHaveFinished.Add(other.gameObject);
             rocketGroup.RemoveMember(other.transform);
-            StartCoroutine(other.GetComponent<Rocket>().Finish());
+
+            //Stop a stunt coroutine if there is one and launch the finish coroutine when rocket continue to fly
+            if (rocket.stuntCoroutine != null)
+            {
+                StopCoroutine(rocket.stuntCoroutine);
+                rocket.transform.DOKill();
+                rocket.isStunt = false;
+                rocket.stuntCoroutine = null;
+            }
+            StartCoroutine(rocket.Finish());
         }
 
         //If all rockets have finished, camera follow the finish line and show the podium

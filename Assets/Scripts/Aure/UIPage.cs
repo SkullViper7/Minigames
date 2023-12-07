@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEditor.Animations;
 
 public class UIPage : MonoBehaviour
 {
@@ -42,6 +41,17 @@ public class UIPage : MonoBehaviour
         }
         _LastDead = Instantiate(_PlayerDeadUI, _PlayerDeadUI.transform.parent);
         _LastDead.text = player.name + " is OUT";
+        _LastDead.gameObject.SetActive(true);
+        StartCoroutine(StopDeadUI(_LastDead.gameObject));
+    }
+    public void ShowNameWinnerUI(GameObject player)
+    {
+        if (_LastDead != null)
+        {
+            _LastDead.gameObject.SetActive(false);
+        }
+        _LastDead = Instantiate(_PlayerDeadUI, _PlayerDeadUI.transform.parent);
+        _LastDead.text = player.name + " WIN!!!!!!!!!!";
         _LastDead.gameObject.SetActive(true);
         StartCoroutine(StopDeadUI(_LastDead.gameObject));
     }

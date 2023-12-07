@@ -14586,6 +14586,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propulsion: 500
+  rotationPerSecond: 270
+  leftKeyIsHeld: 0
+  rightKeyIsHeld: 0
   bounceForce: 30
   timeStunt: 3
   fires:
