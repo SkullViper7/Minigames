@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using JetBrains.Annotations;
+using UnityEngine.SceneManagement;
 
 public class BlocUI_Manager : MonoBehaviour
 {
@@ -95,5 +97,16 @@ public class BlocUI_Manager : MonoBehaviour
             playerNumberUI[i].color = PlayerColor(kvp.Key);
             scoresUI[i].text = kvp.Value.ToString();
         }
+    }
+
+    public void RestartGame()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

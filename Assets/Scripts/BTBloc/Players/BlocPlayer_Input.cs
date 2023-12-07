@@ -10,6 +10,7 @@ public class BlocPlayer_Input : MonoBehaviour
     private InputActions _inputActions;
     private PlayerInput _playerInput;
     public Camera _camera;
+    private bool isSpawning = false;
 
     public GameObject cubeToSpawn;
 
@@ -20,14 +21,16 @@ public class BlocPlayer_Input : MonoBehaviour
 
     private void Spawner()
     {
-        BlocUI_Manager.Instance.scoresPlayers[gameObject.name]++;
+        isSpawning = true;
         Instantiate(cubeToSpawn, transform.position, transform.rotation);
         transform.position += new Vector3(0f, 0.5f, 0f);
+        BlocUI_Manager.Instance.scoresPlayers[gameObject.name]++;
+        isSpawning = false;
     }
 
     public void OnAction(InputAction.CallbackContext context)
     {
-        if (BTBloc_Manager.Instance.isGameOver == false)
+        if (!BTBloc_Manager.Instance.isGameOver && !isSpawning)
         {
             switch (context.action.name)
             {
