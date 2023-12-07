@@ -8,14 +8,13 @@ using UnityEngine.InputSystem.Utilities;
 public class BTBloc_Manager : MonoBehaviour
 {
 
+    public bool isGameOver = false;
     public int players;
     public float setTimer;
     private float timer;
     private bool isTimerActive;
-    public int player1Score;
-    public int player2Score;
-    public int player3Score;
-    public int player4Score;
+
+    int[] scores = new int[4];
 
     //Singleton
     private static BTBloc_Manager _instance = null;
@@ -65,6 +64,8 @@ public class BTBloc_Manager : MonoBehaviour
 
         private void EndGame()
     {
-
+        isGameOver = true;
+        BlocUI_Manager.Instance.DisplayScores();
+        BlocUI_Manager.Instance.leaderBoard.SetActive(true);
     }
 }
