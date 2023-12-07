@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AnswerManager : MonoBehaviour
 {
@@ -140,7 +141,7 @@ public class AnswerManager : MonoBehaviour
 
         correctAnswers.Remove(correctAnswer);//Removing the answer from the list so it can't be picked randomly again
 
-        if (questionManager.questions.Count > 38)
+        if (questionManager.questions.Count > 29)
         {
             Invoke("ChooseNextQuestion", 3);//Waiting time before the next question
         }
