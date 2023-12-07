@@ -23,6 +23,8 @@ public class AnswerManager : MonoBehaviour
     GameObject player3;
     GameObject player4;
 
+    public int questionChosed;
+
     private void Start()
     {
         if (GameManager.Instance.maxPlayerCount == 2)//Searching for the right amount of players to avoid errors
@@ -44,12 +46,21 @@ public class AnswerManager : MonoBehaviour
             player4 = GameObject.FindGameObjectWithTag("Player4");
         }
 
-        Invoke("AnswerCheck", 10);//Check for the player answer after a countdown
+        ChooseNextQuestion();
     }
 
-    public void UpdateCorrectAnswer()//Get the index of the correct answer based on the index of the question randomly picked
+    void ChooseNextQuestion()
     {
-        correctAnswer = correctAnswers[questionManager.questionPicked];
+        blink.isPaused = false;
+
+        int questionIndex = Random.Range(0, questionManager.questions.Count);
+        questionManager.DisplayQuestion(questionIndex);
+        StartCoroutine(answerTextManager.AnswerWrite(questionIndex));
+
+        correctAnswer = correctAnswers[questionIndex];
+        correctAnswers.Remove(questionIndex);
+
+        Invoke("AnswerCheck", 10);
     }
 
     public void AnswerCheck()
@@ -129,9 +140,9 @@ public class AnswerManager : MonoBehaviour
 
         correctAnswers.Remove(correctAnswer);//Removing the answer from the list so it can't be picked randomly again
 
-        if (questionManager.questions !=  null)
+        if (questionManager.questions.Count > 38)
         {
-            Invoke("LoadNextQuestion", 3);//Waiting time before the next question
+            Invoke("ChooseNextQuestion", 3);//Waiting time before the next question
         }
 
         else
@@ -140,39 +151,5 @@ public class AnswerManager : MonoBehaviour
             endScreen.SetActive(true);
             leaderboardManager.ShowScore();
         }
-    }
-
-    void LoadNextQuestion()
-    {
-        blink.isPaused = false;//Reseting timer
-
-        if (GameManager.Instance.maxPlayerCount == 2)
-        {
-            player1.GetComponent<PlayerController>().answerChosed = 0;//Reseting the default answer for each player
-            player2.GetComponent<PlayerController>().answerChosed = 0;
-        }
-        if (GameManager.Instance.maxPlayerCount == 3)
-        {
-            player1.GetComponent<PlayerController>().answerChosed = 0;
-            player2.GetComponent<PlayerController>().answerChosed = 0;
-            player3.GetComponent<PlayerController>().answerChosed = 0;
-        }
-        if (GameManager.Instance.maxPlayerCount == 4)
-        {
-            player1.GetComponent<PlayerController>().answerChosed = 0;
-            player2.GetComponent<PlayerController>().answerChosed = 0;
-            player3.GetComponent<PlayerController>().answerChosed = 0;
-            player4.GetComponent<PlayerController>().answerChosed = 0;
-        }
-
-        int questionPicked = Random.Range(0, questionManager.questions.Count);//Picking a random question
-        StartCoroutine(questionManager.QuestionWrite(questionManager.questions[questionPicked]));//Calling the method to write the question based on the random index
-        UpdateCorrectAnswer();//Update the correct answer
-        answerTextManager.AnswerWrite(answerTextManager.firstAnswer[questionPicked],//Calling the method to write the answers for the question picked
-            answerTextManager.secondAnswer[questionPicked],
-            answerTextManager.thirdAnswer[questionPicked],
-           answerTextManager.fourthAnswer[questionPicked]);
-
-        Invoke("AnswerCheck", 10);//Restarting countdown
     }
 }

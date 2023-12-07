@@ -18,23 +18,21 @@ public class AnswerTextManager : MonoBehaviour
 
     [Space]
     public QuestionManager questionManager;
+    public AnswerManager answerManager;
 
-    private void Start()
+    public IEnumerator AnswerWrite(int questionIndex)
     {
-        AnswerWrite(firstAnswer[questionManager.questionPicked], secondAnswer[questionManager.questionPicked], //Calling the method with the randomly picked index
-            thirdAnswer[questionManager.questionPicked], fourthAnswer[questionManager.questionPicked]);
-    }
+        answerText1.text = firstAnswer[questionIndex];
+        answerText2.text = secondAnswer[questionIndex];
+        answerText3.text = thirdAnswer[questionIndex];
+        answerText4.text = fourthAnswer[questionIndex];
 
-    public void AnswerWrite(string answer1, string answer2, string answer3, string answer4)
-    {
-        answerText1.text = answer1;//Replacing current text with chosen answer
-        answerText2.text = answer2;
-        answerText3.text = answer3;
-        answerText4.text = answer4;
+        yield return new WaitForSeconds(10);
 
-        firstAnswer.Remove(answer1);//Removing the answer from the list to avoid picking it again
-        secondAnswer.Remove(answer2);
-        thirdAnswer.Remove(answer3);
-        fourthAnswer.Remove(answer4);
+        // Remove answers based on the index
+        firstAnswer.RemoveAt(questionIndex);
+        secondAnswer.RemoveAt(questionIndex);
+        thirdAnswer.RemoveAt(questionIndex);
+        fourthAnswer.RemoveAt(questionIndex);
     }
 }

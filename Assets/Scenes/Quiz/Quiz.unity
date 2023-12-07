@@ -1396,6 +1396,7 @@ MonoBehaviour:
   gameScreen: {fileID: 1655685006}
   endScreen: {fileID: 522988476}
   leaderboardManager: {fileID: 366637002}
+  questionChosed: 0
 --- !u!4 &369025602
 Transform:
   m_ObjectHideFlags: 0
@@ -3528,7 +3529,6 @@ MonoBehaviour:
     ?"
   - "En Pennsylvanie, qu'est-ce qu'il ne faut pas faire lors d'un concert \xE0 l'auditorium
     de Barnstormers ?"
-  questionPicked: 0
   questionText: {fileID: 1975079268}
   answerManager: {fileID: 369025601}
 --- !u!1 &1403351216
@@ -4855,6 +4855,7 @@ MonoBehaviour:
   answerText3: {fileID: 641742980}
   answerText4: {fileID: 1861585075}
   questionManager: {fileID: 1303899939}
+  answerManager: {fileID: 369025601}
 --- !u!1 &1861585073
 GameObject:
   m_ObjectHideFlags: 0

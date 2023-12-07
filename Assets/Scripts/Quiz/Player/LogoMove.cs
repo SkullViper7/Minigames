@@ -42,7 +42,7 @@ public class LogoMove : MonoBehaviour
 
         while (player.localPosition != Vector3.zero)//While the player icon' transform is not reset we smoothly move it towards it's destination
         {
-            player.localPosition = Vector3.SmoothDamp(player.localPosition, Vector3.zero, ref velocity, 1, 200);
+            player.localPosition = Vector3.SmoothDamp(player.localPosition, Vector3.zero, ref velocity, 0.25f, 200);
             yield return null;
         }
     }
