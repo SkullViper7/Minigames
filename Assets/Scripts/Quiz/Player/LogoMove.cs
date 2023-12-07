@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class LogoMove : MonoBehaviour
 {
@@ -38,11 +39,9 @@ public class LogoMove : MonoBehaviour
 
     public IEnumerator Move(Transform player, Transform holder)
     {
-        player.SetParent(holder);//Set the player as child of the chosen answer
-
-        while (player.localPosition != Vector3.zero)//While the player icon' transform is not reset we smoothly move it towards it's destination
+        while (Vector3.Distance(player.position, holder.position) > 0.01f)//While the player icon' transform is not reset we smoothly move it towards it's destination
         {
-            player.localPosition = Vector3.SmoothDamp(player.localPosition, Vector3.zero, ref velocity, 1, 200);
+            player.DOMove(holder.position, 0.25f);
             yield return null;
         }
     }
