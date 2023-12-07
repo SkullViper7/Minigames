@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,8 +16,11 @@ public class PlayerMovement : MonoBehaviour
     AudioSource audioSource;
     public float _score;
 
+    private PlayerInput playerInput;
     private void Start()
     {
+        LinkPlayerToDevice();
+
         switch (GameManager.Instance.maxPlayerCount)
         {
             case 2:
@@ -46,7 +51,127 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
     }
-    public void GameStart()
+
+    private void LinkPlayerToDevice()
+    {
+        //If controller chosen is gamepad
+        if (!GameManager.Instance.isOnKeyboard)
+        {
+            //Determine which PlayerInputControl to find depending of the name of the rocket
+            switch (gameObject.name)
+            {
+                case "Player1":
+                    TryToFindController("PlayerInputControl1");
+                    break;
+                case "Player2":
+                    TryToFindController("PlayerInputControl2");
+                    break;
+                case "Player3":
+                    TryToFindController("PlayerInputControl3");
+                    break;
+                case "Player4":
+                    TryToFindController("PlayerInputControl4");
+                    break;
+            }
+        }
+        //If controller chosen is keyboard
+        else
+        {
+            //Active green and red rocket by default and blue and yellow if necessary
+            switch (gameObject.name)
+            {
+                case "Player1":
+                    gameObject.SetActive(true);
+                    SlimeJumpManager.Instance._players.Add(this);
+                    break;
+                case "Player2":
+                    gameObject.SetActive(true);
+                    SlimeJumpManager.Instance._players.Add(this);
+                    break;
+                case "Player3":
+                    if (GameManager.Instance.maxPlayerCount >= 3)
+                    {
+                        gameObject.SetActive(true);
+                        SlimeJumpManager.Instance._players.Add(this);
+                    }
+                    else
+                    {
+                        gameObject.SetActive(false);
+                    }
+                    break;
+                case "Player4":
+                    if (GameManager.Instance.maxPlayerCount == 4)
+                    {
+                        gameObject.SetActive(true);
+                        SlimeJumpManager.Instance._players.Add(this);
+                    }
+                    else
+                    {
+                        gameObject.SetActive(false);
+                    }
+                    break;
+            }
+            //Find the player input control
+            playerInput = GameObject.Find("PlayerInputControlKeyboard").GetComponent<PlayerInput>();
+            playerInput.onActionTriggered += OnAction;
+        }
+    }
+
+    private void TryToFindController(string _name)
+    {
+        //Try to find the PlayerInputControl for this rocket, if there is no PlayerInputControl for it, desactive it
+        if (GameObject.Find(_name) != null)
+        {
+            playerInput = GameObject.Find(_name).GetComponent<PlayerInput>();
+            playerInput.onActionTriggered += OnAction;
+            SlimeJumpManager.Instance._players.Add(this);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    public void OnAction(InputAction.CallbackContext context)
+    {
+        //List of all inputs for this game
+        switch (context.action.name)
+        {
+            //Gamepad
+            case "ControllerMove":
+                if (!GameManager.Instance.isOnKeyboard)
+                {
+                    OnMove();
+                }
+                break;
+            case "Player1Move":
+                if (GameManager.Instance.isOnKeyboard && gameObject.name == "Player1")
+                {
+                    OnMove();
+                }
+                break;
+            case "Player2Move":
+                if (GameManager.Instance.isOnKeyboard && gameObject.name == "Player2")
+                {
+                    OnMove();
+                }
+                break;
+            case "Player3Move":
+                if (GameManager.Instance.isOnKeyboard && gameObject.name == "Player3")
+                {
+                    OnMove();
+                }
+                break;
+            case "Player4Move":
+                if (GameManager.Instance.isOnKeyboard && gameObject.name == "Player4")
+                {
+                    OnMove();
+                }
+                break;
+        }
+    }
+
+                public void GameStart()
     {
         
         speed = 0;
@@ -129,7 +254,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsJumping", true);
         audioSource.Play();
         speed = 25;
-        
     }
 
     void Dead()
