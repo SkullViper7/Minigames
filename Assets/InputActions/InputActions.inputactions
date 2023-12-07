@@ -998,6 +998,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ControllerMove",
+                    "type": "Button",
+                    "id": "4ecbe6da-5459-4978-867c-3471774b76de",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1042,6 +1051,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Player4Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5cb81346-54fc-45a9-a663-8856ebf434a1",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ControllerMove",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

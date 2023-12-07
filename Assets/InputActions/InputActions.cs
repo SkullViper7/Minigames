@@ -1020,6 +1020,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ControllerMove"",
+                    ""type"": ""Button"",
+                    ""id"": ""4ecbe6da-5459-4978-867c-3471774b76de"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1064,6 +1073,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Player4Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5cb81346-54fc-45a9-a663-8856ebf434a1"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ControllerMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1134,6 +1154,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_SlimeJump_Player2Move = m_SlimeJump.FindAction("Player2Move", throwIfNotFound: true);
         m_SlimeJump_Player3Move = m_SlimeJump.FindAction("Player3Move", throwIfNotFound: true);
         m_SlimeJump_Player4Move = m_SlimeJump.FindAction("Player4Move", throwIfNotFound: true);
+        m_SlimeJump_ControllerMove = m_SlimeJump.FindAction("ControllerMove", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1713,6 +1734,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_SlimeJump_Player2Move;
     private readonly InputAction m_SlimeJump_Player3Move;
     private readonly InputAction m_SlimeJump_Player4Move;
+    private readonly InputAction m_SlimeJump_ControllerMove;
     public struct SlimeJumpActions
     {
         private @InputActions m_Wrapper;
@@ -1721,6 +1743,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @Player2Move => m_Wrapper.m_SlimeJump_Player2Move;
         public InputAction @Player3Move => m_Wrapper.m_SlimeJump_Player3Move;
         public InputAction @Player4Move => m_Wrapper.m_SlimeJump_Player4Move;
+        public InputAction @ControllerMove => m_Wrapper.m_SlimeJump_ControllerMove;
         public InputActionMap Get() { return m_Wrapper.m_SlimeJump; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1742,6 +1765,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Player4Move.started += instance.OnPlayer4Move;
             @Player4Move.performed += instance.OnPlayer4Move;
             @Player4Move.canceled += instance.OnPlayer4Move;
+            @ControllerMove.started += instance.OnControllerMove;
+            @ControllerMove.performed += instance.OnControllerMove;
+            @ControllerMove.canceled += instance.OnControllerMove;
         }
 
         private void UnregisterCallbacks(ISlimeJumpActions instance)
@@ -1758,6 +1784,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Player4Move.started -= instance.OnPlayer4Move;
             @Player4Move.performed -= instance.OnPlayer4Move;
             @Player4Move.canceled -= instance.OnPlayer4Move;
+            @ControllerMove.started -= instance.OnControllerMove;
+            @ControllerMove.performed -= instance.OnControllerMove;
+            @ControllerMove.canceled -= instance.OnControllerMove;
         }
 
         public void RemoveCallbacks(ISlimeJumpActions instance)
@@ -1840,5 +1869,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnPlayer2Move(InputAction.CallbackContext context);
         void OnPlayer3Move(InputAction.CallbackContext context);
         void OnPlayer4Move(InputAction.CallbackContext context);
+        void OnControllerMove(InputAction.CallbackContext context);
     }
 }
