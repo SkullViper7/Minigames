@@ -627,7 +627,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""19a5ed1b-2c81-4609-885c-106c28517de9"",
-                    ""path"": ""<Keyboard>/8"",
+                    ""path"": ""<Keyboard>/numpad8"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
