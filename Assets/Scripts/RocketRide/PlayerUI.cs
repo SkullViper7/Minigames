@@ -20,6 +20,7 @@ public class PlayerUI : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //keep the rotation and the scale as the start
         transform.eulerAngles = new Vector3(0f, 0f, -player.transform.rotation.z);
         transform.localScale = new Vector3(((playerUiStartScale.x * camera.transform.position.z) / cameraStartPosZ),
                                            ((playerUiStartScale.y * camera.transform.position.z) / cameraStartPosZ),

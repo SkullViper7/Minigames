@@ -107,6 +107,7 @@ public class BlocUI_Manager : MonoBehaviour
 
     public void MainMenu()
     {
+        GameManager.Instance.ResetManager();
         SceneManager.LoadScene("MainMenu");
     }
 }

@@ -29,6 +29,10 @@ public class Rocket : MonoBehaviour
     private List<ParticleSystem> fires;
 
     public bool hasFinished;
+    public int minutesAtEnd;
+    public int secondsAtEnd;
+    public int hundredthsOfSecondsAtEnd;
+
 
     void Start()
     {
@@ -127,7 +131,7 @@ public class Rocket : MonoBehaviour
             case "OrientationGamepad":
                 if (!GameManager.Instance.isOnKeyboard)
                 {
-                    if (!isStunt && !hasFinished)
+                    if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                     {
                         OrientationGamepad(context.action.ReadValue<Vector2>());
                     }
@@ -136,7 +140,7 @@ public class Rocket : MonoBehaviour
             case "PropulsionGamepad":
                 if (!GameManager.Instance.isOnKeyboard)
                 {
-                    if (!isStunt && !hasFinished)
+                    if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                     {
                         if (context.started == true)
                         {
@@ -152,7 +156,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "GreenRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -171,7 +175,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "GreenRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -190,7 +194,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "GreenRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -206,7 +210,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "RedRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -225,7 +229,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "RedRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -244,7 +248,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "RedRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -260,7 +264,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "BlueRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -279,7 +283,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "BlueRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -298,7 +302,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "BlueRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -314,7 +318,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "YellowRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -333,7 +337,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "YellowRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -352,7 +356,7 @@ public class Rocket : MonoBehaviour
                 {
                     if (gameObject.name == "YellowRocket")
                     {
-                        if (!isStunt && !hasFinished)
+                        if (!isStunt && !hasFinished && !RocketRideManager.Instance.gameIsOver)
                         {
                             if (context.started == true)
                             {
@@ -464,12 +468,12 @@ public class Rocket : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         //Rocket is stunt when it collides to environment
-        if (collision.gameObject.CompareTag("Environment"))
+        if (collision.gameObject.CompareTag("Environment") && !hasFinished && !RocketRideManager.Instance.gameIsOver)
         {
             //Bounce when collide to the environment
             rigidbody.velocity = Vector2.Reflect(rigidbody.velocity.normalized * bounceForce, collision.contacts[0].normal);
 
-            if (stuntCoroutine == null)
+            if (!isStunt)
             {
                 //Launch the coroutine for stunt
                 stuntCoroutine = StartCoroutine(Stunt(timeStunt));
@@ -494,7 +498,6 @@ public class Rocket : MonoBehaviour
         //Wait
         yield return new WaitForSeconds(_time);
         isStunt = false;
-        stuntCoroutine = null;
     }
 
     public IEnumerator Finish()
