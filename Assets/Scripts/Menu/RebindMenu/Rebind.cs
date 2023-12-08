@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Rebind : MonoBehaviour
 {
+    /*
     [SerializeField] private InputActionReference jumpAction = null;
     [SerializeField] private InputActionReference mouvementAction = null;
     [SerializeField] private InputActionReference attackAction = null;
@@ -26,15 +27,23 @@ public class Rebind : MonoBehaviour
     [SerializeField] private GameObject AttackButton = null;
     [SerializeField] private GameObject ChangeTimeButton = null;
     [SerializeField] private GameObject startRebindObject = null;
-    [SerializeField] private GameObject waitingForInputObject = null;
+    
+    */
+
+    public GameObject waitingForInputObject = null;
+
+    private string currentMapAction;
 
     private InputActionRebindingExtensions.RebindingOperation rebindingOperation;
 
     private const string RebindsKey = "rebinds";
 
-    public void TheActionToRebind (string nameOfTheAction)
-    {
+    private GameObject startRebindObject;
 
+    public void TheActionToRebind (string _nameOfTheAction, Button _button)
+    {
+        startRebindObject = _button.gameObject;
+        StartRebinding(_nameOfTheAction);
     }
 
     public void InitBindToButton()
@@ -43,7 +52,7 @@ public class Rebind : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         RebindManager.Instance.playerInput.SwitchCurrentActionMap("PlayerActions");
 
@@ -78,7 +87,7 @@ public class Rebind : MonoBehaviour
         leftDisplayNameText.text = QwertyToAzerty(InputControlPath.ToHumanReadableString(
             mouvementAction.action.bindings[mouvementAction.action.GetBindingIndexForControl(mouvementAction.action.controls[3])].effectivePath,
             InputControlPath.HumanReadableStringOptions.OmitDevice));
-    }
+    }*/
 
     public void Save()
     {
@@ -88,11 +97,38 @@ public class Rebind : MonoBehaviour
     }
     public void StartRebinding(string ButtonRebind)
     {
+        Debug.Log("start");
         int controlsFromActions = 0;
-        InputActionReference InputActionForRebind = null;
-        TMP_Text bindingDisplayNameText = null;
         // InputActionForRebind.action = new InputAction(expectedControlType: "Vector2");
+        currentMapAction = RebindManager.Instance.playerInput.currentActionMap.name;
+        startRebindObject.SetActive(false);
+        waitingForInputObject.transform.position = startRebindObject.transform.position;
+        waitingForInputObject.SetActive(true);
+        Debug.Log(RebindManager.Instance.playerInput.currentActionMap);
+        List<InputAction> _actions = new List<InputAction>();
+        foreach (InputAction _action in RebindManager.Instance.playerInput.currentActionMap.actions)
+        {
+            _actions.Add(_action);
+        }
+            
+        RebindManager.Instance.playerInput.SwitchCurrentActionMap("Rebind");
+        
+        foreach (InputAction _action in _actions)
+        {
+            Debug.Log(_action.name);
+            Debug.Log(ButtonRebind);
+            if(_action.name == ButtonRebind)
+            {
+                rebindingOperation = _action.PerformInteractiveRebinding(controlsFromActions)
+                .WithControlsExcluding("Mouse")
+                .OnMatchWaitForAnother(0.1f)
+                .OnComplete(operation => RebindComplete(_action, controlsFromActions, startRebindObject.transform.GetChild(0).GetComponent<TMP_Text>()))
+                .Start();
+            }
+        }
+        
 
+        /*
         switch (ButtonRebind)
         {
             case "jump":
@@ -134,10 +170,12 @@ public class Rebind : MonoBehaviour
                 startRebindObject = ChangeTimeButton;
                 break;
         }
-        startRebindObject.SetActive(false);
-        waitingForInputObject.transform.position = startRebindObject.transform.position;
-        waitingForInputObject.SetActive(true);
-        RebindManager.Instance.playerInput.SwitchCurrentActionMap("menu");
+
+        
+        
+        
+
+        
         if (InputActionForRebind == mouvementAction)
         {
             rebindingOperation = InputActionForRebind.action.PerformInteractiveRebinding(controlsFromActions + 1)
@@ -154,24 +192,24 @@ public class Rebind : MonoBehaviour
             .OnComplete(operation => RebindComplete(InputActionForRebind, controlsFromActions, bindingDisplayNameText))
             .Start();
         }
-
+        */
     }
-    private void RebindComplete(InputActionReference ActionForRebind, int TheControlsFromActions, TMP_Text bindingDisplayNameText)
+    private void RebindComplete(InputAction ActionForRebind, int TheControlsFromActions, TMP_Text bindingDisplayNameText)
     {
-
-        int bindingIndex = ActionForRebind.action.GetBindingIndexForControl(ActionForRebind.action.controls[TheControlsFromActions]);
+        Debug.Log("complete");
+        int bindingIndex = ActionForRebind.GetBindingIndexForControl(ActionForRebind.controls[TheControlsFromActions]);
 
         string QwertyCaracter = InputControlPath.ToHumanReadableString(
-            ActionForRebind.action.bindings[bindingIndex].effectivePath,
+            ActionForRebind.bindings[bindingIndex].effectivePath,
             InputControlPath.HumanReadableStringOptions.OmitDevice);
-
         bindingDisplayNameText.text = QwertyToAzerty(QwertyCaracter);
         rebindingOperation.Dispose();
-
+        
         startRebindObject.SetActive(true);
         waitingForInputObject.SetActive(false);
-
-        RebindManager.Instance.playerInput.SwitchCurrentActionMap("PlayerActions");
+        
+        RebindManager.Instance.playerInput.SwitchCurrentActionMap(currentMapAction);
+        Save();
     }
 
     private string QwertyToAzerty(string QwertyCaracterToAzerty)

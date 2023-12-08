@@ -7,6 +7,7 @@ public class RebindUI : MonoBehaviour
 {
     List<GameObject> UIToRebind = new List<GameObject>();
     GameObject actualUI;
+    public GameObject waitingForInputObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +24,18 @@ public class RebindUI : MonoBehaviour
     public Object[] SearchAllButton(string _UIName)
     {
         ChangeUIToVIew(_UIName);
-        Object[] allButton = FindObjectsOfType<Button>();
-        foreach (Button button in allButton) 
+        Object[] allButton = FindObjectsOfType<GameObject>();
+        foreach (GameObject obj in allButton) 
         {
-            button.onClick.AddListener(delegate { ButtonClicked(button.name); } );
+            if(obj.GetComponent<Button>() != null)
+            {
+                obj.GetComponent<Button>().onClick.AddListener(delegate { ButtonClicked(obj.name, obj.GetComponent<Button>()); });
+            }
+            if (obj.name == "WaitingForInputObject")
+            {
+                RebindManager.Instance.rebind.waitingForInputObject = obj;
+                obj.SetActive(false);
+            }
         }
         return allButton;
     }
@@ -48,9 +57,9 @@ public class RebindUI : MonoBehaviour
         }
     }
 
-    void ButtonClicked(string _buttonName)
+    void ButtonClicked(string _buttonName, Button _button)
     {
         Debug.Log(_buttonName);
-        RebindManager.Instance.rebind.TheActionToRebind(_buttonName);
+        RebindManager.Instance.rebind.TheActionToRebind(_buttonName, _button);
     }
 }
