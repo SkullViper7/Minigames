@@ -455,6 +455,21 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 536870967
       objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3327819778610038210, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1761,6 +1776,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.09954834
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3327819778610038210, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
         type: 3}
@@ -4189,6 +4224,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1105805783928645365, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105805783928645365, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
       propertyPath: m_TagString
       value: Player3
       objectReference: {fileID: 0}
@@ -4276,6 +4316,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 1073741879
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3327819778610038210, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
         type: 3}
@@ -5118,6 +5173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1697147248}
   - component: {fileID: 1697147249}
+  - component: {fileID: 1697147250}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -5155,6 +5211,22 @@ MonoBehaviour:
   isGameOver: 0
   players: 0
   setTimer: 10
+--- !u!114 &1697147250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697147246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ab70fdfabb2fc48b0d26e31fa37a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCam1: {fileID: 562539778}
+  playerCam2: {fileID: 91055661}
+  playerCam3: {fileID: 1200163113}
+  playerCam4: {fileID: 586962300428213423}
 --- !u!1 &1710902913
 GameObject:
   m_ObjectHideFlags: 0
@@ -6093,7 +6165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2077066984
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6166,6 +6238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bloc_Player_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105805783928645365, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1105805783928645365, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
         type: 3}
@@ -6256,6 +6333,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 2147483703
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883295575628992870, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3327819778610038210, guid: 950b87c79213ac542b2bcf4cf83e0fe7,
         type: 3}
