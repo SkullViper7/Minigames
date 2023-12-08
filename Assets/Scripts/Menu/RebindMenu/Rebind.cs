@@ -48,7 +48,35 @@ public class Rebind : MonoBehaviour
 
     public void InitBindToButton()
     {
+        string rebinds = PlayerPrefs.GetString(RebindsKey, string.Empty);
 
+        if (string.IsNullOrEmpty(rebinds))
+        {
+            return;
+        }
+        RebindManager.Instance.playerInput.actions.LoadBindingOverridesFromJson(rebinds);
+
+        Button[] _allButton = FindObjectsOfType<Button>();
+        List<InputAction> _actions = new List<InputAction>();
+        foreach (InputAction _action in RebindManager.Instance.playerInput.currentActionMap.actions)
+        {
+            _actions.Add(_action);
+        }
+
+        for (int i = 0; i < _allButton.Length; i++)
+        {
+            for (int j = 0; j < _actions.Count; j++)
+            {
+                if (_allButton[i].name == _actions[j].name)
+                {
+
+                    _allButton[i].transform.GetChild(0).GetComponent<TMP_Text>().text = QwertyToAzerty(InputControlPath.ToHumanReadableString(
+            _actions[j].bindings[0].effectivePath,
+            InputControlPath.HumanReadableStringOptions.OmitDevice)); 
+                    
+                }
+            }
+        }
     }
 
     // Start is called before the first frame update
@@ -104,7 +132,6 @@ public class Rebind : MonoBehaviour
         startRebindObject.SetActive(false);
         waitingForInputObject.transform.position = startRebindObject.transform.position;
         waitingForInputObject.SetActive(true);
-        Debug.Log(RebindManager.Instance.playerInput.currentActionMap);
         List<InputAction> _actions = new List<InputAction>();
         foreach (InputAction _action in RebindManager.Instance.playerInput.currentActionMap.actions)
         {
@@ -115,84 +142,30 @@ public class Rebind : MonoBehaviour
         
         foreach (InputAction _action in _actions)
         {
-            Debug.Log(_action.name);
-            Debug.Log(ButtonRebind);
+            
             if(_action.name == ButtonRebind)
             {
-                rebindingOperation = _action.PerformInteractiveRebinding(controlsFromActions)
+                if(startRebindObject.GetComponent<ButtonMapping>()._isController) 
+                {
+                    rebindingOperation = _action.PerformInteractiveRebinding(controlsFromActions)
+                    .WithControlsExcluding("Mouse")
+                    .WithControlsExcluding("Keyboard")
+                    .OnMatchWaitForAnother(0.1f)
+                    .OnComplete(operation => RebindComplete(_action, controlsFromActions, startRebindObject.transform.GetChild(0).GetComponent<TMP_Text>()))
+                    .Start();
+                }
+
+                else
+                {
+                    rebindingOperation = _action.PerformInteractiveRebinding(controlsFromActions)
                 .WithControlsExcluding("Mouse")
+                .WithControlsExcluding("<Gamepad>")
                 .OnMatchWaitForAnother(0.1f)
                 .OnComplete(operation => RebindComplete(_action, controlsFromActions, startRebindObject.transform.GetChild(0).GetComponent<TMP_Text>()))
                 .Start();
+                }
             }
         }
-        
-
-        /*
-        switch (ButtonRebind)
-        {
-            case "jump":
-                InputActionForRebind = jumpAction;
-                bindingDisplayNameText = jumpDisplayNameText;
-                startRebindObject = JumpButton;
-                break;
-            case "up":
-                InputActionForRebind = mouvementAction;
-                bindingDisplayNameText = upDisplayNameText;
-                startRebindObject = UpButton;
-                break;
-            case "down":
-                InputActionForRebind = mouvementAction;
-                controlsFromActions = 1;
-                bindingDisplayNameText = downDisplayNameText;
-                startRebindObject = DownButton;
-                break;
-            case "right":
-                InputActionForRebind = mouvementAction;
-                controlsFromActions = 3;
-                bindingDisplayNameText = rightDisplayNameText;
-                startRebindObject = RightButton;
-                break;
-            case "left":
-                InputActionForRebind = mouvementAction;
-                controlsFromActions = 2;
-                bindingDisplayNameText = leftDisplayNameText;
-                startRebindObject = LeftButton;
-                break;
-            case "attack":
-                InputActionForRebind = attackAction;
-                bindingDisplayNameText = attackDisplayNameText;
-                startRebindObject = AttackButton;
-                break;
-            case "changeTime":
-                InputActionForRebind = changeTimeAction;
-                bindingDisplayNameText = changeTimeDisplayNameText;
-                startRebindObject = ChangeTimeButton;
-                break;
-        }
-
-        
-        
-        
-
-        
-        if (InputActionForRebind == mouvementAction)
-        {
-            rebindingOperation = InputActionForRebind.action.PerformInteractiveRebinding(controlsFromActions + 1)
-            .WithControlsExcluding("Mouse")
-            .OnMatchWaitForAnother(0.1f)
-            .OnComplete(operation => RebindComplete(InputActionForRebind, controlsFromActions, bindingDisplayNameText))
-            .Start();
-        }
-        else
-        {
-            rebindingOperation = InputActionForRebind.action.PerformInteractiveRebinding(controlsFromActions)
-            .WithControlsExcluding("Mouse")
-            .OnMatchWaitForAnother(0.1f)
-            .OnComplete(operation => RebindComplete(InputActionForRebind, controlsFromActions, bindingDisplayNameText))
-            .Start();
-        }
-        */
     }
     private void RebindComplete(InputAction ActionForRebind, int TheControlsFromActions, TMP_Text bindingDisplayNameText)
     {
@@ -214,9 +187,10 @@ public class Rebind : MonoBehaviour
 
     private string QwertyToAzerty(string QwertyCaracterToAzerty)
     {
-
+        
         switch (QwertyCaracterToAzerty)
         {
+
             case "Q":
                 QwertyCaracterToAzerty = "A";
                 break;
@@ -235,8 +209,22 @@ public class Rebind : MonoBehaviour
             case "M":
                 QwertyCaracterToAzerty = ",";
                 break;
+            case "Button South":
+                QwertyCaracterToAzerty = "A";
+                break;
+            case "Button North":
+                QwertyCaracterToAzerty = "Y";
+                break;
+            case "Button East":
+                QwertyCaracterToAzerty = "B";
+                break;
+            case "Button West":
+                QwertyCaracterToAzerty = "X";
+                break;
         }
+        
         return QwertyCaracterToAzerty;
+        
     }
   
 }

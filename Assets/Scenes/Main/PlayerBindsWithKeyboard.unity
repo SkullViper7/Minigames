@@ -440,6 +440,7 @@ GameObject:
   - component: {fileID: 169562822}
   - component: {fileID: 169562825}
   - component: {fileID: 169562824}
+  - component: {fileID: 169562826}
   - component: {fileID: 169562823}
   m_Layer: 5
   m_Name: Player1Move
@@ -550,6 +551,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169562821}
   m_CullTransparentMesh: 1
+--- !u!114 &169562826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169562821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e67e89852bacf24c8176eff631cc0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isController: 0
 --- !u!1 &233654935
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,7 +805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &255435890
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1479,6 +1493,7 @@ GameObject:
   - component: {fileID: 453675012}
   - component: {fileID: 453675011}
   - component: {fileID: 453675010}
+  - component: {fileID: 453675013}
   m_Layer: 5
   m_Name: ControllerMove
   m_TagString: Untagged
@@ -1588,6 +1603,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453675008}
   m_CullTransparentMesh: 1
+--- !u!114 &453675013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453675008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e67e89852bacf24c8176eff631cc0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isController: 1
 --- !u!1 &497319948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2766,9 +2794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-'
+  m_text: Left Control
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3058,6 +3084,7 @@ GameObject:
   - component: {fileID: 1078423893}
   - component: {fileID: 1078423896}
   - component: {fileID: 1078423895}
+  - component: {fileID: 1078423897}
   - component: {fileID: 1078423894}
   m_Layer: 5
   m_Name: Player3Move
@@ -3168,6 +3195,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078423892}
   m_CullTransparentMesh: 1
+--- !u!114 &1078423897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078423892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e67e89852bacf24c8176eff631cc0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isController: 0
 --- !u!1 &1089663730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,6 +3355,7 @@ GameObject:
   - component: {fileID: 1236391494}
   - component: {fileID: 1236391497}
   - component: {fileID: 1236391496}
+  - component: {fileID: 1236391498}
   - component: {fileID: 1236391495}
   m_Layer: 5
   m_Name: Player4Move
@@ -3425,6 +3466,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236391493}
   m_CullTransparentMesh: 1
+--- !u!114 &1236391498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236391493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e67e89852bacf24c8176eff631cc0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isController: 0
 --- !u!1 &1317551188
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,6 +3490,7 @@ GameObject:
   - component: {fileID: 1317551189}
   - component: {fileID: 1317551192}
   - component: {fileID: 1317551191}
+  - component: {fileID: 1317551193}
   - component: {fileID: 1317551190}
   m_Layer: 5
   m_Name: Player2Move
@@ -3546,6 +3601,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317551188}
   m_CullTransparentMesh: 1
+--- !u!114 &1317551193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317551188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e67e89852bacf24c8176eff631cc0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isController: 0
 --- !u!1 &1357658941
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,18 +42,15 @@ public class RebindManager : MonoBehaviour
         if (dropdownText != "None")
         {
             playerInput.SwitchCurrentActionMap(dropdownText);
-           /* for(int i = 0;  i < _allButton.Length; i++)
-            {
+            /* for(int i = 0;  i < _allButton.Length; i++)
+             {
 
-            }
-            foreach (GameObject button in _allButton)
-            {
+             }
+             foreach (GameObject button in _allButton)
+             {
 
-            }*/
-            foreach (InputAction actio in playerInput.currentActionMap.actions)
-            {
-                Debug.Log(actio.name);
-            }
+             }*/
+            rebind.InitBindToButton();
         }
         
         
