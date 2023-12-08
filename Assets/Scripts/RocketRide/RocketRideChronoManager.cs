@@ -13,12 +13,18 @@ public class RocketRideChronoManager : MonoBehaviour
     //
 
     public float time;
-    public GameObject podiumScreen;
+    [SerializeField]
+    private GameObject podiumScreen;
+    [SerializeField]
+    private GameObject gameScreen;
 
     [Header("ChronoTimer")]
-    public TextMeshProUGUI minutes;
-    public TextMeshProUGUI seconds;
-    public TextMeshProUGUI hundredthsOfSeconds;
+    [SerializeField]
+    private TextMeshProUGUI minutes;
+    [SerializeField]
+    private TextMeshProUGUI seconds;
+    [SerializeField]
+    private TextMeshProUGUI hundredthsOfSeconds;
     private Coroutine decrementTimer;
 
     [HideInInspector]
@@ -54,7 +60,10 @@ public class RocketRideChronoManager : MonoBehaviour
         minutes.SetText(ConvertToString(nbrOfMinutes));
         seconds.SetText(ConvertToString(nbrOfSeconds));
         hundredthsOfSeconds.SetText(ConvertToString(nbrOfHundredthsOfSeconds));
+    }
 
+    public void StartChrono()
+    {
         decrementTimer = StartCoroutine(DecrementChrono());
     }
 
@@ -137,6 +146,7 @@ public class RocketRideChronoManager : MonoBehaviour
     {
         //Wait for 3 seconds before showing the results
         yield return new WaitForSeconds(3f);
+        gameScreen.SetActive(false);
         podiumScreen.SetActive(true);
     }
 }
