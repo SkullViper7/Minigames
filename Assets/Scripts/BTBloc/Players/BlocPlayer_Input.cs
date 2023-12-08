@@ -30,7 +30,7 @@ public class BlocPlayer_Input : MonoBehaviour
 
     public void OnAction(InputAction.CallbackContext context)
     {
-        if (!BTBloc_Manager.Instance.isGameOver && !isSpawning)
+        if (!BTBloc_Manager.Instance.isGameOver && !BlocUI_Manager.Instance.isCountDown && !isSpawning)
         {
             switch (context.action.name)
             {
