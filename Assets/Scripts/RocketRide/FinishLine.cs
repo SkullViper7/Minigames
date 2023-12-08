@@ -13,6 +13,8 @@ public class FinishLine : MonoBehaviour
 
     [SerializeField]
     private GameObject podiumScreen;
+    [SerializeField]
+    private GameObject gameScreen;
 
     private void Start()
     {
@@ -53,6 +55,7 @@ public class FinishLine : MonoBehaviour
         if (RocketRideManager.Instance.rocketsWhichHaveFinished.Count == numberOfPlayer)
         {
             RocketRideManager.Instance.gameIsOver = true;
+            RocketRideChronoManager.Instance.StopTimer();
             rocketGroup.AddMember(transform, 1, 0);
             StartCoroutine(other.GetComponent<Rocket>().Finish());
             StartCoroutine(WaitBeforeShowingPodium());

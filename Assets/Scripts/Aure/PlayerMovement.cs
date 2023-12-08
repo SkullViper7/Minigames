@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public float _score;
 
     private PlayerInput playerInput;
+
+    bool _isDead;
     private void Start()
     {
         LinkPlayerToDevice();
@@ -171,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-                public void GameStart()
+    public void GameStart()
     {
         
         speed = 0;
@@ -181,8 +183,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 velocite = new Vector2(speed * directionX * Time.deltaTime, directionY * Time.deltaTime);
-        transform.Translate(velocite, Space.World);
+        if (!_isDead)
+        {
+            Vector2 velocite = new Vector2(speed * directionX * Time.deltaTime, directionY * Time.deltaTime);
+            transform.Translate(velocite, Space.World);
+        }
     }
 
 
@@ -259,6 +264,13 @@ public class PlayerMovement : MonoBehaviour
     void Dead()
     {
         SlimeJumpManager.Instance.PlayerDie(this);
+        _isDead = true;
+        GetComponent<BoxCollider2D>().enabled = false;
+        animator.SetBool("IsDead", true);
+    }
+
+    public void DesactivatePlayer()
+    {
         gameObject.SetActive(false);
     }
 }
