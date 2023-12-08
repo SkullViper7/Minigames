@@ -41,11 +41,5 @@ public class LogoMove : MonoBehaviour
     {
         player.DOMove(holder.position, 0.25f);
         yield return null;
-
-        //while (Vector3.Distance(player.position, holder.position) > 0.01f)//While the player icon' transform is not reset we smoothly move it towards it's destination
-        //{
-        //    player.DOMove(holder.position, 0.25f);
-        //    yield return null;
-        //}
     }
 }

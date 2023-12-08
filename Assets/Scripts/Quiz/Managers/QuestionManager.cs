@@ -13,10 +13,14 @@ public class QuestionManager : MonoBehaviour
     [Space]
     public AnswerManager answerManager;
 
+    public string GetQuestion(int questionIndex)
+    {
+        return questions[questionIndex];
+    }
+
     public void DisplayQuestion(int questionIndex)
     {
         questionText.text = questions[questionIndex];
-        StartCoroutine(RemoveQuestion(questionIndex));
     }
 
     IEnumerator RemoveQuestion(int questionIndex)

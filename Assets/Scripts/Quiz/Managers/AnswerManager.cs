@@ -60,15 +60,16 @@ public class AnswerManager : MonoBehaviour
         blink.isPaused = false;
 
         int questionIndex = Random.Range(0, questionManager.questions.Count);
+        string question = questionManager.GetQuestion(questionIndex);
         questionManager.DisplayQuestion(questionIndex);
         audioManager.QuestionRead(questionIndex);
 
-        StartCoroutine(answerTextManager.AnswerWrite(questionIndex));
+        StartCoroutine(answerTextManager.AnswerWrite(questionIndex, question));
 
         correctAnswer = correctAnswers[questionIndex];
-        correctAnswers.Remove(questionIndex);
+        correctAnswers.RemoveAt(questionIndex);
 
-        Invoke("AnswerCheck", 10);
+        Invoke("AnswerCheck", audioManager.questionVoiced[questionIndex].length + 10);
     }
 
     public void AnswerCheck()
@@ -151,7 +152,7 @@ public class AnswerManager : MonoBehaviour
 
         correctAnswers.Remove(correctAnswer);//Removing the answer from the list so it can't be picked randomly again
 
-        if (questionManager.questions.Count > 29)
+        if (questionManager.questions.Count > 30)
         {
             Invoke("ChooseNextQuestion", 3);//Waiting time before the next question
         }

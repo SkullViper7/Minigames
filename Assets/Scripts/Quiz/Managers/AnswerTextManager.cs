@@ -20,12 +20,21 @@ public class AnswerTextManager : MonoBehaviour
     public QuestionManager questionManager;
     public AnswerManager answerManager;
 
-    public IEnumerator AnswerWrite(int questionIndex)
+    public IEnumerator AnswerWrite(int questionIndex, string question)
     {
         answerText1.text = firstAnswer[questionIndex];
         answerText2.text = secondAnswer[questionIndex];
         answerText3.text = thirdAnswer[questionIndex];
         answerText4.text = fourthAnswer[questionIndex];
+
+        // Si la question affichée ne correspond pas à la question actuelle, cacher les réponses
+        if (question != questionManager.GetQuestion(questionIndex))
+        {
+            answerText1.gameObject.SetActive(false);
+            answerText2.gameObject.SetActive(false);
+            answerText3.gameObject.SetActive(false);
+            answerText4.gameObject.SetActive(false);
+        }
 
         yield return new WaitForSeconds(10);
 
