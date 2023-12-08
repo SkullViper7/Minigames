@@ -66,70 +66,33 @@ public class AnswerManager : MonoBehaviour
 
         StartCoroutine(answerTextManager.AnswerWrite(questionIndex, question));
 
+        // Utiliser la bonne réponse associée à la question choisie
         correctAnswer = correctAnswers[questionIndex];
-        correctAnswers.RemoveAt(questionIndex);
+
+        // Stocker l'index de la question choisie pour une utilisation ultérieure
+        questionChosed = questionIndex;
 
         Invoke("AnswerCheck", audioManager.questionVoiced[questionIndex].length + 10);
     }
+
 
     public void AnswerCheck()
     {
         int voiceIndex = Random.Range(0, audioManager.answerVoiced.Count);
         audioManager.AnswerRead(voiceIndex);
 
-        blink.isPaused = true;//Stops the timer
+        blink.isPaused = true;
 
-        if (GameManager.Instance.maxPlayerCount == 2)
+        // Récupérer la bonne réponse associée à l'index de la question choisie
+        correctAnswer = correctAnswers[questionChosed];
+
+        // Vérifier les réponses pour chaque joueur en fonction de la question choisie
+        for (int i = 1; i <= GameManager.Instance.maxPlayerCount; i++)
         {
-            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
+            GameObject player = GameObject.FindGameObjectWithTag("Player" + i);
+            if (player.GetComponent<PlayerController>().answerChosed == correctAnswer)
             {
-                scoreManager.AddScore(1, 1);//Calls the method to add 1 point to the correct player
-            }
-
-            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(2, 1);
-            }
-        }
-
-        if (GameManager.Instance.maxPlayerCount == 3)
-        {
-            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(1,  1);
-            }
-
-            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(2, 1);
-            }
-
-            if (player3.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(3, 1);
-            }
-        }
-
-        if (GameManager.Instance.maxPlayerCount == 4)
-        {
-            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(1, 1);
-            }
-
-            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(2, 1);
-            }
-
-            if (player3.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(3, 1);
-            }
-
-            if (player4.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(4, 1);
+                scoreManager.AddScore(i, 1);
             }
         }
 
@@ -150,9 +113,16 @@ public class AnswerManager : MonoBehaviour
             StartCoroutine(blink.Blink(blink.answer4, blink.icon4, blink.text4));
         }
 
-        correctAnswers.Remove(correctAnswer);//Removing the answer from the list so it can't be picked randomly again
+        // Supprimer la réponse correcte associée à la question choisie
+        correctAnswers.RemoveAt(questionChosed);
 
-        if (questionManager.questions.Count > 30)
+        // Ajuster l'index pour la prochaine question
+        if (correctAnswers.Count > 0)
+        {
+            questionChosed = Random.Range(0, correctAnswers.Count);
+        }
+
+        if (questionManager.questions.Count > 0)
         {
             Invoke("ChooseNextQuestion", 3);//Waiting time before the next question
         }

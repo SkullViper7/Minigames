@@ -22,12 +22,19 @@ public class AnswerTextManager : MonoBehaviour
 
     public IEnumerator AnswerWrite(int questionIndex, string question)
     {
-        answerText1.text = firstAnswer[questionIndex];
-        answerText2.text = secondAnswer[questionIndex];
-        answerText3.text = thirdAnswer[questionIndex];
-        answerText4.text = fourthAnswer[questionIndex];
+        // Stockage des réponses actuelles liées à la question
+        string currentFirstAnswer = firstAnswer[questionIndex];
+        string currentSecondAnswer = secondAnswer[questionIndex];
+        string currentThirdAnswer = thirdAnswer[questionIndex];
+        string currentFourthAnswer = fourthAnswer[questionIndex];
 
-        // Si la question affichée ne correspond pas à la question actuelle, cacher les réponses
+        // Affichage des réponses
+        answerText1.text = currentFirstAnswer;
+        answerText2.text = currentSecondAnswer;
+        answerText3.text = currentThirdAnswer;
+        answerText4.text = currentFourthAnswer;
+
+        // Vérification de correspondance avec la question actuelle pour masquer les réponses incorrectes
         if (question != questionManager.GetQuestion(questionIndex))
         {
             answerText1.gameObject.SetActive(false);
@@ -35,10 +42,18 @@ public class AnswerTextManager : MonoBehaviour
             answerText3.gameObject.SetActive(false);
             answerText4.gameObject.SetActive(false);
         }
+        else
+        {
+            // Si la question correspond, afficher les réponses
+            answerText1.gameObject.SetActive(true);
+            answerText2.gameObject.SetActive(true);
+            answerText3.gameObject.SetActive(true);
+            answerText4.gameObject.SetActive(true);
+        }
 
         yield return new WaitForSeconds(10);
 
-        // Remove answers based on the index
+        // Suppression des réponses en fonction de la question choisie
         firstAnswer.RemoveAt(questionIndex);
         secondAnswer.RemoveAt(questionIndex);
         thirdAnswer.RemoveAt(questionIndex);
