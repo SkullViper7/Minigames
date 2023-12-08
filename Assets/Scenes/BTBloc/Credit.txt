@@ -1,4 +1,14 @@
 Assets from : 
-
+Slimes
 https://assetstore.unity.com/packages/3d/characters/creatures/kawaii-slimes-221172
 By - Awaii Studio
+
+Environnement
+https://assetstore.unity.com/packages/3d/environments/landscapes/toon-environments-world-creator-pack-lite-264325
+By - Selcuk Gerceker
+
+Skybox
+https://assetstore.unity.com/packages/2d/textures-materials/sky/free-stylized-skybox-212257
+By - Yuki2022
+
+Only free assets used
