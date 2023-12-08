@@ -1088,6 +1088,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Rebind"",
+            ""id"": ""e5d98014-c98a-4677-8afd-7bd7b3f81627"",
+            ""actions"": [],
+            ""bindings"": []
         }
     ],
     ""controlSchemes"": []
@@ -1155,6 +1161,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_SlimeJump_Player3Move = m_SlimeJump.FindAction("Player3Move", throwIfNotFound: true);
         m_SlimeJump_Player4Move = m_SlimeJump.FindAction("Player4Move", throwIfNotFound: true);
         m_SlimeJump_ControllerMove = m_SlimeJump.FindAction("ControllerMove", throwIfNotFound: true);
+        // Rebind
+        m_Rebind = asset.FindActionMap("Rebind", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1804,6 +1812,44 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         }
     }
     public SlimeJumpActions @SlimeJump => new SlimeJumpActions(this);
+
+    // Rebind
+    private readonly InputActionMap m_Rebind;
+    private List<IRebindActions> m_RebindActionsCallbackInterfaces = new List<IRebindActions>();
+    public struct RebindActions
+    {
+        private @InputActions m_Wrapper;
+        public RebindActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputActionMap Get() { return m_Wrapper.m_Rebind; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(RebindActions set) { return set.Get(); }
+        public void AddCallbacks(IRebindActions instance)
+        {
+            if (instance == null || m_Wrapper.m_RebindActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_RebindActionsCallbackInterfaces.Add(instance);
+        }
+
+        private void UnregisterCallbacks(IRebindActions instance)
+        {
+        }
+
+        public void RemoveCallbacks(IRebindActions instance)
+        {
+            if (m_Wrapper.m_RebindActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IRebindActions instance)
+        {
+            foreach (var item in m_Wrapper.m_RebindActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_RebindActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public RebindActions @Rebind => new RebindActions(this);
     public interface IQuizActions
     {
         void OnAnswer1(InputAction.CallbackContext context);
@@ -1870,5 +1916,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnPlayer3Move(InputAction.CallbackContext context);
         void OnPlayer4Move(InputAction.CallbackContext context);
         void OnControllerMove(InputAction.CallbackContext context);
+    }
+    public interface IRebindActions
+    {
     }
 }

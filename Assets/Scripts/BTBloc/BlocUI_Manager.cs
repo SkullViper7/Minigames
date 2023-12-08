@@ -27,6 +27,8 @@ public class BlocUI_Manager : MonoBehaviour
     public Color blue;
     public Color yellow;
 
+    public bool isCountDown = true;
+
     public Dictionary<string, int> scoresPlayers = new Dictionary<string, int>();
 
     private void Awake()
@@ -107,6 +109,12 @@ public class BlocUI_Manager : MonoBehaviour
 
     public void MainMenu()
     {
+        GameManager.Instance.ResetManager();
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void CountDownFinished()
+    {
+        isCountDown = false;
     }
 }

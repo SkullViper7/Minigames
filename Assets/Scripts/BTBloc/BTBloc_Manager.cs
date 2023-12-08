@@ -7,7 +7,6 @@ using UnityEngine.InputSystem.Utilities;
 
 public class BTBloc_Manager : MonoBehaviour
 {
-
     public bool isGameOver = false;
     public int players;
     public float setTimer;
@@ -45,7 +44,7 @@ public class BTBloc_Manager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isTimerActive)
+        if (isTimerActive && !BlocUI_Manager.Instance.isCountDown)
         {
             if (timer > 0)
             {
