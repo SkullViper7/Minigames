@@ -25,12 +25,29 @@ public class RocketRideManager : MonoBehaviour
         //
     }
 
+    public GameObject[] rockets;
     public List<GameObject> rocketsWhichHaveFinished = new();
+    public List<GameObject> rocketsWhichHaveNotFinished = new();
 
     public bool gameIsOver;
 
     private void Start()
     {
         gameIsOver = false;
+
+        //Get all rockets
+        rockets = GameObject.FindGameObjectsWithTag("Rocket");
+    }
+
+    public void GetRocketsWhichHaveNotFinished()
+    {
+        //Get rockets which have not finished the race
+        for (int i = 0; i < rockets.Length; i++)
+        {
+            if (!rocketsWhichHaveFinished.Contains(rockets[i]))
+            {
+                rocketsWhichHaveNotFinished.Add(rockets[i]);
+            }
+        }
     }
 }
