@@ -13,6 +13,7 @@ public class AnswerManager : MonoBehaviour
     public QuestionManager questionManager;
     public AnswerTextManager answerTextManager;
     public CorrectAnswerBlink blink;
+    public AudioManager audioManager;
 
     [Header("EndScreen")]
     public GameObject gameScreen;
@@ -25,6 +26,10 @@ public class AnswerManager : MonoBehaviour
     GameObject player4;
 
     public int questionChosed;
+
+    [Header("Audio")]
+    public AudioClip voice;
+    public AudioSource voiceSource;
 
     private void Start()
     {
@@ -56,6 +61,8 @@ public class AnswerManager : MonoBehaviour
 
         int questionIndex = Random.Range(0, questionManager.questions.Count);
         questionManager.DisplayQuestion(questionIndex);
+        audioManager.QuestionRead(questionIndex);
+
         StartCoroutine(answerTextManager.AnswerWrite(questionIndex));
 
         correctAnswer = correctAnswers[questionIndex];
@@ -66,6 +73,9 @@ public class AnswerManager : MonoBehaviour
 
     public void AnswerCheck()
     {
+        int voiceIndex = Random.Range(0, audioManager.answerVoiced.Count);
+        audioManager.AnswerRead(voiceIndex);
+
         blink.isPaused = true;//Stops the timer
 
         if (GameManager.Instance.maxPlayerCount == 2)
@@ -148,6 +158,7 @@ public class AnswerManager : MonoBehaviour
 
         else
         {
+            voiceSource.PlayOneShot(voice);
             gameScreen.SetActive(false);
             endScreen.SetActive(true);
             leaderboardManager.ShowScore();

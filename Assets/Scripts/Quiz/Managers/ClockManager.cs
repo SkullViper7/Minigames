@@ -7,6 +7,8 @@ using UnityEngine;
 public class ClockManager : MonoBehaviour
 {
     public TMP_Text time;
+    public AudioManager audioManager;
+    public AnswerManager answerManager;
 
     private void Start()
     {
@@ -15,6 +17,7 @@ public class ClockManager : MonoBehaviour
 
     IEnumerator TimeDecrease()//Countdown from 10 to 0
     {
+        yield return new WaitForSeconds(audioManager.questionVoiced[answerManager.questionChosed].length);
         time.text = "10";
         yield return new WaitForSeconds(1);
         time.text = "9";
