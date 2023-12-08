@@ -9,8 +9,9 @@ using UnityEngine.SceneManagement;
 public class BlocUI_Manager : MonoBehaviour
 {
     public TMP_Text _uiTimer;
+    AudioSource audioData;
 
-        //Singleton
+    //Singleton
     private static BlocUI_Manager _instance = null;
     private BlocUI_Manager() { }
     public static BlocUI_Manager Instance => _instance;
@@ -44,6 +45,7 @@ public class BlocUI_Manager : MonoBehaviour
             _instance = this;
         }
         //
+        audioData = GetComponent<AudioSource>();
     }
 
     private string PlayerName(string _player)
@@ -116,5 +118,9 @@ public class BlocUI_Manager : MonoBehaviour
     public void CountDownFinished()
     {
         isCountDown = false;
+    }
+    public void CountDownSound()
+    {
+        audioData.Play();
     }
 }
