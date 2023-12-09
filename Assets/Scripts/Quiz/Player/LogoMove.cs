@@ -35,14 +35,9 @@ public class LogoMove : MonoBehaviour
     public Transform YHolder3;
     public Transform YHolder4;
 
-    Vector3 velocity;
-
     public IEnumerator Move(Transform player, Transform holder)
     {
-        while (Vector3.Distance(player.position, holder.position) > 0.01f)//While the player icon' transform is not reset we smoothly move it towards it's destination
-        {
-            player.DOMove(holder.position, 0.25f);
-            yield return null;
-        }
+        player.DOMove(holder.position, 0.25f);
+        yield return null;
     }
 }
