@@ -16,8 +16,8 @@ public class LeaderboardManager : MonoBehaviour
 
     public void ShowScore()
     {
-        player1Score.text = scoreManager.player1Score.ToString();
-        MainLeaderboardManager.Instance.UpdateScore("QuizPlayer1", scoreManager.player1Score);
+        player1Score.text = scoreManager.player1Score.ToString();//Display player score
+        MainLeaderboardManager.Instance.UpdateScore("QuizPlayer1", scoreManager.player1Score);//Add score to leaderboard
         player2Score.text = scoreManager.player2Score.ToString();
         MainLeaderboardManager.Instance.UpdateScore("QuizPlayer2", scoreManager.player2Score);
         player3Score.text = scoreManager.player3Score.ToString();
