@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Main/MainMenu.unity
     guid: 218f8fc2dde053b45a7deb43ab71e0df
   - enabled: 1
+    path: Assets/Scenes/Main/MainLeaderboard.unity
+    guid: a79b71c244f751e4484b8a58094566e9
+  - enabled: 1
+    path: Assets/Scenes/Main/PlayerBindsWithKeyboard.unity
+    guid: f746624aa8bff5e4e9a70bb6a337477e
+  - enabled: 1
     path: Assets/Scenes/Main/ControllerChoice.unity
     guid: a10cd1d388c353d488afb3545b68430c
   - enabled: 1
