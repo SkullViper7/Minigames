@@ -7236,7 +7236,7 @@ MonoBehaviour:
   - {fileID: 1879411428}
   - {fileID: 825942897}
   leaderBoard: {fileID: 2077066983}
-  newScore: {fileID: 0}
+  newScore: {fileID: 196523101}
   green: {r: 0, g: 1, b: 0.03529412, a: 1}
   red: {r: 0.7529412, g: 0.08235294, b: 0.08235294, a: 1}
   blue: {r: 0.0627451, g: 0.62352943, b: 0.90588236, a: 1}
