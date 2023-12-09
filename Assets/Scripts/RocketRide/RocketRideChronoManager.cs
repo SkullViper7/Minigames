@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using TMPro;
 using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
 
@@ -12,7 +13,6 @@ public class RocketRideChronoManager : MonoBehaviour
     public static RocketRideChronoManager Instance => _instance;
     //
 
-    public float time;
     [SerializeField]
     private GameObject podiumScreen;
     [SerializeField]
@@ -20,20 +20,18 @@ public class RocketRideChronoManager : MonoBehaviour
 
     [Header("ChronoTimer")]
     [SerializeField]
+    private float time;
+    [SerializeField]
     private TextMeshProUGUI minutes;
     [SerializeField]
     private TextMeshProUGUI seconds;
     [SerializeField]
-    private TextMeshProUGUI hundredthsOfSeconds;
+    private TextMeshProUGUI centiseconds;
     private Coroutine decrementTimer;
 
+    //Chrono where [0] = minutes, [1] = seconds, [2] = centiseconds
     [HideInInspector]
-    public int nbrOfMinutes;
-    [HideInInspector]
-    public int nbrOfSeconds;
-    [HideInInspector]
-    public int nbrOfHundredthsOfSeconds;
-
+    public List<int> actualChrono;
 
     private void Awake()
     {
@@ -52,19 +50,57 @@ public class RocketRideChronoManager : MonoBehaviour
 
     private void Start()
     {
-        // Convert seconds into minutes, seconds and hundredths of seconds
-        nbrOfMinutes = Mathf.FloorToInt(time / 60f);
-        nbrOfSeconds = (int)(time - (Mathf.FloorToInt(time / 60f) * 60f));
-        nbrOfHundredthsOfSeconds = 0;
+        // Convert the time into minutes, seconds and centiseconds
+        actualChrono = ConvertFloatIntoTime(time);
 
-        minutes.SetText(ConvertToString(nbrOfMinutes));
-        seconds.SetText(ConvertToString(nbrOfSeconds));
-        hundredthsOfSeconds.SetText(ConvertToString(nbrOfHundredthsOfSeconds));
+        minutes.SetText(ConvertToString(actualChrono[0]));
+        seconds.SetText(ConvertToString(actualChrono[1]));
+        centiseconds.SetText(ConvertToString(actualChrono[2]));
     }
 
     public void StartChrono()
     {
         decrementTimer = StartCoroutine(DecrementChrono());
+    }
+
+    private List<int> ConvertFloatIntoTime(float _time)
+    {
+        //Convert a float representing seconds into a list of minutes, seconds and centiseconds
+        List<int> _timeValues = new();
+
+        //Minutes
+        _timeValues.Add(Mathf.FloorToInt(_time / 60f));
+        //Seconds
+        _timeValues.Add((int)(_time - (Mathf.FloorToInt(_time / 60f) * 60f)));
+        //Centiseconds
+        _timeValues.Add((int)(Math.Round(_time - Math.Truncate(_time), 2) * 100));
+
+        return _timeValues;
+    }
+
+    private float ConvertTimeIntoFloat(List<int> _timeValues)
+    {
+        //Convert a list of minutes, seconds and centiseconds into a float representing seconds
+        float _time = 0f;
+
+        //Minutes
+        _time += _timeValues[0] * 60;
+        //Seconds
+        _time += _timeValues[1];
+        //Centiseconds
+        _time += _timeValues[2] / 100f;
+
+        return _time;
+    }
+
+    public List<int> ConvertAnActualChronoIntoATime(List<int> _actualChrono)
+    {
+        //return the chrono given into a real chrono
+        //Example:
+        //If chrono given is 0 minute, 45 seconds, 33 centiseconds
+        //and if the chrono at the start is 1 minute, 36 seconds and 55 centiseconds
+        //it will return 0 minute, 51 seconds and 22 centiseconds
+        return ConvertFloatIntoTime(this.time - ConvertTimeIntoFloat(_actualChrono));
     }
 
     private string ConvertToString(int _time)
@@ -84,33 +120,33 @@ public class RocketRideChronoManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.01f);
 
-        // Decrement hundredths of seconds
-        // Decrement seconds when hundredths of seconds are under 0
+        // Decrement centiseconds
+        // Decrement seconds when centiseconds are under 0
         // Decrement minutes when seconds are under 0
-        // Stop the chrono if minutes, seconds and hundredths of seconds are equals to 0
-        if (nbrOfHundredthsOfSeconds - 1 == -1 && nbrOfSeconds != 0)
+        // Stop the chrono if minutes, seconds and centiseconds are equals to 0
+        if (actualChrono[2] - 1 == -1 && actualChrono[1] != 0)
         {
             //01 : 01 : 00
-            nbrOfHundredthsOfSeconds = 99;
-            nbrOfSeconds -= 1;
+            actualChrono[2] = 99;
+            actualChrono[1] -= 1;
 
-            hundredthsOfSeconds.SetText(ConvertToString(nbrOfHundredthsOfSeconds));
-            seconds.SetText(ConvertToString(nbrOfSeconds));
+            centiseconds.SetText(ConvertToString(actualChrono[2]));
+            seconds.SetText(ConvertToString(actualChrono[1]));
             decrementTimer = StartCoroutine(DecrementChrono());
         }
-        else if (nbrOfHundredthsOfSeconds - 1 == -1 && nbrOfSeconds == 0 && nbrOfMinutes != 0)
+        else if (actualChrono[2] - 1 == -1 && actualChrono[1] == 0 && actualChrono[0] != 0)
         {
             //01 : 00 : 00
-            nbrOfHundredthsOfSeconds = 99;
-            nbrOfSeconds = 59;
-            nbrOfMinutes -= 1;
+            actualChrono[2] = 99;
+            actualChrono[1] = 59;
+            actualChrono[0] -= 1;
 
-            hundredthsOfSeconds.SetText(ConvertToString(nbrOfHundredthsOfSeconds));
-            seconds.SetText(ConvertToString(nbrOfSeconds));
-            minutes.SetText(ConvertToString(nbrOfMinutes));
+            centiseconds.SetText(ConvertToString(actualChrono[2]));
+            seconds.SetText(ConvertToString(actualChrono[1]));
+            minutes.SetText(ConvertToString(actualChrono[0]));
             decrementTimer = StartCoroutine(DecrementChrono());
         }
-        else if (nbrOfHundredthsOfSeconds - 1 == -1 && nbrOfSeconds == 0 && nbrOfMinutes == 0)
+        else if (actualChrono[2] - 1 == -1 && actualChrono[1] == 0 && actualChrono[0] == 0)
         {
             //00 : 00 : 00
             StopTimer();
@@ -118,8 +154,8 @@ public class RocketRideChronoManager : MonoBehaviour
         else
         {
             //01 : 01 : 01
-            nbrOfHundredthsOfSeconds -= 1;
-            hundredthsOfSeconds.SetText(ConvertToString(nbrOfHundredthsOfSeconds));
+            actualChrono[2] -= 1;
+            centiseconds.SetText(ConvertToString(actualChrono[2]));
             decrementTimer = StartCoroutine(DecrementChrono());
         }
     }

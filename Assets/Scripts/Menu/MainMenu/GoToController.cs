@@ -11,6 +11,7 @@ public class GoToController : MonoBehaviour
     public void GoToControllerChoice()
     {
         GameManager.Instance.game = game.ToString();
+        GameManager.Instance.InitializeMainLeaderboardManager();
         SceneManager.LoadScene("ControllerChoice");
     }
 }

@@ -7,6 +7,10 @@ public class BackButtons : MonoBehaviour
 {
     public void BackButton(string _previousSceneName)
     {
+        if (_previousSceneName == "MainMenu")
+        {
+            GameManager.Instance.ClearMainLeaderboardManager();
+        }
         SceneManager.LoadScene(_previousSceneName);
     }
 }

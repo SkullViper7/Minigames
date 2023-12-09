@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Audio.meta
+guid: fbbf9190585294f4cad0ffb8ffb77115
+========
 guid: deaa1b444c64b6e4a99e326e91c11ba6
+>>>>>>>> main:Assets/Fonts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

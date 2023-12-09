@@ -8,7 +8,7 @@ public class RebindUI : MonoBehaviour
     List<GameObject> UIToRebind = new List<GameObject>();
     GameObject actualUI;
     public GameObject waitingForInputObject;
-    // Start is called before the first frame update
+
     void Start()
     {
         foreach (GameObject item in FindObjectsOfType<GameObject>())
