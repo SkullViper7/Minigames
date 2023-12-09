@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Aurélien/Dark VFX 01 - 02/Dark VFX 1.meta
+guid: 214811e68dafa5d48bc16d9d599253ce
+========
 guid: 427b27ef427ed6743b6633c908c0a55b
+>>>>>>>> f8ccff87bbb9f5cd95f94b2f99b6ad99c9080b86:Assets/Animations/BTBloc.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

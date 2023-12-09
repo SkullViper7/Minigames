@@ -33,7 +33,7 @@ public class RocketRideManager : MonoBehaviour
 
     private void Start()
     {
-        gameIsOver = false;
+        gameIsOver = true;
 
         //Get all rockets
         rockets = GameObject.FindGameObjectsWithTag("Rocket");
