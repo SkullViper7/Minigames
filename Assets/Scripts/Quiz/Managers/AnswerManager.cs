@@ -65,23 +65,31 @@ public class AnswerManager : MonoBehaviour
         audioManager.QuestionRead(questionIndex);
 
         StartCoroutine(answerTextManager.AnswerWrite(questionIndex, question));
-
         // Utiliser la bonne réponse associée à la question choisie
         correctAnswer = correctAnswers[questionIndex];
 
         // Stocker l'index de la question choisie pour une utilisation ultérieure
         questionChosed = questionIndex;
 
-        Invoke("AnswerCheck", audioManager.questionVoiced[questionIndex].length + 10);
+        StartCoroutine(AnswerCheckWithDelay(audioManager.questionVoiced[questionIndex].length + 10));
     }
 
 
-    public void AnswerCheck()
+    IEnumerator AnswerCheckWithDelay(float delay)
     {
-        int voiceIndex = Random.Range(0, audioManager.answerVoiced.Count);
-        audioManager.AnswerRead(voiceIndex);
+        yield return new WaitForSeconds(delay);
+
+        int currentQuestionIndex = questionChosed;
 
         blink.isPaused = true;
+
+        if (currentQuestionIndex == questionChosed) // Check if the current question index matches
+        {
+            int voiceIndex = Random.Range(0, audioManager.answerVoiced.Count);
+            audioManager.AnswerRead(voiceIndex);
+
+            // Rest of the existing code remains unchanged
+        }
 
         // Récupérer la bonne réponse associée à l'index de la question choisie
         correctAnswer = correctAnswers[questionChosed];
@@ -116,15 +124,12 @@ public class AnswerManager : MonoBehaviour
         // Supprimer la réponse correcte associée à la question choisie
         correctAnswers.RemoveAt(questionChosed);
 
-        // Ajuster l'index pour la prochaine question
-        if (correctAnswers.Count > 0)
-        {
-            questionChosed = Random.Range(0, correctAnswers.Count);
-        }
+        questionChosed = Random.Range(0, Mathf.Max(1, correctAnswers.Count));
 
+        // Ajuster l'index pour la prochaine question
         if (questionManager.questions.Count > 0)
         {
-            Invoke("ChooseNextQuestion", 3);//Waiting time before the next question
+            Invoke("ChooseNextQuestion", 3);
         }
 
         else

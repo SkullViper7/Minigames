@@ -21,6 +21,7 @@ public class QuestionManager : MonoBehaviour
     public void DisplayQuestion(int questionIndex)
     {
         questionText.text = questions[questionIndex];
+        StartCoroutine(RemoveQuestion(questionIndex));
     }
 
     IEnumerator RemoveQuestion(int questionIndex)

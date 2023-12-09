@@ -21,49 +21,71 @@ public class AudioManager : MonoBehaviour
 
     public void QuestionRead(int questionIndex)
     {
-        source.PlayOneShot(questionVoiced[questionIndex]);
-
-        isQuestionBeingRead = true;
-        timer.mute = false;
-        StartCoroutine(RemoveQuestionVoice(questionIndex));
+        if (questionIndex < questionVoiced.Count)
+        {
+            StartCoroutine(PlayQuestionWithDelay(questionIndex));
+        }
+        else
+        {
+            Debug.LogError("Question index out of range!");
+        }
     }
 
-    IEnumerator RemoveQuestionVoice(int questionIndex)
+    IEnumerator PlayQuestionWithDelay(int questionIndex)
     {
-        yield return new WaitForSeconds(questionVoiced[questionIndex].length); // Attendre la durée de la question audio
+        isQuestionBeingRead = true;
+        timer.mute = false;
+
+        source.PlayOneShot(questionVoiced[questionIndex]);
+
+        float audioLength = questionVoiced[questionIndex].length;
+
+        yield return new WaitForSeconds(audioLength); // Wait for the audio to finish playing
+
+        questionVoiced.RemoveAt(questionIndex); // Remove the played audio from the list
 
         isQuestionBeingRead = false;
-        if (!IsAnswerVoiceRemaining()) // Vérifier s'il n'y a plus de réponses audio à lire
+        if (!IsAnswerVoiceRemaining())
         {
-            timer.mute = true; // Arrêter le timer si toutes les réponses ont été données
+            timer.mute = true;
         }
     }
 
     public void AnswerRead(int voiceIndex)
     {
-        source.PlayOneShot(answerVoiced[voiceIndex]);
-        if (voiceIndex == 3 || voiceIndex == 8)
+        if (voiceIndex < answerVoiced.Count) // Check if the index is within the answerVoiced list range
         {
-            SFXsource.PlayOneShot(badAnswer);
+            source.PlayOneShot(answerVoiced[voiceIndex]);
+            if (voiceIndex == 3 || voiceIndex == 8)
+            {
+                SFXsource.PlayOneShot(badAnswer);
+            }
+            else
+            {
+                SFXsource.PlayOneShot(goodAnswer);
+                SFXsource.PlayOneShot(applause);
+            }
+
+            StartCoroutine(RemoveAnswerVoice(voiceIndex));
         }
         else
         {
-            SFXsource.PlayOneShot(goodAnswer);
-            SFXsource.PlayOneShot(applause);
+            Debug.LogError("Answer index out of range!");
         }
-
-        StartCoroutine(RemoveAnswerVoice(voiceIndex));
     }
 
     IEnumerator RemoveAnswerVoice(int voiceIndex)
     {
-        yield return new WaitForSeconds(3); // Attendre la durée de l'audio de la réponse
-
-        answerVoiced.Remove(answerVoiced[voiceIndex]);
-
-        if (!isQuestionBeingRead && !IsAnswerVoiceRemaining()) // Si aucune question n'est en train d'être lue et qu'il n'y a plus de réponses audio
+        if (voiceIndex < answerVoiced.Count) // Check if the index is within the answerVoiced list range
         {
-            timer.mute = true; // Arrêter le timer si aucune question n'est en cours et toutes les réponses ont été données
+            yield return new WaitForSeconds(3);
+
+            answerVoiced.RemoveAt(voiceIndex);
+
+            if (!isQuestionBeingRead && !IsAnswerVoiceRemaining())
+            {
+                timer.mute = true;
+            }
         }
     }
 
