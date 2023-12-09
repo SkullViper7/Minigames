@@ -22,19 +22,19 @@ public class AnswerTextManager : MonoBehaviour
 
     public IEnumerator AnswerWrite(int questionIndex, string question)
     {
-        // Stockage des réponses actuelles liées à la question
+        // Stocks answers related to the question
         string currentFirstAnswer = firstAnswer[questionIndex];
         string currentSecondAnswer = secondAnswer[questionIndex];
         string currentThirdAnswer = thirdAnswer[questionIndex];
         string currentFourthAnswer = fourthAnswer[questionIndex];
 
-        // Affichage des réponses
+        // Displaying answers
         answerText1.text = currentFirstAnswer;
         answerText2.text = currentSecondAnswer;
         answerText3.text = currentThirdAnswer;
         answerText4.text = currentFourthAnswer;
 
-        // Vérification de correspondance avec la question actuelle pour masquer les réponses incorrectes
+        // Match check with current question to hide incorrect answers 
         if (question != questionManager.GetQuestion(questionIndex))
         {
             answerText1.gameObject.SetActive(false);
@@ -44,7 +44,7 @@ public class AnswerTextManager : MonoBehaviour
         }
         else
         {
-            // Si la question correspond, afficher les réponses
+            // If the question is correct show the answers
             answerText1.gameObject.SetActive(true);
             answerText2.gameObject.SetActive(true);
             answerText3.gameObject.SetActive(true);
@@ -53,7 +53,7 @@ public class AnswerTextManager : MonoBehaviour
 
         yield return new WaitForSeconds(10);
 
-        // Suppression des réponses en fonction de la question choisie
+        // Removes answers from the list to avoid picking them again
         firstAnswer.RemoveAt(questionIndex);
         secondAnswer.RemoveAt(questionIndex);
         thirdAnswer.RemoveAt(questionIndex);

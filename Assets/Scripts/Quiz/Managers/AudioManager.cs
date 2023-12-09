@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public List<AudioClip> questionVoiced;
-    public List<AudioClip> answerVoiced;
+    public List<AudioClip> questionVoiced;//List of voicelines for the questions
+    public List<AudioClip> answerVoiced;//List of voicelines for answers
 
     [Space]
     public AudioClip goodAnswer;
@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
 
     bool isQuestionBeingRead = false;
 
-    public void QuestionRead(int questionIndex)
+    public void QuestionRead(int questionIndex)//Checks if the index of the question isn't greater than the list of voicelines
     {
         if (questionIndex < questionVoiced.Count)
         {
@@ -31,10 +31,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    IEnumerator PlayQuestionWithDelay(int questionIndex)
+    IEnumerator PlayQuestionWithDelay(int questionIndex)//Plays the voiceline related to the question index
     {
         isQuestionBeingRead = true;
-        timer.mute = false;
 
         source.PlayOneShot(questionVoiced[questionIndex]);
 
@@ -47,7 +46,7 @@ public class AudioManager : MonoBehaviour
         isQuestionBeingRead = false;
     }
 
-    public void AnswerRead(int voiceIndex)
+    public void AnswerRead(int voiceIndex)//Plays the voiceline for he answer
     {
         if (voiceIndex < answerVoiced.Count) // Check if the index is within the answerVoiced list range
         {
@@ -76,7 +75,7 @@ public class AudioManager : MonoBehaviour
         {
             yield return new WaitForSeconds(3);
 
-            answerVoiced.RemoveAt(voiceIndex);
+            answerVoiced.RemoveAt(voiceIndex);//Removes the voiceline from the list so it can't be picked again
         }
     }
 }

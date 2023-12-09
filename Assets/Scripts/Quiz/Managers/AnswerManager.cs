@@ -33,7 +33,7 @@ public class AnswerManager : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 1; i <= GameManager.Instance.maxPlayerCount; i++)
+        for (int i = 1; i <= GameManager.Instance.maxPlayerCount; i++)//Getting active players with their tag
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player" + i);
             players.Add(player);
@@ -42,29 +42,30 @@ public class AnswerManager : MonoBehaviour
         ChooseNextQuestion();
     }
 
-    void ChooseNextQuestion()
+    void ChooseNextQuestion()//Calling all the methods displaying the questions and answers
     {
         blink.isPaused = false;
         audioManager.timer.Play();
 
-        int questionIndex = Random.Range(0, questionManager.questions.Count);
+        int questionIndex = Random.Range(0, questionManager.questions.Count);//Pick a random question
         string question = questionManager.GetQuestion(questionIndex);
         questionManager.DisplayQuestion(questionIndex);
         audioManager.QuestionRead(questionIndex);
         StartCoroutine(clockManager.TimeDecrease(questionIndex));
 
         StartCoroutine(answerTextManager.AnswerWrite(questionIndex, question));
-        // Utiliser la bonne réponse associée à la question choisie
+
+        // Use the correct answer associated with the chosen question
         correctAnswer = correctAnswers[questionIndex];
 
-        // Stocker l'index de la question choisie pour une utilisation ultérieure
+        // Store the index of the chosen question for later use
         questionChosed = questionIndex;
 
         StartCoroutine(AnswerCheckWithDelay(audioManager.questionVoiced[questionIndex].length + 10));
     }
 
 
-    IEnumerator AnswerCheckWithDelay(float delay)
+    IEnumerator AnswerCheckWithDelay(float delay)//Checks if the players chose the right answer and give them points
     {
         yield return new WaitForSeconds(delay);
 
@@ -76,14 +77,12 @@ public class AnswerManager : MonoBehaviour
         {
             int voiceIndex = Random.Range(0, audioManager.answerVoiced.Count);
             audioManager.AnswerRead(voiceIndex);
-
-            // Rest of the existing code remains unchanged
         }
 
-        // Récupérer la bonne réponse associée à l'index de la question choisie
+        // Retrieve the correct answer associated with the index of the chosen question
         correctAnswer = correctAnswers[questionChosed];
 
-        // Vérifier les réponses pour chaque joueur en fonction de la question choisie
+        // Check the answers for each player based on the chosen question
         for (int i = 1; i <= GameManager.Instance.maxPlayerCount; i++)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player" + i);
@@ -112,14 +111,14 @@ public class AnswerManager : MonoBehaviour
             StartCoroutine(blink.Blink(blink.answer4, blink.icon4, blink.text4));
         }
 
-        // Supprimer la réponse correcte associée à la question choisie
+        // Delete the correct answer associated with the chosen question
         correctAnswers.RemoveAt(questionChosed);
 
         audioManager.timer.Stop();
 
         questionChosed = Random.Range(0, Mathf.Max(1, correctAnswers.Count));
 
-        if (questionsAnswered >= 10)
+        if (questionsAnswered >= 10)//Display leaderboard after the last question
         {
             StartCoroutine(DisplayLeaderboardAfterDelay());
         }
@@ -129,13 +128,13 @@ public class AnswerManager : MonoBehaviour
         }
     }
 
-    IEnumerator DisplayLeaderboardAfterDelay()
+    IEnumerator DisplayLeaderboardAfterDelay()//Displays leaderboard
     {
         voiceSource.PlayOneShot(voice);
         voiceSource.PlayOneShot(applause);
         audioManager.timer.Stop();
 
-        yield return new WaitForSeconds(3); // Adjust this delay as needed
+        yield return new WaitForSeconds(3);
 
         gameScreen.SetActive(false);
         endScreen.SetActive(true);

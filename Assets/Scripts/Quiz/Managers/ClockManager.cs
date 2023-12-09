@@ -10,9 +10,9 @@ public class ClockManager : MonoBehaviour
     public AudioManager audioManager;
     public AnswerManager answerManager;
 
-    public IEnumerator TimeDecrease(int questionIndex)
+    public IEnumerator TimeDecrease(int questionIndex)//Timer from 10 to 0
     {
-        yield return new WaitForSeconds(audioManager.questionVoiced[questionIndex].length);
+        yield return new WaitForSeconds(audioManager.questionVoiced[questionIndex].length);//Starting after the voiceline
         int count = 10;
 
         while (count >= 0)
