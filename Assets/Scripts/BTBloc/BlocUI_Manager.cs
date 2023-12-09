@@ -100,7 +100,7 @@ public class BlocUI_Manager : MonoBehaviour
             var kvp = scoresPlayers.ElementAt(i);
             if (i == 0)
             {
-                if (MainLeaderboardManager.Instance.IsTheFastestEver(kvp.Value / 10))
+                if (MainLeaderboardManager.Instance.IsTheFastestEver(kvp.Value / 10f))
                 {
                     newScore.SetActive(true);
                 }
