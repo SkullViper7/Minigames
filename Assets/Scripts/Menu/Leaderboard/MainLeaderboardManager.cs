@@ -36,9 +36,14 @@ public class MainLeaderboardManager : MonoBehaviour
         //PlayerPrefs.SetInt("RocketRidePlayer2", 0);
         //PlayerPrefs.SetInt("RocketRidePlayer3", 0);
         //PlayerPrefs.SetInt("RocketRidePlayer4", 0);
-        //PlayerPrefs.SetInt("RocketRideBestTimeMinutes", 10);
-        //PlayerPrefs.SetInt("RocketRideBestTimeSeconds", 60);
-        //PlayerPrefs.SetInt("RocketRideBestTimeCentiseconds", 100);
+        if (PlayerPrefs.GetInt("RocketRideBestTimeMinutes") == 0 && 
+            PlayerPrefs.GetInt("RocketRideBestTimeSeconds") == 0 && 
+            PlayerPrefs.GetInt("RocketRideBestTimeCentiseconds") == 0)
+            {
+                PlayerPrefs.SetInt("RocketRideBestTimeMinutes", 10);
+                PlayerPrefs.SetInt("RocketRideBestTimeSeconds", 60);
+                PlayerPrefs.SetInt("RocketRideBestTimeCentiseconds", 100);
+            }
 
         ////Quiz
         //PlayerPrefs.SetInt("QuizPlayer1", 0);
