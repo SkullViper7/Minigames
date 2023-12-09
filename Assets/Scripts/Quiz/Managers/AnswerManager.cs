@@ -30,6 +30,7 @@ public class AnswerManager : MonoBehaviour
 
     [Header("Audio")]
     public AudioClip voice;
+    public AudioClip applause;
     public AudioSource voiceSource;
 
     private void Start()
@@ -144,6 +145,7 @@ public class AnswerManager : MonoBehaviour
         yield return new WaitForSeconds(3); // Adjust this delay as needed
 
         voiceSource.PlayOneShot(voice);
+        voiceSource.PlayOneShot(applause);
         gameScreen.SetActive(false);
         endScreen.SetActive(true);
         leaderboardManager.ShowScore();
