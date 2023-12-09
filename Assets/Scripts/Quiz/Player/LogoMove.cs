@@ -35,8 +35,6 @@ public class LogoMove : MonoBehaviour
     public Transform YHolder3;
     public Transform YHolder4;
 
-    Vector3 velocity;
-
     public IEnumerator Move(Transform player, Transform holder)
     {
         player.DOMove(holder.position, 0.25f);

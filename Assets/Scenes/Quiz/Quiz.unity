@@ -1636,6 +1636,7 @@ MonoBehaviour:
   answerTextManager: {fileID: 1831056239}
   blink: {fileID: 1732366044}
   audioManager: {fileID: 1709566621}
+  clockManager: {fileID: 964851561}
   gameScreen: {fileID: 1655685006}
   endScreen: {fileID: 522988476}
   leaderboardManager: {fileID: 366637002}

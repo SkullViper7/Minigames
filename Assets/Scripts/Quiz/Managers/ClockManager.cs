@@ -10,14 +10,9 @@ public class ClockManager : MonoBehaviour
     public AudioManager audioManager;
     public AnswerManager answerManager;
 
-    private void Start()
+    public IEnumerator TimeDecrease(int questionIndex)
     {
-        StartCoroutine(TimeDecrease());
-    }
-
-    IEnumerator TimeDecrease()
-    {
-        yield return new WaitForSeconds(audioManager.questionVoiced[answerManager.questionChosed].length);
+        yield return new WaitForSeconds(audioManager.questionVoiced[questionIndex].length);
         int count = 10;
 
         while (count >= 0)
@@ -26,8 +21,5 @@ public class ClockManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             count--;
         }
-
-        yield return new WaitForSeconds(3); // Wait 3s between each question
-        StartCoroutine(TimeDecrease()); // Restart countdown for the next question
     }
 }

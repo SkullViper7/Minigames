@@ -14,16 +14,14 @@ public class AnswerManager : MonoBehaviour
     public AnswerTextManager answerTextManager;
     public CorrectAnswerBlink blink;
     public AudioManager audioManager;
+    public ClockManager clockManager;
 
     [Header("EndScreen")]
     public GameObject gameScreen;
     public GameObject endScreen;
     public LeaderboardManager leaderboardManager;
 
-    GameObject player1;//Players
-    GameObject player2;
-    GameObject player3;
-    GameObject player4;
+    List<GameObject> players = new List<GameObject>();
 
     public int questionChosed;
     int questionsAnswered = 0;
@@ -35,23 +33,10 @@ public class AnswerManager : MonoBehaviour
 
     private void Start()
     {
-        if (GameManager.Instance.maxPlayerCount == 2)//Searching for the right amount of players to avoid errors
+        for (int i = 1; i <= GameManager.Instance.maxPlayerCount; i++)
         {
-            player1 = GameObject.FindGameObjectWithTag("Player1");
-            player2 = GameObject.FindGameObjectWithTag("Player2");
-        }
-        if (GameManager.Instance.maxPlayerCount == 3)
-        {
-            player1 = GameObject.FindGameObjectWithTag("Player1");
-            player2 = GameObject.FindGameObjectWithTag("Player2");
-            player3 = GameObject.FindGameObjectWithTag("Player3");
-        }
-        if (GameManager.Instance.maxPlayerCount == 4)
-        {
-            player1 = GameObject.FindGameObjectWithTag("Player1");
-            player2 = GameObject.FindGameObjectWithTag("Player2");
-            player3 = GameObject.FindGameObjectWithTag("Player3");
-            player4 = GameObject.FindGameObjectWithTag("Player4");
+            GameObject player = GameObject.FindGameObjectWithTag("Player" + i);
+            players.Add(player);
         }
 
         ChooseNextQuestion();
@@ -65,6 +50,7 @@ public class AnswerManager : MonoBehaviour
         string question = questionManager.GetQuestion(questionIndex);
         questionManager.DisplayQuestion(questionIndex);
         audioManager.QuestionRead(questionIndex);
+        StartCoroutine(clockManager.TimeDecrease(questionIndex));
 
         StartCoroutine(answerTextManager.AnswerWrite(questionIndex, question));
         // Utiliser la bonne réponse associée à la question choisie
