@@ -45,10 +45,6 @@ public class AudioManager : MonoBehaviour
         questionVoiced.RemoveAt(questionIndex); // Remove the played audio from the list
 
         isQuestionBeingRead = false;
-        if (!IsAnswerVoiceRemaining())
-        {
-            timer.mute = true;
-        }
     }
 
     public void AnswerRead(int voiceIndex)
@@ -81,16 +77,6 @@ public class AudioManager : MonoBehaviour
             yield return new WaitForSeconds(3);
 
             answerVoiced.RemoveAt(voiceIndex);
-
-            if (!isQuestionBeingRead && !IsAnswerVoiceRemaining())
-            {
-                timer.mute = true;
-            }
         }
-    }
-
-    bool IsAnswerVoiceRemaining()
-    {
-        return answerVoiced.Count > 0;
     }
 }

@@ -45,6 +45,7 @@ public class AnswerManager : MonoBehaviour
     void ChooseNextQuestion()
     {
         blink.isPaused = false;
+        audioManager.timer.Play();
 
         int questionIndex = Random.Range(0, questionManager.questions.Count);
         string question = questionManager.GetQuestion(questionIndex);
@@ -114,6 +115,8 @@ public class AnswerManager : MonoBehaviour
         // Supprimer la réponse correcte associée à la question choisie
         correctAnswers.RemoveAt(questionChosed);
 
+        audioManager.timer.Stop();
+
         questionChosed = Random.Range(0, Mathf.Max(1, correctAnswers.Count));
 
         if (questionsAnswered >= 10)
@@ -128,10 +131,12 @@ public class AnswerManager : MonoBehaviour
 
     IEnumerator DisplayLeaderboardAfterDelay()
     {
-        yield return new WaitForSeconds(3); // Adjust this delay as needed
-
         voiceSource.PlayOneShot(voice);
         voiceSource.PlayOneShot(applause);
+        audioManager.timer.Stop();
+
+        yield return new WaitForSeconds(3); // Adjust this delay as needed
+
         gameScreen.SetActive(false);
         endScreen.SetActive(true);
         leaderboardManager.ShowScore();
