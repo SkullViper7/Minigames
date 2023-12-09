@@ -7,6 +7,7 @@ public class GoToMenu : MonoBehaviour
 {
     public void ToMenu()
     {
+        GameManager.Instance.ResetManager();
         SceneManager.LoadScene("MainMenu");
     }
 }

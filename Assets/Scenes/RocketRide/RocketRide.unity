@@ -4210,6 +4210,7 @@ MonoBehaviour:
   rocketGroup: {fileID: 1763438912}
   podiumScreen: {fileID: 1718997142}
   gameScreen: {fileID: 2101414029}
+  chrono: 
 --- !u!1 &301606769
 GameObject:
   m_ObjectHideFlags: 0
@@ -6137,15 +6138,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131ee58f0c5a2fb4bbdff9fe9e0ab8fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 90
   podiumScreen: {fileID: 1718997142}
   gameScreen: {fileID: 2101414029}
+  time: 90
   minutes: {fileID: 617683246}
   seconds: {fileID: 826108056}
-  hundredthsOfSeconds: {fileID: 518692124}
-  nbrOfMinutes: 0
-  nbrOfSeconds: 0
-  nbrOfHundredthsOfSeconds: 0
+  centiseconds: {fileID: 518692124}
+  actualChrono: 
 --- !u!1001 &460916403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6934,7 +6933,7 @@ GameObject:
   - component: {fileID: 518692125}
   - component: {fileID: 518692124}
   m_Layer: 5
-  m_Name: HundredthsOfSeconds
+  m_Name: Centiseconds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

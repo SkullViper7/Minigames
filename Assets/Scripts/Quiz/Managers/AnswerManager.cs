@@ -13,114 +13,86 @@ public class AnswerManager : MonoBehaviour
     public QuestionManager questionManager;
     public AnswerTextManager answerTextManager;
     public CorrectAnswerBlink blink;
+    public AudioManager audioManager;
+    public ClockManager clockManager;
 
     [Header("EndScreen")]
     public GameObject gameScreen;
     public GameObject endScreen;
     public LeaderboardManager leaderboardManager;
 
-    GameObject player1;//Players
-    GameObject player2;
-    GameObject player3;
-    GameObject player4;
+    List<GameObject> players = new List<GameObject>();
 
     public int questionChosed;
+    int questionsAnswered = 0;
+
+    [Header("Audio")]
+    public AudioClip voice;
+    public AudioClip applause;
+    public AudioSource voiceSource;
 
     private void Start()
     {
-        if (GameManager.Instance.maxPlayerCount == 2)//Searching for the right amount of players to avoid errors
+        for (int i = 1; i <= GameManager.Instance.maxPlayerCount; i++)//Getting active players with their tag
         {
-            player1 = GameObject.FindGameObjectWithTag("Player1");
-            player2 = GameObject.FindGameObjectWithTag("Player2");
-        }
-        if (GameManager.Instance.maxPlayerCount == 3)
-        {
-            player1 = GameObject.FindGameObjectWithTag("Player1");
-            player2 = GameObject.FindGameObjectWithTag("Player2");
-            player3 = GameObject.FindGameObjectWithTag("Player3");
-        }
-        if (GameManager.Instance.maxPlayerCount == 4)
-        {
-            player1 = GameObject.FindGameObjectWithTag("Player1");
-            player2 = GameObject.FindGameObjectWithTag("Player2");
-            player3 = GameObject.FindGameObjectWithTag("Player3");
-            player4 = GameObject.FindGameObjectWithTag("Player4");
+            GameObject player = GameObject.FindGameObjectWithTag("Player" + i);
+            players.Add(player);
         }
 
         ChooseNextQuestion();
     }
 
-    void ChooseNextQuestion()
+    void ChooseNextQuestion()//Calling all the methods displaying the questions and answers
     {
         blink.isPaused = false;
+        audioManager.timer.Play();
 
-        int questionIndex = Random.Range(0, questionManager.questions.Count);
+        int questionIndex = Random.Range(0, questionManager.questions.Count);//Pick a random question
+        string question = questionManager.GetQuestion(questionIndex);
         questionManager.DisplayQuestion(questionIndex);
-        StartCoroutine(answerTextManager.AnswerWrite(questionIndex));
+        audioManager.QuestionRead(questionIndex);
+        StartCoroutine(clockManager.TimeDecrease(questionIndex));
 
+        StartCoroutine(answerTextManager.AnswerWrite(questionIndex, question));
+
+        // Use the correct answer associated with the chosen question
         correctAnswer = correctAnswers[questionIndex];
-        correctAnswers.Remove(questionIndex);
 
-        Invoke("AnswerCheck", 10);
+        // Store the index of the chosen question for later use
+        questionChosed = questionIndex;
+
+        StartCoroutine(AnswerCheckWithDelay(audioManager.questionVoiced[questionIndex].length + 10));
     }
 
-    public void AnswerCheck()
+
+    IEnumerator AnswerCheckWithDelay(float delay)//Checks if the players chose the right answer and give them points
     {
-        blink.isPaused = true;//Stops the timer
+        yield return new WaitForSeconds(delay);
 
-        if (GameManager.Instance.maxPlayerCount == 2)
+        int currentQuestionIndex = questionChosed;
+
+        blink.isPaused = true;
+
+        if (currentQuestionIndex == questionChosed) // Check if the current question index matches
         {
-            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(1, 1);//Calls the method to add 1 point to the correct player
-            }
+            int voiceIndex = Random.Range(0, audioManager.answerVoiced.Count);
+            audioManager.AnswerRead(voiceIndex);
+        }
 
-            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
+        // Retrieve the correct answer associated with the index of the chosen question
+        correctAnswer = correctAnswers[questionChosed];
+
+        // Check the answers for each player based on the chosen question
+        for (int i = 1; i <= GameManager.Instance.maxPlayerCount; i++)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player" + i);
+            if (player.GetComponent<PlayerController>().answerChosed == correctAnswer)
             {
-                scoreManager.AddScore(2, 1);
+                scoreManager.AddScore(i, 1);
             }
         }
 
-        if (GameManager.Instance.maxPlayerCount == 3)
-        {
-            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(1,  1);
-            }
-
-            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(2, 1);
-            }
-
-            if (player3.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(3, 1);
-            }
-        }
-
-        if (GameManager.Instance.maxPlayerCount == 4)
-        {
-            if (player1.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(1, 1);
-            }
-
-            if (player2.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(2, 1);
-            }
-
-            if (player3.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(3, 1);
-            }
-
-            if (player4.GetComponent<PlayerController>().answerChosed == correctAnswer)
-            {
-                scoreManager.AddScore(4, 1);
-            }
-        }
+        questionsAnswered++;
 
         if (correctAnswer == 1)
         {
@@ -139,18 +111,33 @@ public class AnswerManager : MonoBehaviour
             StartCoroutine(blink.Blink(blink.answer4, blink.icon4, blink.text4));
         }
 
-        correctAnswers.Remove(correctAnswer);//Removing the answer from the list so it can't be picked randomly again
+        // Delete the correct answer associated with the chosen question
+        correctAnswers.RemoveAt(questionChosed);
 
-        if (questionManager.questions.Count > 29)
+        audioManager.timer.Stop();
+
+        questionChosed = Random.Range(0, Mathf.Max(1, correctAnswers.Count));
+
+        if (questionsAnswered >= 10)//Display leaderboard after the last question
         {
-            Invoke("ChooseNextQuestion", 3);//Waiting time before the next question
+            StartCoroutine(DisplayLeaderboardAfterDelay());
         }
-
         else
         {
-            gameScreen.SetActive(false);
-            endScreen.SetActive(true);
-            leaderboardManager.ShowScore();
+            Invoke("ChooseNextQuestion", 3); // Proceed to the next question
         }
+    }
+
+    IEnumerator DisplayLeaderboardAfterDelay()//Displays leaderboard
+    {
+        voiceSource.PlayOneShot(voice);
+        voiceSource.PlayOneShot(applause);
+        audioManager.timer.Stop();
+
+        yield return new WaitForSeconds(3);
+
+        gameScreen.SetActive(false);
+        endScreen.SetActive(true);
+        leaderboardManager.ShowScore();
     }
 }

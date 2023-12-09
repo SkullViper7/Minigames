@@ -102,6 +102,7 @@ public class PlayerController : MonoBehaviour
     {
         switch (context.action.name)
         {
+            //Gamepad
             case "Answer1":
                 if (!GameManager.Instance.isOnKeyboard)
                 {
@@ -135,6 +136,203 @@ public class PlayerController : MonoBehaviour
                     if (context.started == true)
                     {
                         AnswerFourChoose();
+                    }
+                }
+                break;
+            //Keyboard
+            //Player1
+            case "KBP1A1":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player1")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerOneChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP1A2":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player1")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerTwoChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP1A3":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player1")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerThreeChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP1A4":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player1")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerFourChoose();
+                        }
+                    }
+                }
+                break;
+            //Player2
+            case "KBP2A1":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player2")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerOneChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP2A2":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player2")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerTwoChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP2A3":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player2")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerThreeChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP2A4":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player2")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerFourChoose();
+                        }
+                    }
+                }
+                break;
+            //Player3
+            case "KBP3A1":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player3")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerOneChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP3A2":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player3")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerTwoChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP3A3":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player3")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerThreeChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP3A4":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player3")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerFourChoose();
+                        }
+                    }
+                }
+                break;
+            //Player4
+            case "KBP4A1":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player4")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerOneChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP4A2":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player4")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerTwoChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP4A3":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player4")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerThreeChoose();
+                        }
+                    }
+                }
+                break;
+            case "KBP4A4":
+                if (GameManager.Instance.isOnKeyboard)
+                {
+                    if (gameObject.name == "Player4")
+                    {
+                        if (context.started == true)
+                        {
+                            AnswerFourChoose();
+                        }
                     }
                 }
                 break;

@@ -9,8 +9,9 @@ using UnityEngine.SceneManagement;
 public class BlocUI_Manager : MonoBehaviour
 {
     public TMP_Text _uiTimer;
+    AudioSource audioData;
 
-        //Singleton
+    //Singleton
     private static BlocUI_Manager _instance = null;
     private BlocUI_Manager() { }
     public static BlocUI_Manager Instance => _instance;
@@ -21,6 +22,7 @@ public class BlocUI_Manager : MonoBehaviour
     public TMPro.TMP_Text[] scoresUI;
 
     public GameObject leaderBoard;
+    public GameObject newScore;
 
     public Color green;
     public Color red;
@@ -44,6 +46,7 @@ public class BlocUI_Manager : MonoBehaviour
             _instance = this;
         }
         //
+        audioData = GetComponent<AudioSource>();
     }
 
     private string PlayerName(string _player)
@@ -95,9 +98,17 @@ public class BlocUI_Manager : MonoBehaviour
         {
             rankUI[i].text = (i + 1).ToString();
             var kvp = scoresPlayers.ElementAt(i);
+            if (i == 0)
+            {
+                if (MainLeaderboardManager.Instance.IsTheFastestEver(kvp.Value / 10f))
+                {
+                    newScore.SetActive(true);
+                }
+            }
             playerNumberUI[i].text = PlayerName(kvp.Key);
             playerNumberUI[i].color = PlayerColor(kvp.Key);
             scoresUI[i].text = kvp.Value.ToString();
+            AddScoreInMainLeaderboard(kvp.Key, kvp.Value);
         }
     }
 
@@ -116,5 +127,29 @@ public class BlocUI_Manager : MonoBehaviour
     public void CountDownFinished()
     {
         isCountDown = false;
+    }
+    public void CountDownSound()
+    {
+        audioData.Play();
+    }
+
+    private void AddScoreInMainLeaderboard(string _player, int _score)
+    {
+        //Add score in the main leaderboard for the player given and his position
+        switch (_player)
+        {
+            case "Bloc_Player_1":
+                MainLeaderboardManager.Instance.UpdateScore("BTBlocPlayer1", _score);
+                break;
+            case "Bloc_Player_2":
+                MainLeaderboardManager.Instance.UpdateScore("BTBlocPlayer2", _score);
+                break;
+            case "Bloc_Player_3":
+                MainLeaderboardManager.Instance.UpdateScore("BTBlocPlayer3", _score);
+                break;
+            case "Bloc_Player_4":
+                MainLeaderboardManager.Instance.UpdateScore("BTBlocPlayer4", _score);
+                break;
+        }
     }
 }
