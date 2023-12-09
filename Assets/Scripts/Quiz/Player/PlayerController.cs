@@ -156,7 +156,7 @@ public class PlayerController : MonoBehaviour
             case "KBP1A2":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player2")
+                    if (gameObject.name == "Player1")
                     {
                         if (context.started == true)
                         {
@@ -168,7 +168,7 @@ public class PlayerController : MonoBehaviour
             case "KBP1A3":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player3")
+                    if (gameObject.name == "Player1")
                     {
                         if (context.started == true)
                         {
@@ -180,7 +180,7 @@ public class PlayerController : MonoBehaviour
             case "KBP1A4":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player4")
+                    if (gameObject.name == "Player1")
                     {
                         if (context.started == true)
                         {
@@ -193,7 +193,7 @@ public class PlayerController : MonoBehaviour
             case "KBP2A1":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player1")
+                    if (gameObject.name == "Player2")
                     {
                         if (context.started == true)
                         {
@@ -217,7 +217,7 @@ public class PlayerController : MonoBehaviour
             case "KBP2A3":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player3")
+                    if (gameObject.name == "Player2")
                     {
                         if (context.started == true)
                         {
@@ -229,7 +229,7 @@ public class PlayerController : MonoBehaviour
             case "KBP2A4":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player4")
+                    if (gameObject.name == "Player2")
                     {
                         if (context.started == true)
                         {
@@ -242,7 +242,7 @@ public class PlayerController : MonoBehaviour
             case "KBP3A1":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player1")
+                    if (gameObject.name == "Player3")
                     {
                         if (context.started == true)
                         {
@@ -254,7 +254,7 @@ public class PlayerController : MonoBehaviour
             case "KBP3A2":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player2")
+                    if (gameObject.name == "Player3")
                     {
                         if (context.started == true)
                         {
@@ -278,7 +278,7 @@ public class PlayerController : MonoBehaviour
             case "KBP3A4":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player4")
+                    if (gameObject.name == "Player3")
                     {
                         if (context.started == true)
                         {
@@ -291,7 +291,7 @@ public class PlayerController : MonoBehaviour
             case "KBP4A1":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player1")
+                    if (gameObject.name == "Player4")
                     {
                         if (context.started == true)
                         {
@@ -303,7 +303,7 @@ public class PlayerController : MonoBehaviour
             case "KBP4A2":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player2")
+                    if (gameObject.name == "Player4")
                     {
                         if (context.started == true)
                         {
@@ -315,7 +315,7 @@ public class PlayerController : MonoBehaviour
             case "KBP4A3":
                 if (GameManager.Instance.isOnKeyboard)
                 {
-                    if (gameObject.name == "Player3")
+                    if (gameObject.name == "Player4")
                     {
                         if (context.started == true)
                         {
