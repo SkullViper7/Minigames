@@ -15,19 +15,15 @@ public class ScoreManager : MonoBehaviour
         {
             case 1:
                 player1Score += score;//Adding the right amount for the right player
-                Debug.Log("Player 1 Score: " + player1Score);
                 break;
             case 2:
                 player2Score += score;
-                Debug.Log("Player 2 Score: " + player2Score);
                 break;
             case 3:
                 player3Score += score;
-                Debug.Log("Player 3 Score: " + player3Score);
                 break;
             case 4:
                 player4Score += score;
-                Debug.Log("Player 4 Score: " + player4Score);
                 break;
         }
     }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Audio/Quiz.meta
+guid: 5e788e5a39ca19d4d9db378aacf60202
+========
 guid: 98648b58506f6c542b6f394b8dad0702
+>>>>>>>> main:Assets/Scenes/BTBloc/Audio.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
