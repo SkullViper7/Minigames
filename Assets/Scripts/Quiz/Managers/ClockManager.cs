@@ -15,32 +15,19 @@ public class ClockManager : MonoBehaviour
         StartCoroutine(TimeDecrease());
     }
 
-    IEnumerator TimeDecrease()//Countdown from 10 to 0
+    IEnumerator TimeDecrease()
     {
         yield return new WaitForSeconds(audioManager.questionVoiced[answerManager.questionChosed].length);
-        time.text = "10";
-        yield return new WaitForSeconds(1);
-        time.text = "9";
-        yield return new WaitForSeconds(1);
-        time.text = "8";
-        yield return new WaitForSeconds(1);
-        time.text = "7";
-        yield return new WaitForSeconds(1);
-        time.text = "6";
-        yield return new WaitForSeconds(1);
-        time.text = "5";
-        yield return new WaitForSeconds(1);
-        time.text = "4";
-        yield return new WaitForSeconds(1);
-        time.text = "3";
-        yield return new WaitForSeconds(1);
-        time.text = "2";
-        yield return new WaitForSeconds(1);
-        time.text = "1";
-        yield return new WaitForSeconds(1);
-        time.text = "0";
-        yield return new WaitForSeconds(3);//We wait 3s between each question
+        int count = 10;
 
-        StartCoroutine(TimeDecrease());
+        while (count >= 0)
+        {
+            time.text = count.ToString();
+            yield return new WaitForSeconds(1);
+            count--;
+        }
+
+        yield return new WaitForSeconds(3); // Wait 3s between each question
+        StartCoroutine(TimeDecrease()); // Restart countdown for the next question
     }
 }
