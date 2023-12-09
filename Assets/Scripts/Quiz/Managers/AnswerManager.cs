@@ -26,6 +26,7 @@ public class AnswerManager : MonoBehaviour
     GameObject player4;
 
     public int questionChosed;
+    int questionsAnswered = 0;
 
     [Header("Audio")]
     public AudioClip voice;
@@ -104,6 +105,8 @@ public class AnswerManager : MonoBehaviour
             }
         }
 
+        questionsAnswered++;
+
         if (correctAnswer == 1)
         {
             StartCoroutine(blink.Blink(blink.answer1, blink.icon1, blink.text1));//Animation to highlight the correct answer
@@ -126,18 +129,23 @@ public class AnswerManager : MonoBehaviour
 
         questionChosed = Random.Range(0, Mathf.Max(1, correctAnswers.Count));
 
-        // Ajuster l'index pour la prochaine question
-        if (questionManager.questions.Count > 0)
+        if (questionsAnswered >= 10)
         {
-            Invoke("ChooseNextQuestion", 3);
+            StartCoroutine(DisplayLeaderboardAfterDelay());
         }
-
         else
         {
-            voiceSource.PlayOneShot(voice);
-            gameScreen.SetActive(false);
-            endScreen.SetActive(true);
-            leaderboardManager.ShowScore();
+            Invoke("ChooseNextQuestion", 3); // Proceed to the next question
         }
+    }
+
+    IEnumerator DisplayLeaderboardAfterDelay()
+    {
+        yield return new WaitForSeconds(3); // Adjust this delay as needed
+
+        voiceSource.PlayOneShot(voice);
+        gameScreen.SetActive(false);
+        endScreen.SetActive(true);
+        leaderboardManager.ShowScore();
     }
 }
