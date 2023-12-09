@@ -644,6 +644,8 @@ MonoBehaviour:
   maxPlayerCount: 0
   playerCount: 0
   playerInputControls: []
+  mainLeaderboardManagerPrefab: {fileID: 1971276691228758165, guid: 4a89f2cfd50165a48a3eb0cc5fbb7799,
+    type: 3}
 --- !u!1 &714021990
 GameObject:
   m_ObjectHideFlags: 0

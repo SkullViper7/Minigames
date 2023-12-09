@@ -29,10 +29,9 @@ public class Rocket : MonoBehaviour
     private List<ParticleSystem> fires;
 
     public bool hasFinished;
-    public int minutesAtEnd;
-    public int secondsAtEnd;
-    public int hundredthsOfSecondsAtEnd;
 
+    [HideInInspector]
+    public List<int> chrono = new();
 
     void Start()
     {

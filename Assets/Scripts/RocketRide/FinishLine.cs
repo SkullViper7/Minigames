@@ -32,9 +32,8 @@ public class FinishLine : MonoBehaviour
             {
                 rocket.hasFinished = true;
 
-                rocket.hundredthsOfSecondsAtEnd = RocketRideChronoManager.Instance.nbrOfHundredthsOfSeconds;
-                rocket.secondsAtEnd = RocketRideChronoManager.Instance.nbrOfSeconds;
-                rocket.minutesAtEnd = RocketRideChronoManager.Instance.nbrOfMinutes;
+                //Get the chrono
+                rocket.chrono = RocketRideChronoManager.Instance.ConvertAnActualChronoIntoATime(RocketRideChronoManager.Instance.actualChrono);
 
                 RocketRideManager.Instance.rocketsWhichHaveFinished.Add(other.gameObject);
                 rocketGroup.RemoveMember(other.transform);
