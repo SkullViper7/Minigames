@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class RebindUI : MonoBehaviour
 {
-    List<GameObject> UIToRebind = new List<GameObject>();
+    public List<GameObject> UIToRebind = new List<GameObject>();
     GameObject actualUI;
     public GameObject waitingForInputObject;
 
@@ -23,11 +23,12 @@ public class RebindUI : MonoBehaviour
 
     public Object[] SearchAllButton(string _UIName)
     {
+        Debug.Log(_UIName);
         ChangeUIToVIew(_UIName);
         Object[] allButton = FindObjectsOfType<GameObject>();
         foreach (GameObject obj in allButton) 
         {
-            if(obj.GetComponent<Button>() != null)
+            if(obj.GetComponent<Button>() != null && obj.name != "LeftArrow" && obj.name != "RightArrow" && obj.name != "BackButton")
             {
                 obj.GetComponent<Button>().onClick.AddListener(delegate { ButtonClicked(obj.name, obj.GetComponent<Button>()); });
             }
