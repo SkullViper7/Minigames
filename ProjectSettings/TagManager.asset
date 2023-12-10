@@ -16,6 +16,7 @@ TagManager:
   - Environment
   - Rocket
   - RocketRideCamera
+  - RocketRideMainMusic
   layers:
   - Default
   - TransparentFX

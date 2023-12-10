@@ -13,6 +13,7 @@ public class EndGameButton : MonoBehaviour
     public void Menu()
     {
         GameManager.Instance.ResetManager();
+        Destroy(RocketRideManager.Instance.mainMusic);
         SceneManager.LoadScene("MainMenu");
     }
 }

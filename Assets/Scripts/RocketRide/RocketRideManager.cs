@@ -10,6 +10,14 @@ public class RocketRideManager : MonoBehaviour
     public static RocketRideManager Instance => _instance;
     //
 
+    public GameObject[] rockets;
+    public List<GameObject> rocketsWhichHaveFinished = new();
+    public List<GameObject> rocketsWhichHaveNotFinished = new();
+
+    public bool gameIsOver;
+
+    public GameObject mainMusic;
+
     private void Awake()
     {
         //Singleton
@@ -23,13 +31,15 @@ public class RocketRideManager : MonoBehaviour
             _instance = this;
         }
         //
+
+        //Create an object to play main music if there is no one in the scene
+        if (!GameObject.FindGameObjectWithTag("RocketRideMainMusic"))
+        {
+            GameObject newMainLeaderboardManager = Instantiate(mainMusic, Vector3.zero, Quaternion.Euler(0, 0, 0));
+            newMainLeaderboardManager.name = "MainMusic";
+            DontDestroyOnLoad(newMainLeaderboardManager);
+        }
     }
-
-    public GameObject[] rockets;
-    public List<GameObject> rocketsWhichHaveFinished = new();
-    public List<GameObject> rocketsWhichHaveNotFinished = new();
-
-    public bool gameIsOver;
 
     private void Start()
     {
