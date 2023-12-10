@@ -34,6 +34,9 @@ public class Podium : MonoBehaviour
     [SerializeField]
     private List<TextMeshProUGUI> points = new();
 
+    [SerializeField]
+    private GameObject newBestTime;
+
     private void OnEnable()
     {
         DisplayPodium();
@@ -53,7 +56,7 @@ public class Podium : MonoBehaviour
                 Rocket rocket = rocketObject.GetComponent<Rocket>();
                 if (MainLeaderboardManager.Instance.IsTheBestTimeEver(rocket.chrono))
                 {
-                    Debug.Log("new best time");
+                    newBestTime.SetActive(true);
                 }
             }
 

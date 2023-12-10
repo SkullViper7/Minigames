@@ -76,9 +76,9 @@ public class LeaderboardUI : MonoBehaviour
             rocketNames[i].text = kvp.Key;
             rocketScores[i].text = kvp.Value.ToString();
         }
-        rocketBestChrono.text = PlayerPrefs.GetInt("RocketRideBestTimeMinutes").ToString() + " : " +
-                                PlayerPrefs.GetInt("RocketRideBestTimeSeconds").ToString() + " : " +
-                                PlayerPrefs.GetInt("RocketRideBestTimeCentiseconds").ToString();
+        rocketBestChrono.text = ConvertChronoToString(PlayerPrefs.GetInt("RocketRideBestTimeMinutes")) + " : " +
+                                ConvertChronoToString(PlayerPrefs.GetInt("RocketRideBestTimeSeconds")) + " : " +
+                                ConvertChronoToString(PlayerPrefs.GetInt("RocketRideBestTimeCentiseconds"));
 
         //BTBloc
         for (int i = 0; i < btLeaderboard.Count; i++)
@@ -159,5 +159,18 @@ public class LeaderboardUI : MonoBehaviour
                 break;
         }
         DisplayLeaderboard();
+    }
+
+    private string ConvertChronoToString(int _time)
+    {
+        //Add a 0 before a value if it's less than 10
+        if (_time >= 10)
+        {
+            return _time.ToString();
+        }
+        else
+        {
+            return $"{0}{_time}";
+        }
     }
 }
