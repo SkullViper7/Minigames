@@ -15,9 +15,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public bool isOnKeyboard;
 
-    [HideInInspector]
+    //[HideInInspector]
     public int maxPlayerCount;
-    [HideInInspector]
+    //[HideInInspector]
     public int playerCount;
 
     [HideInInspector]
