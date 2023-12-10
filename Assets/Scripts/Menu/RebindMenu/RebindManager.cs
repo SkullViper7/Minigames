@@ -35,7 +35,6 @@ public class RebindManager : MonoBehaviour
 
     public void ChangeTheMap(string _mapName)
     {
-        Debug.Log("yyeeye");
         Object[] _allButton = rebindUI.SearchAllButton(_mapName);
         playerInput.SwitchCurrentActionMap(_mapName);
         rebind.InitBindToButton();

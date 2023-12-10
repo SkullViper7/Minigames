@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UIPage : MonoBehaviour
 {
     public TextMeshProUGUI _TextEarly;
     public TextMeshProUGUI _PlayerDeadUI;
     public TextMeshProUGUI _LastDead;
+
+    public List<GameObject> UIPodium = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -60,5 +63,38 @@ public class UIPage : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         _lastDeadUI.SetActive(false);
+    }
+
+     public void ShowPodium()
+    {
+        foreach (GameObject obj in UIPodium)
+        {
+            obj.SetActive(true);
+            int _lastDead = 0;
+            switch (obj.name) 
+            {
+                case "FirstPlayer":
+                    obj.transform.parent.parent.gameObject.SetActive(true);
+                    break;
+                case "SecondPlayer":
+                    _lastDead = 1;
+                    break;
+                case "ThirdPlayer":
+                    _lastDead = 2;
+                    break;
+                case "LastPlayer":
+                    _lastDead = 3;
+                    break;
+            }
+            PlayerMovement _player = SlimeJumpManager.Instance._playersDead[_lastDead];
+            foreach (Transform child in obj.transform)
+            {
+                if(child.name == "Score")
+                {
+                    child.GetComponent<TextMeshProUGUI>().text = _player._score + "";
+                }
+            }
+            obj.GetComponent<Image>().sprite = _player._playerSprite;
+        }
     }
 }
