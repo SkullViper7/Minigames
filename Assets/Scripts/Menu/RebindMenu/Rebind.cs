@@ -133,16 +133,20 @@ public class Rebind : MonoBehaviour
         waitingForInputObject.transform.position = startRebindObject.transform.position;
         waitingForInputObject.SetActive(true);
         List<InputAction> _actions = new List<InputAction>();
+        Debug.Log(currentMapAction);
+        RebindManager.Instance.playerInput.SwitchCurrentActionMap(currentMapAction);
         foreach (InputAction _action in RebindManager.Instance.playerInput.currentActionMap.actions)
         {
             _actions.Add(_action);
         }
-            
-        RebindManager.Instance.playerInput.SwitchCurrentActionMap("Rebind");
+        if(_actions.Count != 0) 
+        {
+            RebindManager.Instance.playerInput.SwitchCurrentActionMap("Rebind");
+        }
+        
         
         foreach (InputAction _action in _actions)
         {
-            
             if(_action.name == ButtonRebind)
             {
                 if(startRebindObject.GetComponent<ButtonMapping>()._isController) 

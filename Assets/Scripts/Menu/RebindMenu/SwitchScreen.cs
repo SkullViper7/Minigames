@@ -29,7 +29,7 @@ public class SwitchScreen : MonoBehaviour
             animator.SetInteger("ScreenIndex", 3);
             rightArrow.SetActive(false);
         }
-        
+        Debug.Log(animator.GetInteger("ScreenIndex"));
         RebindManager.Instance.ChangeTheMap(GetMapName());
     }
 
