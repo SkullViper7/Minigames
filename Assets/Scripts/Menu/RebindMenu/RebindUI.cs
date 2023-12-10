@@ -63,4 +63,6 @@ public class RebindUI : MonoBehaviour
         Debug.Log(_buttonName);
         RebindManager.Instance.rebind.TheActionToRebind(_buttonName, _button);
     }
+    
+   
 }

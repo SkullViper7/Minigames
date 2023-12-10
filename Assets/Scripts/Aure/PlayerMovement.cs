@@ -18,40 +18,15 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerInput playerInput;
 
+    public Sprite _playerSprite;
     bool _isDead;
     private void Start()
     {
         LinkPlayerToDevice();
-
-        switch (GameManager.Instance.maxPlayerCount)
-        {
-            case 2:
-                if(gameObject.name != "Player3" || gameObject.name != "Player4")
-                {
-                    SlimeJumpManager.Instance._players.Add(this);
-                }
-                else
-                {
-                    gameObject.SetActive(false);
-                }
-                break;
-            case 3:
-                if (gameObject.name != "Player4")
-                {
-                    SlimeJumpManager.Instance._players.Add(this);
-                }
-                else
-                {
-                    gameObject.SetActive(false);
-                }
-                break;
-            case 4:
-                SlimeJumpManager.Instance._players.Add(this);
-                break;
-        }
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        _playerSprite = sr.sprite;
     }
 
     private void LinkPlayerToDevice()

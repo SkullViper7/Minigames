@@ -67,35 +67,63 @@ public class SpawnManager : MonoBehaviour
                     coin = _obj;
                     _obj.SetActive(false);
                     break;
+                case "FirstPlayer":
+                    _UI.UIPodium.Add(_obj);
+                    _obj.SetActive(false);
+                    break;
+                case "SecondPlayer":
+                    _UI.UIPodium.Add(_obj);
+                    _obj.SetActive(false);
+                    break;
+                case "ThirdPlayer":
+                    if(GameManager.Instance.maxPlayerCount > 2)
+                    {
+                        _UI.UIPodium.Add(_obj);
+                    }
+                    _obj.SetActive(false);
+                    break;
+                case "LastPlayer":
+                    if (GameManager.Instance.maxPlayerCount > 3)
+                    {
+                        _UI.UIPodium.Add(_obj);
+                    }
+                    _obj.SetActive(false);
+                    break;
+                case "Podium":
+                    _obj.SetActive(false);
+                    break;
             }
         }
     }
     public void SpawnAnObject()
     {
-        GameObject _obj = spawnObject[Random.Range(0, spawnObject.Count)];
-        GameObject theObjectSpawn = _obj;
-        if(_obj.activeSelf) 
+        if(!SlimeJumpManager.Instance._isEndGame)
         {
-            GameObject _newObj = Instantiate(_obj);
-            theObjectSpawn = _newObj;
-            float theDistanceToSpawn = _obj.GetComponent<SpawnObjects>().DistanceToSpawn;
-            _newObj.transform.position = new Vector2(_newObj.transform.position.x, theDistanceToSpawn);
-            _newObj.GetComponent<SpawnObjects>().DistanceToSpawn = theDistanceToSpawn;
+            GameObject _obj = spawnObject[Random.Range(0, spawnObject.Count)];
+            GameObject theObjectSpawn = _obj;
+            if (_obj.activeSelf)
+            {
+                GameObject _newObj = Instantiate(_obj);
+                theObjectSpawn = _newObj;
+                float theDistanceToSpawn = _obj.GetComponent<SpawnObjects>().DistanceToSpawn;
+                _newObj.transform.position = new Vector2(_newObj.transform.position.x, theDistanceToSpawn);
+                _newObj.GetComponent<SpawnObjects>().DistanceToSpawn = theDistanceToSpawn;
+            }
+            else
+            {
+                _obj.SetActive(true);
+                _obj.transform.position = new Vector2(_obj.transform.position.x, _obj.GetComponent<SpawnObjects>().DistanceToSpawn);
+            }
+            if (_obj.tag == "Projectile")
+            {
+                theObjectSpawn.GetComponent<ProjectileSpawned>().RandomSpawn();
+                theObjectSpawn.SetActive(false);
+                arrowIndicator.transform.parent.gameObject.SetActive(true);
+                arrowIndicator.transform.position = new Vector2(theObjectSpawn.transform.position.x, arrowIndicator.transform.parent.position.y);
+                StartCoroutine(ShowIndicatorBeforeSpawn(theObjectSpawn));
+            }
+            InvokeTheSpawn("SpawnAnObject", maxSpawnTiming);
         }
-        else
-        {
-            _obj.SetActive(true);
-            _obj.transform.position = new Vector2(_obj.transform.position.x, _obj.GetComponent<SpawnObjects>().DistanceToSpawn);
-        }
-        if (_obj.tag == "Projectile")
-        {
-            theObjectSpawn.GetComponent<ProjectileSpawned>().RandomSpawn();
-            theObjectSpawn.SetActive(false);
-            arrowIndicator.transform.parent.gameObject.SetActive(true);
-            arrowIndicator.transform.position = new Vector2(theObjectSpawn.transform.position.x, arrowIndicator.transform.parent.position.y);
-            StartCoroutine(ShowIndicatorBeforeSpawn(theObjectSpawn));
-        }
-        InvokeTheSpawn("SpawnAnObject", maxSpawnTiming);
     }
 
     IEnumerator ShowIndicatorBeforeSpawn(GameObject ProjectileSpawned)
@@ -118,21 +146,24 @@ public class SpawnManager : MonoBehaviour
 
     public void SpawnCoins()
     {
-        GameObject theObjectSpawn = coin;
-        if (coin.activeSelf)
+        if (!SlimeJumpManager.Instance._isEndGame)
         {
-            GameObject _newCoin = Instantiate(coin);
-            float theDistanceToSpawn = coin.GetComponent<SpawnObjects>().DistanceToSpawn;
-            _newCoin.transform.position = new Vector2(_newCoin.transform.position.x, theDistanceToSpawn);
-            _newCoin.GetComponent<SpawnObjects>().DistanceToSpawn = theDistanceToSpawn;
-            theObjectSpawn = _newCoin;
+            GameObject theObjectSpawn = coin;
+            if (coin.activeSelf)
+            {
+                GameObject _newCoin = Instantiate(coin);
+                float theDistanceToSpawn = coin.GetComponent<SpawnObjects>().DistanceToSpawn;
+                _newCoin.transform.position = new Vector2(_newCoin.transform.position.x, theDistanceToSpawn);
+                _newCoin.GetComponent<SpawnObjects>().DistanceToSpawn = theDistanceToSpawn;
+                theObjectSpawn = _newCoin;
+            }
+            else
+            {
+                coin.SetActive(true);
+                coin.transform.position = new Vector2(coin.transform.position.x, coin.GetComponent<SpawnObjects>().DistanceToSpawn);
+            }
+            theObjectSpawn.GetComponent<CoinSpawned>().RandomSpawn();
+            InvokeTheSpawn("SpawnCoins", maxCoinSpawnTiming);
         }
-        else
-        {
-            coin.SetActive(true);
-            coin.transform.position = new Vector2(coin.transform.position.x, coin.GetComponent<SpawnObjects>().DistanceToSpawn);
-        }
-        theObjectSpawn.GetComponent<CoinSpawned>().RandomSpawn();
-        InvokeTheSpawn("SpawnCoins", maxCoinSpawnTiming);
     }
 }
