@@ -33,55 +33,12 @@ public class RebindManager : MonoBehaviour
         rebind = GetComponent<Rebind>();
     }
 
-    public void ChangeTheMap()
+    public void ChangeTheMap(string _mapName)
     {
-        string dropdownText = dropDown.options[dropDown.value].text;
+        Debug.Log("yyeeye");
+        Object[] _allButton = rebindUI.SearchAllButton(_mapName);
+        playerInput.SwitchCurrentActionMap(_mapName);
+        rebind.InitBindToButton();
 
-        Object[] _allButton = rebindUI.SearchAllButton(dropdownText);
-
-        if (dropdownText != "None")
-        {
-            playerInput.SwitchCurrentActionMap(dropdownText);
-            /* for(int i = 0;  i < _allButton.Length; i++)
-             {
-
-             }
-             foreach (GameObject button in _allButton)
-             {
-
-             }*/
-            rebind.InitBindToButton();
-        }
-        
-        
-
-        
-
-        /*
-        switch (_nameOfTheMap)
-        {
-            case "Quiz":
-                playerInput.currentActionMap = 
-                break;
-
-            case "SlimeJump":
-                break;
-
-            case "RocketRide":
-                break;
-
-            case "BTBloc":
-                break;
-        }*/
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

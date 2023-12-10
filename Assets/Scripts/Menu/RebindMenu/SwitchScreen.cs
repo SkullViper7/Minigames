@@ -13,6 +13,7 @@ public class SwitchScreen : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        RebindManager.Instance.ChangeTheMap(GetMapName());
     }
 
     public void ClickArrow(int _index)
@@ -28,5 +29,28 @@ public class SwitchScreen : MonoBehaviour
             animator.SetInteger("ScreenIndex", 3);
             rightArrow.SetActive(false);
         }
+        
+        RebindManager.Instance.ChangeTheMap(GetMapName());
+    }
+
+    string GetMapName() 
+    {
+        string _mapName = "";
+        switch (animator.GetInteger("ScreenIndex"))
+        {
+            case 0:
+                _mapName = "Quiz";
+                break;
+            case 1:
+                _mapName = "SlimeJump";
+                break;
+            case 2:
+                _mapName = "RocketRide";
+                break;
+            case 3:
+                _mapName = "BTBloc";
+                break;
+        }
+        return _mapName;
     }
 }
