@@ -118,7 +118,7 @@ public class AnswerManager : MonoBehaviour
 
         questionChosed = Random.Range(0, Mathf.Max(1, correctAnswers.Count));
 
-        if (questionsAnswered >= 10)//Display leaderboard after the last question
+        if (questionsAnswered >= 3)//Display leaderboard after the last question
         {
             StartCoroutine(DisplayLeaderboardAfterDelay());
         }
