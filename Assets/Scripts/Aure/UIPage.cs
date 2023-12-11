@@ -22,6 +22,8 @@ public class UIPage : MonoBehaviour
     {
         
     }
+
+    //Lance un décompte avant de débuter le jeu
     public IEnumerator AnnounceTheGame()
     {
         _TextEarly.text = "3";
@@ -36,6 +38,7 @@ public class UIPage : MonoBehaviour
         _TextEarly.gameObject.SetActive(false);
     }
 
+    //Montre quel joueur est mort via l'ui
     public void ChangeNamePlayerDeadUI(GameObject player)
     {
         if(_LastDead != null) 
@@ -47,6 +50,8 @@ public class UIPage : MonoBehaviour
         _LastDead.gameObject.SetActive(true);
         StartCoroutine(StopDeadUI(_LastDead.gameObject));
     }
+
+    //Montre quel joueur a survécu le plus longtemps via l'ui
     public void ShowNameWinnerUI(GameObject player)
     {
         if (_LastDead != null)
@@ -59,12 +64,14 @@ public class UIPage : MonoBehaviour
         StartCoroutine(StopDeadUI(_LastDead.gameObject));
     }
 
+    //Permet d'enlever l'ui après un délai
     IEnumerator StopDeadUI(GameObject _lastDeadUI)
     {
         yield return new WaitForSeconds(2f);
         _lastDeadUI.SetActive(false);
     }
 
+    //Va montrer l'ui du podium et va enregistrer le score de chaque joueur dans le leaderboard
      public void ShowPodium()
     {
         foreach (GameObject obj in UIPodium)

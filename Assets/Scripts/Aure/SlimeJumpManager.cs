@@ -37,7 +37,7 @@ public class SlimeJumpManager : MonoBehaviour
     {
         
     }
-
+    //Dès qu'un joueur meurt il va lancer cette fonction pour voir si il est le dernier à être mort, dans ce cas là on va montrer le podium, sinon on va juste indiquer via l'ui qu'il est mort
     public void PlayerDie(PlayerMovement theDeadPlayer)
     {
         theDeadPlayer._score += TimeManager.Instance.totalScore;
@@ -64,10 +64,13 @@ public class SlimeJumpManager : MonoBehaviour
             }
         }
     }
+    //Permet de trier la liste des joueurs pour mettre le meilleur score en premier et le plus mauvais en dernier
     public int Compare(PlayerMovement x, PlayerMovement y)
     {
         return y._score.CompareTo(x._score);
     }
+
+    //Initie le jeu
     public void StartTheGame()
     {
         TimeManager.Instance.GameStart();
@@ -78,12 +81,14 @@ public class SlimeJumpManager : MonoBehaviour
             player.GameStart();
         }
     }
+
+    //Permet de relancer le jeu via un boutton
     public void RestartGame()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
-
+    //Permet de quitter le jeu via un boutton
     public void MainMenu()
     {
         GameManager.Instance.ResetManager();
