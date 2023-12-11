@@ -1,0 +1,11 @@
+Slime Jump :
+{
+	reff pixel -> les slimes
+	ansimuz -> ground
+	chierit -> arrow
+	AOHA/Nid -> musique jeu
+	Jalastram -> sound 500
+	Listener -> jump sound
+	GrafxKid -> piece
+	pimen -> Mort slime
+}
