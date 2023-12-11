@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Scripting;
 
 public class RocketRideManager : MonoBehaviour
 {
@@ -39,6 +40,11 @@ public class RocketRideManager : MonoBehaviour
             newMainLeaderboardManager.name = "MainMusic";
             DontDestroyOnLoad(newMainLeaderboardManager);
         }
+
+        #if !UNITY_EDITOR
+        GarbageCollector.GCMode = GarbageCollector.Mode.Disabled;
+        #endif
+        System.GC.Collect();
     }
 
     private void Start()
