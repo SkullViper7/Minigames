@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
     public Camera playerCam3;
     public Camera playerCam4;
 
-    // Start is called before the first frame update
+    // Resize Camera for x player to have split screens
     void Start()
     {
         if (GameManager.Instance.maxPlayerCount == 2)

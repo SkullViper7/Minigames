@@ -19,6 +19,7 @@ public class BlocPlayer_Input : MonoBehaviour
         LinkPlayerToDevice();
     }
 
+    // Function to spawn a prefab on player & up the player
     private void Spawner()
     {
         isSpawning = true;
@@ -28,6 +29,7 @@ public class BlocPlayer_Input : MonoBehaviour
         isSpawning = false;
     }
 
+    // Inputs
     public void OnAction(InputAction.CallbackContext context)
     {
         if (!BTBloc_Manager.Instance.isGameOver && !BlocUI_Manager.Instance.isCountDown && !isSpawning)

@@ -83,6 +83,7 @@ public class BlocUI_Manager : MonoBehaviour
         }
     }
 
+    //Display the Time on UI 
     public void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
@@ -90,6 +91,7 @@ public class BlocUI_Manager : MonoBehaviour
         _uiTimer.text = string.Format("{00}", seconds);
     }
 
+    //Display the Score on UI 
     public void DisplayScores()
     {
         scoresPlayers = scoresPlayers.OrderByDescending(_player => _player.Value).ToDictionary(_player => _player.Key, _player => _player.Value);

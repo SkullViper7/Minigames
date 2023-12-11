@@ -42,6 +42,7 @@ public class BTBloc_Manager : MonoBehaviour
         isTimerActive = true;
     }
 
+    //Fixed Update for the Timer 
     private void FixedUpdate()
     {
         if (isTimerActive && !BlocUI_Manager.Instance.isCountDown)
