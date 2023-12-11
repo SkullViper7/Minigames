@@ -21,6 +21,7 @@ public class RebindUI : MonoBehaviour
         }
     }
 
+    //Va  rechercher tout les boutons présents dans la scène pour leur donner une fonction de rebind, en excluant tout les autres boutons
     public Object[] SearchAllButton(string _UIName)
     {
         Debug.Log(_UIName);
@@ -41,7 +42,7 @@ public class RebindUI : MonoBehaviour
         return allButton;
     }
 
-
+    //Il y a 4 pages présents pour l'ui, permet de n'en garder qu'une seule lié à la page que l'on veut changer
     void ChangeUIToVIew(string _UIName)
     {
         if (actualUI != null)
@@ -58,6 +59,7 @@ public class RebindUI : MonoBehaviour
         }
     }
 
+    //Va rebind une touche si on touche au bouton
     void ButtonClicked(string _buttonName, Button _button)
     {
         Debug.Log(_buttonName);

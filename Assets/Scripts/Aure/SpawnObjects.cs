@@ -18,6 +18,7 @@ public class SpawnObjects : MonoBehaviour
         
     }
 
+    //Va gérer la vitesse de l'objet, si il n'est pas l'original il va le détruire à la fin du niveau sinon si il l'est il va le rendre inactif 
     private void FixedUpdate()
     {
         Vector2 velocite = new Vector2(0, speed * Time.deltaTime);

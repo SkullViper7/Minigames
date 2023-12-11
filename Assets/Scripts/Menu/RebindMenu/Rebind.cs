@@ -46,6 +46,7 @@ public class Rebind : MonoBehaviour
         StartRebinding(_nameOfTheAction);
     }
 
+    //Permet de montrer tout les binds des touches sur les boutons
     public void InitBindToButton()
     {
         string rebinds = PlayerPrefs.GetString(RebindsKey, string.Empty);
@@ -79,53 +80,17 @@ public class Rebind : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        RebindManager.Instance.playerInput.SwitchCurrentActionMap("PlayerActions");
-
-        // En utilisant un tuto de DapperDino
-        string rebinds = PlayerPrefs.GetString(RebindsKey, string.Empty);
-
-        if (string.IsNullOrEmpty(rebinds))
-        {
-            return;
-        }
-        RebindManager.Instance.playerInput.actions.LoadBindingOverridesFromJson(rebinds);
-
-
-        jumpDisplayNameText.text = QwertyToAzerty(InputControlPath.ToHumanReadableString(
-            jumpAction.action.bindings[jumpAction.action.GetBindingIndexForControl(jumpAction.action.controls[0])].effectivePath,
-            InputControlPath.HumanReadableStringOptions.OmitDevice));
-        attackDisplayNameText.text = QwertyToAzerty(InputControlPath.ToHumanReadableString(
-            attackAction.action.bindings[attackAction.action.GetBindingIndexForControl(attackAction.action.controls[0])].effectivePath,
-            InputControlPath.HumanReadableStringOptions.OmitDevice));
-        changeTimeDisplayNameText.text = QwertyToAzerty(InputControlPath.ToHumanReadableString(
-            changeTimeAction.action.bindings[changeTimeAction.action.GetBindingIndexForControl(changeTimeAction.action.controls[0])].effectivePath,
-            InputControlPath.HumanReadableStringOptions.OmitDevice));
-        upDisplayNameText.text = QwertyToAzerty(InputControlPath.ToHumanReadableString(
-            mouvementAction.action.bindings[mouvementAction.action.GetBindingIndexForControl(mouvementAction.action.controls[0])].effectivePath,
-            InputControlPath.HumanReadableStringOptions.OmitDevice));
-        downDisplayNameText.text = QwertyToAzerty(InputControlPath.ToHumanReadableString(
-            mouvementAction.action.bindings[mouvementAction.action.GetBindingIndexForControl(mouvementAction.action.controls[1])].effectivePath,
-            InputControlPath.HumanReadableStringOptions.OmitDevice));
-        rightDisplayNameText.text = QwertyToAzerty(InputControlPath.ToHumanReadableString(
-            mouvementAction.action.bindings[mouvementAction.action.GetBindingIndexForControl(mouvementAction.action.controls[2])].effectivePath,
-            InputControlPath.HumanReadableStringOptions.OmitDevice));
-        leftDisplayNameText.text = QwertyToAzerty(InputControlPath.ToHumanReadableString(
-            mouvementAction.action.bindings[mouvementAction.action.GetBindingIndexForControl(mouvementAction.action.controls[3])].effectivePath,
-            InputControlPath.HumanReadableStringOptions.OmitDevice));
-    }*/
-
+    //Permet de sauvegarder notre bind
     public void Save()
     {
         string rebinds = RebindManager.Instance.playerInput.actions.SaveBindingOverridesAsJson();
 
         PlayerPrefs.SetString(RebindsKey, rebinds);
     }
+
+    //Lorsqu'on aura choisi notre touche on va pouvoir montrer que notre touche est en attente via de l'ui, on va par la suite pouvoir lui assigner une touche
     public void StartRebinding(string ButtonRebind)
     {
-        Debug.Log("start");
         int controlsFromActions = 0;
         // InputActionForRebind.action = new InputAction(expectedControlType: "Vector2");
         currentMapAction = RebindManager.Instance.playerInput.currentActionMap.name;
@@ -133,7 +98,6 @@ public class Rebind : MonoBehaviour
         waitingForInputObject.transform.position = startRebindObject.transform.position;
         waitingForInputObject.SetActive(true);
         List<InputAction> _actions = new List<InputAction>();
-        Debug.Log(currentMapAction);
         RebindManager.Instance.playerInput.SwitchCurrentActionMap(currentMapAction);
         foreach (InputAction _action in RebindManager.Instance.playerInput.currentActionMap.actions)
         {
@@ -144,7 +108,7 @@ public class Rebind : MonoBehaviour
             RebindManager.Instance.playerInput.SwitchCurrentActionMap("Rebind");
         }
         
-        
+        //Permet de n'utiliser que le clavier ou que la manette en fonction du bouton touché
         foreach (InputAction _action in _actions)
         {
             if(_action.name == ButtonRebind)
@@ -171,9 +135,10 @@ public class Rebind : MonoBehaviour
             }
         }
     }
+
+    //Lorsqu'on aura appuyer sur notre touche on va alors pouvoir sauvegarder notre touche
     private void RebindComplete(InputAction ActionForRebind, int TheControlsFromActions, TMP_Text bindingDisplayNameText)
     {
-        Debug.Log("complete");
         int bindingIndex = ActionForRebind.GetBindingIndexForControl(ActionForRebind.controls[TheControlsFromActions]);
 
         string QwertyCaracter = InputControlPath.ToHumanReadableString(
@@ -189,6 +154,7 @@ public class Rebind : MonoBehaviour
         Save();
     }
 
+    //Permet de montrer le nom de notre touche, ne montrera pas le nom technique mais plutôt le nom commun, de plus va prendre en compte le clavier azerty 
     private string QwertyToAzerty(string QwertyCaracterToAzerty)
     {
         
