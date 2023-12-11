@@ -71,10 +71,15 @@ public class UIPage : MonoBehaviour
         {
             obj.SetActive(true);
             int _lastDead = 0;
+            
             switch (obj.name) 
             {
                 case "FirstPlayer":
                     obj.transform.parent.parent.gameObject.SetActive(true);
+                    if (MainLeaderboardManager.Instance.IsTheBestScore(SlimeJumpManager.Instance._playersDead[0]._score))
+                    {
+                        Debug.Log(SlimeJumpManager.Instance._playersDead[0]._score);
+                    } 
                     break;
                 case "SecondPlayer":
                     _lastDead = 1;
@@ -87,6 +92,21 @@ public class UIPage : MonoBehaviour
                     break;
             }
             PlayerMovement _player = SlimeJumpManager.Instance._playersDead[_lastDead];
+            switch (_player.name)
+            {
+                case "Player1":
+                    MainLeaderboardManager.Instance.UpdateFloatScore("SlimeJumpPlayer1", (_player._score));
+                    break;
+                case "Player2":
+                    MainLeaderboardManager.Instance.UpdateFloatScore("SlimeJumpPlayer2",(_player._score));
+                    break;
+                case "Player3":
+                    MainLeaderboardManager.Instance.UpdateFloatScore("SlimeJumpPlayer3", (_player._score));
+                    break;
+                case "Player4":
+                    MainLeaderboardManager.Instance.UpdateFloatScore("SlimeJumpPlayer4", (_player._score));
+                    break;
+            }
             foreach (Transform child in obj.transform)
             {
                 if(child.name == "Score")

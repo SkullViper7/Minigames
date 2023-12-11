@@ -52,11 +52,11 @@ public class MainLeaderboardManager : MonoBehaviour
         //PlayerPrefs.SetInt("QuizPlayer4", 0);
 
         ////Slime Jump
-        //PlayerPrefs.SetInt("SlimeJumpPlayer1", 0);
-        //PlayerPrefs.SetInt("SlimeJumpPlayer2", 0);
-        //PlayerPrefs.SetInt("SlimeJumpPlayer3", 0);
-        //PlayerPrefs.SetInt("SlimeJumpPlayer4", 0);
-        //PlayerPrefs.SetInt("SlimeJumpBestScore", 0);
+        PlayerPrefs.SetFloat("SlimeJumpPlayer1", 0f);
+        PlayerPrefs.SetFloat("SlimeJumpPlayer2", 0f);
+        PlayerPrefs.SetFloat("SlimeJumpPlayer3", 0f);
+        PlayerPrefs.SetFloat("SlimeJumpPlayer4", 0f);
+        PlayerPrefs.SetFloat("SlimeJumpBestScore", 0f);
 
 
         ////BTBloc
@@ -71,6 +71,12 @@ public class MainLeaderboardManager : MonoBehaviour
     {
         //Update the score of the player given
         PlayerPrefs.SetInt(_player, PlayerPrefs.GetInt(_player) + _score);
+    }
+
+    public void UpdateFloatScore(string _player, float _score)
+    {
+        //Update the score of the player given
+        PlayerPrefs.SetFloat(_player, PlayerPrefs.GetFloat(_player) + _score);
     }
 
     public bool IsTheBestTimeEver(List<int> _chrono)
@@ -117,12 +123,12 @@ public class MainLeaderboardManager : MonoBehaviour
         }
     }
 
-    public bool IsTheBestScore(int _score)
+    public bool IsTheBestScore(float _score)
     {
         //Check if the score giver is better than the best
-        if (_score > PlayerPrefs.GetInt("SlimeJumpBestScore"))
+        if (_score > PlayerPrefs.GetFloat("SlimeJumpBestScore"))
         {
-            PlayerPrefs.SetInt("SlimeJumpBestScore", _score);
+            PlayerPrefs.SetFloat("SlimeJumpBestScore", _score);
             return true;
         }
         else
