@@ -148,14 +148,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //Initie les joueurs dans le jeu à  un moment voulu
     public void GameStart()
     {
-        
         speed = 0;
         directionX = 1;
         directionY = -1;
     }
 
+    //fait déplacer le joueur si il n'est pas mort
     private void FixedUpdate()
     {
         if (!_isDead)
@@ -165,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
+    //Gère toutes les collisions du jeu
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (directionX != 0)
@@ -216,6 +217,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //Permet de faire descendre le joueur plus vite si il ne saute pas assez vite du mur du milieu
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Wall" && speed == 0)
@@ -224,6 +226,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //va faire sauter le joueur quand il va appuyer sur sa touche
     void OnMove()
     {
         directionY = 2;
@@ -236,6 +239,7 @@ public class PlayerMovement : MonoBehaviour
         speed = 25;
     }
 
+    //Fait tuer le joueur 
     void Dead()
     {
         SlimeJumpManager.Instance.PlayerDie(this);
@@ -244,6 +248,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsDead", true);
     }
 
+    //Va désactiver le joueur à la fin de son animation de mort
     public void DesactivatePlayer()
     {
         gameObject.SetActive(false);

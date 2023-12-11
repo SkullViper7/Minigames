@@ -33,6 +33,7 @@ public class RebindManager : MonoBehaviour
         rebind = GetComponent<Rebind>();
     }
 
+    //Permet de Montrer les touches sur les boutons en fonction du jeu choisi
     public void ChangeTheMap(string _mapName)
     {
         Object[] _allButton = rebindUI.SearchAllButton(_mapName);

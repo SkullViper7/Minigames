@@ -17,8 +17,6 @@ public class AudioManager : MonoBehaviour
     public AudioSource SFXsource;
     public AudioSource timer;
 
-    bool isQuestionBeingRead = false;
-
     public void QuestionRead(int questionIndex)//Checks if the index of the question isn't greater than the list of voicelines
     {
         if (questionIndex < questionVoiced.Count)
@@ -33,8 +31,6 @@ public class AudioManager : MonoBehaviour
 
     IEnumerator PlayQuestionWithDelay(int questionIndex)//Plays the voiceline related to the question index
     {
-        isQuestionBeingRead = true;
-
         source.PlayOneShot(questionVoiced[questionIndex]);
 
         float audioLength = questionVoiced[questionIndex].length;
@@ -42,8 +38,6 @@ public class AudioManager : MonoBehaviour
         yield return new WaitForSeconds(audioLength); // Wait for the audio to finish playing
 
         questionVoiced.RemoveAt(questionIndex); // Remove the played audio from the list
-
-        isQuestionBeingRead = false;
     }
 
     public void AnswerRead(int voiceIndex)//Plays the voiceline for he answer
