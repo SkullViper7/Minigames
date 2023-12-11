@@ -24,6 +24,7 @@ public class TimeManager : MonoBehaviour
         }
     }
 
+    
     public void GameStart()
     {
         timeMultiplicator = 0.9f;
@@ -31,6 +32,7 @@ public class TimeManager : MonoBehaviour
         SpeedUp();
     }
 
+    //Va augmenter la vitesse du jeu et la vitesse de la musique toute les 3 secondes
     private void SpeedUp()
     {
         totalScore += timeMultiplicator;

@@ -34,6 +34,7 @@ public class SpawnManager : MonoBehaviour
         maxSpawnTiming = 5;
         maxCoinSpawnTiming = 3;
         UIPage _UI = SlimeJumpManager.Instance.UI;
+        //Va récupérer chaque objet dans le jeu pour les trier dans d'autres script
         foreach (GameObject _obj in FindObjectsOfType(typeof(GameObject)))
         {
             switch (_obj.name)
@@ -95,6 +96,7 @@ public class SpawnManager : MonoBehaviour
             }
         }
     }
+    //Permet de spawn un projectile ou un mur va a nouveau rappeler la fonction à la fin pour qu'elle ne se finisse que lorsque tout les joueurs sont morts
     public void SpawnAnObject()
     {
         if(!SlimeJumpManager.Instance._isEndGame)
@@ -126,6 +128,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    //Permet de montrer une flèche rouge avant que la vrai n'apparaisse
     IEnumerator ShowIndicatorBeforeSpawn(GameObject ProjectileSpawned)
     {
         yield return new WaitForSeconds(0.6f);
@@ -133,17 +136,20 @@ public class SpawnManager : MonoBehaviour
         ProjectileSpawned.SetActive(true);
         StartCoroutine(SoundArrow(ProjectileSpawned.GetComponent<AudioSource>()));
     }
+    //Va lancer le son de la flèche 
     IEnumerator SoundArrow(AudioSource sound)
     {
         yield return new WaitForSeconds(0.5f);
         sound.Play();
     }
 
+    //Va lancer la fonction invoke pour faire lancer une fonction
     public void InvokeTheSpawn(string _functionName, float timing)
     {
         Invoke(_functionName, Random.Range(3f, timing));
     }
 
+    //va faire spawn une pièce de la même façon que les murs ou les flèches, cependant le délai pour la refaire spawn diffère
     public void SpawnCoins()
     {
         if (!SlimeJumpManager.Instance._isEndGame)
