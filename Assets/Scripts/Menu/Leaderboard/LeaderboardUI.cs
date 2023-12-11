@@ -20,7 +20,7 @@ public class LeaderboardUI : MonoBehaviour
     private List<TextMeshProUGUI> slimScores = new();
     [SerializeField]
     private TextMeshProUGUI slimeBestScore;
-    private Dictionary<string, int> slimeLeaderboard = new Dictionary<string, int> { { "Player1", 0 }, { "Player2", 0 }, { "Player3", 0 }, { "Player4", 0 } };
+    private Dictionary<string, float> slimeLeaderboard = new Dictionary<string, float> { { "Player1", 0 }, { "Player2", 0 }, { "Player3", 0 }, { "Player4", 0 } };
 
     [Header("Rocket Ride")]
     [SerializeField]
@@ -67,7 +67,7 @@ public class LeaderboardUI : MonoBehaviour
             slimeNames[i].text = kvp.Key;
             slimScores[i].text = kvp.Value.ToString();
         }
-        slimeBestScore.text = PlayerPrefs.GetInt("SlimeJumpBestScore").ToString();
+        slimeBestScore.text = PlayerPrefs.GetFloat("SlimeJumpBestScore").ToString();
 
         //Rocket Ride
         for (int i = 0; i < rocketLeaderboard.Count; i++)
@@ -101,10 +101,10 @@ public class LeaderboardUI : MonoBehaviour
         quizLeaderboard["Player4"] = PlayerPrefs.GetInt("QuizPlayer4");
 
         //Slime Jump
-        slimeLeaderboard["Player1"] = PlayerPrefs.GetInt("SlimeJumpPlayer1");
-        slimeLeaderboard["Player2"] = PlayerPrefs.GetInt("SlimeJumpPlayer2");
-        slimeLeaderboard["Player3"] = PlayerPrefs.GetInt("SlimeJumpPlayer3");
-        slimeLeaderboard["Player4"] = PlayerPrefs.GetInt("SlimeJumpPlayer4");
+        slimeLeaderboard["Player1"] = PlayerPrefs.GetFloat("SlimeJumpPlayer1");
+        slimeLeaderboard["Player2"] = PlayerPrefs.GetFloat("SlimeJumpPlayer2");
+        slimeLeaderboard["Player3"] = PlayerPrefs.GetFloat("SlimeJumpPlayer3");
+        slimeLeaderboard["Player4"] = PlayerPrefs.GetFloat("SlimeJumpPlayer4");
 
         //Rocket Ride
         rocketLeaderboard["Player1"] = PlayerPrefs.GetInt("RocketRidePlayer1");
