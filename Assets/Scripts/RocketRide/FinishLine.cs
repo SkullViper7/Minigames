@@ -39,12 +39,12 @@ public class FinishLine : MonoBehaviour
                 rocketGroup.RemoveMember(other.transform);
 
                 //Stop a stunt coroutine if there is one and launch the finish coroutine when rocket continue to fly
-                if (rocket.stuntCoroutine != null)
+                if (rocket.stunnedCoroutine != null)
                 {
-                    StopCoroutine(rocket.stuntCoroutine);
+                    StopCoroutine(rocket.stunnedCoroutine);
                     rocket.transform.DOKill();
-                    rocket.isStunt = false;
-                    rocket.stuntCoroutine = null;
+                    rocket.isStunned = false;
+                    rocket.stunnedCoroutine = null;
                 }
                 StartCoroutine(rocket.Finish());
             }
