@@ -19680,8 +19680,8 @@ MonoBehaviour:
   propulsion: 500
   rotationPerSecond: 270
   bounceForce: 30
-  timeStunt: 2
-  isStunt: 0
+  timeStunned: 2
+  isStunned: 0
   fires:
   - {fileID: 9170664393694086411}
   - {fileID: 2941066828383309884}

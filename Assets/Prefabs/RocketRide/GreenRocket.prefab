@@ -19545,8 +19545,8 @@ MonoBehaviour:
   propulsion: 500
   rotationPerSecond: 270
   bounceForce: 30
-  timeStunt: 2
-  isStunt: 0
+  timeStunned: 2
+  isStunned: 0
   fires:
   - {fileID: 7406701838235471122}
   - {fileID: 7264263195017178325}

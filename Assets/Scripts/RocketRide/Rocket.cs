@@ -135,7 +135,7 @@ public class Rocket : MonoBehaviour
                         OrientationGamepad(context.action.ReadValue<Vector2>());
                     }
                 }
-                break;
+            break;
             case "PropulsionGamepad":
                 if (!GameManager.Instance.isOnKeyboard)
                 {
