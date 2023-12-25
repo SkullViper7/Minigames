@@ -1879,6 +1879,14 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Join
         m_Flags: 0
+      - m_Name: 
+        m_Id: 80854ea8-6439-4c8a-b818-e6b413e61432
+        m_Path: <HID::Microntek              USB Joystick          >/button3
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 3164325837590241499, guid: 2e81439d4af8d3d40969caed3acc76da,
